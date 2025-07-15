@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project name and version
-project(EsportsChampionshipManagamentSystem 
+project(EsportsChampionshipManagementSystem 
         VERSION 1.0.0
         DESCRIPTION "Esports Championship Management System"
         LANGUAGES CXX)
@@ -29,13 +29,13 @@ file(GLOB_RECURSE APP_SOURCES "src/*.cpp")
 list(FILTER APP_SOURCES EXCLUDE REGEX "src/tests/.*\\.cpp$")
 
 # Executable output
-add_executable(EsportsChampionshipManagamentSystem ${APP_SOURCES})
+add_executable(EsportsChampionshipManagementSystem ${APP_SOURCES})
 
 # Set compiler warnings
 if(MSVC)
-    target_compile_options(EsportsChampionshipManagamentSystem PRIVATE /W4)
+    target_compile_options(EsportsChampionshipManagementSystem PRIVATE /W4)
 else()
-    target_compile_options(EsportsChampionshipManagamentSystem PRIVATE -Wall -Wextra -Wpedantic)
+    target_compile_options(EsportsChampionshipManagementSystem PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
 # Testing configuration
@@ -45,7 +45,7 @@ if(BUILD_TESTS)
 endif()
 
 # Installation rules
-install(TARGETS EsportsChampionshipManagamentSystem
+install(TARGETS EsportsChampionshipManagementSystem
         RUNTIME DESTINATION bin)
 install(DIRECTORY include/ 
         DESTINATION include)
@@ -62,7 +62,7 @@ endif()
 
 # Print summary
 message(STATUS "")
-message(STATUS "EsportsChampionshipManagamentSystem configuration summary:")
+message(STATUS "EsportsChampionshipManagementSystem configuration summary:")
 message(STATUS "  Version: ${PROJECT_VERSION}")
 message(STATUS "  Build tests: ${BUILD_TESTS}")
 message(STATUS "  Build docs: ${BUILD_DOCS}")
