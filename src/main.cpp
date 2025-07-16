@@ -17,7 +17,7 @@ int main() {
     std::cout << "=== DTO Test ===\n";
 
     Performance perf1(1, 20, Champion::Yasuo, "2025-07-01", 75.0f);
-    Player player1(1, "Alex", 21, Gender::Male, "alex@apu.edu.my", "0123456789", 5, "2023-03-14", 1);
+    Player player1(1, "Alex", 21, Gender::Male, "alex@apu.edu.my", "0123456789", 5, false, "2023-03-14", 1);
     Tournament tour1(1, "APUEC 2025", "2025-08-01", "2025-08-15", "KL Campus", TournamentStage::Qualifiers, TournamentCategory::Regional);
     Match match1(1, 1, TournamentStage::Qualifiers, MatchType::BestOf3, "2025-08-03", "14:00", 1, 2, 1);
     
