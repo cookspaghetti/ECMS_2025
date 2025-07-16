@@ -19,7 +19,7 @@ int main() {
     Performance perf1(1, 20, Champion::Yasuo, "2025-07-01", 75.0f);
     Player player1(1, "Alex", 21, Gender::Male, "alex@apu.edu.my", "0123456789", 5, "2023-03-14", 1);
     Tournament tour1(1, "APUEC 2025", "2025-08-01", "2025-08-15", "KL Campus", TournamentCategory::Regional);
-    Match match1(1, 1, MatchType::BestOf3, "2025-08-03", "14:00", 1, 2, 1);
+    Match match1(1, 1, MatchState::Qualifiers, MatchType::BestOf3, "2025-08-03", "14:00", 1, 2, 1);
     
     Champion champs1[Result::TEAM_SIZE] = { Champion::Yasuo, Champion::LeeSin, Champion::Ahri, Champion::Lux, Champion::Ezreal };
     Champion champs2[Result::TEAM_SIZE] = { Champion::Zed, Champion::Katarina, Champion::Teemo, Champion::Morgana, Champion::Vayne };
@@ -28,6 +28,9 @@ int main() {
     Spectator spectator1(1, "Jamie", Gender::Female, "jamie@stream.com", "0198765432", SpectatorType::Streamer, "Twitch");
 
     std::cout << "Player: " << player1.name << ", Rank: " << player1.rank << ", Favourite Champ: Yasuo\n";
+    std::cout << "Tournament: " << tour1.name << ", Category: Regional, Location: " << tour1.location << "\n";
+    std::cout << "Result: " << result1.score << ", Winner ID: " << result1.winnerId << "\n";
+    std::cout << "Spectator: " << spectator1.name << ", Type: " << (spectator1.type == SpectatorType::Streamer ? "Streamer" : "Normal") << "\n\n";
     std::cout << "Match: " << match1.date << " " << match1.time << ", Type: BestOf3\n";
     std::cout << "Spectator: " << spectator1.name << ", Type: Streamer\n\n";
 
