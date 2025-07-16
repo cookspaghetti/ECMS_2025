@@ -8,7 +8,7 @@ enum class MatchType
     BestOf5
 };
 
-enum class TournamentState
+enum class TournamentStage
 {
     Qualifiers,
     GroupStage,
