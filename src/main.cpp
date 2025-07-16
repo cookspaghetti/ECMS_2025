@@ -18,8 +18,8 @@ int main() {
 
     Performance perf1(1, 20, Champion::Yasuo, "2025-07-01", 75.0f);
     Player player1(1, "Alex", 21, Gender::Male, "alex@apu.edu.my", "0123456789", 5, "2023-03-14", 1);
-    Tournament tour1(1, "APUEC 2025", "2025-08-01", "2025-08-15", "KL Campus", TournamentCategory::Regional);
-    Match match1(1, 1, MatchState::Qualifiers, MatchType::BestOf3, "2025-08-03", "14:00", 1, 2, 1);
+    Tournament tour1(1, "APUEC 2025", "2025-08-01", "2025-08-15", "KL Campus", TournamentState::Qualifiers, TournamentCategory::Regional);
+    Match match1(1, 1, TournamentState::Qualifiers, MatchType::BestOf3, "2025-08-03", "14:00", 1, 2, 1);
     
     Champion champs1[Result::TEAM_SIZE] = { Champion::Yasuo, Champion::LeeSin, Champion::Ahri, Champion::Lux, Champion::Ezreal };
     Champion champs2[Result::TEAM_SIZE] = { Champion::Zed, Champion::Katarina, Champion::Teemo, Champion::Morgana, Champion::Vayne };
