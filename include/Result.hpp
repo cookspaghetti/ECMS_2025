@@ -2,62 +2,7 @@
 #define RESULT_HPP
 
 #include <string>
-
-enum class Champion
-{
-    Ahri,
-    Akali,
-    Alistar,
-    Ashe,
-    Azir,
-    Braum,
-    Cassiopeia,
-    Darius,
-    Draven,
-    Ezreal,
-    Fiora,
-    Fizz,
-    Garen,
-    Graves,
-    Janna,
-    Jax,
-    Jhin,
-    Jinx,
-    Karma,
-    Karthus,
-    Katarina,
-    KhaZix,
-    LeeSin,
-    Leona,
-    Lissandra,
-    Lulu,
-    Lux,
-    Malphite,
-    MissFortune,
-    Morgana,
-    Nami,
-    Nautilus,
-    Orianna,
-    Rengar,
-    Riven,
-    Ryze,
-    Sona,
-    Soraka,
-    Syndra,
-    Taric,
-    Teemo,
-    Thresh,
-    TwistedFate,
-    Twitch,
-    Vayne,
-    VelKoz,
-    Viktor,
-    Xerath,
-    Yasuo,
-    Zed,
-    Zyra,
-    NoChampion // Placeholder for no champion selected
-};
+#include "Enum.hpp"
 
 class Result {
 public:
@@ -71,10 +16,20 @@ public:
     Champion championsP2[TEAM_SIZE];        // Champions used by player 2
     int winnerId;                           // ID of the winning player
 
-    Result();
+    Result() : id(0), matchId(0), gamesPlayed(0), score(""), winnerId(0) {
+        for (int i = 0; i < TEAM_SIZE; ++i) {
+            championsP1[i] = Champion::NoChampion;
+            championsP2[i] = Champion::NoChampion;
+        }
+    }
     Result(int id, int matchId, int gamesPlayed, const std::string& score,
-           const Champion championsP1[TEAM_SIZE], const Champion championsP2[TEAM_SIZE],
-           int winnerId);
+           Champion championsP1[TEAM_SIZE], Champion championsP2[TEAM_SIZE], int winnerId)
+        : id(id), matchId(matchId), gamesPlayed(gamesPlayed), score(score), winnerId(winnerId) {
+        for (int i = 0; i < TEAM_SIZE; ++i) {
+            this->championsP1[i] = championsP1[i];
+            this->championsP2[i] = championsP2[i];
+        }
+    }
 };
 
 #endif
