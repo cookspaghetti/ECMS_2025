@@ -2,7 +2,7 @@
 #define TOURNAMENT_HPP
 
 #include <string>
-#include "Enum.hpp"
+#include "general/Enum.hpp"
 
 class Tournament {
 public:

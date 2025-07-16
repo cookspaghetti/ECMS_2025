@@ -17,6 +17,7 @@ public:
     T dequeue();
     T peek() const;
     int size() const;
+    void display() const;
 };
 
 template <typename T>
@@ -69,6 +70,19 @@ T Queue<T>::peek() const {
 template <typename T>
 int Queue<T>::size() const {
     return count;
+}
+
+template <typename T>
+void Queue<T>::display() const {
+    if (isEmpty()) {
+        std::cout << "Queue is empty.\n";
+        return;
+    }
+    std::cout << "Queue contents: ";
+    for (int i = 0; i < count; i++) {
+        std::cout << data[(front + i) % capacity] << " ";
+    }
+    std::cout << "\n";
 }
 
 #endif
