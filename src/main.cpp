@@ -1,70 +1,167 @@
 #include <iostream>
-#include <string>
-
-#include "Performance.hpp"
-#include "Player.hpp"
-#include "Tournament.hpp"
 #include "Match.hpp"
-#include "Result.hpp"
+#include "Player.hpp"
 #include "Spectator.hpp"
+#include "Result.hpp"
+#include "Performance.hpp"
+#include "Tournament.hpp"
+
 #include "Queue.hpp"
 #include "CircularQueue.hpp"
 #include "PriorityQueue.hpp"
 #include "Stack.hpp"
 
+void handleMatchScheduling();
+void handleRegistration();
+void handleSpectatorQueue();
+void handleResultLogging();
+
 int main() {
-    // === Test DTOs ===
-    std::cout << "=== DTO Test ===\n";
+    int choice;
 
-    Performance perf1(1, 20, Champion::Yasuo, "2025-07-01", 75.0f);
-    Player player1(1, "Alex", 21, Gender::Male, "alex@apu.edu.my", "0123456789", 5, false, "2023-03-14", 1);
-    Tournament tour1(1, "APUEC 2025", "2025-08-01", "2025-08-15", "KL Campus", TournamentStage::Qualifiers, TournamentCategory::Regional);
-    Match match1(1, 1, TournamentStage::Qualifiers, MatchType::BestOf3, "2025-08-03", "14:00", 1, 2, 1);
-    
-    Champion champs1[Result::TEAM_SIZE] = { Champion::Yasuo, Champion::LeeSin, Champion::Ahri, Champion::Lux, Champion::Ezreal };
-    Champion champs2[Result::TEAM_SIZE] = { Champion::Zed, Champion::Katarina, Champion::Teemo, Champion::Morgana, Champion::Vayne };
-    Result result1(1, 1, 3, "2-1", champs1, champs2, 1);
+    do {
+        std::cout << "\n=== APUEC Management System ===\n";
+        std::cout << "1. Match Scheduling & Player Progression\n";
+        std::cout << "2. Tournament Registration & Player Queueing\n";
+        std::cout << "3. Live Stream & Spectator Queue Management\n";
+        std::cout << "4. Game Result Logging & Performance History\n";
+        std::cout << "0. Exit\n";
+        std::cout << "Select an option: ";
+        std::cin >> choice;
 
-    Spectator spectator1(1, "Jamie", Gender::Female, "jamie@stream.com", "0198765432", SpectatorType::Streamer, "Twitch");
+        switch (choice) {
+            case 1:
+                handleMatchScheduling();
+                break;
+            case 2:
+                handleRegistration();
+                break;
+            case 3:
+                handleSpectatorQueue();
+                break;
+            case 4:
+                handleResultLogging();
+                break;
+            case 0:
+                std::cout << "Exiting... Goodbye!\n";
+                break;
+            default:
+                std::cout << "Invalid option. Try again.\n";
+        }
 
-    std::cout << "Player: " << player1.name << ", Rank: " << player1.rank << ", Favourite Champ: Yasuo\n";
-    std::cout << "Tournament: " << tour1.name << ", Category: Regional, Location: " << tour1.location << "\n";
-    std::cout << "Result: " << result1.score << ", Winner ID: " << result1.winnerId << "\n";
-    std::cout << "Spectator: " << spectator1.name << ", Type: " << (spectator1.type == SpectatorType::Streamer ? "Streamer" : "Normal") << "\n\n";
-    std::cout << "Match: " << match1.date << " " << match1.time << ", Type: BestOf3\n";
-    std::cout << "Spectator: " << spectator1.name << ", Type: Streamer\n\n";
-
-    // === Test Queue ===
-    std::cout << "=== Queue Test ===\n";
-    Queue<Player> playerQueue(3);
-    playerQueue.enqueue(player1);
-    std::cout << "Queued Player: " << playerQueue.peek().name << "\n\n";
-
-    // === Test CircularQueue ===
-    std::cout << "=== CircularQueue Test ===\n";
-    CircularQueue<Spectator> specQueue(2);
-    specQueue.enqueue(spectator1);
-    std::cout << "First Spectator: " << specQueue.peek().name << "\n\n";
-
-    // === Test PriorityQueue ===
-    std::cout << "=== PriorityQueue Test ===\n";
-    PriorityQueue<Spectator> vipQueue(3);
-    Spectator vip(2, "VIP John", Gender::Male, "john@vip.com", "0111222333", SpectatorType::VIP, "RedBull");
-    Spectator normal(3, "Norma", Gender::Female, "norma@xyz.com", "0133334444", SpectatorType::Normal, "None");
-
-    vipQueue.enqueue(spectator1, 2);  // Streamer
-    vipQueue.enqueue(vip, 5);         // VIP
-    vipQueue.enqueue(normal, 1);      // Normal
-
-    std::cout << "Highest Priority Spectator: " << vipQueue.peek().name << "\n\n";
-
-    // === Test Stack ===
-    std::cout << "=== Stack Test ===\n";
-    Stack<Result> resultStack(2);
-    resultStack.push(result1);
-    std::cout << "Top Result ID: " << resultStack.peek().id << ", Score: " << resultStack.peek().score << "\n";
-
-    std::cout << "\nAll structures and DTOs instantiated successfully.\n";
+    } while (choice != 0);
 
     return 0;
+}
+
+void handleMatchScheduling() {
+    int choice;
+    do {
+        std::cout << "\n-- Match Scheduling Menu --\n";
+        std::cout << "1. Show Current Tournaments\n";
+        std::cout << "2. Check Tournament Info\n";
+        std::cout << "3. Search Player\n";
+        std::cout << "0. Back to Main Menu\n";
+        std::cout << "Select an option: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                std::cout << "Showing current tournaments...\n";
+                break;
+            case 2:
+                std::cout << "Checking tournament info...\n";
+                break;
+            case 3:
+                std::cout << "Searching player...\n";
+                break;
+            case 0:
+                break;
+            default:
+                std::cout << "Invalid option. Try again.\n";
+        }
+    } while (choice != 0);
+}
+
+void handleRegistration() {
+    int choice;
+    do {
+        std::cout << "\n-- Tournament Registration Menu --\n";
+        std::cout << "1. Register Player\n";
+        std::cout << "2. Check-In Player\n";
+        std::cout << "0. Back to Main Menu\n";
+        std::cout << "Select an option: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                std::cout << "Registering player...\n";
+                break;
+            case 2:
+                std::cout << "Checking in player...\n";
+                break;
+            case 0:
+                break;
+            default:
+                std::cout << "Invalid option. Try again.\n";
+        }
+    } while (choice != 0);
+}
+
+void handleSpectatorQueue() {
+    int choice;
+    do {
+        std::cout << "\n-- Spectator Management Menu --\n";
+        std::cout << "1. Register Spectator\n";
+        std::cout << "2. Select Spectator Type\n";
+        std::cout << "0. Back to Main Menu\n";
+        std::cout << "Select an option: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                std::cout << "Registering spectator...\n";
+                break;
+            case 2:
+                std::cout << "Selecting spectator type...\n";
+                break;
+            case 0:
+                break;
+            default:
+                std::cout << "Invalid option. Try again.\n";
+        }
+    } while (choice != 0);
+}
+
+void handleResultLogging() {
+    int choice;
+    do {
+        std::cout << "\n-- Game Result Menu --\n";
+        std::cout << "1. Record Game Result\n";
+        std::cout << "2. Search for Player\n";
+        std::cout << "3. Search for Tournament\n";
+        std::cout << "4. Search Champion Statistics\n";
+        std::cout << "0. Back to Main Menu\n";
+        std::cout << "Select an option: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                std::cout << "Recording game result...\n";
+                break;
+            case 2:
+                std::cout << "Searching player...\n";
+                break;
+            case 3:
+                std::cout << "Searching tournament...\n";
+                break;
+            case 4:
+                std::cout << "Searching champion stats...\n";
+                break;
+            case 0:
+                break;
+            default:
+                std::cout << "Invalid option. Try again.\n";
+        }
+    } while (choice != 0);
 }
