@@ -3,21 +3,27 @@
 
 #include <string>
 
+enum class Gender {
+    Male,
+    Female
+};
+
 class Player {
 public:
     int id;
     std::string name;
     int age;
-    char gender;
+    Gender gender;
     std::string email;
     std::string phoneNum;
     int rank;
     std::string dateJoined;
-    int performanceId; // pointer to Performance
+    int performanceId; // ID of associated performance record
 
     Player();
-    Player(int id, const std::string& name, int age, char gender, const std::string& email,
-           const std::string& phoneNum, int rank, const std::string& dateJoined, int performanceId);
+    Player(int id, const std::string& name, int age, Gender gender,
+           const std::string& email, const std::string& phoneNum,
+           int rank, const std::string& dateJoined, int performanceId);
 };
 
 #endif
