@@ -2,7 +2,7 @@
 #define TOURNAMENT_HPP
 
 #include <string>
-#include "Enum.hpp"
+#include "general/Enum.hpp"
 
 class Tournament {
 public:
@@ -11,11 +11,12 @@ public:
     std::string startDate;
     std::string endDate;
     std::string location;
+    TournamentStage stage;
     TournamentCategory category;
 
-    Tournament() : id(0), name(""), startDate(""), endDate(""), location(""), category(TournamentCategory::Local) {}
-    Tournament(int id, const std::string& name, const std::string& startDate, const std::string& endDate, const std::string& location, TournamentCategory category)
-        : id(id), name(name), startDate(startDate), endDate(endDate), location(location), category(category) {}
+    Tournament() : id(0), name(""), startDate(""), endDate(""), location(""), stage(TournamentStage::Qualifiers), category(TournamentCategory::Local) {}
+    Tournament(int id, const std::string& name, const std::string& startDate, const std::string& endDate, const std::string& location, TournamentStage stage, TournamentCategory category)
+        : id(id), name(name), startDate(startDate), endDate(endDate), location(location), stage(stage), category(category) {}
 };
 
 std::string toString(TournamentCategory category) {

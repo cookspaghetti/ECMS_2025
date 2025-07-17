@@ -8,6 +8,16 @@ enum class MatchType
     BestOf5
 };
 
+enum class TournamentStage
+{
+    Qualifiers,
+    GroupStage,
+    KnockoutStage,
+    Quarterfinals,
+    Semifinals,
+    Finals
+};
+
 enum class TournamentCategory
 {
     Local,

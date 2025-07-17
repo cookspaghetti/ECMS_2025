@@ -2,7 +2,7 @@
 #define RESULT_HPP
 
 #include <string>
-#include "Enum.hpp"
+#include "general/Enum.hpp"
 
 class Result {
 public:

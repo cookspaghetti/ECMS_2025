@@ -2,7 +2,7 @@
 #define PERFORMANCE_HPP
 
 #include <string>
-#include "Enum.hpp"
+#include "general/Enum.hpp"
 
 class Performance
 {
