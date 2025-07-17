@@ -1,15 +1,7 @@
 #include <iostream>
-#include "Match.hpp"
-#include "Player.hpp"
-#include "Spectator.hpp"
-#include "Result.hpp"
-#include "Performance.hpp"
-#include "Tournament.hpp"
+#include "functions/PlayerRegistration.hpp"
 
-#include "Queue.hpp"
-#include "CircularQueue.hpp"
-#include "PriorityQueue.hpp"
-#include "Stack.hpp"
+PlayerRegistration playerReg;
 
 void handleMatchScheduling();
 void handleRegistration();
@@ -89,16 +81,20 @@ void handleRegistration() {
         std::cout << "\n-- Tournament Registration Menu --\n";
         std::cout << "1. Register Player\n";
         std::cout << "2. Check-In Player\n";
+        std::cout << "3. Show Registered Queue\n";
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
         std::cin >> choice;
 
         switch (choice) {
             case 1:
-                std::cout << "Registering player...\n";
+                playerReg.registerPlayer();
                 break;
             case 2:
-                std::cout << "Checking in player...\n";
+                playerReg.checkInPlayer();
+                break;
+            case 3:
+                playerReg.displayQueue();
                 break;
             case 0:
                 break;
