@@ -11,6 +11,7 @@
 #include "CircularQueue.hpp"
 #include "PriorityQueue.hpp"
 #include "Stack.hpp"
+#include "SeatingManager.hpp"
 
 int main() {
     // === Test DTOs ===
@@ -59,7 +60,62 @@ int main() {
     std::cout << "=== Stack Test ===\n";
     Stack<Result> resultStack(2);
     resultStack.push(result1);
-    std::cout << "Top Result ID: " << resultStack.peek().id << ", Score: " << resultStack.peek().score << "\n";
+    std::cout << "Top Result ID: " << resultStack.peek().id << ", Score: " << resultStack.peek().score << "\n\n";
+
+    // === TASK 3: LIVE STREAM & SPECTATOR QUEUE MANAGEMENT ===
+    std::cout << "=== TASK 3: SEATING & SPECTATOR MANAGEMENT ===\n";
+
+    // Create seating manager with capacity: VIP(5), Influencer(3), Streaming(4), General(20)
+    SeatingManager seatingManager(5, 3, 4, 20);
+
+    // Create various types of spectators
+    Spectator vip1(101, "VIP Alice", Gender::Female, "alice@vip.com", "0123456789", SpectatorType::VIP, "Premium Sponsor");
+    Spectator vip2(102, "VIP Bob", Gender::Male, "bob@vip.com", "0123456790", SpectatorType::VIP, "Tournament Sponsor");
+    Spectator vip3(103, "VIP Charlie", Gender::Male, "charlie@vip.com", "0123456791", SpectatorType::VIP, "Major Sponsor");
+
+    Spectator influencer1(201, "Influencer Dana", Gender::Female, "dana@youtube.com", "0134567890", SpectatorType::Influencer, "YouTube Gaming");
+    Spectator influencer2(202, "Influencer Eve", Gender::Female, "eve@tiktok.com", "0134567891", SpectatorType::Influencer, "TikTok Gaming");
+
+    Spectator streamer1(301, "Streamer Felix", Gender::Male, "felix@twitch.tv", "0145678901", SpectatorType::Streamer, "Twitch");
+    Spectator streamer2(302, "Streamer Grace", Gender::Female, "grace@youtube.com", "0145678902", SpectatorType::Streamer, "YouTube");
+    Spectator streamer3(303, "Streamer Henry", Gender::Male, "henry@facebook.com", "0145678903", SpectatorType::Streamer, "Facebook Gaming");
+
+    Spectator normal1(401, "John Normal", Gender::Male, "john@email.com", "0156789012", SpectatorType::Normal, "General Public");
+    Spectator normal2(402, "Jane Normal", Gender::Female, "jane@email.com", "0156789013", SpectatorType::Normal, "General Public");
+    Spectator normal3(403, "Jack Normal", Gender::Male, "jack@email.com", "0156789014", SpectatorType::Normal, "General Public");
+
+    // Add spectators to entry queue (they'll be processed by priority)
+    std::cout << "\n--- Adding Spectators to Entry Queue ---\n";
+    seatingManager.addToEntryQueue(normal1);     // Priority 1
+    seatingManager.addToEntryQueue(vip1);        // Priority 10
+    seatingManager.addToEntryQueue(streamer1);   // Priority 7
+    seatingManager.addToEntryQueue(influencer1); // Priority 8
+    seatingManager.addToEntryQueue(normal2);     // Priority 1
+    seatingManager.addToEntryQueue(vip2);        // Priority 10
+    seatingManager.addToEntryQueue(streamer2);   // Priority 7
+
+    // Process the entry queue (higher priority spectators get seated first)
+    seatingManager.processEntryQueue();
+
+    // Display current status
+    seatingManager.displaySeatingStatus();
+
+    // Add more spectators to test overflow management
+    std::cout << "\n--- Testing Overflow Management ---\n";
+    seatingManager.addToEntryQueue(vip3);
+    seatingManager.addToEntryQueue(influencer2);
+    seatingManager.addToEntryQueue(streamer3);
+    seatingManager.addToEntryQueue(normal3);
+
+    seatingManager.processEntryQueue();
+    seatingManager.displaySeatingStatus();
+    seatingManager.displayOverflowStatus();
+
+    // Demonstrate overflow management (simulating some spectators leaving)
+    std::cout << "\n--- Simulating Spectator Departure and Overflow Processing ---\n";
+    std::cout << "Some VIPs left early, checking overflow...\n";
+    seatingManager.manageOverflow();
+    seatingManager.displaySeatingStatus();
 
     std::cout << "\nAll structures and DTOs instantiated successfully.\n";
 
