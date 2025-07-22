@@ -20,7 +20,7 @@ public:
         : id(id), name(name), gender(gender), email(email), phoneNum(phoneNum), type(type), affiliation(affiliation) {}
 };
 
-std::string toString(SpectatorType type)
+inline std::string toString(SpectatorType type)
 {
     switch (type)
     {

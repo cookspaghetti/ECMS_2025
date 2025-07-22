@@ -1,7 +1,9 @@
 #include <iostream>
 #include "functions/PlayerRegistration.hpp"
+#include "functions/SpectatorRegistration.hpp"
 
 PlayerRegistration playerReg;
+SpectatorRegistration spectatorReg; 
 
 void handleMatchScheduling();
 void handleRegistration();
@@ -109,7 +111,7 @@ void handleSpectatorQueue() {
     do {
         std::cout << "\n-- Spectator Management Menu --\n";
         std::cout << "1. Register Spectator\n";
-        std::cout << "2. Select Spectator Type\n";
+        std::cout << "2. Display Queue\n";
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
         std::cin >> choice;
@@ -117,9 +119,11 @@ void handleSpectatorQueue() {
         switch (choice) {
             case 1:
                 std::cout << "Registering spectator...\n";
+                spectatorReg.registerSpectator();
                 break;
             case 2:
-                std::cout << "Selecting spectator type...\n";
+                std::cout << "Displaying spectator queue and seating status...\n";
+                spectatorReg.displayQueue();
                 break;
             case 0:
                 break;
