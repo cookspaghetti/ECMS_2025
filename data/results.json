@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "matchId": 1001,
+        "player1Id": 101,
+        "player2Id": 102,
+        "gamesPlayed": 1,
+        "score": "1:0",
+        "championsP1": ["Yasuo", "NoChampion", "NoChampion", "NoChampion", "NoChampion"],
+        "championsP2": ["Azir", "NoChampion", "NoChampion", "NoChampion", "NoChampion"],
+        "winnerId": 101
+    },
+    {
+        "id": 2,
+        "matchId": 1002,
+        "player1Id": 103,
+        "player2Id": 104,
+        "gamesPlayed": 3,
+        "score": "2:1",
+        "championsP1": ["Ahri", "Zed", "Jinx", "NoChampion", "NoChampion"],
+        "championsP2": ["Lux", "LeeSin", "Vayne", "NoChampion", "NoChampion"],
+        "winnerId": 103
+    },
+    {
+        "id": 3,
+        "matchId": 1003,
+        "player1Id": 101,
+        "player2Id": 103,
+        "gamesPlayed": 2,
+        "score": "2:0",
+        "championsP1": ["Thresh", "Braum", "NoChampion", "NoChampion", "NoChampion"],
+        "championsP2": ["Morgana", "Leona", "NoChampion", "NoChampion", "NoChampion"],
+        "winnerId": 101
+    },
+    {
+        "id": 4,
+        "matchId": 1004,
+        "player1Id": 102,
+        "player2Id": 104,
+        "gamesPlayed": 5,
+        "score": "3:2",
+        "championsP1": ["Fiora", "Riven", "Jax", "Darius", "Garen"],
+        "championsP2": ["Malphite", "Nautilus", "Alistar", "Braum", "Thresh"],
+        "winnerId": 104
+    },
+    {
+        "id": 5,
+        "matchId": 1005,
+        "player1Id": 102,
+        "player2Id": 103,
+        "gamesPlayed": 1,
+        "score": "1:0",
+        "championsP1": ["Ezreal", "NoChampion", "NoChampion", "NoChampion", "NoChampion"],
+        "championsP2": ["Jinx", "NoChampion", "NoChampion", "NoChampion", "NoChampion"],
+        "winnerId": 102
+    }
+]

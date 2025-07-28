@@ -448,5 +448,68 @@
         "phoneNum": "601934274863",
         "type": "Influencer",
         "affiliation": "Instagram"
+    },
+    {
+        "id": "S00051",
+        "name": "StreamerOne Alpha",
+        "gender": "Male",
+        "email": "streamer1@twitch.tv",
+        "phoneNum": "601111111111",
+        "type": "Streamer",
+        "affiliation": "Twitch"
+    },
+    {
+        "id": "S00052",
+        "name": "StreamerTwo Beta",
+        "gender": "Female", 
+        "email": "streamer2@youtube.com",
+        "phoneNum": "601222222222",
+        "type": "Streamer",
+        "affiliation": "YouTube"
+    },
+    {
+        "id": "S00053",
+        "name": "StreamerThree Gamma",
+        "gender": "Male",
+        "email": "streamer3@twitch.tv",
+        "phoneNum": "601333333333",
+        "type": "Streamer",
+        "affiliation": "Twitch"
+    },
+    {
+        "id": "S00054",
+        "name": "StreamerFour Delta",
+        "gender": "Female",
+        "email": "streamer4@facebook.com",
+        "phoneNum": "601444444444",
+        "type": "Streamer",
+        "affiliation": "Facebook Gaming"
+    },
+    {
+        "id": "S00055",
+        "name": "StreamerFive Epsilon",
+        "gender": "Male",
+        "email": "streamer5@twitch.tv",
+        "phoneNum": "601555555555",
+        "type": "Streamer",
+        "affiliation": "Twitch"
+    },
+    {
+        "id": "S00056",
+        "name": "StreamerSix Overflow",
+        "gender": "Female",
+        "email": "streamer6@youtube.com",
+        "phoneNum": "601666666666",
+        "type": "Streamer",
+        "affiliation": "YouTube"
+    },
+    {
+        "id": "S00057",
+        "name": "StreamerSeven Extra",
+        "gender": "Male",
+        "email": "streamer7@twitch.tv",
+        "phoneNum": "601777777777",
+        "type": "Streamer",
+        "affiliation": "Twitch"
     }
 ]

@@ -1,9 +1,12 @@
 #include <iostream>
 #include "functions/PlayerRegistration.hpp"
 #include "functions/SpectatorRegistration.hpp"
+#include "functions/GameResultLogger.hpp"
 
 PlayerRegistration playerReg;
 SpectatorRegistration spectatorReg; 
+GameResultLogger logger; // Global logger instance 
+
 
 void handleMatchScheduling();
 void handleRegistration();
@@ -114,7 +117,13 @@ void handleSpectatorQueue() {
         std::cout << "2. Display Queue\n";
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
-        std::cin >> choice;
+        
+        if (!(std::cin >> choice)) {
+            // Input failed, clear error state and ignore bad input
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            choice = -1; // Set to invalid choice to trigger default case
+        }
 
         switch (choice) {
             case 1:
@@ -134,34 +143,92 @@ void handleSpectatorQueue() {
 }
 
 void handleResultLogging() {
+    std::string input;
     int choice;
+    
     do {
         std::cout << "\n-- Game Result Menu --\n";
-        std::cout << "1. Record Game Result\n";
+        std::cout << "1. Display All Loaded Results\n";
         std::cout << "2. Search for Player\n";
         std::cout << "3. Search for Tournament\n";
         std::cout << "4. Search Champion Statistics\n";
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
-        std::cin >> choice;
+        
+        std::getline(std::cin, input);
+        try {
+            choice = std::stoi(input);
+        } catch (...) {
+            choice = -1; // Invalid input
+        }
 
         switch (choice) {
             case 1:
-                std::cout << "Recording game result...\n";
+                std::cout << "\n=== ALL LOADED GAME RESULTS ===\n";
+                logger.displayLoadedResults();
                 break;
-            case 2:
-                std::cout << "Searching player...\n";
+            case 2: {
+                std::cout << "=== PLAYER SEARCH ===\n";
+                std::cout << "Enter Player ID to search: ";
+                std::getline(std::cin, input);
+                int playerId;
+                try {
+                    playerId = std::stoi(input);
+                } catch (...) {
+                    std::cout << "Invalid Player ID entered.\n";
+                    break;
+                }
+                
+                // Search for specific player matches (data already loaded)
+                logger.searchMatchesByPlayer(playerId);
+                
+                // Also display player's win rate and statistics
+                std::cout << "\n--- PLAYER STATISTICS ---\n";
+                logger.displayPlayerPerformance(playerId);
                 break;
-            case 3:
-                std::cout << "Searching tournament...\n";
+            }
+            case 3: {
+                std::cout << "=== TOURNAMENT SEARCH ===\n";
+                std::cout << "Enter Tournament/Match ID to search: ";
+                std::getline(std::cin, input);
+                int tournamentId;
+                try {
+                    tournamentId = std::stoi(input);
+                } catch (...) {
+                    std::cout << "Invalid Tournament/Match ID entered.\n";
+                    break;
+                }
+                
+                // Search for specific tournament/match (data already loaded)
+                logger.searchMatchesByMatchId(tournamentId);
                 break;
-            case 4:
-                std::cout << "Searching champion stats...\n";
+            }
+            case 4: {
+                std::cout << "=== CHAMPION STATISTICS ===\n";
+                std::cout << "Enter Champion name to search: ";
+                std::string championName;
+                std::getline(std::cin, championName);
+                
+                // Show champion-specific statistics (data already loaded)
+                std::cout << "\n=== STATISTICS FOR CHAMPION: " << championName << " ===\n";
+                std::cout << "Searching for matches where " << championName << " was played...\n\n";
+                
+                // Show favorite champions to see if the searched champion appears
+                logger.displayPlayerFavoriteChampions();
+                std::cout << "\nNote: The table above shows each player's most-used champion.\n";
+                std::cout << "If " << championName << " appears as someone's favorite, they use it frequently.\n";
                 break;
+            }
             case 0:
                 break;
             default:
                 std::cout << "Invalid option. Try again.\n";
         }
+        
+        if (choice != 0) {
+            std::cout << "\nPress Enter to continue...";
+            std::cin.get();
+        }
+        
     } while (choice != 0);
 }
