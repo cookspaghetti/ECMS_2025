@@ -11,12 +11,13 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "dto/Spectator.hpp"
 #include "structures/Queue.hpp"
 #include "structures/CircularQueue.hpp"
 
 // Fixed layout constants
-static constexpr int VIP_ROWS            = 1;  // 1 row × 10 seats = 10 VIP seats
+static constexpr int VIP_ROWS            = 5;  // 5 rooms × 10 seats = 50 VIP seats total
 static constexpr int SEATS_PER_ROW       = 10;
 static constexpr int MAX_STREAMING_ROOMS = 5;
 
@@ -25,9 +26,9 @@ struct SeatPosition {
     int  row;
     int  seat;
     bool occupied;
-    std::string spectatorName;
+    int spectatorId;  // Changed from spectatorName to spectatorId
     SeatPosition(int r=0,int s=0)
-      : row(r), seat(s), occupied(false), spectatorName("") {}
+      : row(r), seat(s), occupied(false), spectatorId(0) {}
 };
 
 /// One streaming‐room container
@@ -62,6 +63,17 @@ public:
     // Print VIP rows, influencer block, each stream room, general & overflow
     void displaySeatingStatus() const;
 
+    // Overflow management methods
+    bool hasOverflow() const;
+    void handleOverflow();
+    void addMoreSeats();
+    void rejectOverflowUsers();
+    
+    // Helper methods for overflow handling
+    void handleOverflowWithMoreSeats(const std::vector<Spectator>& overflowSpectators);
+    void handleOverflowReassignment(const std::vector<Spectator>& overflowSpectators);
+    void handleOverflowManual(const std::vector<Spectator>& overflowSpectators);
+
 private:
     // Helpers for each category
     SeatPosition findNextVIPSeat() const;
@@ -95,6 +107,11 @@ private:
     // Queues
     Queue<Spectator> entryQueue;
     Queue<Spectator> overflowQueue;
+    
+    // Manual tracking variables for enhanced seating management
+    int generalOccupied;
+    int overflowCount;
+    std::string generalSeatIds[5][30]; // Room x Seat matrix for seat IDs
 };
 
 

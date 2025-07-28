@@ -1,153 +1,7 @@
-// #include <iostream>
-// #include <string>
-// #include <fstream>
-// #include <filesystem>
-
-// #include "functions/SpectatorRegistration.hpp"
-// #include "functions/SeatingManager.hpp"
-// #include "dto/Spectator.hpp"
-// #include "nlohmann/json.hpp"
-
-// using json = nlohmann::json;
-
-// //——————————————————————————————————————————————————————————
-// // SpectatorRegistration implementation
-// //——————————————————————————————————————————————————————————
-
-// SpectatorRegistration::SpectatorRegistration() 
-//   : nextSpectatorId(1001),
-//     // VIP: 3 rows×10 seats, Influencer: 2 blocks×5 seats,
-//     // Streaming: 5 rooms×10 viewers, General: 20 seats
-//     seatingManager(new SeatingManager(
-//         /*numVipRows=*/3, /*seatsPerVipRow=*/10,
-//         /*numInflRows=*/2, /*seatsPerStreamRoom=*/5,
-//         /*numStreamRooms=*/5, /*seatsPerStreamRoom=*/10,
-//         /*generalCapacity=*/20
-//     )),
-//     dataLoaded(false)
-// {}
-
-// SpectatorRegistration::~SpectatorRegistration() {
-//     delete seatingManager;
-// }
-
-// SpectatorType SpectatorRegistration::parseSpectatorType(const std::string& typeStr) {
-//     if      (typeStr == "VIP")        return SpectatorType::VIP;
-//     else if (typeStr == "Streamer")   return SpectatorType::Streamer;
-//     else if (typeStr == "Influencer") return SpectatorType::Influencer;
-//     else if (typeStr == "Player")     return SpectatorType::Player;
-//     else                               return SpectatorType::Normal;
-// }
-
-// Gender SpectatorRegistration::parseGender(const std::string& genderStr) {
-//     return (genderStr == "Female") ? Gender::Female : Gender::Male;
-// }
-
-// void SpectatorRegistration::loadSpectatorsFromJSON() {
-//     if (dataLoaded) {
-//         std::cout << "Spectator data already loaded.\n";
-//         return;
-//     }
-//     try {
-//         std::string path = "data/spectators.json";
-//         if (!std::filesystem::exists(path))
-//             path = "c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/spectators.json";
-
-//         std::ifstream file(path);
-//         if (!file.is_open()) {
-//             std::cout << "Error: Cannot open spectators.json\n";
-//             return;
-//         }
-
-//         json arr; file >> arr; file.close();
-//         std::cout << "Loading spectator data.\n";
-
-//         int vipCnt=0, infCnt=0, strCnt=0, plyCnt=0, norCnt=0;
-//         int loaded=0;
-//         for (auto &item : arr) {
-//             int id = std::stoi(item["id"].get<std::string>().substr(1));
-//             std::string name = item["name"];
-//             Gender g = parseGender(item["gender"]);
-//             std::string email = item["email"];
-//             std::string phone = item["phoneNum"];
-//             auto type = parseSpectatorType(item["type"]);
-//             std::string aff = item["affiliation"];
-
-//             switch(type) {
-//                 case SpectatorType::VIP:         vipCnt++; break;
-//                 case SpectatorType::Influencer:  infCnt++; break;
-//                 case SpectatorType::Streamer:    strCnt++; break;
-//                 case SpectatorType::Player:      plyCnt++; break;
-//                 default:                         norCnt++; break;
-//             }
-
-//             Spectator s{id, name, g, email, phone, type, aff};
-//             registrationQueue.enqueue(s);
-//             loaded++;
-//         }
-
-//         // hand off all to seatingManager
-//         while (!registrationQueue.isEmpty()) {
-//             auto s = registrationQueue.dequeue();
-//             seatingManager->addToEntryQueue(s, /*quiet=*/true);
-//         }
-
-//         std::cout << "\n=== PROCESSING SPECTATOR SEATING ===\n";
-//         seatingManager->processEntryQueue(/*verbose=*/true);
-//         std::cout << "=====================================\n";
-
-//         dataLoaded = true;
-//         std::cout << "Loaded " << loaded << " spectators.\n"
-//                   << "  VIP: " << vipCnt << "\n"
-//                   << "  Players: " << plyCnt << "\n"
-//                   << "  Influencers: " << infCnt << "\n"
-//                   << "  Streamers: " << strCnt << "\n"
-//                   << "  Normal: " << norCnt << "\n"
-//                   << "Use 'Display Queue' to view seating.\n";
-//     } catch (const std::exception &e) {
-//         std::cout << "JSON error: " << e.what() << "\n";
-//     }
-// }
-
-// void SpectatorRegistration::registerSpectator() {
-//     if (!dataLoaded) {
-//         std::cout << "\nLoading from JSON.\n";
-//         loadSpectatorsFromJSON();
-//         std::cout << "\n" << std::string(50, '=') << "\n";
-//         std::cout << "Done. Use 'Display Queue'.\n";
-//     } else {
-//         std::cout << "\nAlready loaded. Use 'Display Queue'.\n";
-//     }
-// }
-
-// void SpectatorRegistration::checkInSpectator() {
-//     if (registrationQueue.isEmpty()) {
-//         std::cout << "\nNo spectators waiting.\n";
-//         return;
-//     }
-//     auto s = registrationQueue.dequeue();
-//     std::cout << "\nChecked in: " << s.name
-//               << " (ID " << s.id << ", " << toString(s.type) << ")\n";
-// }
-
-// void SpectatorRegistration::displayQueue() {
-//     std::cout << "\n=== Live Stream & Spectator Management System ===\n";
-//     if (!dataLoaded) {
-//         std::cout << "No data loaded. Use 'Register Spectator'.\n";
-//         return;
-//     }
-//     std::cout << "Registration queue: "
-//               << (registrationQueue.isEmpty() ? "All seated"
-//                                               : std::to_string(registrationQueue.size()) + " waiting")
-//               << "\n\n";
-//     seatingManager->displaySeatingStatus();
-//     std::cout << "==========================================\n";
-// }
-
-
 // File: functions/SpectatorRegistration.cpp
 #include <iostream>
 #include <fstream>
+#include <cstdio>
 #include <nlohmann/json.hpp>
 #include "functions/SpectatorRegistration.hpp"
 
@@ -155,13 +9,14 @@ using json = nlohmann::json;
 
 SpectatorRegistration::SpectatorRegistration()
   : seatingManager(new SeatingManager(
-        /* VIP rows */          1,  /* seats/VIP row */      10,  // 10 VIP seats total
-        /* Infl rows */         2,  /* seats/Infl row */     5,   // 10 Influencer seats  
-        /* Streaming rooms */   5,  /* seats/stream room */  10,  // 5 rooms × 10 = 50 streaming seats
-        /* general capacity */  30  // 30 normal/general seats
+        /* VIP rows */          1,  /* seats/VIP row */      10,  // 10 VIP seats total per room
+        /* Infl rows */         2,  /* seats/Infl row */     5,   // 10 Influencer seats per room  
+        /* Streaming rooms */   5,  /* seats/stream room */  1,   // 5 streaming rooms × 1 streamer each = 5 streaming seats total
+        /* general capacity */  150 // 30 normal/general seats per room × 5 rooms = 150 total general seats
     )),
     waitingList(),
-    processed(false)
+    processed(false),
+    dataLoaded(false)
 {
     // Load spectators from JSON in a separate method to avoid include conflicts
     loadSpectatorsFromJSON();
@@ -225,6 +80,9 @@ void SpectatorRegistration::loadSpectatorsFromJSON() {
         // Now load check-in data to determine who actually checked in
         loadCheckInData();
         
+        // Mark that data has been loaded successfully
+        dataLoaded = true;
+        
     } catch (const std::exception& e) {
         std::cout << "Error parsing spectator JSON file: " << e.what() << "\n";
         std::cout << "No spectators loaded. You can add spectators manually.\n";
@@ -249,21 +107,36 @@ void SpectatorRegistration::loadCheckInData() {
         checkInFile >> checkInArray;
         checkInFile.close();
 
-        // Create a map of checked-in spectators with their check-in times
-        checkedInSpectators.clear();
+        // Load check-in data into our DoublyLinkedList
         for (const auto& checkIn : checkInArray) {
             std::string spectatorId = checkIn["spectatorId"];
             std::string checkInDateTime = checkIn["checkInDateTime"];
-            checkedInSpectators[spectatorId] = checkInDateTime;
+            
+            CheckInInfo info(spectatorId.c_str(), checkInDateTime.c_str());
+            checkedInSpectators.append(info);
         }
 
-        std::cout << "Loaded check-in data for " << checkedInSpectators.size() << " spectators.\n";
+        std::cout << "Loaded check-in data for " << checkedInSpectators.getSize() << " spectators.\n";
+        dataLoaded = true;
+
         
     } catch (const std::exception& e) {
         std::cout << "Error parsing check-in JSON file: " << e.what() << "\n";
         std::cout << "All registered spectators will be considered for seating.\n";
     }
 }
+
+CheckInInfo* SpectatorRegistration::findCheckInInfo(const char* spectatorId) {
+    for (int i = 0; i < checkedInSpectators.getSize(); i++) {
+        CheckInInfo* info = checkedInSpectators.get(i);
+        if (info && strcmp(info->spectatorId, spectatorId) == 0) {
+            return info;
+        }
+    }
+    return nullptr;
+}
+
+
 
 SpectatorRegistration::~SpectatorRegistration() {
     delete seatingManager;
@@ -357,24 +230,128 @@ void SpectatorRegistration::registerSpectator() {
 }
 
 void SpectatorRegistration::displayQueue() {
+    if (!dataLoaded) {
+        std::cout << "Error: Spectator data not loaded yet. Please ensure JSON files are accessible.\n";
+        return;
+    }
+    
     if (!processed) {
-        std::cout << "\n=== Assigning Seats ===\n";
-        while (waitingList.getSize() > 0) {
-            Spectator* firstSpectator = waitingList.get(0);
-            if (firstSpectator) {
-                Spectator s = *firstSpectator;
-                registrationQueue.enqueue(s);
-                seatingManager->addToEntryQueue(s, /*quiet=*/true);
-                waitingList.removeAt(0);
-            } else {
-                break;
+        std::cout << "\n=== Assigning Seats Based on Check-in Data ===\n";
+        
+        // Create separate lists for each spectator type
+        DoublyLinkedList<Spectator> vipSpectators;
+        DoublyLinkedList<Spectator> influencerSpectators;
+        DoublyLinkedList<Spectator> normalSpectators;
+        DoublyLinkedList<Spectator> streamerSpectators;
+        DoublyLinkedList<Spectator> playerSpectators;
+        
+        // Go through all registered spectators and separate those who checked in
+        for (int i = 0; i < waitingList.getSize(); i++) {
+            Spectator* spectator = waitingList.get(i);
+            if (spectator) {
+                // Convert spectator ID to string format (e.g., "S00001")
+                char spectatorIdStr[10];
+                sprintf(spectatorIdStr, "S%05d", spectator->id);
+                
+                // Check if this spectator has checked in
+                CheckInInfo* checkInInfo = findCheckInInfo(spectatorIdStr);
+                if (checkInInfo != nullptr) {
+                    // This spectator has checked in, add to appropriate priority list
+                    switch (spectator->type) {
+                        case SpectatorType::VIP:
+                            vipSpectators.append(*spectator);
+                            break;
+                        case SpectatorType::Influencer:
+                            influencerSpectators.append(*spectator);
+                            break;
+                        case SpectatorType::Streamer:
+                            streamerSpectators.append(*spectator);
+                            break;
+                        case SpectatorType::Player:
+                            playerSpectators.append(*spectator);
+                            break;
+                        case SpectatorType::Normal:
+                        default:
+                            normalSpectators.append(*spectator);
+                            break;
+                    }
+                }
             }
         }
-        seatingManager->processEntryQueue(/*verbose=*/true);
+        
+        int totalCheckedIn = vipSpectators.getSize() + influencerSpectators.getSize() + 
+                           normalSpectators.getSize() + streamerSpectators.getSize() + 
+                           playerSpectators.getSize();
+        
+        std::cout << "Processing " << totalCheckedIn << " checked-in spectators for seating...\n";
+        
+        // Process in priority order: VIP → Influencer → Normal → Streamer
+        // (Removed check-in time sorting to avoid CircularQueue issues)
+        
+        // Process VIP spectators
+        for (int i = 0; i < vipSpectators.getSize(); i++) {
+            Spectator* spectator = vipSpectators.get(i);
+            if (spectator) {
+                registrationQueue.enqueue(*spectator);
+                seatingManager->addToEntryQueue(*spectator, /*quiet=*/true);
+            }
+        }
+        
+        // Process Influencer spectators
+        for (int i = 0; i < influencerSpectators.getSize(); i++) {
+            Spectator* spectator = influencerSpectators.get(i);
+            if (spectator) {
+                registrationQueue.enqueue(*spectator);
+                seatingManager->addToEntryQueue(*spectator, /*quiet=*/true);
+            }
+        }
+        
+        // Process Normal spectators
+        for (int i = 0; i < normalSpectators.getSize(); i++) {
+            Spectator* spectator = normalSpectators.get(i);
+            if (spectator) {
+                registrationQueue.enqueue(*spectator);
+                seatingManager->addToEntryQueue(*spectator, /*quiet=*/true);
+            }
+        }
+        
+        // Process Streamer spectators
+        for (int i = 0; i < streamerSpectators.getSize(); i++) {
+            Spectator* spectator = streamerSpectators.get(i);
+            if (spectator) {
+                registrationQueue.enqueue(*spectator);
+                seatingManager->addToEntryQueue(*spectator, /*quiet=*/true);
+            }
+        }
+        
+        // Process Player spectators
+        for (int i = 0; i < playerSpectators.getSize(); i++) {
+            Spectator* spectator = playerSpectators.get(i);
+            if (spectator) {
+                registrationQueue.enqueue(*spectator);
+                seatingManager->addToEntryQueue(*spectator, /*quiet=*/true);
+            }
+        }
+        
+        seatingManager->processEntryQueue(/*verbose=*/false);
         processed = true;
     }
+    
     std::cout << "\n=== Current Seating Status ===\n";
     seatingManager->displaySeatingStatus();
+    
+    // Check if there's overflow and handle it
+    if (seatingManager->hasOverflow()) {
+        bool hadOverflowBefore = true;
+        seatingManager->handleOverflow();
+        
+        // Only show updated seating status if there's no more overflow (seats were added)
+        // If overflow still exists, it means users were rejected
+        if (!seatingManager->hasOverflow() && hadOverflowBefore) {
+            std::cout << "\n=== Updated Seating Status ===\n";
+            seatingManager->displaySeatingStatus();
+        }
+    }
 }
 
 void SpectatorRegistration::checkInSpectator() {

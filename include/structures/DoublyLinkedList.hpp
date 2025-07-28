@@ -1,7 +1,8 @@
 #ifndef DOUBLY_LINKED_LIST_HPP
 #define DOUBLY_LINKED_LIST_HPP
-
+// added functional header for std::function
 #include <iostream>
+#include <functional>
 
 template <typename T>
 class DoublyLinkedList {
