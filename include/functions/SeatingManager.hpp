@@ -11,10 +11,10 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include "dto/Spectator.hpp"
 #include "structures/Queue.hpp"
 #include "structures/CircularQueue.hpp"
+#include "structures/DoublyLinkedList.hpp"
 
 // Fixed layout constants
 static constexpr int VIP_ROWS            = 5;  // 5 rooms × 10 seats = 50 VIP seats total
@@ -70,9 +70,9 @@ public:
     void rejectOverflowUsers();
     
     // Helper methods for overflow handling
-    void handleOverflowWithMoreSeats(const std::vector<Spectator>& overflowSpectators);
-    void handleOverflowReassignment(const std::vector<Spectator>& overflowSpectators);
-    void handleOverflowManual(const std::vector<Spectator>& overflowSpectators);
+    void handleOverflowWithMoreSeats(const DoublyLinkedList<Spectator>& overflowSpectators);
+    void handleOverflowReassignment(const DoublyLinkedList<Spectator>& overflowSpectators);
+    void handleOverflowManual(const DoublyLinkedList<Spectator>& overflowSpectators);
 
 private:
     // Helpers for each category

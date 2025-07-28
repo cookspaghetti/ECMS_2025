@@ -487,7 +487,7 @@ void SeatingManager::handleOverflow() {
     std::cout << "\n=== Processing Overflow Queue ===\n";
     
     // First, reject all streamers immediately
-    std::vector<Spectator> nonStreamerOverflow;
+    DoublyLinkedList<Spectator> nonStreamerOverflow;
     
     while (!overflowQueue.isEmpty()) {
         Spectator s = overflowQueue.dequeue();
@@ -497,18 +497,21 @@ void SeatingManager::handleOverflow() {
             std::cout << "REJECTED: " << s.name << " (Streamer overflow not allowed - all streaming rooms full)\n";
             continue;
         } else {
-            nonStreamerOverflow.push_back(s);
+            nonStreamerOverflow.append(s);
         }
     }
     
-    if (nonStreamerOverflow.empty()) {
+    if (nonStreamerOverflow.getSize() == 0) {
         std::cout << "All overflow spectators were streamers and have been rejected.\n";
         return;
     }
     
-    std::cout << "\nNon-streamer overflow spectators: " << nonStreamerOverflow.size() << "\n";
-    for (const auto& s : nonStreamerOverflow) {
-        std::cout << "  - " << s.name << " (" << toString(s.type) << ")\n";
+    std::cout << "\nNon-streamer overflow spectators: " << nonStreamerOverflow.getSize() << "\n";
+    for (int i = 0; i < nonStreamerOverflow.getSize(); ++i) {
+        Spectator* s = nonStreamerOverflow.get(i);
+        if (s) {
+            std::cout << "  - " << s->name << " (" << toString(s->type) << ")\n";
+        }
     }
     
     // Provide options for handling non-streamer overflow
@@ -569,22 +572,25 @@ void SeatingManager::addMoreSeats() {
 }
 
 // Helper method for handling overflow with automatic seat addition
-void SeatingManager::handleOverflowWithMoreSeats(const std::vector<Spectator>& overflowSpectators) {
+void SeatingManager::handleOverflowWithMoreSeats(const DoublyLinkedList<Spectator>& overflowSpectators) {
     std::cout << "Attempting to expand seating capacity...\n";
     
-    for (const auto& s : overflowSpectators) {
+    for (int i = 0; i < overflowSpectators.getSize(); ++i) {
+        Spectator* s = overflowSpectators.get(i);
+        if (!s) continue;
+        
         bool assigned = false;
         
         // Try to assign to existing spaces first
-        switch (s.type) {
+        switch (s->type) {
             case SpectatorType::VIP:
-                assigned = assignVIPSeatPosition(s, false);
+                assigned = assignVIPSeatPosition(*s, false);
                 break;
             case SpectatorType::Influencer:
-                assigned = assignInfluencerSeat(s, false);
+                assigned = assignInfluencerSeat(*s, false);
                 break;
             case SpectatorType::Normal:
-                assigned = assignGeneralSeat(s, false);
+                assigned = assignGeneralSeat(*s, false);
                 break;
             default:
                 break;
@@ -592,52 +598,58 @@ void SeatingManager::handleOverflowWithMoreSeats(const std::vector<Spectator>& o
         
         if (!assigned) {
             // If general seating, try to add to general capacity
-            if (s.type == SpectatorType::Normal && generalOccupied < 200) {  // Allow expansion up to 200
+            if (s->type == SpectatorType::Normal && generalOccupied < 200) {  // Allow expansion up to 200
                 generalCapacity = std::min(200, generalCapacity + 10);  // Expand by 10
                 std::cout << "Expanded general seating capacity to " << generalCapacity << "\n";
-                assigned = assignGeneralSeat(s, false);
+                assigned = assignGeneralSeat(*s, false);
             }
         }
         
         if (!assigned) {
-            std::cout << "Could not assign even with expansion: " << s.name << "\n";
+            std::cout << "Could not assign even with expansion: " << s->name << "\n";
         }
     }
 }
 
 // Helper method for trying to reassign overflow spectators
-void SeatingManager::handleOverflowReassignment(const std::vector<Spectator>& overflowSpectators) {
-    for (const auto& s : overflowSpectators) {
-        std::cout << "Processing overflow spectator: " << s.name 
-                  << " (" << toString(s.type) << ")\n";
+void SeatingManager::handleOverflowReassignment(const DoublyLinkedList<Spectator>& overflowSpectators) {
+    for (int i = 0; i < overflowSpectators.getSize(); ++i) {
+        Spectator* s = overflowSpectators.get(i);
+        if (!s) continue;
+        
+        std::cout << "Processing overflow spectator: " << s->name 
+                  << " (" << toString(s->type) << ")\n";
         
         bool assigned = false;
-        switch (s.type) {
+        switch (s->type) {
             case SpectatorType::VIP:
-                assigned = assignVIPSeatPosition(s, false);
+                assigned = assignVIPSeatPosition(*s, false);
                 break;
             case SpectatorType::Influencer:
-                assigned = assignInfluencerSeat(s, false);
+                assigned = assignInfluencerSeat(*s, false);
                 break;
             case SpectatorType::Normal:
-                assigned = assignGeneralSeat(s, false);
+                assigned = assignGeneralSeat(*s, false);
                 break;
             default:
                 break;
         }
         
         if (!assigned) {
-            std::cout << "Could not assign overflow spectator: " << s.name << "\n";
+            std::cout << "Could not assign overflow spectator: " << s->name << "\n";
         }
     }
 }
 
 // Helper method for manual overflow handling
-void SeatingManager::handleOverflowManual(const std::vector<Spectator>& overflowSpectators) {
-    std::cout << "Manual seat addition for " << overflowSpectators.size() << " spectators:\n";
+void SeatingManager::handleOverflowManual(const DoublyLinkedList<Spectator>& overflowSpectators) {
+    std::cout << "Manual seat addition for " << overflowSpectators.getSize() << " spectators:\n";
     
-    for (const auto& s : overflowSpectators) {
-        std::cout << "\n--- " << s.name << " (" << toString(s.type) << ") ---\n";
+    for (int i = 0; i < overflowSpectators.getSize(); ++i) {
+        Spectator* s = overflowSpectators.get(i);
+        if (!s) continue;
+        
+        std::cout << "\n--- " << s->name << " (" << toString(s->type) << ") ---\n";
         std::cout << "1. Try to assign to existing space\n";
         std::cout << "2. Add to general seating (expand capacity)\n";
         std::cout << "3. Reject this spectator\n";
@@ -649,40 +661,40 @@ void SeatingManager::handleOverflowManual(const std::vector<Spectator>& overflow
         switch (choice) {
             case 1: {
                 bool assigned = false;
-                switch (s.type) {
+                switch (s->type) {
                     case SpectatorType::VIP:
-                        assigned = assignVIPSeatPosition(s, false);
+                        assigned = assignVIPSeatPosition(*s, false);
                         break;
                     case SpectatorType::Influencer:
-                        assigned = assignInfluencerSeat(s, false);
+                        assigned = assignInfluencerSeat(*s, false);
                         break;
                     case SpectatorType::Normal:
-                        assigned = assignGeneralSeat(s, false);
+                        assigned = assignGeneralSeat(*s, false);
                         break;
                     default:
                         break;
                 }
                 if (!assigned) {
-                    std::cout << "Assignment failed for " << s.name << "\n";
+                    std::cout << "Assignment failed for " << s->name << "\n";
                 }
                 break;
             }
             case 2:
-                if (s.type == SpectatorType::Normal) {
+                if (s->type == SpectatorType::Normal) {
                     generalCapacity = std::min(200, generalCapacity + 1);
                     std::cout << "Expanded general capacity to " << generalCapacity << "\n";
-                    if (!assignGeneralSeat(s, false)) {
-                        std::cout << "Assignment still failed for " << s.name << "\n";
+                    if (!assignGeneralSeat(*s, false)) {
+                        std::cout << "Assignment still failed for " << s->name << "\n";
                     }
                 } else {
                     std::cout << "Can only expand general seating for normal spectators\n";
                 }
                 break;
             case 3:
-                std::cout << "REJECTED: " << s.name << "\n";
+                std::cout << "REJECTED: " << s->name << "\n";
                 break;
             default:
-                std::cout << "Invalid choice. REJECTED: " << s.name << "\n";
+                std::cout << "Invalid choice. REJECTED: " << s->name << "\n";
         }
     }
 }
