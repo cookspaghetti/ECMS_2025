@@ -1,36 +1,35 @@
-#ifndef SPECTATORREGISTRATION_HPP
-#define SPECTATORREGISTRATION_HPP
+// File: functions/SpectatorRegistration.hpp
+#ifndef FUNCTIONS_SPECTATORREGISTRATION_HPP
+#define FUNCTIONS_SPECTATORREGISTRATION_HPP
 
-#include <string>
-#include "dto/Spectator.hpp"
+#include "structures/Queue.hpp"
 #include "functions/SeatingManager.hpp"
-#include "structures/CircularQueue.hpp"
+#include "structures/DoublyLinkedList.hpp"
+#include "dto/Spectator.hpp"
 
 class SpectatorRegistration {
 public:
     SpectatorRegistration();
     ~SpectatorRegistration();
 
-    // user-facing operations
+    /// Register spectator - offers both JSON loading and manual entry options
     void registerSpectator();
-    void checkInSpectator();
+
+    /// Loads everyone into the queue, assigns seats, then shows status.
     void displayQueue();
-    void displaySeatingStatus();
-    bool hasWaitingSpectators() const;
-    Spectator getNextSpectator();
-    void implementEmergencySeating(int additionalCapacity);
+
+    /// Optional: manually dequeue/check-in one spectator.
+    void checkInSpectator();
 
 private:
-    // parsing helpers
-    SpectatorType parseSpectatorType(const std::string& typeStr);
-    Gender        parseGender(const std::string& genderStr);
-    void          loadSpectatorsFromJSON();
+    Queue<Spectator>            registrationQueue;
+    SeatingManager*                         seatingManager;
+    DoublyLinkedList<Spectator> waitingList;   // all spectators loaded at startup
+    bool                                    processed;     // have we already assigned seats?
 
-    // internal state
-    int                              nextSpectatorId;
-    SeatingManager*                  seatingManager;
-    CircularQueue<Spectator>         registrationQueue;
-    bool                             dataLoaded;
+    // Helper method for loading JSON data
+    void loadSpectatorsFromJSON();
 };
 
-#endif // SPECTATORREGISTRATION_HPP
+#endif // FUNCTIONS_SPECTATORREGISTRATION_HPP
+

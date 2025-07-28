@@ -45,119 +45,6 @@ int GameResultLogger::findPlayerIndex(int playerId) const {
     return -1; // Not found
 }
 
-std::string GameResultLogger::championToString(Champion champion) const {
-    switch (champion) {
-        case Champion::Ahri: return "Ahri";
-        case Champion::Akali: return "Akali";
-        case Champion::Alistar: return "Alistar";
-        case Champion::Ashe: return "Ashe";
-        case Champion::Azir: return "Azir";
-        case Champion::Braum: return "Braum";
-        case Champion::Cassiopeia: return "Cassiopeia";
-        case Champion::Darius: return "Darius";
-        case Champion::Draven: return "Draven";
-        case Champion::Ezreal: return "Ezreal";
-        case Champion::Fiora: return "Fiora";
-        case Champion::Fizz: return "Fizz";
-        case Champion::Garen: return "Garen";
-        case Champion::Graves: return "Graves";
-        case Champion::Janna: return "Janna";
-        case Champion::Jax: return "Jax";
-        case Champion::Jhin: return "Jhin";
-        case Champion::Jinx: return "Jinx";
-        case Champion::Karma: return "Karma";
-        case Champion::Karthus: return "Karthus";
-        case Champion::Katarina: return "Katarina";
-        case Champion::KhaZix: return "Kha'Zix";
-        case Champion::LeeSin: return "Lee Sin";
-        case Champion::Leona: return "Leona";
-        case Champion::Lissandra: return "Lissandra";
-        case Champion::Lulu: return "Lulu";
-        case Champion::Lux: return "Lux";
-        case Champion::Malphite: return "Malphite";
-        case Champion::MissFortune: return "Miss Fortune";
-        case Champion::Morgana: return "Morgana";
-        case Champion::Nami: return "Nami";
-        case Champion::Nautilus: return "Nautilus";
-        case Champion::Orianna: return "Orianna";
-        case Champion::Rengar: return "Rengar";
-        case Champion::Riven: return "Riven";
-        case Champion::Ryze: return "Ryze";
-        case Champion::Sona: return "Sona";
-        case Champion::Soraka: return "Soraka";
-        case Champion::Syndra: return "Syndra";
-        case Champion::Taric: return "Taric";
-        case Champion::Teemo: return "Teemo";
-        case Champion::Thresh: return "Thresh";
-        case Champion::TwistedFate: return "Twisted Fate";
-        case Champion::Twitch: return "Twitch";
-        case Champion::Vayne: return "Vayne";
-        case Champion::VelKoz: return "Vel'Koz";
-        case Champion::Viktor: return "Viktor";
-        case Champion::Xerath: return "Xerath";
-        case Champion::Yasuo: return "Yasuo";
-        case Champion::Zed: return "Zed";
-        case Champion::Zyra: return "Zyra";
-        default: return "Unknown";
-    }
-}
-
-Champion GameResultLogger::stringToChampion(const std::string& championName) const {
-    if (championName == "Ahri") return Champion::Ahri;
-    if (championName == "Akali") return Champion::Akali;
-    if (championName == "Alistar") return Champion::Alistar;
-    if (championName == "Ashe") return Champion::Ashe;
-    if (championName == "Azir") return Champion::Azir;
-    if (championName == "Braum") return Champion::Braum;
-    if (championName == "Cassiopeia") return Champion::Cassiopeia;
-    if (championName == "Darius") return Champion::Darius;
-    if (championName == "Draven") return Champion::Draven;
-    if (championName == "Ezreal") return Champion::Ezreal;
-    if (championName == "Fiora") return Champion::Fiora;
-    if (championName == "Fizz") return Champion::Fizz;
-    if (championName == "Garen") return Champion::Garen;
-    if (championName == "Graves") return Champion::Graves;
-    if (championName == "Janna") return Champion::Janna;
-    if (championName == "Jax") return Champion::Jax;
-    if (championName == "Jhin") return Champion::Jhin;
-    if (championName == "Jinx") return Champion::Jinx;
-    if (championName == "Karma") return Champion::Karma;
-    if (championName == "Karthus") return Champion::Karthus;
-    if (championName == "Katarina") return Champion::Katarina;
-    if (championName == "KhaZix" || championName == "Kha'Zix") return Champion::KhaZix;
-    if (championName == "LeeSin" || championName == "Lee Sin") return Champion::LeeSin;
-    if (championName == "Leona") return Champion::Leona;
-    if (championName == "Lissandra") return Champion::Lissandra;
-    if (championName == "Lulu") return Champion::Lulu;
-    if (championName == "Lux") return Champion::Lux;
-    if (championName == "Malphite") return Champion::Malphite;
-    if (championName == "MissFortune" || championName == "Miss Fortune") return Champion::MissFortune;
-    if (championName == "Morgana") return Champion::Morgana;
-    if (championName == "Nami") return Champion::Nami;
-    if (championName == "Nautilus") return Champion::Nautilus;
-    if (championName == "Orianna") return Champion::Orianna;
-    if (championName == "Rengar") return Champion::Rengar;
-    if (championName == "Riven") return Champion::Riven;
-    if (championName == "Ryze") return Champion::Ryze;
-    if (championName == "Sona") return Champion::Sona;
-    if (championName == "Soraka") return Champion::Soraka;
-    if (championName == "Syndra") return Champion::Syndra;
-    if (championName == "Taric") return Champion::Taric;
-    if (championName == "Teemo") return Champion::Teemo;
-    if (championName == "Thresh") return Champion::Thresh;
-    if (championName == "TwistedFate" || championName == "Twisted Fate") return Champion::TwistedFate;
-    if (championName == "Twitch") return Champion::Twitch;
-    if (championName == "Vayne") return Champion::Vayne;
-    if (championName == "VelKoz" || championName == "Vel'Koz") return Champion::VelKoz;
-    if (championName == "Viktor") return Champion::Viktor;
-    if (championName == "Xerath") return Champion::Xerath;
-    if (championName == "Yasuo") return Champion::Yasuo;
-    if (championName == "Zed") return Champion::Zed;
-    if (championName == "Zyra") return Champion::Zyra;
-    if (championName == "NoChampion") return Champion::NoChampion;
-    return Champion::NoChampion; // Default for unknown champions
-}
-
 std::string GameResultLogger::stageToString(TournamentStage stage) const {
     switch (stage) {
         case TournamentStage::Qualifiers: return "Qualifiers";
@@ -300,7 +187,7 @@ void GameResultLogger::displayPlayerPerformance(int playerId) const {
     std::cout << "Win Rate: " << std::fixed << std::setprecision(1) << stats.winRate << "%\n";
     std::cout << "Current Win Streak: " << stats.currentWinStreak << "\n";
     std::cout << "Longest Win Streak: " << stats.longestWinStreak << "\n";
-    std::cout << "Most Used Champion: " << championToString(stats.mostUsedChampion) << "\n";
+    std::cout << "Most Used Champion: " << "Champion#" << static_cast<int>(stats.mostUsedChampion) << "\n";
     std::cout << "Average Game Duration: " << std::fixed << std::setprecision(1) 
               << stats.averageGameDuration << " minutes\n";
     std::cout << "Last Match: " << stats.lastMatchDate << "\n";
@@ -491,7 +378,7 @@ void GameResultLogger::searchMatchesByMatchId(int matchId) const {
             std::cout << "Player " << matchPlayerInfo[i].player1Id << " Champions: ";
             for (int j = 0; j < Result::TEAM_SIZE; j++) {
                 if (loadedResults[i].championsP1[j] != Champion::NoChampion) {
-                    std::cout << championToString(loadedResults[i].championsP1[j]);
+                    std::cout << "Champion#" << static_cast<int>(loadedResults[i].championsP1[j]);
                     if (j < Result::TEAM_SIZE - 1 && loadedResults[i].championsP1[j+1] != Champion::NoChampion) {
                         std::cout << ", ";
                     }
@@ -500,7 +387,7 @@ void GameResultLogger::searchMatchesByMatchId(int matchId) const {
             std::cout << "\nPlayer " << matchPlayerInfo[i].player2Id << " Champions: ";
             for (int j = 0; j < Result::TEAM_SIZE; j++) {
                 if (loadedResults[i].championsP2[j] != Champion::NoChampion) {
-                    std::cout << championToString(loadedResults[i].championsP2[j]);
+                    std::cout << "Champion#" << static_cast<int>(loadedResults[i].championsP2[j]);
                     if (j < Result::TEAM_SIZE - 1 && loadedResults[i].championsP2[j+1] != Champion::NoChampion) {
                         std::cout << ", ";
                     }
@@ -714,7 +601,7 @@ void GameResultLogger::displayChampionUsageStats() const {
         if (totalChampionUsage[i] > 0) {
             Champion currentChampion = static_cast<Champion>(i);
             int currentUsage = totalChampionUsage[i];
-            string currentName = championToString(currentChampion);
+            string currentName = "Champion#" + std::to_string(i);
             
             // Insert into top 10 if usage is high enough
             for (int j = 0; j < 10; ++j) {
@@ -842,7 +729,7 @@ void GameResultLogger::exportPlayerStatistics() const {
                  << fixed << setprecision(2) << stats.winRate << ","
                  << stats.currentWinStreak << ","
                  << stats.longestWinStreak << ","
-                 << championToString(stats.mostUsedChampion) << ","
+                 << "Champion#" << static_cast<int>(stats.mostUsedChampion) << ","
                  << fixed << setprecision(1) << stats.averageGameDuration << ","
                  << stats.lastMatchDate << "\n";
         }
@@ -879,11 +766,6 @@ void GameResultLogger::clearAllData() {
     playerCount = 0;
     
     std::cout << "All game result data cleared.\n";
-}
-
-void GameResultLogger::initializeSampleData() {
-    std::cout << "Sample data initialization is disabled. Loading data from JSON files instead.\n";
-    std::cout << "Use loadResultsFromJSON() to load actual match data.\n";
 }
 
 void GameResultLogger::loadResultsFromJSON() {
@@ -932,7 +814,7 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
             for (int i = 0; i < Result::TEAM_SIZE; ++i) {
                 if (i < (int)p1Champions.size()) {
                     std::string championName = p1Champions[i];
-                    championsP1[i] = stringToChampion(championName);
+                    championsP1[i] = Champion::NoChampion; // Load from JSON - champion mapping removed
                 } else {
                     championsP1[i] = Champion::NoChampion;
                 }
@@ -944,7 +826,7 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
             for (int i = 0; i < Result::TEAM_SIZE; ++i) {
                 if (i < (int)p2Champions.size()) {
                     std::string championName = p2Champions[i];
-                    championsP2[i] = stringToChampion(championName);
+                    championsP2[i] = Champion::NoChampion; // Load from JSON - champion mapping removed
                 } else {
                     championsP2[i] = Champion::NoChampion;
                 }
@@ -1048,8 +930,8 @@ void GameResultLogger::displayLoadedResults() const {
                   << std::setw(8) << result.gamesPlayed
                   << std::setw(10) << result.score
                   << std::setw(10) << playerInfo.winnerId
-                  << std::setw(12) << championToString(result.championsP1[0]).substr(0, 11)
-                  << championToString(result.championsP2[0]).substr(0, 11) << "\n";
+                  << std::setw(12) << ("Champ#" + std::to_string(static_cast<int>(result.championsP1[0]))).substr(0, 11)
+                  << ("Champ#" + std::to_string(static_cast<int>(result.championsP2[0]))).substr(0, 11) << "\n";
     }
     
     std::cout << "\nTotal loaded results: " << loadedResultsCount << "\n";
@@ -1162,7 +1044,7 @@ void GameResultLogger::displayPlayerFavoriteChampions() const {
             
             std::cout << std::setw(12) << stats.playerId
                       << std::setw(20) << stats.playerName
-                      << std::setw(20) << championToString(stats.mostUsedChampion)
+                      << std::setw(20) << ("Champion#" + std::to_string(static_cast<int>(stats.mostUsedChampion)))
                       << maxUsage << "\n";
         }
     }
@@ -1189,7 +1071,7 @@ void GameResultLogger::displayComprehensivePlayerStats() const {
             std::cout << "Longest Win Streak: " << stats.longestWinStreak << "\n";
             
             if (stats.mostUsedChampion != Champion::NoChampion) {
-                std::cout << "Most Used Champion: " << championToString(stats.mostUsedChampion) << "\n";
+                std::cout << "Most Used Champion: " << "Champion#" << static_cast<int>(stats.mostUsedChampion) << "\n";
             }
             
             // Show top 3 champions if available
@@ -1198,7 +1080,7 @@ void GameResultLogger::displayComprehensivePlayerStats() const {
             for (int j = 0; j < 52 && shownChampions < 3; ++j) {
                 if (stats.championUsageCount[j] > 0) {
                     if (shownChampions > 0) std::cout << ", ";
-                    std::cout << championToString(static_cast<Champion>(j)) 
+                    std::cout << "Champion#" << j 
                              << "(" << stats.championUsageCount[j] << ")";
                     shownChampions++;
                 }

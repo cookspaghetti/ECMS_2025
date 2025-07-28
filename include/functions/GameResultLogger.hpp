@@ -206,8 +206,6 @@ private:
     
     // Helper functions
     int findPlayerIndex(int playerId) const;
-    std::string championToString(Champion champion) const;
-    Champion stringToChampion(const std::string& championName) const;
     std::string stageToString(TournamentStage stage) const;
     std::string matchTypeToString(MatchType type) const;
     float generateRandomDuration(MatchType type) const; // Simulate match duration
@@ -241,7 +239,6 @@ public:
     int getTotalMatchesLogged() const;
     bool hasPlayerData(int playerId) const;
     void clearAllData();
-    void initializeSampleData(); // Disabled - data loaded from JSON instead
     
     // JSON Data Loading
     void loadResultsFromJSON();

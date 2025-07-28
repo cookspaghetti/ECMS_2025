@@ -1,3 +1,11 @@
+// 5 streamers rooms
+// 10 vip, 30 normal seats
+// vip, influcencer, general, late comer
+// vip : [A1], [id]
+// [empty]
+// bottom is streamer room (is diff with spectator room)
+// streamer first row id, second row platform
+
 #ifndef FUNCTIONS_SEATINGMANAGER_HPP
 #define FUNCTIONS_SEATINGMANAGER_HPP
 
@@ -8,7 +16,7 @@
 #include "structures/CircularQueue.hpp"
 
 // Fixed layout constants
-static constexpr int VIP_ROWS            = 3;
+static constexpr int VIP_ROWS            = 1;  // 1 row × 10 seats = 10 VIP seats
 static constexpr int SEATS_PER_ROW       = 10;
 static constexpr int MAX_STREAMING_ROOMS = 5;
 

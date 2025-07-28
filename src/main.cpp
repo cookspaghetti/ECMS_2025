@@ -127,7 +127,6 @@ void handleSpectatorQueue() {
 
         switch (choice) {
             case 1:
-                std::cout << "Registering spectator...\n";
                 spectatorReg.registerSpectator();
                 break;
             case 2:

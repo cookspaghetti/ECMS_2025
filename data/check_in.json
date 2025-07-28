@@ -1,0 +1,502 @@
+﻿[
+    {
+        "checkInDateTime":  "2025-01-15 10:06:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "Facebook",
+        "spectatorId":  "S00039",
+        "checkedIn":  true,
+        "name":  "Riley Lopez",
+        "type":  "Influencer",
+        "checkInTime":  "10:06:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 08:26:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "",
+        "spectatorId":  "S00038",
+        "checkedIn":  true,
+        "name":  "Riley Jones",
+        "type":  "Normal",
+        "checkInTime":  "08:26:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 14:29:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "TikTok",
+        "spectatorId":  "S00036",
+        "checkedIn":  true,
+        "name":  "Charlie Martinez",
+        "type":  "Influencer",
+        "checkInTime":  "14:29:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 16:59:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "YouTube",
+        "spectatorId":  "S00042",
+        "checkedIn":  true,
+        "name":  "Morgan Jones",
+        "type":  "Streamer",
+        "checkInTime":  "16:59:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 16:49:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "Facebook",
+        "spectatorId":  "S00041",
+        "checkedIn":  true,
+        "name":  "Skyler Williams",
+        "type":  "Influencer",
+        "checkInTime":  "16:49:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 08:59:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "",
+        "spectatorId":  "S00040",
+        "checkedIn":  true,
+        "name":  "Casey Khan",
+        "type":  "Normal",
+        "checkInTime":  "08:59:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 13:06:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00032",
+        "checkedIn":  true,
+        "name":  "Morgan Brown",
+        "type":  "Normal",
+        "checkInTime":  "13:06:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 09:11:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Bilibili",
+        "spectatorId":  "S00031",
+        "checkedIn":  true,
+        "name":  "Riley Garcia",
+        "type":  "Streamer",
+        "checkInTime":  "09:11:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 17:11:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00030",
+        "checkedIn":  true,
+        "name":  "Avery Muller",
+        "type":  "VIP",
+        "checkInTime":  "17:11:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 15:12:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00035",
+        "checkedIn":  true,
+        "name":  "Casey Brown",
+        "type":  "VIP",
+        "checkInTime":  "15:12:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 10:57:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "Alpha Wolves",
+        "spectatorId":  "S00034",
+        "checkedIn":  true,
+        "name":  "Taylor Garcia",
+        "type":  "Player",
+        "checkInTime":  "10:57:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 18:13:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00033",
+        "checkedIn":  true,
+        "name":  "Avery Davis",
+        "type":  "VIP",
+        "checkInTime":  "18:13:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 09:18:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "Huya",
+        "spectatorId":  "S00043",
+        "checkedIn":  true,
+        "name":  "Cameron Jones",
+        "type":  "Streamer",
+        "checkInTime":  "09:18:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 15:11:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "Twitch",
+        "spectatorId":  "S00053",
+        "checkedIn":  true,
+        "name":  "StreamerThree Gamma",
+        "type":  "Streamer",
+        "checkInTime":  "15:11:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 15:26:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "YouTube",
+        "spectatorId":  "S00052",
+        "checkedIn":  true,
+        "name":  "StreamerTwo Beta",
+        "type":  "Streamer",
+        "checkInTime":  "15:26:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 09:56:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "Twitch",
+        "spectatorId":  "S00051",
+        "checkedIn":  true,
+        "name":  "StreamerOne Alpha",
+        "type":  "Streamer",
+        "checkInTime":  "09:56:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 16:13:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "YouTube",
+        "spectatorId":  "S00056",
+        "checkedIn":  true,
+        "name":  "StreamerSix Overflow",
+        "type":  "Streamer",
+        "checkInTime":  "16:13:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 14:27:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "Twitch",
+        "spectatorId":  "S00055",
+        "checkedIn":  true,
+        "name":  "StreamerFive Epsilon",
+        "type":  "Streamer",
+        "checkInTime":  "14:27:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 17:23:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Facebook Gaming",
+        "spectatorId":  "S00054",
+        "checkedIn":  true,
+        "name":  "StreamerFour Delta",
+        "type":  "Streamer",
+        "checkInTime":  "17:23:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 08:54:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00046",
+        "checkedIn":  true,
+        "name":  "Drew Brown",
+        "type":  "VIP",
+        "checkInTime":  "08:54:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 09:39:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Crimson Hawks",
+        "spectatorId":  "S00045",
+        "checkedIn":  true,
+        "name":  "Charlie Khan",
+        "type":  "Player",
+        "checkInTime":  "09:39:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 12:03:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Facebook",
+        "spectatorId":  "S00044",
+        "checkedIn":  true,
+        "name":  "Quinn Smith",
+        "type":  "Influencer",
+        "checkInTime":  "12:03:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 11:47:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Instagram",
+        "spectatorId":  "S00050",
+        "checkedIn":  true,
+        "name":  "Drew Jones",
+        "type":  "Influencer",
+        "checkInTime":  "11:47:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 10:24:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00049",
+        "checkedIn":  true,
+        "name":  "Charlie Brown",
+        "type":  "VIP",
+        "checkInTime":  "10:24:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 16:54:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "YouTube",
+        "spectatorId":  "S00048",
+        "checkedIn":  true,
+        "name":  "Charlie Johnson",
+        "type":  "Streamer",
+        "checkInTime":  "16:54:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 12:36:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "",
+        "spectatorId":  "S00010",
+        "checkedIn":  true,
+        "name":  "Quinn Patel",
+        "type":  "Normal",
+        "checkInTime":  "12:36:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 10:21:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00009",
+        "checkedIn":  true,
+        "name":  "Peyton Khan",
+        "type":  "Normal",
+        "checkInTime":  "10:21:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 08:30:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00008",
+        "checkedIn":  true,
+        "name":  "Riley Davis",
+        "type":  "VIP",
+        "checkInTime":  "08:30:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 16:23:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00014",
+        "checkedIn":  true,
+        "name":  "Casey Brown",
+        "type":  "Normal",
+        "checkInTime":  "16:23:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 08:27:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "Facebook",
+        "spectatorId":  "S00013",
+        "checkedIn":  true,
+        "name":  "Charlie Muller",
+        "type":  "Influencer",
+        "checkInTime":  "08:27:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 15:30:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00012",
+        "checkedIn":  true,
+        "name":  "Quinn Patel",
+        "type":  "VIP",
+        "checkInTime":  "15:30:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 12:11:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Twitch",
+        "spectatorId":  "S00004",
+        "checkedIn":  true,
+        "name":  "Drew Muller",
+        "type":  "Streamer",
+        "checkInTime":  "12:11:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 08:56:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00003",
+        "checkedIn":  true,
+        "name":  "Peyton Lopez",
+        "type":  "Normal",
+        "checkInTime":  "08:56:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 10:56:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00001",
+        "checkedIn":  true,
+        "name":  "Morgan Davis",
+        "type":  "VIP",
+        "checkInTime":  "10:56:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 16:24:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00007",
+        "checkedIn":  true,
+        "name":  "Drew Garcia",
+        "type":  "VIP",
+        "checkInTime":  "16:24:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 09:34:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00006",
+        "checkedIn":  true,
+        "name":  "Jordan Davis",
+        "type":  "Normal",
+        "checkInTime":  "09:34:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 15:08:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "TikTok",
+        "spectatorId":  "S00005",
+        "checkedIn":  true,
+        "name":  "Taylor Brown",
+        "type":  "Influencer",
+        "checkInTime":  "15:08:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 15:54:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "TikTok",
+        "spectatorId":  "S00015",
+        "checkedIn":  true,
+        "name":  "Peyton Lee",
+        "type":  "Influencer",
+        "checkInTime":  "15:54:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 14:40:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00025",
+        "checkedIn":  true,
+        "name":  "Jordan Khan",
+        "type":  "VIP",
+        "checkInTime":  "14:40:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 14:44:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Alpha Wolves",
+        "spectatorId":  "S00024",
+        "checkedIn":  true,
+        "name":  "Casey Smith",
+        "type":  "Player",
+        "checkInTime":  "14:44:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 12:39:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00023",
+        "checkedIn":  true,
+        "name":  "Riley Patel",
+        "type":  "Normal",
+        "checkInTime":  "12:39:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 18:57:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "Twitter",
+        "spectatorId":  "S00028",
+        "checkedIn":  true,
+        "name":  "Cameron Brown",
+        "type":  "Influencer",
+        "checkInTime":  "18:57:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 13:08:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "",
+        "spectatorId":  "S00027",
+        "checkedIn":  true,
+        "name":  "Riley Khan",
+        "type":  "Normal",
+        "checkInTime":  "13:08:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 09:23:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00026",
+        "checkedIn":  true,
+        "name":  "Jordan Williams",
+        "type":  "Normal",
+        "checkInTime":  "09:23:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 10:38:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00019",
+        "checkedIn":  true,
+        "name":  "Quinn Johnson",
+        "type":  "Normal",
+        "checkInTime":  "10:38:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 08:55:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "Huya",
+        "spectatorId":  "S00017",
+        "checkedIn":  true,
+        "name":  "Alex Lopez",
+        "type":  "Streamer",
+        "checkInTime":  "08:55:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-17 08:56:00",
+        "checkInDate":  "2025-01-17",
+        "affiliation":  "",
+        "spectatorId":  "S00016",
+        "checkedIn":  true,
+        "name":  "Quinn Patel",
+        "type":  "Normal",
+        "checkInTime":  "08:56:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-16 16:00:00",
+        "checkInDate":  "2025-01-16",
+        "affiliation":  "",
+        "spectatorId":  "S00022",
+        "checkedIn":  true,
+        "name":  "Charlie Garcia",
+        "type":  "Normal",
+        "checkInTime":  "16:00:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 17:46:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "Blue Titans",
+        "spectatorId":  "S00021",
+        "checkedIn":  true,
+        "name":  "Riley Jones",
+        "type":  "Player",
+        "checkInTime":  "17:46:00"
+    },
+    {
+        "checkInDateTime":  "2025-01-15 13:59:00",
+        "checkInDate":  "2025-01-15",
+        "affiliation":  "",
+        "spectatorId":  "S00020",
+        "checkedIn":  true,
+        "name":  "Avery Lopez",
+        "type":  "VIP",
+        "checkInTime":  "13:59:00"
+    }
+]
