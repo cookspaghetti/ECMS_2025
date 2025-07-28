@@ -96,6 +96,18 @@ public:
         }
     }
 
+    T* search(const std::function<bool(const T&)>& predicate) const {
+        Node* current = head;
+        while (current) {
+            if (predicate(current->data)) {
+                return &current->data;
+            }
+            current = current->next;
+        }
+        return nullptr;
+    }
+
+
     // Iteration support
     class Iterator {
     private:

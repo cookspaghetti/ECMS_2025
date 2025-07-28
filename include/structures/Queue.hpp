@@ -1,6 +1,8 @@
 #ifndef QUEUE_HPP
 #define QUEUE_HPP
 
+#include <iostream>
+
 template <typename T>
 class Queue {
 private:
