@@ -1,6 +1,8 @@
 #ifndef PRIORITYQUEUE_HPP
 #define PRIORITYQUEUE_HPP
 
+#include <iostream>
+
 template <typename T>
 class PriorityQueue {
 private:
@@ -27,6 +29,7 @@ public:
     bool isEmpty() const;
     bool isFull() const;
     int getSize() const;
+    void display() const;  // Display all items in priority order
 };
 
 template <typename T>
@@ -120,6 +123,20 @@ template <typename T>
 T PriorityQueue<T>::peek() const {
     if (isEmpty()) return T();
     return heap[0].data;
+}
+
+template <typename T>
+void PriorityQueue<T>::display() const {
+    if (isEmpty()) {
+        std::cout << "Priority Queue is empty.\n";
+        return;
+    }
+    
+    std::cout << "Priority Queue contents (Priority: Data):\n";
+    for (int i = 0; i < size; i++) {
+        std::cout << "Priority " << heap[i].priority << ": " << heap[i].data << "\n";
+    }
+    std::cout << "Total items: " << size << "\n";
 }
 
 #endif
