@@ -22,6 +22,7 @@ public:
             championsP2[i] = Champion::NoChampion;
         }
     }
+    
     Result(int id, int matchId, int gamesPlayed, const std::string& score,
            Champion championsP1[TEAM_SIZE], Champion championsP2[TEAM_SIZE], int winnerId)
         : id(id), matchId(matchId), gamesPlayed(gamesPlayed), score(score), winnerId(winnerId) {
@@ -31,5 +32,20 @@ public:
         }
     }
 };
+
+inline Champion championFromString(const std::string& str) {
+    if (str == "Akali") return Champion::Akali;
+    if (str == "Ezreal") return Champion::Ezreal;
+    if (str == "Fiora") return Champion::Fiora;
+    if (str == "Fizz") return Champion::Fizz;
+    if (str == "Garen") return Champion::Garen;
+    if (str == "Jax") return Champion::Jax;
+    if (str == "Katarina") return Champion::Katarina;
+    if (str == "LeeSin") return Champion::LeeSin;
+    if (str == "Riven") return Champion::Riven;
+    if (str == "Yasuo") return Champion::Yasuo;
+    if (str == "Zed") return Champion::Zed;
+    return Champion::NoChampion;
+}
 
 #endif
