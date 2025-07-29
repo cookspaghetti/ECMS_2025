@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "functions/PlayerRegistration.hpp"
 #include "functions/SpectatorRegistration.hpp"
 #include "functions/GameResultLogger.hpp"
@@ -142,7 +143,6 @@ void handleSpectatorQueue() {
 }
 
 void handleResultLogging() {
-    std::string input;
     int choice;
     
     do {
@@ -154,11 +154,11 @@ void handleResultLogging() {
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
         
-        std::getline(std::cin, input);
-        try {
-            choice = std::stoi(input);
-        } catch (...) {
-            choice = -1; // Invalid input
+        if (!(std::cin >> choice)) {
+            // Input failed, clear error state and ignore bad input
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            choice = -1; // Set to invalid choice to trigger default case
         }
 
         switch (choice) {
@@ -169,7 +169,8 @@ void handleResultLogging() {
             case 2: {
                 std::cout << "=== PLAYER SEARCH ===\n";
                 std::cout << "Enter Player ID to search: ";
-                std::getline(std::cin, input);
+                std::string input;
+                std::cin >> input;
                 int playerId;
                 try {
                     playerId = std::stoi(input);
@@ -189,7 +190,8 @@ void handleResultLogging() {
             case 3: {
                 std::cout << "=== TOURNAMENT SEARCH ===\n";
                 std::cout << "Enter Tournament/Match ID to search: ";
-                std::getline(std::cin, input);
+                std::string input;
+                std::cin >> input;
                 int tournamentId;
                 try {
                     tournamentId = std::stoi(input);
@@ -206,7 +208,7 @@ void handleResultLogging() {
                 std::cout << "=== CHAMPION STATISTICS ===\n";
                 std::cout << "Enter Champion name to search: ";
                 std::string championName;
-                std::getline(std::cin, championName);
+                std::cin >> championName;
                 
                 // Show champion-specific statistics (data already loaded)
                 std::cout << "\n=== STATISTICS FOR CHAMPION: " << championName << " ===\n";
@@ -222,11 +224,6 @@ void handleResultLogging() {
                 break;
             default:
                 std::cout << "Invalid option. Try again.\n";
-        }
-        
-        if (choice != 0) {
-            std::cout << "\nPress Enter to continue...";
-            std::cin.get();
         }
         
     } while (choice != 0);

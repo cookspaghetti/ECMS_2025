@@ -43,6 +43,7 @@ public:
 private:
     Queue<Spectator>            registrationQueue;
     SeatingManager*                         seatingManager;
+    // use queue dont use list 
     DoublyLinkedList<Spectator> waitingList;   // all spectators loaded at startup
     bool                                    processed;     // have we already assigned seats?
     bool                                    dataLoaded;    // track if JSON data has been loaded

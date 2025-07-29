@@ -13,6 +13,7 @@
 #include <string>
 #include "dto/Spectator.hpp"
 #include "structures/Queue.hpp"
+#include "structures/PriorityQueue.hpp"
 #include "structures/CircularQueue.hpp"
 #include "structures/DoublyLinkedList.hpp"
 
@@ -37,7 +38,7 @@ struct StreamingRoom {
     int capacity;
     CircularQueue<Spectator> viewers;
     StreamingRoom(int id=0,int cap=0)
-      : roomId(id), capacity(cap), viewers(cap) {}
+      : roomId(id), capacity(cap), viewers(cap > 0 ? cap : 1) {}  // Ensure at least size 1
 };
 
 class SeatingManager {
@@ -105,7 +106,7 @@ private:
     int generalCapacity;
 
     // Queues
-    Queue<Spectator> entryQueue;
+    PriorityQueue<Spectator> entryQueue;    // Priority queue for seat assignment
     Queue<Spectator> overflowQueue;
     
     // Manual tracking variables for enhanced seating management

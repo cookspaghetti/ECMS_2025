@@ -20,7 +20,7 @@ public:
         : id(id), name(name), startDate(startDate), endDate(endDate), location(location), stage(stage), category(category), tournamentSize(tournamentSize) {}
 };
 
-std::string toString(TournamentCategory category) {
+inline std::string toString(TournamentCategory category) {
     switch (category) {
         case TournamentCategory::Local: return "Local";
         case TournamentCategory::Regional: return "Regional";
@@ -29,7 +29,7 @@ std::string toString(TournamentCategory category) {
     }
 }
 
-std::string toString(TournamentStage stage) {
+inline std::string toString(TournamentStage stage) {
     switch (stage) {
         case TournamentStage::Qualifiers: return "Qualifiers";
         case TournamentStage::GroupStage: return "Group Stage";

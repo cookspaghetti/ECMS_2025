@@ -20,7 +20,7 @@ SeatingManager::SeatingManager(int /*numVipRows*/, size_t /*seatsPerVipRow*/,
     entryQueue(VIP_ROWS*SEATS_PER_ROW
                + influencerCapacity
                + numStreamRooms*seatsPerStreamRoom
-               + generalCap),
+               + generalCap),    // PriorityQueue for seat assignment
     overflowQueue(VIP_ROWS*SEATS_PER_ROW
                   + influencerCapacity
                   + numStreamRooms*seatsPerStreamRoom
@@ -50,13 +50,45 @@ SeatingManager::SeatingManager(int /*numVipRows*/, size_t /*seatsPerVipRow*/,
 }
 
 // ——————————————————————————————————————————————————————————
-// Enqueue into entry queue
+// Get priority for spectator types (higher number = higher priority)
+// ——————————————————————————————————————————————————————————
+int getSpectatorPriority(SpectatorType type) {
+    switch (type) {
+        case SpectatorType::VIP:        return 5;  // Highest priority
+        case SpectatorType::Influencer: return 4;
+        case SpectatorType::Streamer:   return 3;
+        case SpectatorType::Normal:     return 2;
+        case SpectatorType::Player:     return 1;  // Lowest priority
+        default:                        return 0;
+    }
+}
+
+// ——————————————————————————————————————————————————————————
+// Enqueue into entry queue with priority
 // ——————————————————————————————————————————————————————————
 void SeatingManager::addToEntryQueue(const Spectator &s, bool /*quiet*/) {
+    std::cout << "[DEBUG] addToEntryQueue called for " << s.name << " (ID: " << s.id << ")\n";
     try {
-        entryQueue.enqueue(s);
+        int priority = getSpectatorPriority(s.type);
+        std::cout << "[DEBUG] Spectator type: " << static_cast<int>(s.type) << ", priority: " << priority << "\n";
+        
+        bool isFull = entryQueue.isFull();
+        int currentSize = entryQueue.getSize();
+        std::cout << "[DEBUG] Queue isFull: " << (isFull ? "true" : "false") 
+                  << ", current size: " << currentSize << "\n";
+        
+        if (isFull) {
+            std::cout << "[ERROR] Entry queue is full, cannot enqueue " << s.name << "\n";
+            return;
+        }
+        
+        std::cout << "[DEBUG] About to call entryQueue.enqueue()\n";
+        entryQueue.enqueue(s, priority);
+        std::cout << "[DEBUG] Successfully enqueued " << s.name << "\n";
+    } catch (const std::exception& e) {
+        std::cout << "[ERROR] Exception in addToEntryQueue for " << s.name << ": " << e.what() << "\n";
     } catch (...) {
-        // Handle exception silently
+        std::cout << "[ERROR] Unknown exception in addToEntryQueue for " << s.name << "\n";
     }
 }
 
@@ -64,7 +96,7 @@ void SeatingManager::addToEntryQueue(const Spectator &s, bool /*quiet*/) {
 // Process everyone waiting to be seated
 // ——————————————————————————————————————————————————————————
 void SeatingManager::processEntryQueue(bool verbose) {
-    if (verbose) std::cout << "Processing entry queue...\n";
+    std::cout << "Processing spectators for seat assignments...\n";
     
     int processedCount = 0;
     while (!entryQueue.isEmpty()) {
@@ -82,7 +114,9 @@ void SeatingManager::processEntryQueue(bool verbose) {
             seated = assignInfluencerSeat(sp, !verbose);
             break;
           case SpectatorType::Streamer:
+            std::cout << "[DEBUG] Processing Streamer: " << sp.name << "\n";
             seated = assignStreamingSeat(sp, !verbose);
+            std::cout << "[DEBUG] Streamer processing completed\n";
             break;
           default:
             seated = assignGeneralSeat(sp, !verbose);
@@ -106,7 +140,7 @@ void SeatingManager::processEntryQueue(bool verbose) {
                           << " (" << toString(sp.type) << ")\n";
         }
     }
-    if (verbose) std::cout << "Finished processing " << processedCount << " spectators\n";
+    std::cout << "Completed processing " << processedCount << " spectators.\n";
 }
 
 // ——————————————————————————————————————————————————————————
@@ -416,57 +450,96 @@ bool SeatingManager::assignInfluencerSeat(const Spectator &s, bool quiet) {
 }
 
 bool SeatingManager::assignStreamingSeat(const Spectator &s, bool quiet) {
+    std::cout << "[DEBUG] assignStreamingSeat() called for " << s.name << "\n";
+    std::cout << "[DEBUG] numStreamRooms: " << numStreamRooms << "\n";
+    
+    // Check each streaming room for availability
     for (int i = 0; i < numStreamRooms; ++i) {
-        // Check if room's queue has capacity
-        bool isFull = streamingRooms[i].viewers.isFull();
+        std::cout << "[DEBUG] Checking streaming room " << i << "\n";
         
-        if (!isFull) {
-            // Create a copy of the spectator to avoid reference issues
-            Spectator spectatorCopy = s;
+        // Validate room index is within bounds
+        if (i >= MAX_STREAMING_ROOMS) {
+            std::cout << "[DEBUG] Room index " << i << " >= MAX_STREAMING_ROOMS\n";
+            break;
+        }
+        
+        std::cout << "[DEBUG] Room " << i << " capacity: " << streamingRooms[i].capacity << "\n";
+        
+        // Check if this room has capacity and space
+        if (streamingRooms[i].capacity > 0) {
+            std::cout << "[DEBUG] Room " << i << " has capacity, checking if full...\n";
             
+            bool roomFull;
             try {
-                streamingRooms[i].viewers.enqueue(spectatorCopy);
-                
-                if (!quiet)
-                    std::cout << s.name
-                              << " seated in Stream Room " << (i+1)
-                              << " (capacity: " << streamingRooms[i].capacity
-                              << " viewers)\n";
-                return true;
-            } catch (const std::exception& e) {
-                return false;
+                roomFull = streamingRooms[i].viewers.isFull();
+                std::cout << "[DEBUG] Room " << i << " isFull(): " << (roomFull ? "true" : "false") << "\n";
             } catch (...) {
-                return false;
+                std::cout << "[DEBUG] Exception in isFull() for room " << i << "\n";
+                continue;
+            }
+            
+            if (!roomFull) {
+                std::cout << "[DEBUG] Attempting to enqueue to room " << i << "\n";
+                try {
+                    streamingRooms[i].viewers.enqueue(s);
+                    std::cout << "[DEBUG] Successfully enqueued to room " << i << "\n";
+                    streamerOccupied++;
+                    if (!quiet) {
+                        int currentSize = streamingRooms[i].viewers.size();
+                        std::cout << s.name
+                                  << " seated in Stream Room " << (i+1)
+                                  << " (" << currentSize << "/"
+                                  << streamingRooms[i].capacity << " viewers)\n";
+                    }
+                    return true;
+                } catch (...) {
+                    std::cout << "[DEBUG] Exception in streamingRooms[" << i << "].viewers.enqueue()\n";
+                    // If enqueue fails, try next room
+                    continue;
+                }
             }
         }
     }
-    if (!quiet)
+    
+    // All rooms are full
+    if (!quiet) {
         std::cout << "All " << numStreamRooms
                   << " streaming rooms are full, sending to overflow\n";
+    }
     return false;
 }
 
 bool SeatingManager::assignGeneralSeat(const Spectator &s, bool quiet) {
+    if (!quiet) std::cout << "[DEBUG] assignGeneralSeat() called for " << s.name << "\n";
+    
     bool isFull = generalSeating.isFull();
+    if (!quiet) std::cout << "[DEBUG] generalSeating.isFull(): " << (isFull ? "true" : "false") << "\n";
+    if (!quiet) std::cout << "[DEBUG] generalOccupied: " << generalOccupied << "/" << generalCapacity << "\n";
     
     if (!isFull) {
+        if (!quiet) std::cout << "[DEBUG] Attempting to enqueue to generalSeating...\n";
         try {
             generalSeating.enqueue(s);
+            if (!quiet) std::cout << "[DEBUG] Successfully enqueued to generalSeating\n";
         } catch (...) {
+            if (!quiet) std::cout << "[DEBUG] Exception in generalSeating.enqueue()\n";
             return false;
         }
         
         generalOccupied++;  // Update manual counter
+        if (!quiet) std::cout << "[DEBUG] Updated generalOccupied to: " << generalOccupied << "\n";
         
         // Assign to seat ID tracking (distribute across rooms)
         int room = (generalOccupied - 1) / 30;  // 30 seats per room
         int seat = (generalOccupied - 1) % 30;  // seat within room
+        if (!quiet) std::cout << "[DEBUG] Calculated room: " << room << ", seat: " << seat << "\n";
         
         if (room < 5) {  // Only if within our 5 rooms limit
             // Format as S00001, S00002, etc.
             char formattedId[10];
             sprintf(formattedId, "S%05d", s.id);
             generalSeatIds[room][seat] = formattedId;
+            if (!quiet) std::cout << "[DEBUG] Assigned seat ID: " << formattedId << " to room " << room << ", seat " << seat << "\n";
         }
         
         if (!quiet)
@@ -476,6 +549,7 @@ bool SeatingManager::assignGeneralSeat(const Spectator &s, bool quiet) {
                       << generalCapacity << ")\n";
         return true;
     }
+    if (!quiet) std::cout << "[DEBUG] General seating is full, returning false\n";
     return false;
 }
 
