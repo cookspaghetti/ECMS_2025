@@ -10,18 +10,21 @@ enum class MatchType
 
 enum class TournamentStage
 {
+    Registration,    // Added for tournament creation
     Qualifiers,
     GroupStage,
-    KnockoutStage,
+    KnockoutStage,   // Changed from Knockout to match existing
     Quarterfinals,
     Semifinals,
-    Finals
+    Finals,
+    Completed        // Added for completed tournaments
 };
 
 enum class TournamentCategory
 {
     Local,
     Regional,
+    National,        // Added for national tournaments
     International
 };
 
