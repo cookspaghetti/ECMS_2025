@@ -24,7 +24,9 @@ DoublyLinkedList<Player> JsonLoader::loadPlayers(const std::string& filename) {
             item["email"],
             item["phoneNum"],
             item["points"],
+            item["isEarlyBird"],
             item["isWildcard"],
+            item["isLate"],
             item["dateJoined"],
             item["performanceId"]
         );
@@ -106,22 +108,12 @@ DoublyLinkedList<Result> JsonLoader::loadResults(const std::string& filename) {
         Champion championsP1[Result::TEAM_SIZE];
         Champion championsP2[Result::TEAM_SIZE];
 
-        // const auto& jsonP1 = item["championsP1"];
-        // const auto& jsonP2 = item["championsP2"];
-
-        // for (int i = 0; i < Result::TEAM_SIZE; ++i) {
-        //     championsP1[i] = championFromString(jsonP1.at(i));
-        //     championsP2[i] = championFromString(jsonP2.at(i));
-        // }
-
         const auto& jsonP1 = item["championsP1"];
+        const auto& jsonP2 = item["championsP2"];
+
         for (int i = 0; i < Result::TEAM_SIZE; ++i) {
             championsP1[i] = championFromString(jsonP1.at(i));
-            championsP1[i] = championFromString(jsonP1.at(i).get<std::string>());
-        }
-        const auto& jsonP2 = item["championsP2"];
-        for (int i = 0; i < Result::TEAM_SIZE; ++i) {
-            championsP2[i] = championFromString(jsonP2.at(i).get<std::string>());
+            championsP2[i] = championFromString(jsonP2.at(i));
         }
 
         Result result(
@@ -202,7 +194,9 @@ DoublyLinkedList<Tournament> JsonLoader::loadTournaments(const std::string& file
             item["location"],
             stage,
             category,
-            item["tournamentSize"]
+            item["maxParticipants"],
+            item["currentParticipants"],
+            item["prizePool"]
         );
         list.append(t);
     }
