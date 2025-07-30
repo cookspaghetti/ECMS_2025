@@ -6,7 +6,7 @@
 #include "../dto/Performance.hpp"
 #include "../dto/Player.hpp"
 #include "../structures/Stack.hpp"
-#include "../structures/DoublyLinkedList.hpp"
+#include "../helper/JsonLoader.hpp"
 #include "nlohmann/json.hpp"
 #include <iostream>
 #include <string>
@@ -179,12 +179,10 @@ struct MatchPlayerInfo {
 class GameResultLogger {
 private:
     // ===============================================
-    // TASK 4 CORE DATA STRUCTURES (DoublyLinkedList + Stack)
+    // TASK 4 CORE DATA STRUCTURES (JsonLoader → DoublyLinkedList → Stack)
     // ===============================================
     
-    // Main data storage using DoublyLinkedList (loaded from JSON)
-    DoublyLinkedList<Result> loadedResultsList;
-    DoublyLinkedList<MatchPlayerInfo> matchPlayerInfoList;
+    // JsonLoader handles DoublyLinkedList internally - we don't store it directly
     int loadedResultsCount;
     
     // Stack-based operations for Task 4 functionality
@@ -209,19 +207,19 @@ public:
     ~GameResultLogger();
     
     // ===============================================
-    // TASK 4 CORE FUNCTIONALITY (DoublyLinkedList + Stack)
+    // TASK 4 CORE FUNCTIONALITY (JsonLoader → DoublyLinkedList → Stack)
     // ===============================================
     
-    // JSON Data Loading into DoublyLinkedList
+    // JSON Data Loading using JsonLoader (which handles DoublyLinkedList internally)
     void loadResultsFromJSON();
     void loadResultsFromJSON(const std::string& jsonPath);
     
-    // DoublyLinkedList operations for loaded results
-    void displayLoadedResults() const;                // Display all results from DLL
-    void traverseResultsForward() const;              // Forward traversal of results
-    void traverseResultsBackward() const;             // Backward traversal of results
-    void findResultInList(int matchId) const;         // Find specific result in list
-    void filterResultsByPlayer(int playerId) const;   // Filter results using DLL
+    // Data operations using JsonLoader results
+    void displayLoadedResults() const;                // Display results from JsonLoader
+    void traverseResultsForward() const;              // Forward traversal via JsonLoader
+    void traverseResultsBackward() const;             // Backward traversal via JsonLoader
+    void findResultInList(int matchId) const;         // Find result using JsonLoader
+    void filterResultsByPlayer(int playerId) const;   // Filter results from JsonLoader
     
     // Stack-based operations for search and analysis
     void pushSearchResult(const Result& result);      // Push result to search stack
@@ -239,7 +237,7 @@ public:
     void displayOperationHistory() const;              // Display operation history stack
     void clearOperationHistory();                      // Clear operation history
     
-    // Statistical Analysis from DoublyLinkedList data
+    // Statistical Analysis from JsonLoader data (DoublyLinkedList handled internally)
     void calculatePlayerStatistics();
     void displayPlayerPerformance(int playerId) const;
     void searchMatchesByPlayer(int playerId) const;

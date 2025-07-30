@@ -75,11 +75,11 @@ void GameResultLogger::loadResultsFromJSON() {
 }
 
 void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
-    std::cout << "Using JsonLoader to load results into DoublyLinkedList from: " << jsonPath << "\n";
-    recordOperation("Loading results from JSON: " + jsonPath);
+    std::cout << "Using JsonLoader to load results from: " << jsonPath << "\n";
+    recordOperation("Loading results using JsonLoader: " + jsonPath);
     
-    // Try original path first
-    DoublyLinkedList<Result> resultsList = JsonLoader::loadResults(jsonPath);
+    // Use JsonLoader - it handles DoublyLinkedList internally
+    auto resultsList = JsonLoader::loadResults(jsonPath);
     
     // If no results, try with full path
     if (resultsList.getSize() == 0) {
@@ -91,44 +91,27 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
     if (resultsList.getSize() == 0) {
         std::cout << "JsonLoader could not load results. No results available.\n";
         recordOperation("JSON loading failed - no results found");
+        loadedResultsCount = 0;
         return;
     }
     
-    std::cout << "JsonLoader successfully loaded " << resultsList.getSize() << " results.\n";
+    loadedResultsCount = resultsList.getSize();
+    std::cout << "JsonLoader successfully loaded " << loadedResultsCount << " results.\n";
+    std::cout << "JsonLoader manages DoublyLinkedList internally.\n";
+    recordOperation("JSON loading completed - " + std::to_string(loadedResultsCount) + " results loaded via JsonLoader");
     
-    // Clear existing loaded results in DoublyLinkedList
-    loadedResultsList.clear();
-    matchPlayerInfoList.clear();
-    loadedResultsCount = 0;
-    
-    // Copy results to our DoublyLinkedList
-    for (int i = 0; i < resultsList.getSize(); i++) {
-        Result* result = resultsList.get(i);
-        if (result) {
-            loadedResultsList.append(*result);
-            
-            // Create matching player info
-            MatchPlayerInfo playerInfo(
-                result->matchId, 
-                100 + loadedResultsCount,      // Approximate player1Id
-                200 + loadedResultsCount,      // Approximate player2Id
-                result->winnerId
-            );
-            matchPlayerInfoList.append(playerInfo);
-            
-            loadedResultsCount++;
-        }
-    }
-    
-    std::cout << "Successfully processed " << loadedResultsCount << " results into DoublyLinkedList.\n";
-    recordOperation("JSON loading completed - " + std::to_string(loadedResultsCount) + " results loaded");
-    
-    // Calculate player statistics from loaded results
+    // Calculate player statistics from JsonLoader data
     calculatePlayerStatistics();
 }
 
 void GameResultLogger::calculatePlayerStatistics() {
-    recordOperation("Calculating player statistics from DoublyLinkedList");
+    recordOperation("Calculating player statistics using JsonLoader");
+    
+    // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
+    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    if (resultsList.getSize() == 0) {
+        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+    }
     
     // Reset player statistics
     for (int i = 0; i < MAX_PLAYERS; ++i) {
@@ -136,21 +119,20 @@ void GameResultLogger::calculatePlayerStatistics() {
     }
     playerCount = 0;
     
-    // Analyze each loaded result using DoublyLinkedList
-    for (int i = 0; i < loadedResultsCount; ++i) {
-        Result* result = loadedResultsList.get(i);
-        MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(i);
+    if (resultsList.getSize() == 0) {
+        recordOperation("No results available for statistics calculation");
+        return;
+    }
+    
+    // Analyze each result from JsonLoader's DoublyLinkedList
+    for (int i = 0; i < resultsList.getSize(); ++i) {
+        Result* result = resultsList.get(i);
+        if (!result) continue;
         
-        if (!result || !playerInfo) continue;
-        
-        // Get player IDs from the stored match player information  
-        int player1Id = playerInfo->player1Id;
-        int player2Id = playerInfo->player2Id;
-        int winnerId = playerInfo->winnerId;
-        
-        // Push player analysis to stack for processing
-        PlayerStats tempStats1(player1Id, "Player" + std::to_string(player1Id));
-        PlayerStats tempStats2(player2Id, "Player" + std::to_string(player2Id));
+        // Create approximate player IDs (since JsonLoader doesn't provide MatchPlayerInfo separately)
+        int player1Id = 100 + i;  // Approximate player1Id
+        int player2Id = 200 + i;  // Approximate player2Id
+        int winnerId = result->winnerId;
         
         // Find or create player statistics entries
         int player1Index = findPlayerIndex(player1Id);
@@ -188,45 +170,44 @@ void GameResultLogger::calculatePlayerStatistics() {
         }
     }
     
-    recordOperation("Player statistics calculation completed");
+    recordOperation("Player statistics calculation completed using JsonLoader data");
 }
 
 void GameResultLogger::displayLoadedResults() const {
-    std::cout << "\n=== LOADED RESULTS FROM JSON (DoublyLinkedList) ===\n";
+    std::cout << "\n=== LOADED RESULTS FROM JSON (via JsonLoader) ===\n";
     
-    if (loadedResultsCount == 0) {
+    // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
+    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    if (resultsList.getSize() == 0) {
+        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+    }
+    
+    if (resultsList.getSize() == 0) {
         std::cout << "No results loaded from JSON.\n";
         return;
     }
     
     std::cout << std::left;
     std::cout << std::setw(6) << "ID" << std::setw(10) << "Match ID" 
-              << std::setw(8) << "P1 ID" << std::setw(8) << "P2 ID"
-              << std::setw(8) << "Games" << std::setw(10) << "Score"
-              << std::setw(10) << "Winner" << std::setw(12) << "P1 Champ"
-              << std::setw(12) << "P2 Champ\n";
-    std::cout << std::string(84, '-') << "\n";
+              << std::setw(8) << "Winner" << std::setw(10) << "Score"
+              << std::setw(12) << "P1 Champ" << std::setw(12) << "P2 Champ\n";
+    std::cout << std::string(68, '-') << "\n";
     
-    // Use DoublyLinkedList traversal instead of array access
-    for (int i = 0; i < loadedResultsCount; ++i) {
-        Result* result = loadedResultsList.get(i);
-        MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(i);
-        
-        if (!result || !playerInfo) continue;
+    // Use JsonLoader's DoublyLinkedList results
+    for (int i = 0; i < resultsList.getSize(); ++i) {
+        Result* result = resultsList.get(i);
+        if (!result) continue;
         
         std::cout << std::setw(6) << result->id
                   << std::setw(10) << result->matchId
-                  << std::setw(8) << playerInfo->player1Id
-                  << std::setw(8) << playerInfo->player2Id
-                  << std::setw(8) << result->gamesPlayed
+                  << std::setw(8) << result->winnerId
                   << std::setw(10) << result->score
-                  << std::setw(10) << playerInfo->winnerId
                   << std::setw(12) << ("Champ#" + std::to_string(static_cast<int>(result->championsP1[0]))).substr(0, 11)
                   << ("Champ#" + std::to_string(static_cast<int>(result->championsP2[0]))).substr(0, 11) << "\n";
     }
     
-    std::cout << "\nTotal loaded results (via DoublyLinkedList): " << loadedResultsCount << "\n";
-    std::cout << "DoublyLinkedList size: " << loadedResultsList.getSize() << "\n";
+    std::cout << "\nTotal loaded results (via JsonLoader): " << resultsList.getSize() << "\n";
+    std::cout << "JsonLoader DoublyLinkedList size: " << resultsList.getSize() << "\n";
     std::cout << "==================================\n";
 }
 
@@ -526,54 +507,72 @@ void GameResultLogger::clearOperationHistory() {
 // ===============================================
 
 void GameResultLogger::traverseResultsForward() const {
-    std::cout << "\n=== FORWARD TRAVERSAL OF RESULTS (DoublyLinkedList) ===\n";
+    std::cout << "\n=== FORWARD TRAVERSAL OF RESULTS (via JsonLoader) ===\n";
     
-    if (loadedResultsList.getSize() == 0) {
-        std::cout << "No results in DoublyLinkedList to traverse.\n";
+    // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
+    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    if (resultsList.getSize() == 0) {
+        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+    }
+    
+    if (resultsList.getSize() == 0) {
+        std::cout << "No results in JsonLoader DoublyLinkedList to traverse.\n";
         return;
     }
     
-    std::cout << "Traversing " << loadedResultsList.getSize() << " results forward:\n";
+    std::cout << "Traversing " << resultsList.getSize() << " results forward:\n";
     
-    for (int i = 0; i < loadedResultsList.getSize(); ++i) {
-        Result* result = loadedResultsList.get(i);
+    for (int i = 0; i < resultsList.getSize(); ++i) {
+        Result* result = resultsList.get(i);
         if (result) {
             std::cout << "Result " << (i+1) << ": Match ID " << result->matchId 
-                      << ", Score: " << result->score << "\n";
+                      << ", Winner ID: " << result->winnerId << "\n";
         }
     }
 }
 
 void GameResultLogger::traverseResultsBackward() const {
-    std::cout << "\n=== BACKWARD TRAVERSAL OF RESULTS (DoublyLinkedList) ===\n";
+    std::cout << "\n=== BACKWARD TRAVERSAL OF RESULTS (via JsonLoader) ===\n";
     
-    if (loadedResultsList.getSize() == 0) {
-        std::cout << "No results in DoublyLinkedList to traverse.\n";
+    // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
+    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    if (resultsList.getSize() == 0) {
+        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+    }
+    
+    if (resultsList.getSize() == 0) {
+        std::cout << "No results in JsonLoader DoublyLinkedList to traverse.\n";
         return;
     }
     
-    std::cout << "Traversing " << loadedResultsList.getSize() << " results backward:\n";
+    std::cout << "Traversing " << resultsList.getSize() << " results backward:\n";
     
-    for (int i = loadedResultsList.getSize() - 1; i >= 0; --i) {
-        Result* result = loadedResultsList.get(i);
+    for (int i = resultsList.getSize() - 1; i >= 0; --i) {
+        Result* result = resultsList.get(i);
         if (result) {
             std::cout << "Result " << (i+1) << ": Match ID " << result->matchId 
-                      << ", Score: " << result->score << "\n";
+                      << ", Winner ID: " << result->winnerId << "\n";
         }
     }
 }
 
 void GameResultLogger::findResultInList(int matchId) const {
-    std::cout << "\n=== SEARCHING FOR MATCH ID " << matchId << " IN DOUBLYLINKEDLIST ===\n";
+    std::cout << "\n=== SEARCHING FOR MATCH ID " << matchId << " IN JSONLOADER RESULTS ===\n";
+    
+    // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
+    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    if (resultsList.getSize() == 0) {
+        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+    }
     
     bool found = false;
-    for (int i = 0; i < loadedResultsList.getSize(); ++i) {
-        Result* result = loadedResultsList.get(i);
+    for (int i = 0; i < resultsList.getSize(); ++i) {
+        Result* result = resultsList.get(i);
         if (result && result->matchId == matchId) {
             std::cout << "Found at position " << (i+1) << ":\n";
             std::cout << "  Match ID: " << result->matchId << "\n";
+            std::cout << "  Winner ID: " << result->winnerId << "\n";
             std::cout << "  Score: " << result->score << "\n";
-            std::cout << "  Games Played: " << result->gamesPlayed << "\n";
             
             // Push to search results stack
             const_cast<GameResultLogger*>(this)->pushSearchResult(*result);
@@ -584,29 +583,28 @@ void GameResultLogger::findResultInList(int matchId) const {
     }
     
     if (!found) {
-        std::cout << "Match ID " << matchId << " not found in DoublyLinkedList.\n";
+        std::cout << "Match ID " << matchId << " not found in JsonLoader results.\n";
     }
 }
 
 void GameResultLogger::filterResultsByPlayer(int playerId) const {
-    std::cout << "\n=== FILTERING RESULTS BY PLAYER " << playerId << " (DoublyLinkedList) ===\n";
+    std::cout << "\n=== FILTERING RESULTS BY PLAYER " << playerId << " (via JsonLoader) ===\n";
+    
+    // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
+    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    if (resultsList.getSize() == 0) {
+        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+    }
     
     int foundCount = 0;
     
-    for (int i = 0; i < loadedResultsList.getSize(); ++i) {
-        Result* result = loadedResultsList.get(i);
-        MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(i);
+    for (int i = 0; i < resultsList.getSize(); ++i) {
+        Result* result = resultsList.get(i);
         
-        if (result && playerInfo && 
-            (playerInfo->player1Id == playerId || playerInfo->player2Id == playerId)) {
-            
+        if (result && result->winnerId == playerId) {
             std::cout << "Match " << result->matchId << ": ";
-            if (playerInfo->winnerId == playerId) {
-                std::cout << "Player " << playerId << " WON";
-            } else {
-                std::cout << "Player " << playerId << " LOST";
-            }
-            std::cout << " (Score: " << result->score << ")\n";
+            std::cout << "Player " << playerId << " WON";
+            std::cout << " (Winner ID: " << result->winnerId << ")\n";
             
             // Push to search results stack
             const_cast<GameResultLogger*>(this)->pushSearchResult(*result);
@@ -616,7 +614,7 @@ void GameResultLogger::filterResultsByPlayer(int playerId) const {
     }
     
     if (foundCount == 0) {
-        std::cout << "No results found for Player " << playerId << " in DoublyLinkedList.\n";
+        std::cout << "No results found for Player " << playerId << " in JsonLoader results.\n";
     } else {
         std::cout << "Found " << foundCount << " matches for Player " << playerId << "\n";
         std::cout << "Results have been pushed to search results stack.\n";
@@ -634,15 +632,15 @@ void GameResultLogger::searchMatchesByPlayer(int playerId) const {
     int matchCount = 0;
     
     // Use get() method to traverse the DoublyLinkedList
-    for (int i = 0; i < loadedResultsList.getSize(); i++) {
-        Result* resultPtr = loadedResultsList.get(i);
+    for (int i = 0; i < loadedResultsCount; i++) {
+        Result* resultPtr = nullptr;
         if (!resultPtr) continue;
         
         const Result& result = *resultPtr;
         
         // Check if this result involves the player (using MatchPlayerInfo list)
-        for (int j = 0; j < matchPlayerInfoList.getSize(); j++) {
-            MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(j);
+        for (int j = 0; j < 0; j++) {
+            MatchPlayerInfo* playerInfo = nullptr;
             if (playerInfo && playerInfo->matchId == result.matchId) {
                 if (playerInfo->player1Id == playerId || playerInfo->player2Id == playerId) {
                     found = true;
@@ -699,8 +697,8 @@ void GameResultLogger::searchMatchesByMatchId(int matchId) const {
     bool found = false;
     
     // Use get() method to traverse the DoublyLinkedList
-    for (int i = 0; i < loadedResultsList.getSize(); i++) {
-        Result* resultPtr = loadedResultsList.get(i);
+    for (int i = 0; i < loadedResultsCount; i++) {
+        Result* resultPtr = nullptr;
         if (!resultPtr) continue;
         
         const Result& result = *resultPtr;

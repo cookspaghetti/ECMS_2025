@@ -15,7 +15,8 @@
 #include "structures/Queue.hpp"
 #include "structures/PriorityQueue.hpp"
 #include "structures/CircularQueue.hpp"
-#include "structures/DoublyLinkedList.hpp"
+#include "structures/DoublyLinkedList.hpp"  // Needed for method signatures
+#include "../helper/JsonLoader.hpp"
 
 // Fixed layout constants
 static constexpr int VIP_ROWS            = 5;  // 5 rooms × 10 seats = 50 VIP seats total
