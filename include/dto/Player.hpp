@@ -7,7 +7,7 @@
 
 class Player {
 public:
-    std::string id;
+    int id;
     std::string name;
     int age;
     Gender gender;
@@ -18,10 +18,10 @@ public:
     bool isWildcard; // Indicates if the player is a wildcard entry
     bool isLate; // Indicates if the player registered late
     std::string dateJoined;
-    std::string performanceId; // ID of associated performance record
+    int performanceId; // ID of associated performance record
 
-    Player() : id("0"), name(""), age(0), gender(Gender::Male), email(""), phoneNum(""), points(0), isEarlyBird(false), isWildcard(false), isLate(false), dateJoined(""), performanceId("0") {}
-    Player(const std::string& id, const std::string& name, int age, Gender gender, const std::string& email, const std::string& phoneNum, int points, bool isEarlyBird, bool isWildcard, bool isLate, const std::string& dateJoined, const std::string& performanceId) 
+    Player() : id(0), name(""), age(0), gender(Gender::Male), email(""), phoneNum(""), points(0), isEarlyBird(false), isWildcard(false), isLate(false), dateJoined(""), performanceId(0) {}
+    Player(int id, const std::string& name, int age, Gender gender, const std::string& email, const std::string& phoneNum, int points, bool isEarlyBird, bool isWildcard, bool isLate, const std::string& dateJoined, int performanceId) 
         : id(id), name(name), age(age), gender(gender), email(email), phoneNum(phoneNum), points(points), isEarlyBird(isEarlyBird), isWildcard(isWildcard), isLate(isLate), dateJoined(dateJoined), performanceId(performanceId) {}
 
     // Function to display player information
