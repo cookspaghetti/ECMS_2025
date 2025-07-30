@@ -24,13 +24,42 @@ DoublyLinkedList<Player> JsonLoader::loadPlayers(const std::string& filename) {
             item["email"],
             item["phoneNum"],
             item["points"],
+            item["isEarlyBird"],
             item["isWildcard"],
+            item["isLate"],
             item["dateJoined"],
             item["performanceId"]
         );
         list.append(player);
     }
     return list;
+}
+
+PriorityQueue<Player> JsonLoader::loadCheckedInPlayers(const std::string& filename) {
+    PriorityQueue<Player> queue;
+    std::ifstream file(filename);
+    if (!file.is_open()) return queue;
+
+    json data;
+    file >> data;
+    for (const auto& item : data) {
+        Player player(
+            item["id"],
+            item["name"],
+            item["age"],
+            item["gender"] == "Male" ? Gender::Male : Gender::Female,
+            item["email"],
+            item["phoneNum"],
+            item["points"],
+            item["isEarlyBird"],
+            item["isWildcard"],
+            item["isLate"],
+            item["dateJoined"],
+            item["performanceId"]
+        );
+        queue.enqueue(player, item["priority"]);
+    }
+    return queue;
 }
 
 DoublyLinkedList<Match> JsonLoader::loadMatches(const std::string& filename) {
@@ -192,7 +221,9 @@ DoublyLinkedList<Tournament> JsonLoader::loadTournaments(const std::string& file
             item["location"],
             stage,
             category,
-            item["tournamentSize"]
+            item["maxParticipants"],
+            item["currentParticipants"],
+            item["prizePool"]
         );
         list.append(t);
     }

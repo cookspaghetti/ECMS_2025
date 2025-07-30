@@ -20,6 +20,7 @@ public:
     T peek() const;
     int size() const;
     void display() const;
+    void clear();
 };
 
 template <typename T>
@@ -85,6 +86,14 @@ void Queue<T>::display() const {
         std::cout << data[(front + i) % capacity] << " ";
     }
     std::cout << "\n";
+}
+
+template <typename T>
+void Queue<T>::clear() {
+    front = 0;
+    rear = -1;
+    count = 0;
+    std::cout << "Queue cleared.\n";
 }
 
 #endif

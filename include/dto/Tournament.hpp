@@ -13,11 +13,20 @@ public:
     std::string location;
     TournamentStage stage;
     TournamentCategory category;
-    int tournamentSize;
+    int maxParticipants;  // Maximum number of participants
+    int currentParticipants;  // Current number of registered participants
+    double prizePool;  // Prize pool amount
 
-    Tournament() : id(0), name(""), startDate(""), endDate(""), location(""), stage(TournamentStage::Qualifiers), category(TournamentCategory::Local), tournamentSize(0) {}
-    Tournament(int id, const std::string& name, const std::string& startDate, const std::string& endDate, const std::string& location, TournamentStage stage, TournamentCategory category, int tournamentSize)
-        : id(id), name(name), startDate(startDate), endDate(endDate), location(location), stage(stage), category(category), tournamentSize(tournamentSize) {}
+    Tournament() : id(0), name(""), startDate(""), endDate(""), location(""), 
+                   stage(TournamentStage::Registration), category(TournamentCategory::Regional), 
+                   maxParticipants(0), currentParticipants(0), prizePool(0.0) {}
+
+    Tournament(int id, const std::string& name, const std::string& startDate, const std::string& endDate, const std::string& location, 
+               TournamentStage stage, TournamentCategory category, 
+               int maxParticipants, int currentParticipants = 0, double prizePool = 0.0)
+        : id(id), name(name), startDate(startDate), endDate(endDate), location(location), 
+          stage(stage), category(category), maxParticipants(maxParticipants), 
+          currentParticipants(currentParticipants), prizePool(prizePool) {}
 };
 
 inline std::string toString(TournamentCategory category) {
@@ -31,13 +40,15 @@ inline std::string toString(TournamentCategory category) {
 
 inline std::string toString(TournamentStage stage) {
     switch (stage) {
+        case TournamentStage::Registration: return "Registration";
         case TournamentStage::Qualifiers: return "Qualifiers";
         case TournamentStage::GroupStage: return "Group Stage";
         case TournamentStage::KnockoutStage: return "Knockout Stage";
         case TournamentStage::Quarterfinals: return "Quarterfinals";
         case TournamentStage::Semifinals: return "Semifinals";
         case TournamentStage::Finals: return "Finals";
-        default: return "Unknown";
+        case TournamentStage::Completed: return "Completed";
+        default: return "Registration";
     }
 }
 

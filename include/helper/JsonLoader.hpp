@@ -3,6 +3,7 @@
 
 #include <string>
 #include "structures/DoublyLinkedList.hpp"
+#include "structures/PriorityQueue.hpp"
 #include "dto/Player.hpp"
 #include "dto/Match.hpp"
 #include "dto/Performance.hpp"
@@ -13,6 +14,7 @@
 class JsonLoader {
 public:
     static DoublyLinkedList<Player> loadPlayers(const std::string& filename);
+    static PriorityQueue<Player> loadCheckedInPlayers(const std::string& filename);
     static DoublyLinkedList<Match> loadMatches(const std::string& filename);
     static DoublyLinkedList<Performance> loadPerformances(const std::string& filename);
     static DoublyLinkedList<Result> loadResults(const std::string& filename);
