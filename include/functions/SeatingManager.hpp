@@ -20,7 +20,7 @@
 // Fixed layout constants
 static constexpr int VIP_ROWS            = 5;  // 5 rooms × 10 seats = 50 VIP seats total
 static constexpr int SEATS_PER_ROW       = 10;
-static constexpr int MAX_STREAMING_ROOMS = 5;
+static constexpr int MAX_STREAMING_ROOMS = 5;  // 5 streaming rooms as per original design
 
 /// Holds a single VIP seat’s state
 struct SeatPosition {
@@ -43,14 +43,9 @@ struct StreamingRoom {
 
 class SeatingManager {
 public:
-    // numVipRows × seatsPerVipRow (→ VIP_ROWS×SEATS_PER_ROW),
-    // numInflRows × seatsPerInflencerRow,
-    // numStreamRooms × seatsPerStreamRoom,
-    // generalCapacity total general seats
-    SeatingManager(int numVipRows,
-                   size_t seatsPerVipRow,
-                   int numInflRows,
-                   size_t seatsPerInfluencerRow,
+    // Constructor: vipCapacity, influencerCapacity, numStreamRooms, seatsPerStreamRoom, generalCapacity
+    SeatingManager(int vipCapacity,
+                   int influencerCapacity,
                    int numStreamRooms,
                    size_t seatsPerStreamRoom,
                    size_t generalCapacity);
@@ -71,48 +66,78 @@ public:
     void rejectOverflowUsers();
     
     // Helper methods for overflow handling
-    void handleOverflowWithMoreSeats(const DoublyLinkedList<Spectator>& overflowSpectators);
-    void handleOverflowReassignment(const DoublyLinkedList<Spectator>& overflowSpectators);
-    void handleOverflowManual(const DoublyLinkedList<Spectator>& overflowSpectators);
+    void handleOverflowWithMoreSeats(const DoublyLinkedList<Spectator>& vipOverflow,
+                                    const DoublyLinkedList<Spectator>& influencerOverflow,
+                                    const DoublyLinkedList<Spectator>& streamerOverflow,
+                                    const DoublyLinkedList<Spectator>& normalOverflow);
+    void handleOverflowReassignment(const DoublyLinkedList<Spectator>& vipOverflow,
+                                   const DoublyLinkedList<Spectator>& influencerOverflow,
+                                   const DoublyLinkedList<Spectator>& streamerOverflow,
+                                   const DoublyLinkedList<Spectator>& normalOverflow);
+    void handleOverflowManual(const DoublyLinkedList<Spectator>& vipOverflow,
+                             const DoublyLinkedList<Spectator>& influencerOverflow,
+                             const DoublyLinkedList<Spectator>& streamerOverflow,
+                             const DoublyLinkedList<Spectator>& normalOverflow);
+    void rejectAllOverflow(const DoublyLinkedList<Spectator>& vipOverflow,
+                          const DoublyLinkedList<Spectator>& influencerOverflow,
+                          const DoublyLinkedList<Spectator>& streamerOverflow,
+                          const DoublyLinkedList<Spectator>& normalOverflow);
+    
+    // New drop and replace methods
+    void handleDropAndReplace(const DoublyLinkedList<Spectator>& vipOverflow,
+                             const DoublyLinkedList<Spectator>& influencerOverflow,
+                             const DoublyLinkedList<Spectator>& streamerOverflow,
+                             const DoublyLinkedList<Spectator>& normalOverflow);
+    bool dropUserFromGeneralSeating(SpectatorType targetType);
+    bool dropUserFromStreamingRoom();
+    
+    // Manual seat management helpers
+    bool removeSpectatorById(int id);
+    bool addSpectatorToAvailableSeat(const Spectator& spectator);
+    bool assignSpectatorToSpecificSeat(const Spectator& spectator, int room, int seat);
 
 private:
     // Helpers for each category
-    SeatPosition findNextVIPSeat() const;
-    bool assignVIPSeatPosition(const Spectator &s, bool quiet);
+    bool assignVIPSeat(const Spectator &s, bool quiet);
     bool assignInfluencerSeat(const Spectator &s, bool quiet);
     bool assignStreamingSeat(const Spectator &s, bool quiet);
     bool assignGeneralSeat(const Spectator &s, bool quiet);
+    bool assignGeneralSeatWithPriority(const Spectator &s, bool quiet, int priority);
 
     int vipOverflow     = 0;
     int infOverflow     = 0;
     int streamerOverflow= 0;
     int generalOverflow = 0;
-    // VIP grid
+    
+    // Member variables ordered to match constructor initialization
+    int vipCapacity;
+    PriorityQueue<Spectator> vipSeating;
+    // Display tracking for VIP seats (5 rooms × 10 seats each)
     SeatPosition vipSeats[VIP_ROWS][SEATS_PER_ROW];
 
-    // Influencer block
-    int  influencerCapacity;
-    int  influencerOccupied;
-    Queue<Spectator> influencerSeating;
+    int influencerCapacity;
+    int influencerOccupied;
+    PriorityQueue<Spectator> influencerSeating;
 
     // Streaming rooms
     int numStreamRooms;
     size_t seatsPerStreamRoom;
-    StreamingRoom streamingRooms[MAX_STREAMING_ROOMS];
     int streamerOccupied;
+    StreamingRoom streamingRooms[MAX_STREAMING_ROOMS];
 
-    // General admission
-    CircularQueue<Spectator> generalSeating;
+    // General admission with priority support
+    PriorityQueue<Spectator> generalSeating;  // Changed from CircularQueue to PriorityQueue
     int generalCapacity;
+    // Display tracking for general seats (5 rooms × 30 seats each)
+    std::string generalSeatIds[5][30];
 
     // Queues
     PriorityQueue<Spectator> entryQueue;    // Priority queue for seat assignment
-    Queue<Spectator> overflowQueue;
+    CircularQueue<Spectator> overflowQueue; // CircularQueue for overflow handling
     
     // Manual tracking variables for enhanced seating management
     int generalOccupied;
     int overflowCount;
-    std::string generalSeatIds[5][30]; // Room x Seat matrix for seat IDs
 };
 
 
