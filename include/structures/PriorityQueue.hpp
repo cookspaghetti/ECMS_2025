@@ -30,6 +30,10 @@ public:
     bool isFull() const;
     int getSize() const;
     void display() const;  // Display all items in priority order
+    void clear();          // Clear the priority queue
+    
+    // Method to get all items with their priorities
+    void getAllItemsWithPriority(T items[], int priorities[], int& count) const;
 };
 
 template <typename T>
@@ -137,6 +141,25 @@ void PriorityQueue<T>::display() const {
         std::cout << "Priority " << heap[i].priority << ": " << heap[i].data << "\n";
     }
     std::cout << "Total items: " << size << "\n";
+}
+
+// Clear the priority queue
+template <typename T>
+void PriorityQueue<T>::clear() {
+    size = 0;
+    delete[] heap;
+    heap = new Node[capacity]; // Reinitialize the heap
+    std::cout << "Priority Queue cleared.\n";
+}
+
+// Get all items with their priorities
+template <typename T>
+void PriorityQueue<T>::getAllItemsWithPriority(T items[], int priorities[], int& count) const {
+    count = size;
+    for (int i = 0; i < size; i++) {
+        items[i] = heap[i].data;
+        priorities[i] = heap[i].priority;
+    }
 }
 
 #endif
