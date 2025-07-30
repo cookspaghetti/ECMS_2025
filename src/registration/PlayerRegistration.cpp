@@ -36,7 +36,7 @@ void PlayerRegistration::registerPlayer() {
     std::cout << "Enter date joined (YYYY-MM-DD): ";
     std::cin >> dateJoined;
 
-    Player p(nextPlayerId++, name, age, gender, email, phone, rank, isWildcard, dateJoined, -1);
+    Player p(nextPlayerId++, name, age, gender, email, phone, rank, false, isWildcard, false, dateJoined, -1);
     registrationQueue.enqueue(p);
 
     std::cout << "Player registered and added to the queue.\n";

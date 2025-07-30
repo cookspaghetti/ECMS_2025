@@ -5,10 +5,8 @@
 #include "../dto/Result.hpp"
 #include "../dto/Performance.hpp"
 #include "../dto/Player.hpp"
-#include "../structures/CircularQueue.hpp"
-#include "../structures/Queue.hpp"
 #include "../structures/Stack.hpp"
-#include "../structures/PriorityQueue.hpp"
+#include "../structures/DoublyLinkedList.hpp"
 #include "nlohmann/json.hpp"
 #include <iostream>
 #include <string>
@@ -180,78 +178,80 @@ struct MatchPlayerInfo {
 
 class GameResultLogger {
 private:
-    // Recent match results (circular queue for efficient storage)
-    static const int MAX_RECENT_MATCHES = 50;
-    CircularQueue<MatchSummary> recentMatches;
+    // ===============================================
+    // TASK 4 CORE DATA STRUCTURES (DoublyLinkedList + Stack)
+    // ===============================================
     
-    // Complete match history (linked list for unlimited storage)
-    LinkedHistory<MatchSummary> completeHistory;
-    
-    // Loaded results storage (array/linked list for analysis)
-    static const int MAX_RESULTS = 200;
-    Result loadedResults[MAX_RESULTS];
-    MatchPlayerInfo matchPlayerInfo[MAX_RESULTS]; // Store player info for each match
+    // Main data storage using DoublyLinkedList (loaded from JSON)
+    DoublyLinkedList<Result> loadedResultsList;
+    DoublyLinkedList<MatchPlayerInfo> matchPlayerInfoList;
     int loadedResultsCount;
     
-    // Player performance tracking
+    // Stack-based operations for Task 4 functionality
+    Stack<Result> searchResultsStack;                 // For storing search results
+    Stack<PlayerStats> playerAnalysisStack;           // For player analysis operations
+    Stack<std::string> operationHistoryStack;        // Track operations performed
+    Stack<MatchSummary> processingStack;              // For general processing operations
+    
+    // Player performance tracking (simplified for Task 4)
     static const int MAX_PLAYERS = 100;
+    static const int MAX_RECENT_MATCHES = 50;
     PlayerStats playerStatistics[MAX_PLAYERS];
     int playerCount;
-    
-    // Performance metrics priority queue (for rankings)
-    PriorityQueue<PlayerStats> performanceRankings;
-    
-    // Match results stack (for undo functionality)
-    Stack<MatchSummary> undoStack;
     
     // Helper functions
     int findPlayerIndex(int playerId) const;
     std::string stageToString(TournamentStage stage) const;
     std::string matchTypeToString(MatchType type) const;
-    float generateRandomDuration(MatchType type) const; // Simulate match duration
     
 public:
     GameResultLogger();
     ~GameResultLogger();
     
-    // Core functionality
-    void logMatchResult(const Match& match, const Result& result, 
-                       const std::string& player1Name, const std::string& player2Name);
-    void displayRecentResults(int count = 10) const;
-    void displayPlayerPerformance(int playerId) const;
-    void displayAllPlayerRankings() const;
-    void displayMatchHistory(int count = 20) const;
+    // ===============================================
+    // TASK 4 CORE FUNCTIONALITY (DoublyLinkedList + Stack)
+    // ===============================================
     
-    // Advanced features
-    void searchMatchesByPlayer(int playerId) const;
-    void searchMatchesByMatchId(int matchId) const;
-    void searchMatchesByDate(const std::string& date) const;
-    void displayTournamentSummary(TournamentStage stage) const;
-    void exportPlayerStatistics() const;
-    void undoLastResult();
-    
-    // Statistical analysis
-    void displayWinRateAnalysis() const;
-    void displayChampionUsageStats() const;
-    void displayMatchTypeAnalysis() const;
-    
-    // Utility functions
-    int getTotalMatchesLogged() const;
-    bool hasPlayerData(int playerId) const;
-    void clearAllData();
-    
-    // JSON Data Loading
+    // JSON Data Loading into DoublyLinkedList
     void loadResultsFromJSON();
     void loadResultsFromJSON(const std::string& jsonPath);
     
-    // Statistical Analysis from Loaded Results
+    // DoublyLinkedList operations for loaded results
+    void displayLoadedResults() const;                // Display all results from DLL
+    void traverseResultsForward() const;              // Forward traversal of results
+    void traverseResultsBackward() const;             // Backward traversal of results
+    void findResultInList(int matchId) const;         // Find specific result in list
+    void filterResultsByPlayer(int playerId) const;   // Filter results using DLL
+    
+    // Stack-based operations for search and analysis
+    void pushSearchResult(const Result& result);      // Push result to search stack
+    Result popSearchResult();                          // Pop result from search stack
+    void clearSearchResults();                        // Clear search results stack
+    void displaySearchResultsStack() const;           // Display all results in search stack
+    
+    void pushPlayerAnalysis(const PlayerStats& stats); // Push player stats to analysis stack
+    PlayerStats popPlayerAnalysis();                   // Pop player stats from analysis stack
+    void processPlayerAnalysisStack();                 // Process all players in analysis stack
+    void displayPlayerAnalysisStack() const;          // Display analysis stack contents
+    
+    void recordOperation(const std::string& operation); // Record operation in history stack
+    std::string getLastOperation();                     // Get last operation from history
+    void displayOperationHistory() const;              // Display operation history stack
+    void clearOperationHistory();                      // Clear operation history
+    
+    // Statistical Analysis from DoublyLinkedList data
     void calculatePlayerStatistics();
-    void displayLoadedResults() const;
+    void displayPlayerPerformance(int playerId) const;
+    void searchMatchesByPlayer(int playerId) const;
+    void searchMatchesByMatchId(int matchId) const;
+    void displayPlayerFavoriteChampions() const;
     void displayPlayerMatchCount() const;
     void displayPlayerWinRates() const;
-    void displayPlayerFavoriteChampions() const;
     void displayComprehensivePlayerStats() const;
+    
+    // Utility functions
     int getLoadedResultsCount() const;
+    bool hasPlayerData(int playerId) const;
 };
 
 #endif // GAMERESULTLOGGER_HPP

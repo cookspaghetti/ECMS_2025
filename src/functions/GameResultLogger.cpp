@@ -14,31 +14,26 @@ using namespace std;
 using json = nlohmann::json;
 
 GameResultLogger::GameResultLogger()
-  : recentMatches(MAX_RECENT_MATCHES)
-  , loadedResultsCount(0)
-  , playerCount(0)
-  , performanceRankings(MAX_PLAYERS)
-  , undoStack(MAX_RECENT_MATCHES) {
+  : loadedResultsCount(0)
+  , searchResultsStack(50)                    // Stack for search results
+  , playerAnalysisStack(100)                  // Stack for player analysis  
+  , operationHistoryStack(100)                // Stack for operation history
+  , processingStack(50)                       // Stack for general processing
+  , playerCount(0) {
+    
     // Initialize player statistics array
     for (int i = 0; i < MAX_PLAYERS; ++i) {
         playerStatistics[i] = PlayerStats();
     }
     
-    // Initialize loaded results array
-    for (int i = 0; i < MAX_RESULTS; ++i) {
-        loadedResults[i] = Result();
-    }
-    
-    // Seed random number generator for match duration simulation
-    srand(static_cast<unsigned int>(time(nullptr)));
-    
-    // Automatically load results from JSON on initialization
-    std::cout << "Loading game results from JSON...\n";
+    // Automatically load results from JSON into DoublyLinkedList on initialization
+    std::cout << "Task 4: Loading game results from JSON into DoublyLinkedList...\n";
     loadResultsFromJSON();
+    recordOperation("Task 4 system initialized - DoublyLinkedList + Stack ready");
 }
 
 GameResultLogger::~GameResultLogger() {
-    // Destructor - LinkedHistory will clean itself up automatically
+    // Destructor - DoublyLinkedList and Stack will clean themselves up automatically
 }
 
 int GameResultLogger::findPlayerIndex(int playerId) const {
@@ -71,714 +66,17 @@ std::string GameResultLogger::matchTypeToString(MatchType type) const {
     }
 }
 
-float GameResultLogger::generateRandomDuration(MatchType type) const {
-    // Simulate realistic match durations based on match type
-    switch (type) {
-        case MatchType::BestOf1: return 25.0f + (rand() % 20); // 25-45 minutes
-        case MatchType::BestOf3: return 45.0f + (rand() % 30); // 45-75 minutes  
-        case MatchType::BestOf5: return 75.0f + (rand() % 45); // 75-120 minutes
-        default: return 30.0f;
-    }
-}
-
-void GameResultLogger::logMatchResult(const Match& match, const Result& result, 
-                                           const std::string& player1Name, const std::string& player2Name) {
-    // Generate match duration
-    float duration = generateRandomDuration(match.matchType);
-    
-    // Create match summary
-    std::string winnerName = (result.winnerId == match.player1) ? player1Name : player2Name;
-    MatchSummary summary(match.id, match.date, player1Name, player2Name, 
-                        result.score, winnerName, match.stage, match.matchType, duration);
-    
-    // Add to recent matches (circular queue)
-    recentMatches.enqueue(summary);
-    
-    // Add to complete history (linked list)
-    completeHistory.addRecord(summary);
-    
-    // Push to undo stack
-    undoStack.push(summary);
-    
-    // Update player statistics
-    int player1Index = findPlayerIndex(match.player1);
-    int player2Index = findPlayerIndex(match.player2);
-    
-    // If players don't exist, create new entries
-    if (player1Index == -1 && playerCount < MAX_PLAYERS) {
-        playerStatistics[playerCount] = PlayerStats(match.player1, player1Name);
-        player1Index = playerCount++;
-    }
-    if (player2Index == -1 && playerCount < MAX_PLAYERS) {
-        playerStatistics[playerCount] = PlayerStats(match.player2, player2Name);
-        player2Index = playerCount++;
-    }
-    
-    // Update statistics for both players
-    if (player1Index != -1) {
-        bool player1Won = (result.winnerId == match.player1);
-        Champion player1Champion = (result.championsP1[0] != Champion::NoChampion) ? 
-                                   result.championsP1[0] : Champion::NoChampion;
-        playerStatistics[player1Index].updateStats(player1Won, player1Champion, match.date, duration);
-    }
-    
-    if (player2Index != -1) {
-        bool player2Won = (result.winnerId == match.player2);
-        Champion player2Champion = (result.championsP2[0] != Champion::NoChampion) ? 
-                                   result.championsP2[0] : Champion::NoChampion;
-        playerStatistics[player2Index].updateStats(player2Won, player2Champion, match.date, duration);
-    }
-    
-    std::cout << "✓ Match result logged successfully!\n";
-    std::cout << "  Match ID: " << match.id << " | Winner: " << winnerName << " | Duration: " 
-              << std::fixed << std::setprecision(1) << duration << " minutes\n";
-}
-
-void GameResultLogger::displayRecentResults(int count) const {
-    std::cout << "\n=== RECENT MATCH RESULTS ===\n";
-    
-    if (recentMatches.isEmpty()) {
-        std::cout << "No recent matches found.\n";
-        return;
-    }
-    
-    // Create a temporary queue to iterate without modifying original
-    CircularQueue<MatchSummary> temp = recentMatches;
-    Queue<MatchSummary> displayQueue(count);
-    
-    // Extract matches to display queue
-    int displayCount = 0;
-    while (!temp.isEmpty() && displayCount < count) {
-        displayQueue.enqueue(temp.dequeue());
-        displayCount++;
-    }
-    
-    std::cout << std::left;
-    std::cout << std::setw(8) << "ID" << std::setw(12) << "Date" 
-              << std::setw(15) << "Player 1" << std::setw(15) << "Player 2"
-              << std::setw(10) << "Score" << std::setw(15) << "Winner"
-              << std::setw(12) << "Stage" << std::setw(10) << "Duration\n";
-    std::cout << std::string(97, '-') << "\n";
-    
-    while (!displayQueue.isEmpty()) {
-        MatchSummary match = displayQueue.dequeue();
-        std::cout << std::setw(8) << match.matchId 
-                  << std::setw(12) << match.date
-                  << std::setw(15) << match.player1Name.substr(0, 14)
-                  << std::setw(15) << match.player2Name.substr(0, 14)
-                  << std::setw(10) << match.score
-                  << std::setw(15) << match.winnerName.substr(0, 14)
-                  << std::setw(12) << stageToString(match.stage).substr(0, 11)
-                  << std::fixed << std::setprecision(1) << match.duration << "m\n";
-    }
-    
-    std::cout << "============================\n";
-}
-
-void GameResultLogger::displayPlayerPerformance(int playerId) const {
-    int playerIndex = findPlayerIndex(playerId);
-    if (playerIndex == -1) {
-        std::cout << "Player with ID " << playerId << " not found.\n";
-        return;
-    }
-    
-    const PlayerStats& stats = playerStatistics[playerIndex];
-    
-    std::cout << "\n=== PLAYER PERFORMANCE ===\n";
-    std::cout << "Player: " << stats.playerName << " (ID: " << stats.playerId << ")\n";
-    std::cout << std::string(40, '-') << "\n";
-    std::cout << "Total Matches: " << stats.totalMatches << "\n";
-    std::cout << "Wins: " << stats.wins << " | Losses: " << stats.losses << "\n";
-    std::cout << "Win Rate: " << std::fixed << std::setprecision(1) << stats.winRate << "%\n";
-    std::cout << "Current Win Streak: " << stats.currentWinStreak << "\n";
-    std::cout << "Longest Win Streak: " << stats.longestWinStreak << "\n";
-    std::cout << "Most Used Champion: " << "Champion#" << static_cast<int>(stats.mostUsedChampion) << "\n";
-    std::cout << "Average Game Duration: " << std::fixed << std::setprecision(1) 
-              << stats.averageGameDuration << " minutes\n";
-    std::cout << "Last Match: " << stats.lastMatchDate << "\n";
-    std::cout << "==========================\n";
-}
-
-void GameResultLogger::displayAllPlayerRankings() const {
-    if (playerCount == 0) {
-        std::cout << "No player data available.\n";
-        return;
-    }
-    
-    // Create a copy of player stats for sorting
-    PlayerStats sortedStats[MAX_PLAYERS];
-    int actualCount = 0;
-    
-    // Copy players with match data
-    for (int i = 0; i < playerCount; ++i) {
-        if (playerStatistics[i].totalMatches > 0) {
-            sortedStats[actualCount++] = playerStatistics[i];
-        }
-    }
-    
-    // Simple bubble sort by win rate (descending)
-    for (int i = 0; i < actualCount - 1; ++i) {
-        for (int j = 0; j < actualCount - i - 1; ++j) {
-            if (sortedStats[j].winRate < sortedStats[j + 1].winRate) {
-                PlayerStats temp = sortedStats[j];
-                sortedStats[j] = sortedStats[j + 1];
-                sortedStats[j + 1] = temp;
-            }
-        }
-    }
-    
-    std::cout << "\n=== PLAYER RANKINGS ===\n";
-    std::cout << std::left;
-    std::cout << std::setw(5) << "Rank" << std::setw(20) << "Player Name" 
-              << std::setw(10) << "Matches" << std::setw(10) << "Win Rate"
-              << std::setw(8) << "Wins" << std::setw(8) << "Losses"
-              << std::setw(15) << "Win Streak\n";
-    std::cout << std::string(76, '-') << "\n";
-    
-    for (int i = 0; i < actualCount; ++i) {
-        const PlayerStats& stats = sortedStats[i];
-        std::cout << std::setw(5) << (i + 1)
-                  << std::setw(20) << stats.playerName.substr(0, 19)
-                  << std::setw(10) << stats.totalMatches
-                  << std::setw(9) << std::fixed << std::setprecision(1) << stats.winRate << "%"
-                  << std::setw(8) << stats.wins
-                  << std::setw(8) << stats.losses
-                  << stats.currentWinStreak << "\n";
-    }
-    
-    std::cout << "=======================\n";
-}
-
-void GameResultLogger::displayMatchHistory(int count) const {
-    std::cout << "\n=== MATCH HISTORY ===\n";
-    
-    if (completeHistory.isEmpty()) {
-        std::cout << "No match history available.\n";
-        return;
-    }
-    
-    HistoryNode<MatchSummary>* current = completeHistory.getHead();
-    int displayed = 0;
-    
-    std::cout << std::left;
-    std::cout << std::setw(8) << "ID" << std::setw(12) << "Date"
-              << std::setw(18) << "Match" << std::setw(10) << "Score"
-              << std::setw(15) << "Winner" << std::setw(12) << "Type\n";
-    std::cout << std::string(75, '-') << "\n";
-    
-    while (current && displayed < count) {
-        const MatchSummary& match = current->data;
-        std::cout << std::setw(8) << match.matchId
-                  << std::setw(12) << match.date
-                  << std::setw(18) << (match.player1Name.substr(0,8) + " vs " + match.player2Name.substr(0,8))
-                  << std::setw(10) << match.score
-                  << std::setw(15) << match.winnerName.substr(0, 14)
-                  << matchTypeToString(match.matchType) << "\n";
-        current = current->next;
-        displayed++;
-    }
-    
-    std::cout << "\nTotal matches in history: " << completeHistory.getSize() << "\n";
-    std::cout << "=====================\n";
-}
-
-void GameResultLogger::searchMatchesByPlayer(int playerId) const {
-    std::cout << "\n=== MATCHES FOR PLAYER ID " << playerId << " ===\n";
-
-    if (loadedResultsCount == 0) {
-        std::cout << "No loaded results. Please load results first.\n";
-        return;
-    }
-
-    // Header
-    std::cout << std::left
-              << std::setw(8)  << "ResID"
-              << std::setw(10) << "MatchID"
-              << std::setw(10) << "Score"
-              << std::setw(10) << "Result\n";
-    std::cout << std::string(38, '-') << "\n";
-
-    bool found = false;
-    for (int i = 0; i < loadedResultsCount; ++i) {
-        // Compare the actual numeric IDs
-        if (matchPlayerInfo[i].player1Id == playerId ||
-            matchPlayerInfo[i].player2Id == playerId) {
-            
-            const Result& res = loadedResults[i];
-            bool    win = (res.winnerId == playerId);
-            std::cout << std::setw(8)  << res.id
-                      << std::setw(10) << res.matchId
-                      << std::setw(10) << res.score
-                      << std::setw(10) << (win ? "WIN" : "LOSS") << "\n";
-            found = true;
-        }
-    }
-
-    if (!found) {
-        std::cout << "No matches found for player ID " << playerId << "\n";
-    }
-    std::cout << "=====================================\n";
-}
-
-
-void GameResultLogger::searchMatchesByDate(const string& date) const {
-    std::cout << "\n=== MATCHES ON " << date << " ===\n";
-    
-    if (completeHistory.isEmpty()) {
-        std::cout << "No match history available.\n";
-        return;
-    }
-    
-    HistoryNode<MatchSummary>* current = completeHistory.getHead();
-    int matchCount = 0;
-    
-    std::cout << std::left;
-    std::cout << std::setw(8) << "ID" << std::setw(18) << "Match" << std::setw(10) << "Score"
-              << std::setw(15) << "Winner" << std::setw(12) << "Stage" << std::setw(10) << "Duration\n";
-    std::cout << std::string(73, '-') << "\n";
-    
-    while (current) {
-        const MatchSummary& match = current->data;
-        
-        if (match.date == date) {
-            std::cout << std::setw(8) << match.matchId
-                      << std::setw(18) << (match.player1Name.substr(0,8) + " vs " + match.player2Name.substr(0,8))
-                      << std::setw(10) << match.score
-                      << std::setw(15) << match.winnerName.substr(0, 14)
-                      << std::setw(12) << stageToString(match.stage).substr(0, 11)
-                      << std::fixed << std::setprecision(1) << match.duration << "m\n";
-            matchCount++;
-        }
-        
-        current = current->next;
-    }
-    
-    if (matchCount == 0) {
-        std::cout << "No matches found on " << date << "\n";
-    } else {
-        std::cout << "\nTotal matches found: " << matchCount << "\n";
-    }
-    
-    std::cout << "================================\n";
-}
-
-void GameResultLogger::searchMatchesByMatchId(int matchId) const {
-    std::cout << "\n=== SEARCHING FOR MATCH ID " << matchId << " ===\n";
-    
-    // Search in loaded results first (more detailed information)
-    bool foundInLoaded = false;
-    for (int i = 0; i < loadedResultsCount; i++) {
-        if (loadedResults[i].matchId == matchId) {
-            std::cout << "\n--- MATCH DETAILS FROM JSON DATA ---\n";
-            std::cout << "Match ID: " << loadedResults[i].matchId << "\n";
-            std::cout << "Result ID: " << loadedResults[i].id << "\n";
-            std::cout << "Player 1 ID: " << matchPlayerInfo[i].player1Id << "\n";
-            std::cout << "Player 2 ID: " << matchPlayerInfo[i].player2Id << "\n";
-            std::cout << "Winner ID: " << loadedResults[i].winnerId << "\n";
-            std::cout << "Score: " << loadedResults[i].score << "\n";
-            std::cout << "Games Played: " << loadedResults[i].gamesPlayed << "\n";
-            
-            // Display champions used
-            std::cout << "\n--- CHAMPIONS USED ---\n";
-            std::cout << "Player " << matchPlayerInfo[i].player1Id << " Champions: ";
-            for (int j = 0; j < Result::TEAM_SIZE; j++) {
-                if (loadedResults[i].championsP1[j] != Champion::NoChampion) {
-                    std::cout << "Champion#" << static_cast<int>(loadedResults[i].championsP1[j]);
-                    if (j < Result::TEAM_SIZE - 1 && loadedResults[i].championsP1[j+1] != Champion::NoChampion) {
-                        std::cout << ", ";
-                    }
-                }
-            }
-            std::cout << "\nPlayer " << matchPlayerInfo[i].player2Id << " Champions: ";
-            for (int j = 0; j < Result::TEAM_SIZE; j++) {
-                if (loadedResults[i].championsP2[j] != Champion::NoChampion) {
-                    std::cout << "Champion#" << static_cast<int>(loadedResults[i].championsP2[j]);
-                    if (j < Result::TEAM_SIZE - 1 && loadedResults[i].championsP2[j+1] != Champion::NoChampion) {
-                        std::cout << ", ";
-                    }
-                }
-            }
-            std::cout << "\n";
-            foundInLoaded = true;
-            break;
-        }
-    }
-    
-    // Also search in match history for additional info
-    HistoryNode<MatchSummary>* current = completeHistory.getHead();
-    bool foundInHistory = false;
-    
-    while (current) {
-        const MatchSummary& match = current->data;
-        if (match.matchId == matchId) {
-            if (!foundInLoaded) {
-                std::cout << "\n--- MATCH SUMMARY FROM HISTORY ---\n";
-            } else {
-                std::cout << "\n--- ADDITIONAL MATCH INFO ---\n";
-            }
-            std::cout << "Match ID: " << match.matchId << "\n";
-            std::cout << "Date: " << match.date << "\n";
-            std::cout << "Players: " << match.player1Name << " vs " << match.player2Name << "\n";
-            std::cout << "Score: " << match.score << "\n";
-            std::cout << "Winner: " << match.winnerName << "\n";
-            std::cout << "Stage: " << stageToString(match.stage) << "\n";
-            std::cout << "Match Type: " << matchTypeToString(match.matchType) << "\n";
-            std::cout << "Duration: " << std::fixed << std::setprecision(1) << match.duration << " minutes\n";
-            foundInHistory = true;
-            break;
-        }
-        current = current->next;
-    }
-    
-    if (!foundInLoaded && !foundInHistory) {
-        std::cout << "No match found with ID " << matchId << "\n";
-        std::cout << "Available match IDs in loaded data: ";
-        for (int i = 0; i < loadedResultsCount && i < 10; i++) {
-            std::cout << loadedResults[i].matchId;
-            if (i < loadedResultsCount - 1 && i < 9) std::cout << ", ";
-        }
-        if (loadedResultsCount > 10) std::cout << "...";
-        std::cout << "\n";
-    }
-    
-    std::cout << "=====================================\n";
-}
-
-void GameResultLogger::displayTournamentSummary(TournamentStage stage) const {
-    std::cout << "\n=== " << stageToString(stage) << " SUMMARY ===\n";
-    
-    if (completeHistory.isEmpty()) {
-        std::cout << "No match data available.\n";
-        return;
-    }
-    
-    HistoryNode<MatchSummary>* current = completeHistory.getHead();
-    int matchCount = 0;
-    float totalDuration = 0.0f;
-    
-    std::cout << std::left;
-    std::cout << std::setw(8) << "ID" << std::setw(12) << "Date" 
-              << std::setw(18) << "Match" << std::setw(10) << "Score"
-              << std::setw(15) << "Winner" << std::setw(10) << "Duration\n";
-    std::cout << std::string(73, '-') << "\n";
-    
-    while (current) {
-        const MatchSummary& match = current->data;
-        
-        if (match.stage == stage) {
-            std::cout << std::setw(8) << match.matchId
-                      << std::setw(12) << match.date
-                      << std::setw(18) << (match.player1Name.substr(0,8) + " vs " + match.player2Name.substr(0,8))
-                      << std::setw(10) << match.score
-                      << std::setw(15) << match.winnerName.substr(0, 14)
-                      << std::fixed << std::setprecision(1) << match.duration << "m\n";
-            
-            matchCount++;
-            totalDuration += match.duration;
-        }
-        
-        current = current->next;
-    }
-    
-    if (matchCount > 0) {
-        float avgDuration = totalDuration / matchCount;
-        std::cout << "\nStage Statistics:\n";
-        std::cout << "  Total matches: " << matchCount << "\n";
-        std::cout << "  Average duration: " << std::fixed << std::setprecision(1) << avgDuration << " minutes\n";
-    } else {
-        std::cout << "No matches found for " << stageToString(stage) << "\n";
-    }
-    
-    std::cout << "==================================\n";
-}
-
-void GameResultLogger::undoLastResult() {
-    if (undoStack.isEmpty()) {
-        std::cout << "No matches to undo.\n";
-        return;
-    }
-    
-    MatchSummary lastMatch = undoStack.pop();
-    std::cout << "⚠️  Undo functionality would remove match ID " << lastMatch.matchId 
-              << " (" << lastMatch.player1Name << " vs " << lastMatch.player2Name << ")\n";
-    std::cout << "Note: Full undo implementation would require reversing player statistics.\n";
-}
-
-void GameResultLogger::displayWinRateAnalysis() const {
-    std::cout << "\n=== WIN RATE ANALYSIS ===\n";
-    
-    if (playerCount == 0) {
-        std::cout << "No player data available for analysis.\n";
-        return;
-    }
-    
-    float totalWinRate = 0.0f;
-    int playersWithMatches = 0;
-    float highestWinRate = 0.0f;
-    float lowestWinRate = 100.0f;
-    std::string bestPlayer = "";
-    std::string worstPlayer = "";
-    
-    for (int i = 0; i < playerCount; ++i) {
-        const PlayerStats& stats = playerStatistics[i];
-        if (stats.totalMatches > 0) {
-            totalWinRate += stats.winRate;
-            playersWithMatches++;
-            
-            if (stats.winRate > highestWinRate) {
-                highestWinRate = stats.winRate;
-                bestPlayer = stats.playerName;
-            }
-            
-            if (stats.winRate < lowestWinRate) {
-                lowestWinRate = stats.winRate;
-                worstPlayer = stats.playerName;
-            }
-        }
-    }
-    
-    if (playersWithMatches > 0) {
-        float averageWinRate = totalWinRate / playersWithMatches;
-        
-        std::cout << "Players analyzed: " << playersWithMatches << "\n";
-        std::cout << "Average win rate: " << std::fixed << std::setprecision(1) << averageWinRate << "%\n";
-        std::cout << "Highest win rate: " << highestWinRate << "% (" << bestPlayer << ")\n";
-        std::cout << "Lowest win rate: " << lowestWinRate << "% (" << worstPlayer << ")\n";
-        
-        // Win rate distribution
-        int excellent = 0, good = 0, average = 0, poor = 0;
-        for (int i = 0; i < playerCount; ++i) {
-            const PlayerStats& stats = playerStatistics[i];
-            if (stats.totalMatches > 0) {
-                if (stats.winRate >= 80.0f) excellent++;
-                else if (stats.winRate >= 60.0f) good++;
-                else if (stats.winRate >= 40.0f) average++;
-                else poor++;
-            }
-        }
-        
-        std::cout << "\nWin Rate Distribution:\n";
-        std::cout << "  Excellent (80%+): " << excellent << " players\n";
-        std::cout << "  Good (60-79%): " << good << " players\n";
-        std::cout << "  Average (40-59%): " << average << " players\n";
-        std::cout << "  Poor (<40%): " << poor << " players\n";
-    }
-    
-    std::cout << "=========================\n";
-}
-
-void GameResultLogger::displayChampionUsageStats() const {
-    cout << "\n=== CHAMPION USAGE STATISTICS ===\n";
-    
-    if (playerCount == 0) {
-        cout << "No player data available for champion analysis.\n";
-        return;
-    }
-    
-    // Aggregate champion usage across all players
-    int totalChampionUsage[52] = {0}; // Initialize all to 0
-    
-    for (int i = 0; i < playerCount; ++i) {
-        const PlayerStats& stats = playerStatistics[i];
-        if (stats.totalMatches > 0) {
-            for (int j = 0; j < 52; ++j) {
-                totalChampionUsage[j] += stats.championUsageCount[j];
-            }
-        }
-    }
-    
-    // Find top 10 most used champions
-    struct ChampionUsage {
-        Champion champion;
-        int usage;
-        string name;
-    };
-    
-    ChampionUsage topChampions[10];
-    
-    // Initialize top champions array
-    for (int i = 0; i < 10; ++i) {
-        topChampions[i] = {Champion::NoChampion, 0, "None"};
-    }
-    
-    // Find top champions
-    for (int i = 0; i < 52; ++i) {
-        if (totalChampionUsage[i] > 0) {
-            Champion currentChampion = static_cast<Champion>(i);
-            int currentUsage = totalChampionUsage[i];
-            string currentName = "Champion#" + std::to_string(i);
-            
-            // Insert into top 10 if usage is high enough
-            for (int j = 0; j < 10; ++j) {
-                if (currentUsage > topChampions[j].usage) {
-                    // Shift lower champions down
-                    for (int k = 9; k > j; --k) {
-                        topChampions[k] = topChampions[k - 1];
-                    }
-                    // Insert current champion
-                    topChampions[j] = {currentChampion, currentUsage, currentName};
-                    break;
-                }
-            }
-        }
-    }
-    
-    cout << left;
-    cout << setw(5) << "Rank" << setw(18) << "Champion" << setw(8) << "Usage" << "Percentage\n";
-    cout << string(45, '-') << "\n";
-    
-    int totalUsage = 0;
-    for (int i = 0; i < 52; ++i) {
-        totalUsage += totalChampionUsage[i];
-    }
-    
-    for (int i = 0; i < 10; ++i) {
-        if (topChampions[i].usage > 0) {
-            float percentage = (totalUsage > 0) ? 
-                              (static_cast<float>(topChampions[i].usage) / totalUsage) * 100.0f : 0.0f;
-            cout << setw(5) << (i + 1)
-                 << setw(18) << topChampions[i].name
-                 << setw(8) << topChampions[i].usage
-                 << fixed << setprecision(1) << percentage << "%\n";
-        }
-    }
-    
-    cout << "\nTotal champion picks analyzed: " << totalUsage << "\n";
-    cout << "===================================\n";
-}
-
-void GameResultLogger::displayMatchTypeAnalysis() const {
-    cout << "\n=== MATCH TYPE ANALYSIS ===\n";
-    
-    if (completeHistory.isEmpty()) {
-        cout << "No match data available for analysis.\n";
-        return;
-    }
-    
-    int bestOf1Count = 0, bestOf3Count = 0, bestOf5Count = 0;
-    float bestOf1Duration = 0.0f, bestOf3Duration = 0.0f, bestOf5Duration = 0.0f;
-    
-    HistoryNode<MatchSummary>* current = completeHistory.getHead();
-    
-    while (current) {
-        const MatchSummary& match = current->data;
-        
-        switch (match.matchType) {
-            case MatchType::BestOf1:
-                bestOf1Count++;
-                bestOf1Duration += match.duration;
-                break;
-            case MatchType::BestOf3:
-                bestOf3Count++;
-                bestOf3Duration += match.duration;
-                break;
-            case MatchType::BestOf5:
-                bestOf5Count++;
-                bestOf5Duration += match.duration;
-                break;
-        }
-        
-        current = current->next;
-    }
-    
-    int totalMatches = bestOf1Count + bestOf3Count + bestOf5Count;
-    
-    cout << left;
-    cout << setw(15) << "Match Type" << setw(8) << "Count" << setw(12) << "Percentage" 
-         << setw(15) << "Avg Duration\n";
-    cout << string(50, '-') << "\n";
-    
-    if (bestOf1Count > 0) {
-        float percentage = (static_cast<float>(bestOf1Count) / totalMatches) * 100.0f;
-        float avgDuration = bestOf1Duration / bestOf1Count;
-        cout << setw(15) << "Best of 1" << setw(8) << bestOf1Count 
-             << setw(11) << fixed << setprecision(1) << percentage << "%"
-             << setw(14) << avgDuration << "m\n";
-    }
-    
-    if (bestOf3Count > 0) {
-        float percentage = (static_cast<float>(bestOf3Count) / totalMatches) * 100.0f;
-        float avgDuration = bestOf3Duration / bestOf3Count;
-        cout << setw(15) << "Best of 3" << setw(8) << bestOf3Count 
-             << setw(11) << fixed << setprecision(1) << percentage << "%"
-             << setw(14) << avgDuration << "m\n";
-    }
-    
-    if (bestOf5Count > 0) {
-        float percentage = (static_cast<float>(bestOf5Count) / totalMatches) * 100.0f;
-        float avgDuration = bestOf5Duration / bestOf5Count;
-        cout << setw(15) << "Best of 5" << setw(8) << bestOf5Count 
-             << setw(11) << fixed << setprecision(1) << percentage << "%"
-             << setw(14) << avgDuration << "m\n";
-    }
-    
-    cout << "\nTotal matches analyzed: " << totalMatches << "\n";
-    cout << "===========================\n";
-}
-
-void GameResultLogger::exportPlayerStatistics() const {
-    cout << "\n=== EXPORTED PLAYER STATISTICS ===\n";
-    cout << "Format: CSV-like output for external analysis\n";
-    cout << string(50, '-') << "\n";
-    
-    cout << "PlayerID,PlayerName,TotalMatches,Wins,Losses,WinRate,CurrentStreak,LongestStreak,MostUsedChampion,AvgDuration,LastMatch\n";
-    
-    for (int i = 0; i < playerCount; ++i) {
-        const PlayerStats& stats = playerStatistics[i];
-        if (stats.totalMatches > 0) {
-            cout << stats.playerId << ","
-                 << stats.playerName << ","
-                 << stats.totalMatches << ","
-                 << stats.wins << ","
-                 << stats.losses << ","
-                 << fixed << setprecision(2) << stats.winRate << ","
-                 << stats.currentWinStreak << ","
-                 << stats.longestWinStreak << ","
-                 << "Champion#" << static_cast<int>(stats.mostUsedChampion) << ","
-                 << fixed << setprecision(1) << stats.averageGameDuration << ","
-                 << stats.lastMatchDate << "\n";
-        }
-    }
-    
-    cout << "\n" << playerCount << " player records exported.\n";
-    cout << "===================================\n";
-}
-
-int GameResultLogger::getTotalMatchesLogged() const {
-    return completeHistory.getSize();
-}
-
-bool GameResultLogger::hasPlayerData(int playerId) const {
-    return findPlayerIndex(playerId) != -1;
-}
-
-void GameResultLogger::clearAllData() {
-    // Clear all data structures
-    while (!recentMatches.isEmpty()) {
-        recentMatches.dequeue();
-    }
-    
-    completeHistory.clear();
-    
-    while (!undoStack.isEmpty()) {
-        undoStack.pop();
-    }
-    
-    // Reset player statistics
-    for (int i = 0; i < MAX_PLAYERS; ++i) {
-        playerStatistics[i] = PlayerStats();
-    }
-    playerCount = 0;
-    
-    std::cout << "All game result data cleared.\n";
-}
+// ===============================================
+// TASK 4 JSON LOADING (DoublyLinkedList)
+// ===============================================
 
 void GameResultLogger::loadResultsFromJSON() {
     loadResultsFromJSON("../data/results.json");
 }
 
 void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
-    std::cout << "Using JsonLoader to load results from: " << jsonPath << "\n";
+    std::cout << "Using JsonLoader to load results into DoublyLinkedList from: " << jsonPath << "\n";
+    recordOperation("Loading results from JSON: " + jsonPath);
     
     // Try original path first
     DoublyLinkedList<Result> resultsList = JsonLoader::loadResults(jsonPath);
@@ -792,55 +90,67 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
     
     if (resultsList.getSize() == 0) {
         std::cout << "JsonLoader could not load results. No results available.\n";
+        recordOperation("JSON loading failed - no results found");
         return;
     }
     
     std::cout << "JsonLoader successfully loaded " << resultsList.getSize() << " results.\n";
     
-    // Clear existing loaded results
+    // Clear existing loaded results in DoublyLinkedList
+    loadedResultsList.clear();
+    matchPlayerInfoList.clear();
     loadedResultsCount = 0;
     
-    // Convert DoublyLinkedList to array format for GameResultLogger
-    for (int i = 0; i < resultsList.getSize() && loadedResultsCount < MAX_RESULTS; i++) {
+    // Copy results to our DoublyLinkedList
+    for (int i = 0; i < resultsList.getSize(); i++) {
         Result* result = resultsList.get(i);
         if (result) {
-            loadedResults[loadedResultsCount] = *result;
+            loadedResultsList.append(*result);
             
-            // Note: JsonLoader doesn't provide player1Id/player2Id, so we'll use approximations
-            // This is a limitation of the current JsonLoader implementation
-            matchPlayerInfo[loadedResultsCount] = MatchPlayerInfo(
+            // Create matching player info
+            MatchPlayerInfo playerInfo(
                 result->matchId, 
                 100 + loadedResultsCount,      // Approximate player1Id
                 200 + loadedResultsCount,      // Approximate player2Id
                 result->winnerId
             );
+            matchPlayerInfoList.append(playerInfo);
             
             loadedResultsCount++;
         }
     }
     
-    std::cout << "Successfully processed " << loadedResultsCount << " results using JsonLoader.\n";
+    std::cout << "Successfully processed " << loadedResultsCount << " results into DoublyLinkedList.\n";
+    recordOperation("JSON loading completed - " + std::to_string(loadedResultsCount) + " results loaded");
     
     // Calculate player statistics from loaded results
     calculatePlayerStatistics();
 }
 
 void GameResultLogger::calculatePlayerStatistics() {
+    recordOperation("Calculating player statistics from DoublyLinkedList");
+    
     // Reset player statistics
     for (int i = 0; i < MAX_PLAYERS; ++i) {
         playerStatistics[i] = PlayerStats();
     }
     playerCount = 0;
     
-    // Analyze each loaded result
+    // Analyze each loaded result using DoublyLinkedList
     for (int i = 0; i < loadedResultsCount; ++i) {
-        const Result& result = loadedResults[i];
-        const MatchPlayerInfo& playerInfo = matchPlayerInfo[i];
+        Result* result = loadedResultsList.get(i);
+        MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(i);
         
-        // Get player IDs from the stored match player information
-        int player1Id = playerInfo.player1Id;
-        int player2Id = playerInfo.player2Id;
-        int winnerId = playerInfo.winnerId;
+        if (!result || !playerInfo) continue;
+        
+        // Get player IDs from the stored match player information  
+        int player1Id = playerInfo->player1Id;
+        int player2Id = playerInfo->player2Id;
+        int winnerId = playerInfo->winnerId;
+        
+        // Push player analysis to stack for processing
+        PlayerStats tempStats1(player1Id, "Player" + std::to_string(player1Id));
+        PlayerStats tempStats2(player2Id, "Player" + std::to_string(player2Id));
         
         // Find or create player statistics entries
         int player1Index = findPlayerIndex(player1Id);
@@ -858,23 +168,31 @@ void GameResultLogger::calculatePlayerStatistics() {
         // Update statistics for player 1
         if (player1Index != -1) {
             bool player1Won = (winnerId == player1Id);
-            Champion player1Champion = (result.championsP1[0] != Champion::NoChampion) ? 
-                                       result.championsP1[0] : Champion::NoChampion;
+            Champion player1Champion = (result->championsP1[0] != Champion::NoChampion) ? 
+                                       result->championsP1[0] : Champion::NoChampion;
             playerStatistics[player1Index].updateStats(player1Won, player1Champion, "2024-01-01", 30.0f);
+            
+            // Push to analysis stack
+            pushPlayerAnalysis(playerStatistics[player1Index]);
         }
         
         // Update statistics for player 2
         if (player2Index != -1) {
             bool player2Won = (winnerId == player2Id);
-            Champion player2Champion = (result.championsP2[0] != Champion::NoChampion) ? 
-                                       result.championsP2[0] : Champion::NoChampion;
+            Champion player2Champion = (result->championsP2[0] != Champion::NoChampion) ? 
+                                       result->championsP2[0] : Champion::NoChampion;
             playerStatistics[player2Index].updateStats(player2Won, player2Champion, "2024-01-01", 30.0f);
+            
+            // Push to analysis stack
+            pushPlayerAnalysis(playerStatistics[player2Index]);
         }
     }
+    
+    recordOperation("Player statistics calculation completed");
 }
 
 void GameResultLogger::displayLoadedResults() const {
-    std::cout << "\n=== LOADED RESULTS FROM JSON ===\n";
+    std::cout << "\n=== LOADED RESULTS FROM JSON (DoublyLinkedList) ===\n";
     
     if (loadedResultsCount == 0) {
         std::cout << "No results loaded from JSON.\n";
@@ -889,22 +207,26 @@ void GameResultLogger::displayLoadedResults() const {
               << std::setw(12) << "P2 Champ\n";
     std::cout << std::string(84, '-') << "\n";
     
+    // Use DoublyLinkedList traversal instead of array access
     for (int i = 0; i < loadedResultsCount; ++i) {
-        const Result& result = loadedResults[i];
-        const MatchPlayerInfo& playerInfo = matchPlayerInfo[i];
+        Result* result = loadedResultsList.get(i);
+        MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(i);
         
-        std::cout << std::setw(6) << result.id
-                  << std::setw(10) << result.matchId
-                  << std::setw(8) << playerInfo.player1Id
-                  << std::setw(8) << playerInfo.player2Id
-                  << std::setw(8) << result.gamesPlayed
-                  << std::setw(10) << result.score
-                  << std::setw(10) << playerInfo.winnerId
-                  << std::setw(12) << ("Champ#" + std::to_string(static_cast<int>(result.championsP1[0]))).substr(0, 11)
-                  << ("Champ#" + std::to_string(static_cast<int>(result.championsP2[0]))).substr(0, 11) << "\n";
+        if (!result || !playerInfo) continue;
+        
+        std::cout << std::setw(6) << result->id
+                  << std::setw(10) << result->matchId
+                  << std::setw(8) << playerInfo->player1Id
+                  << std::setw(8) << playerInfo->player2Id
+                  << std::setw(8) << result->gamesPlayed
+                  << std::setw(10) << result->score
+                  << std::setw(10) << playerInfo->winnerId
+                  << std::setw(12) << ("Champ#" + std::to_string(static_cast<int>(result->championsP1[0]))).substr(0, 11)
+                  << ("Champ#" + std::to_string(static_cast<int>(result->championsP2[0]))).substr(0, 11) << "\n";
     }
     
-    std::cout << "\nTotal loaded results: " << loadedResultsCount << "\n";
+    std::cout << "\nTotal loaded results (via DoublyLinkedList): " << loadedResultsCount << "\n";
+    std::cout << "DoublyLinkedList size: " << loadedResultsList.getSize() << "\n";
     std::cout << "==================================\n";
 }
 
@@ -1062,6 +384,345 @@ void GameResultLogger::displayComprehensivePlayerStats() const {
     std::cout << "\n========================================\n";
 }
 
+// ===============================================
+// NEW STACK-BASED TASK 4 IMPLEMENTATION
+// ===============================================
+
+// Stack operations for search results
+void GameResultLogger::pushSearchResult(const Result& result) {
+    if (!searchResultsStack.isFull()) {
+        searchResultsStack.push(result);
+        recordOperation("Pushed search result to stack - Match ID: " + std::to_string(result.matchId));
+    }
+}
+
+Result GameResultLogger::popSearchResult() {
+    if (!searchResultsStack.isEmpty()) {
+        Result result = searchResultsStack.pop();
+        recordOperation("Popped search result from stack - Match ID: " + std::to_string(result.matchId));
+        return result;
+    }
+    return Result(); // Return empty result if stack is empty
+}
+
+void GameResultLogger::clearSearchResults() {
+    while (!searchResultsStack.isEmpty()) {
+        searchResultsStack.pop();
+    }
+    recordOperation("Cleared all search results from stack");
+}
+
+void GameResultLogger::displaySearchResultsStack() const {
+    std::cout << "\n=== SEARCH RESULTS STACK ===\n";
+    std::cout << "Stack size: " << searchResultsStack.size() << "\n";
+    
+    if (searchResultsStack.isEmpty()) {
+        std::cout << "Search results stack is empty.\n";
+        return;
+    }
+    
+    // Create temporary stack to display without modifying original
+    Stack<Result> tempStack(MAX_RECENT_MATCHES);
+    
+    std::cout << std::left;
+    std::cout << std::setw(10) << "Match ID" << std::setw(8) << "Games" 
+              << std::setw(12) << "Score" << std::setw(10) << "Winner\n";
+    std::cout << std::string(40, '-') << "\n";
+    
+    // Display stack contents (Note: this is a simplified display)
+    std::cout << "Stack contains " << searchResultsStack.size() << " search result(s)\n";
+    std::cout << "Use popSearchResult() to retrieve results in LIFO order\n";
+}
+
+// Stack operations for player analysis
+void GameResultLogger::pushPlayerAnalysis(const PlayerStats& stats) {
+    if (!playerAnalysisStack.isFull()) {
+        playerAnalysisStack.push(stats);
+        recordOperation("Pushed player analysis to stack - Player ID: " + std::to_string(stats.playerId));
+    }
+}
+
+PlayerStats GameResultLogger::popPlayerAnalysis() {
+    if (!playerAnalysisStack.isEmpty()) {
+        PlayerStats stats = playerAnalysisStack.pop();
+        recordOperation("Popped player analysis from stack - Player ID: " + std::to_string(stats.playerId));
+        return stats;
+    }
+    return PlayerStats(); // Return empty stats if stack is empty
+}
+
+void GameResultLogger::processPlayerAnalysisStack() {
+    std::cout << "\n=== PROCESSING PLAYER ANALYSIS STACK ===\n";
+    
+    if (playerAnalysisStack.isEmpty()) {
+        std::cout << "Player analysis stack is empty.\n";
+        return;
+    }
+    
+    int processedCount = 0;
+    while (!playerAnalysisStack.isEmpty()) {
+        PlayerStats stats = popPlayerAnalysis();
+        
+        std::cout << "Processing Player " << stats.playerId << " (" << stats.playerName << ")\n";
+        std::cout << "  Matches: " << stats.totalMatches << ", Win Rate: " 
+                  << std::fixed << std::setprecision(1) << stats.winRate << "%\n";
+        
+        processedCount++;
+    }
+    
+    std::cout << "Processed " << processedCount << " players from analysis stack.\n";
+    recordOperation("Processed " + std::to_string(processedCount) + " players from analysis stack");
+}
+
+void GameResultLogger::displayPlayerAnalysisStack() const {
+    std::cout << "\n=== PLAYER ANALYSIS STACK ===\n";
+    std::cout << "Stack size: " << playerAnalysisStack.size() << "\n";
+    
+    if (playerAnalysisStack.isEmpty()) {
+        std::cout << "Player analysis stack is empty.\n";
+        return;
+    }
+    
+    std::cout << "Stack contains " << playerAnalysisStack.size() << " player analysis record(s)\n";
+    std::cout << "Use processPlayerAnalysisStack() to process all players\n";
+}
+
+// Operation history stack management
+void GameResultLogger::recordOperation(const std::string& operation) {
+    if (!operationHistoryStack.isFull()) {
+        operationHistoryStack.push(operation);
+    }
+}
+
+std::string GameResultLogger::getLastOperation() {
+    if (!operationHistoryStack.isEmpty()) {
+        return operationHistoryStack.pop();
+    }
+    return "No operations recorded";
+}
+
+void GameResultLogger::displayOperationHistory() const {
+    std::cout << "\n=== OPERATION HISTORY STACK ===\n";
+    std::cout << "Stack size: " << operationHistoryStack.size() << "\n";
+    
+    if (operationHistoryStack.isEmpty()) {
+        std::cout << "Operation history stack is empty.\n";
+        return;
+    }
+    
+    std::cout << "Recent operations are stored in stack (LIFO order)\n";
+    std::cout << "Use getLastOperation() to retrieve last operation\n";
+}
+
+void GameResultLogger::clearOperationHistory() {
+    while (!operationHistoryStack.isEmpty()) {
+        operationHistoryStack.pop();
+    }
+    recordOperation("Operation history cleared");
+}
+
+// ===============================================  
+// DOUBLY LINKED LIST OPERATIONS
+// ===============================================
+
+void GameResultLogger::traverseResultsForward() const {
+    std::cout << "\n=== FORWARD TRAVERSAL OF RESULTS (DoublyLinkedList) ===\n";
+    
+    if (loadedResultsList.getSize() == 0) {
+        std::cout << "No results in DoublyLinkedList to traverse.\n";
+        return;
+    }
+    
+    std::cout << "Traversing " << loadedResultsList.getSize() << " results forward:\n";
+    
+    for (int i = 0; i < loadedResultsList.getSize(); ++i) {
+        Result* result = loadedResultsList.get(i);
+        if (result) {
+            std::cout << "Result " << (i+1) << ": Match ID " << result->matchId 
+                      << ", Score: " << result->score << "\n";
+        }
+    }
+}
+
+void GameResultLogger::traverseResultsBackward() const {
+    std::cout << "\n=== BACKWARD TRAVERSAL OF RESULTS (DoublyLinkedList) ===\n";
+    
+    if (loadedResultsList.getSize() == 0) {
+        std::cout << "No results in DoublyLinkedList to traverse.\n";
+        return;
+    }
+    
+    std::cout << "Traversing " << loadedResultsList.getSize() << " results backward:\n";
+    
+    for (int i = loadedResultsList.getSize() - 1; i >= 0; --i) {
+        Result* result = loadedResultsList.get(i);
+        if (result) {
+            std::cout << "Result " << (i+1) << ": Match ID " << result->matchId 
+                      << ", Score: " << result->score << "\n";
+        }
+    }
+}
+
+void GameResultLogger::findResultInList(int matchId) const {
+    std::cout << "\n=== SEARCHING FOR MATCH ID " << matchId << " IN DOUBLYLINKEDLIST ===\n";
+    
+    bool found = false;
+    for (int i = 0; i < loadedResultsList.getSize(); ++i) {
+        Result* result = loadedResultsList.get(i);
+        if (result && result->matchId == matchId) {
+            std::cout << "Found at position " << (i+1) << ":\n";
+            std::cout << "  Match ID: " << result->matchId << "\n";
+            std::cout << "  Score: " << result->score << "\n";
+            std::cout << "  Games Played: " << result->gamesPlayed << "\n";
+            
+            // Push to search results stack
+            const_cast<GameResultLogger*>(this)->pushSearchResult(*result);
+            
+            found = true;
+            break;
+        }
+    }
+    
+    if (!found) {
+        std::cout << "Match ID " << matchId << " not found in DoublyLinkedList.\n";
+    }
+}
+
+void GameResultLogger::filterResultsByPlayer(int playerId) const {
+    std::cout << "\n=== FILTERING RESULTS BY PLAYER " << playerId << " (DoublyLinkedList) ===\n";
+    
+    int foundCount = 0;
+    
+    for (int i = 0; i < loadedResultsList.getSize(); ++i) {
+        Result* result = loadedResultsList.get(i);
+        MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(i);
+        
+        if (result && playerInfo && 
+            (playerInfo->player1Id == playerId || playerInfo->player2Id == playerId)) {
+            
+            std::cout << "Match " << result->matchId << ": ";
+            if (playerInfo->winnerId == playerId) {
+                std::cout << "Player " << playerId << " WON";
+            } else {
+                std::cout << "Player " << playerId << " LOST";
+            }
+            std::cout << " (Score: " << result->score << ")\n";
+            
+            // Push to search results stack
+            const_cast<GameResultLogger*>(this)->pushSearchResult(*result);
+            
+            foundCount++;
+        }
+    }
+    
+    if (foundCount == 0) {
+        std::cout << "No results found for Player " << playerId << " in DoublyLinkedList.\n";
+    } else {
+        std::cout << "Found " << foundCount << " matches for Player " << playerId << "\n";
+        std::cout << "Results have been pushed to search results stack.\n";
+    }
+}
+
 int GameResultLogger::getLoadedResultsCount() const {
     return loadedResultsCount;
+}
+
+void GameResultLogger::searchMatchesByPlayer(int playerId) const {
+    std::cout << "\n=== SEARCHING FOR PLAYER " << playerId << " ===\n";
+    
+    bool found = false;
+    int matchCount = 0;
+    
+    // Use get() method to traverse the DoublyLinkedList
+    for (int i = 0; i < loadedResultsList.getSize(); i++) {
+        Result* resultPtr = loadedResultsList.get(i);
+        if (!resultPtr) continue;
+        
+        const Result& result = *resultPtr;
+        
+        // Check if this result involves the player (using MatchPlayerInfo list)
+        for (int j = 0; j < matchPlayerInfoList.getSize(); j++) {
+            MatchPlayerInfo* playerInfo = matchPlayerInfoList.get(j);
+            if (playerInfo && playerInfo->matchId == result.matchId) {
+                if (playerInfo->player1Id == playerId || playerInfo->player2Id == playerId) {
+                    found = true;
+                    matchCount++;
+                    
+                    std::cout << "Match " << matchCount << ":\n";
+                    std::cout << "  Match ID: " << result.matchId << "\n";
+                    std::cout << "  Score: " << result.score << "\n";
+                    std::cout << "  Winner ID: " << result.winnerId << "\n";
+                    std::cout << "  Games Played: " << result.gamesPlayed << "\n";
+                    std::cout << "  Player 1 Champion: Champion #" << static_cast<int>(result.championsP1[0]) << "\n";
+                    std::cout << "  Player 2 Champion: Champion #" << static_cast<int>(result.championsP2[0]) << "\n\n";
+                }
+                break;
+            }
+        }
+    }
+    
+    if (!found) {
+        std::cout << "No matches found for Player " << playerId << "\n";
+    } else {
+        std::cout << "Total matches found: " << matchCount << "\n";
+    }
+}
+
+void GameResultLogger::displayPlayerPerformance(int playerId) const {
+    std::cout << "\n=== PLAYER " << playerId << " PERFORMANCE ===\n";
+    
+    int playerIndex = findPlayerIndex(playerId);
+    if (playerIndex == -1 || playerStatistics[playerIndex].totalMatches == 0) {
+        std::cout << "No performance data available for Player " << playerId << "\n";
+        return;
+    }
+    
+    const PlayerStats& stats = playerStatistics[playerIndex];
+    std::cout << "Player ID: " << stats.playerId << "\n";
+    std::cout << "Player Name: " << stats.playerName << "\n";
+    std::cout << "Total Matches: " << stats.totalMatches << "\n";
+    std::cout << "Wins: " << stats.wins << "\n";
+    std::cout << "Losses: " << stats.losses << "\n";
+    std::cout << "Win Rate: " << std::fixed << std::setprecision(1) << stats.winRate << "%\n";
+    std::cout << "Current Win Streak: " << stats.currentWinStreak << "\n";
+    std::cout << "Longest Win Streak: " << stats.longestWinStreak << "\n";
+    std::cout << "Average Game Duration: " << std::fixed << std::setprecision(1) << stats.averageGameDuration << " minutes\n";
+    
+    if (stats.mostUsedChampion != Champion::NoChampion) {
+        std::cout << "Most Used Champion: Champion #" << static_cast<int>(stats.mostUsedChampion) << "\n";
+    }
+}
+
+void GameResultLogger::searchMatchesByMatchId(int matchId) const {
+    std::cout << "\n=== SEARCHING FOR MATCH " << matchId << " ===\n";
+    
+    bool found = false;
+    
+    // Use get() method to traverse the DoublyLinkedList
+    for (int i = 0; i < loadedResultsList.getSize(); i++) {
+        Result* resultPtr = loadedResultsList.get(i);
+        if (!resultPtr) continue;
+        
+        const Result& result = *resultPtr;
+        if (result.matchId == matchId) {
+            found = true;
+            
+            std::cout << "Match Found:\n";
+            std::cout << "  Match ID: " << result.matchId << "\n";
+            std::cout << "  Score: " << result.score << "\n";
+            std::cout << "  Winner ID: " << result.winnerId << "\n";
+            std::cout << "  Games Played: " << result.gamesPlayed << "\n";
+            std::cout << "  Player 1 Champions: Champion #" << static_cast<int>(result.championsP1[0]) << "\n";
+            std::cout << "  Player 2 Champions: Champion #" << static_cast<int>(result.championsP2[0]) << "\n";
+            break;
+        }
+    }
+    
+    if (!found) {
+        std::cout << "No match found with ID " << matchId << "\n";
+    }
+}
+
+bool GameResultLogger::hasPlayerData(int playerId) const {
+    return findPlayerIndex(playerId) != -1;
 }
