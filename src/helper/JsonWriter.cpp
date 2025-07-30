@@ -32,6 +32,55 @@ bool JsonWriter::appendPlayer(const Player& player, const std::string& filename)
     return writeAllPlayers(existingPlayers, filename);
 }
 
+bool JsonWriter::writeAllCheckedInPlayer(PriorityQueue<Player>& checkInQueue, const std::string& filename) {
+    json jsonArray = json::array();
+    
+    // Get all items from the queue with their priorities
+    int queueSize = checkInQueue.getSize();
+    if (queueSize == 0) {
+        // Create empty file if queue is empty
+        std::ofstream file(filename);
+        if (!file.is_open()) {
+            std::cerr << "Failed to open file for writing: " << filename << std::endl;
+            return false;
+        }
+        file << "[]";
+        file.close();
+        std::cout << "Created empty check-in queue file: " << filename << std::endl;
+        return true;
+    }
+    
+    Player* players = new Player[queueSize];
+    int* priorities = new int[queueSize];
+    int count = 0;
+    
+    checkInQueue.getAllItemsWithPriority(players, priorities, count);
+    
+    // Convert to JSON
+    for (int i = 0; i < count; i++) {
+        json playerJson = playerToJson(players[i]);
+        playerJson["priority"] = priorities[i];
+        jsonArray.push_back(playerJson);
+    }
+    
+    // Clean up dynamic arrays
+    delete[] players;
+    delete[] priorities;
+    
+    // Write to file (replace entire content)
+    std::ofstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Failed to open file for writing: " << filename << std::endl;
+        return false;
+    }
+    
+    file << jsonArray.dump(4); // Pretty print with 4 spaces
+    file.close();
+    
+    std::cout << "Successfully wrote " << jsonArray.size() << " checked-in players to " << filename << std::endl;
+    return true;
+}
+
 bool JsonWriter::writeAllPlayers(const DoublyLinkedList<Player>& players, const std::string& filename) {
     json jsonArray = json::array();
     
@@ -203,6 +252,10 @@ bool JsonWriter::appendTournament(const Tournament& tournament, const std::strin
 }
 
 bool JsonWriter::writeAllTournaments(const DoublyLinkedList<Tournament>& tournaments, const std::string& filename) {
+    if (!createFileIfNotExists(filename)) {
+        return false;
+    }
+    
     json jsonArray = json::array();
     
     for (int i = 0; i < tournaments.getSize(); i++) {
@@ -222,32 +275,6 @@ bool JsonWriter::writeAllTournaments(const DoublyLinkedList<Tournament>& tournam
     file.close();
     
     std::cout << "Successfully wrote " << tournaments.getSize() << " tournaments to " << filename << std::endl;
-    return true;
-}
-
-bool JsonWriter::writeAllTournaments(const std::vector<Tournament>& tournaments, const std::string& filename) {
-    // Ensure the data directory exists
-    if (!createDirectoryIfNotExists("data")) {
-        std::cerr << "Failed to create data directory" << std::endl;
-        return false;
-    }
-    
-    json jsonArray = json::array();
-    
-    for (const auto& tournament : tournaments) {
-        jsonArray.push_back(tournamentToJson(tournament));
-    }
-    
-    std::ofstream file(filename);
-    if (!file.is_open()) {
-        std::cerr << "Failed to open file for writing: " << filename << std::endl;
-        return false;
-    }
-    
-    file << jsonArray.dump(4);
-    file.close();
-    
-    std::cout << "Successfully wrote " << tournaments.size() << " tournaments to " << filename << std::endl;
     return true;
 }
 

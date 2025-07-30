@@ -8,6 +8,7 @@
 #include "dto/Spectator.hpp"
 #include "dto/Tournament.hpp"
 #include "structures/DoublyLinkedList.hpp"
+#include "structures/PriorityQueue.hpp"
 #include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
@@ -16,6 +17,7 @@ class JsonWriter {
 public:
     // Player operations
     static bool appendPlayer(const Player& player, const std::string& filename = "data/players.json");
+    static bool writeAllCheckedInPlayer(PriorityQueue<Player>& checkInQueue, const std::string& filename = "data/check_in.json");
     static bool writeAllPlayers(const DoublyLinkedList<Player>& players, const std::string& filename = "data/players.json");
     
     // Match operations
