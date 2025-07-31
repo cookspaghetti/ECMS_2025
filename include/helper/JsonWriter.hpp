@@ -11,7 +11,6 @@
 #include "structures/PriorityQueue.hpp"
 #include <nlohmann/json.hpp>
 #include <string>
-#include <vector>
 
 class JsonWriter {
 public:
@@ -39,7 +38,6 @@ public:
     // Tournament operations
     static bool appendTournament(const Tournament& tournament, const std::string& filename = "data/tournaments.json");
     static bool writeAllTournaments(const DoublyLinkedList<Tournament>& tournaments, const std::string& filename = "data/tournaments.json");
-    static bool writeAllTournaments(const std::vector<Tournament>& tournaments, const std::string& filename = "data/tournaments.json");
 
     // Champion conversion helper
     static std::string championToString(Champion champion);
