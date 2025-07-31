@@ -115,7 +115,8 @@ void handleSpectatorQueue() {
     do {
         std::cout << "\n-- Spectator Management Menu --\n";
         std::cout << "1. Register Spectator\n";
-        std::cout << "2. Display Queue\n";
+        std::cout << "2. Check-In Spectator\n";
+        std::cout << "3. Display Queue\n";
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
         
@@ -131,6 +132,9 @@ void handleSpectatorQueue() {
                 spectatorReg.registerSpectator();
                 break;
             case 2:
+                spectatorReg.checkInSpectator();
+                break;
+            case 3:
                 std::cout << "Displaying spectator queue and seating status...\n";
                 spectatorReg.displayQueue();
                 break;
