@@ -27,7 +27,7 @@ GameResultLogger::GameResultLogger()
     }
     
     // Automatically load results from JSON into DoublyLinkedList on initialization
-    std::cout << "Task 4: Loading game results from JSON into DoublyLinkedList...\n";
+    // std::cout << "Task 4: Loading game results from JSON into DoublyLinkedList...\n";
     loadResultsFromJSON();
     recordOperation("Task 4 system initialized - DoublyLinkedList + Stack ready");
 }
@@ -75,7 +75,7 @@ void GameResultLogger::loadResultsFromJSON() {
 }
 
 void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
-    std::cout << "Using JsonLoader to load results from: " << jsonPath << "\n";
+    // std::cout << "Using JsonLoader to load results from: " << jsonPath << "\n";
     recordOperation("Loading results using JsonLoader: " + jsonPath);
     
     // Use JsonLoader - it handles DoublyLinkedList internally
@@ -96,8 +96,8 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
     }
     
     loadedResultsCount = resultsList.getSize();
-    std::cout << "JsonLoader successfully loaded " << loadedResultsCount << " results.\n";
-    std::cout << "JsonLoader manages DoublyLinkedList internally.\n";
+    // std::cout << "JsonLoader successfully loaded " << loadedResultsCount << " results.\n";
+    // std::cout << "JsonLoader manages DoublyLinkedList internally.\n";
     recordOperation("JSON loading completed - " + std::to_string(loadedResultsCount) + " results loaded via JsonLoader");
     
     // Calculate player statistics from JsonLoader data

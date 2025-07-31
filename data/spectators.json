@@ -1,2414 +1,2423 @@
-﻿[
+[
     {
+        "affiliation": "",
+        "email": "morgan.davis234@mail.com",
+        "gender": "Male",
         "id": "S00001",
         "name": "Morgan Davis",
-        "gender": "Male",
-        "email": "morgan.davis234@mail.com",
         "phoneNum": "601185298378",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Facebook",
+        "email": "quinn.brown996@mail.com",
+        "gender": "Female",
         "id": "S00002",
         "name": "Quinn Brown",
-        "gender": "Female",
-        "email": "quinn.brown996@mail.com",
         "phoneNum": "601377778365",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "peyton.lopez858@mail.com",
+        "gender": "Male",
         "id": "S00003",
         "name": "Peyton Lopez",
-        "gender": "Male",
-        "email": "peyton.lopez858@mail.com",
         "phoneNum": "601949933045",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Twitch",
+        "email": "drew.muller713@mail.com",
+        "gender": "Female",
         "id": "S00004",
         "name": "Drew Muller",
-        "gender": "Female",
-        "email": "drew.muller713@mail.com",
         "phoneNum": "601276416239",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "TikTok",
+        "email": "taylor.brown178@mail.com",
+        "gender": "Male",
         "id": "S00005",
         "name": "Taylor Brown",
-        "gender": "Male",
-        "email": "taylor.brown178@mail.com",
         "phoneNum": "601650935580",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "jordan.davis193@mail.com",
+        "gender": "Male",
         "id": "S00006",
         "name": "Jordan Davis",
-        "gender": "Male",
-        "email": "jordan.davis193@mail.com",
         "phoneNum": "601775193175",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "drew.garcia681@mail.com",
+        "gender": "Female",
         "id": "S00007",
         "name": "Drew Garcia",
-        "gender": "Female",
-        "email": "drew.garcia681@mail.com",
         "phoneNum": "601546004745",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "riley.davis826@mail.com",
+        "gender": "Female",
         "id": "S00008",
         "name": "Riley Davis",
-        "gender": "Female",
-        "email": "riley.davis826@mail.com",
         "phoneNum": "601556648827",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "peyton.khan815@mail.com",
+        "gender": "Male",
         "id": "S00009",
         "name": "Peyton Khan",
-        "gender": "Male",
-        "email": "peyton.khan815@mail.com",
         "phoneNum": "601697389998",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "quinn.patel140@mail.com",
+        "gender": "Female",
         "id": "S00010",
         "name": "Quinn Patel",
-        "gender": "Female",
-        "email": "quinn.patel140@mail.com",
         "phoneNum": "601194510740",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "drew.garcia757@mail.com",
+        "gender": "Female",
         "id": "S00011",
         "name": "Drew Garcia",
-        "gender": "Female",
-        "email": "drew.garcia757@mail.com",
         "phoneNum": "601049315456",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "quinn.patel385@mail.com",
+        "gender": "Female",
         "id": "S00012",
         "name": "Quinn Patel",
-        "gender": "Female",
-        "email": "quinn.patel385@mail.com",
         "phoneNum": "601601175920",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Facebook",
+        "email": "charlie.muller795@mail.com",
+        "gender": "Female",
         "id": "S00013",
         "name": "Charlie Muller",
-        "gender": "Female",
-        "email": "charlie.muller795@mail.com",
         "phoneNum": "601505207641",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "casey.brown750@mail.com",
+        "gender": "Female",
         "id": "S00014",
         "name": "Casey Brown",
-        "gender": "Female",
-        "email": "casey.brown750@mail.com",
         "phoneNum": "601389057797",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "TikTok",
+        "email": "peyton.lee914@mail.com",
+        "gender": "Male",
         "id": "S00015",
         "name": "Peyton Lee",
-        "gender": "Male",
-        "email": "peyton.lee914@mail.com",
         "phoneNum": "601138391331",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "quinn.patel723@mail.com",
+        "gender": "Male",
         "id": "S00016",
         "name": "Quinn Patel",
-        "gender": "Male",
-        "email": "quinn.patel723@mail.com",
         "phoneNum": "601887316161",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Huya",
+        "email": "alex.lopez527@mail.com",
+        "gender": "Female",
         "id": "S00017",
         "name": "Alex Lopez",
-        "gender": "Female",
-        "email": "alex.lopez527@mail.com",
         "phoneNum": "601086259979",
-        "type": "Streamer",
-        "affiliation": "Huya"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Bilibili",
+        "email": "jamie.davis917@mail.com",
+        "gender": "Female",
         "id": "S00018",
         "name": "Jamie Davis",
-        "gender": "Female",
-        "email": "jamie.davis917@mail.com",
         "phoneNum": "601605185401",
-        "type": "Streamer",
-        "affiliation": "Bilibili"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "quinn.johnson314@mail.com",
+        "gender": "Female",
         "id": "S00019",
         "name": "Quinn Johnson",
-        "gender": "Female",
-        "email": "quinn.johnson314@mail.com",
         "phoneNum": "601548277621",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "avery.lopez859@mail.com",
+        "gender": "Female",
         "id": "S00020",
         "name": "Avery Lopez",
-        "gender": "Female",
-        "email": "avery.lopez859@mail.com",
         "phoneNum": "601304020728",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Blue Titans",
+        "email": "riley.jones107@mail.com",
+        "gender": "Male",
         "id": "S00021",
         "name": "Riley Jones",
-        "gender": "Male",
-        "email": "riley.jones107@mail.com",
         "phoneNum": "601698593489",
-        "type": "Player",
-        "affiliation": "Blue Titans"
+        "type": "Player"
     },
     {
+        "affiliation": "",
+        "email": "charlie.garcia219@mail.com",
+        "gender": "Male",
         "id": "S00022",
         "name": "Charlie Garcia",
-        "gender": "Male",
-        "email": "charlie.garcia219@mail.com",
         "phoneNum": "601394694960",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "riley.patel817@mail.com",
+        "gender": "Female",
         "id": "S00023",
         "name": "Riley Patel",
-        "gender": "Female",
-        "email": "riley.patel817@mail.com",
         "phoneNum": "601049257062",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Alpha Wolves",
+        "email": "casey.smith868@mail.com",
+        "gender": "Female",
         "id": "S00024",
         "name": "Casey Smith",
-        "gender": "Female",
-        "email": "casey.smith868@mail.com",
         "phoneNum": "601460941670",
-        "type": "Player",
-        "affiliation": "Alpha Wolves"
+        "type": "Player"
     },
     {
+        "affiliation": "",
+        "email": "jordan.khan530@mail.com",
+        "gender": "Female",
         "id": "S00025",
         "name": "Jordan Khan",
-        "gender": "Female",
-        "email": "jordan.khan530@mail.com",
         "phoneNum": "601186729809",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "jordan.williams229@mail.com",
+        "gender": "Female",
         "id": "S00026",
         "name": "Jordan Williams",
-        "gender": "Female",
-        "email": "jordan.williams229@mail.com",
         "phoneNum": "601490108147",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "riley.khan928@mail.com",
+        "gender": "Male",
         "id": "S00027",
         "name": "Riley Khan",
-        "gender": "Male",
-        "email": "riley.khan928@mail.com",
         "phoneNum": "601662906794",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Twitter",
+        "email": "cameron.brown824@mail.com",
+        "gender": "Female",
         "id": "S00028",
         "name": "Cameron Brown",
-        "gender": "Female",
-        "email": "cameron.brown824@mail.com",
         "phoneNum": "601754496490",
-        "type": "Influencer",
-        "affiliation": "Twitter"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "alex.lee567@mail.com",
+        "gender": "Male",
         "id": "S00029",
         "name": "Alex Lee",
-        "gender": "Male",
-        "email": "alex.lee567@mail.com",
         "phoneNum": "601404537527",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "avery.muller235@mail.com",
+        "gender": "Male",
         "id": "S00030",
         "name": "Avery Muller",
-        "gender": "Male",
-        "email": "avery.muller235@mail.com",
         "phoneNum": "601353046630",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Bilibili",
+        "email": "riley.garcia389@mail.com",
+        "gender": "Female",
         "id": "S00031",
         "name": "Riley Garcia",
-        "gender": "Female",
-        "email": "riley.garcia389@mail.com",
         "phoneNum": "601175228881",
-        "type": "Streamer",
-        "affiliation": "Bilibili"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "morgan.brown720@mail.com",
+        "gender": "Male",
         "id": "S00032",
         "name": "Morgan Brown",
-        "gender": "Male",
-        "email": "morgan.brown720@mail.com",
         "phoneNum": "601352667367",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "avery.davis765@mail.com",
+        "gender": "Female",
         "id": "S00033",
         "name": "Avery Davis",
-        "gender": "Female",
-        "email": "avery.davis765@mail.com",
         "phoneNum": "601427165259",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Alpha Wolves",
+        "email": "taylor.garcia473@mail.com",
+        "gender": "Female",
         "id": "S00034",
         "name": "Taylor Garcia",
-        "gender": "Female",
-        "email": "taylor.garcia473@mail.com",
         "phoneNum": "601397931015",
-        "type": "Player",
-        "affiliation": "Alpha Wolves"
+        "type": "Player"
     },
     {
+        "affiliation": "",
+        "email": "casey.brown922@mail.com",
+        "gender": "Female",
         "id": "S00035",
         "name": "Casey Brown",
-        "gender": "Female",
-        "email": "casey.brown922@mail.com",
         "phoneNum": "601045309256",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "TikTok",
+        "email": "charlie.martinez382@mail.com",
+        "gender": "Male",
         "id": "S00036",
         "name": "Charlie Martinez",
-        "gender": "Male",
-        "email": "charlie.martinez382@mail.com",
         "phoneNum": "601302511429",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "jamie.lopez696@mail.com",
+        "gender": "Male",
         "id": "S00037",
         "name": "Jamie Lopez",
-        "gender": "Male",
-        "email": "jamie.lopez696@mail.com",
         "phoneNum": "601812913342",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "riley.jones849@mail.com",
+        "gender": "Female",
         "id": "S00038",
         "name": "Riley Jones",
-        "gender": "Female",
-        "email": "riley.jones849@mail.com",
         "phoneNum": "601253974196",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Facebook",
+        "email": "riley.lopez432@mail.com",
+        "gender": "Female",
         "id": "S00039",
         "name": "Riley Lopez",
-        "gender": "Female",
-        "email": "riley.lopez432@mail.com",
         "phoneNum": "601397377418",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "",
+        "email": "casey.khan504@mail.com",
+        "gender": "Male",
         "id": "S00040",
         "name": "Casey Khan",
-        "gender": "Male",
-        "email": "casey.khan504@mail.com",
         "phoneNum": "601106646404",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Facebook",
+        "email": "skyler.williams204@mail.com",
+        "gender": "Male",
         "id": "S00041",
         "name": "Skyler Williams",
-        "gender": "Male",
-        "email": "skyler.williams204@mail.com",
         "phoneNum": "601845538101",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "morgan.jones142@mail.com",
+        "gender": "Female",
         "id": "S00042",
         "name": "Morgan Jones",
-        "gender": "Female",
-        "email": "morgan.jones142@mail.com",
         "phoneNum": "601401931206",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Huya",
+        "email": "cameron.jones800@mail.com",
+        "gender": "Female",
         "id": "S00043",
         "name": "Cameron Jones",
-        "gender": "Female",
-        "email": "cameron.jones800@mail.com",
         "phoneNum": "601470925995",
-        "type": "Streamer",
-        "affiliation": "Huya"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Facebook",
+        "email": "quinn.smith780@mail.com",
+        "gender": "Female",
         "id": "S00044",
         "name": "Quinn Smith",
-        "gender": "Female",
-        "email": "quinn.smith780@mail.com",
         "phoneNum": "601561966243",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Crimson Hawks",
+        "email": "charlie.khan190@mail.com",
+        "gender": "Female",
         "id": "S00045",
         "name": "Charlie Khan",
-        "gender": "Female",
-        "email": "charlie.khan190@mail.com",
         "phoneNum": "601895608440",
-        "type": "Player",
-        "affiliation": "Crimson Hawks"
+        "type": "Player"
     },
     {
+        "affiliation": "",
+        "email": "drew.brown350@mail.com",
+        "gender": "Female",
         "id": "S00046",
         "name": "Drew Brown",
-        "gender": "Female",
-        "email": "drew.brown350@mail.com",
         "phoneNum": "601078707318",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "peyton.davis717@mail.com",
+        "gender": "Male",
         "id": "S00047",
         "name": "Peyton Davis",
-        "gender": "Male",
-        "email": "peyton.davis717@mail.com",
         "phoneNum": "601801820883",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "YouTube",
+        "email": "charlie.johnson829@mail.com",
+        "gender": "Male",
         "id": "S00048",
         "name": "Charlie Johnson",
-        "gender": "Male",
-        "email": "charlie.johnson829@mail.com",
         "phoneNum": "601487863161",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "charlie.brown738@mail.com",
+        "gender": "Male",
         "id": "S00049",
         "name": "Charlie Brown",
-        "gender": "Male",
-        "email": "charlie.brown738@mail.com",
         "phoneNum": "601184164930",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Instagram",
+        "email": "drew.jones239@mail.com",
+        "gender": "Female",
         "id": "S00050",
         "name": "Drew Jones",
-        "gender": "Female",
-        "email": "drew.jones239@mail.com",
         "phoneNum": "601934274863",
-        "type": "Influencer",
-        "affiliation": "Instagram"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "streamer1@twitch.tv",
+        "gender": "Male",
         "id": "S00051",
         "name": "StreamerOne Alpha",
-        "gender": "Male",
-        "email": "streamer1@twitch.tv",
         "phoneNum": "601111111111",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "streamer2@youtube.com",
+        "gender": "Female",
         "id": "S00052",
         "name": "StreamerTwo Beta",
-        "gender": "Female", 
-        "email": "streamer2@youtube.com",
         "phoneNum": "601222222222",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "streamer3@twitch.tv",
+        "gender": "Male",
         "id": "S00053",
         "name": "StreamerThree Gamma",
-        "gender": "Male",
-        "email": "streamer3@twitch.tv",
         "phoneNum": "601333333333",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Facebook Gaming",
+        "email": "streamer4@facebook.com",
+        "gender": "Female",
         "id": "S00054",
         "name": "StreamerFour Delta",
-        "gender": "Female",
-        "email": "streamer4@facebook.com",
         "phoneNum": "601444444444",
-        "type": "Streamer",
-        "affiliation": "Facebook Gaming"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "streamer5@twitch.tv",
+        "gender": "Male",
         "id": "S00055",
         "name": "StreamerFive Epsilon",
-        "gender": "Male",
-        "email": "streamer5@twitch.tv",
         "phoneNum": "601555555555",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "streamer6@youtube.com",
+        "gender": "Female",
         "id": "S00056",
         "name": "StreamerSix Overflow",
-        "gender": "Female",
-        "email": "streamer6@youtube.com",
         "phoneNum": "601666666666",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "streamer7@twitch.tv",
+        "gender": "Male",
         "id": "S00057",
         "name": "StreamerSeven Extra",
-        "gender": "Male",
-        "email": "streamer7@twitch.tv",
         "phoneNum": "601777777777",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "vip1@example.com",
+        "gender": "Male",
         "id": "S00058",
         "name": "VIP User 1",
-        "gender": "Male",
-        "email": "vip1@example.com",
         "phoneNum": "601800000001",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip2@example.com",
+        "gender": "Female",
         "id": "S00059",
         "name": "VIP User 2",
-        "gender": "Female",
-        "email": "vip2@example.com",
         "phoneNum": "601800000002",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip3@example.com",
+        "gender": "Male",
         "id": "S00060",
         "name": "VIP User 3",
-        "gender": "Male",
-        "email": "vip3@example.com",
         "phoneNum": "601800000003",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip4@example.com",
+        "gender": "Female",
         "id": "S00061",
         "name": "VIP User 4",
-        "gender": "Female",
-        "email": "vip4@example.com",
         "phoneNum": "601800000004",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip5@example.com",
+        "gender": "Male",
         "id": "S00062",
         "name": "VIP User 5",
-        "gender": "Male",
-        "email": "vip5@example.com",
         "phoneNum": "601800000005",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip6@example.com",
+        "gender": "Female",
         "id": "S00063",
         "name": "VIP User 6",
-        "gender": "Female",
-        "email": "vip6@example.com",
         "phoneNum": "601800000006",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip7@example.com",
+        "gender": "Male",
         "id": "S00064",
         "name": "VIP User 7",
-        "gender": "Male",
-        "email": "vip7@example.com",
         "phoneNum": "601800000007",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip8@example.com",
+        "gender": "Female",
         "id": "S00065",
         "name": "VIP User 8",
-        "gender": "Female",
-        "email": "vip8@example.com",
         "phoneNum": "601800000008",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip9@example.com",
+        "gender": "Male",
         "id": "S00066",
         "name": "VIP User 9",
-        "gender": "Male",
-        "email": "vip9@example.com",
         "phoneNum": "601800000009",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip10@example.com",
+        "gender": "Female",
         "id": "S00067",
         "name": "VIP User 10",
-        "gender": "Female",
-        "email": "vip10@example.com",
         "phoneNum": "601800000010",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip11@example.com",
+        "gender": "Male",
         "id": "S00068",
         "name": "VIP User 11",
-        "gender": "Male",
-        "email": "vip11@example.com",
         "phoneNum": "601800000011",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip12@example.com",
+        "gender": "Female",
         "id": "S00069",
         "name": "VIP User 12",
-        "gender": "Female",
-        "email": "vip12@example.com",
         "phoneNum": "601800000012",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip13@example.com",
+        "gender": "Male",
         "id": "S00070",
         "name": "VIP User 13",
-        "gender": "Male",
-        "email": "vip13@example.com",
         "phoneNum": "601800000013",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip14@example.com",
+        "gender": "Female",
         "id": "S00071",
         "name": "VIP User 14",
-        "gender": "Female",
-        "email": "vip14@example.com",
         "phoneNum": "601800000014",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip15@example.com",
+        "gender": "Male",
         "id": "S00072",
         "name": "VIP User 15",
-        "gender": "Male",
-        "email": "vip15@example.com",
         "phoneNum": "601800000015",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Instagram",
+        "email": "inf1@example.com",
+        "gender": "Female",
         "id": "S00073",
         "name": "Influencer User 1",
-        "gender": "Female",
-        "email": "inf1@example.com",
         "phoneNum": "601900000001",
-        "type": "Influencer",
-        "affiliation": "Instagram"
+        "type": "Influencer"
     },
     {
+        "affiliation": "TikTok",
+        "email": "inf2@example.com",
+        "gender": "Male",
         "id": "S00074",
         "name": "Influencer User 2",
-        "gender": "Male",
-        "email": "inf2@example.com",
         "phoneNum": "601900000002",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "inf3@example.com",
+        "gender": "Female",
         "id": "S00075",
         "name": "Influencer User 3",
-        "gender": "Female",
-        "email": "inf3@example.com",
         "phoneNum": "601900000003",
-        "type": "Influencer",
-        "affiliation": "YouTube"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Twitter",
+        "email": "inf4@example.com",
+        "gender": "Male",
         "id": "S00076",
         "name": "Influencer User 4",
-        "gender": "Male",
-        "email": "inf4@example.com",
         "phoneNum": "601900000004",
-        "type": "Influencer",
-        "affiliation": "Twitter"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Facebook",
+        "email": "inf5@example.com",
+        "gender": "Female",
         "id": "S00077",
         "name": "Influencer User 5",
-        "gender": "Female",
-        "email": "inf5@example.com",
         "phoneNum": "601900000005",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Instagram",
+        "email": "inf6@example.com",
+        "gender": "Male",
         "id": "S00078",
         "name": "Influencer User 6",
-        "gender": "Male",
-        "email": "inf6@example.com",
         "phoneNum": "601900000006",
-        "type": "Influencer",
-        "affiliation": "Instagram"
+        "type": "Influencer"
     },
     {
+        "affiliation": "TikTok",
+        "email": "inf7@example.com",
+        "gender": "Female",
         "id": "S00079",
         "name": "Influencer User 7",
-        "gender": "Female",
-        "email": "inf7@example.com",
         "phoneNum": "601900000007",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "inf8@example.com",
+        "gender": "Male",
         "id": "S00080",
         "name": "Influencer User 8",
-        "gender": "Male",
-        "email": "inf8@example.com",
         "phoneNum": "601900000008",
-        "type": "Influencer",
-        "affiliation": "YouTube"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Twitter",
+        "email": "inf9@example.com",
+        "gender": "Female",
         "id": "S00081",
         "name": "Influencer User 9",
-        "gender": "Female",
-        "email": "inf9@example.com",
         "phoneNum": "601900000009",
-        "type": "Influencer",
-        "affiliation": "Twitter"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Facebook",
+        "email": "inf10@example.com",
+        "gender": "Male",
         "id": "S00082",
         "name": "Influencer User 10",
-        "gender": "Male",
-        "email": "inf10@example.com",
         "phoneNum": "601900000010",
-        "type": "Influencer",
-        "affiliation": "Facebook"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Instagram",
+        "email": "inf11@example.com",
+        "gender": "Female",
         "id": "S00083",
         "name": "Influencer User 11",
-        "gender": "Female",
-        "email": "inf11@example.com",
         "phoneNum": "601900000011",
-        "type": "Influencer",
-        "affiliation": "Instagram"
+        "type": "Influencer"
     },
     {
+        "affiliation": "TikTok",
+        "email": "inf12@example.com",
+        "gender": "Male",
         "id": "S00084",
         "name": "Influencer User 12",
-        "gender": "Male",
-        "email": "inf12@example.com",
         "phoneNum": "601900000012",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "str1@example.com",
+        "gender": "Female",
         "id": "S00085",
         "name": "Streamer User 1",
-        "gender": "Female",
-        "email": "str1@example.com",
         "phoneNum": "601950000001",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "str2@example.com",
+        "gender": "Male",
         "id": "S00086",
         "name": "Streamer User 2",
-        "gender": "Male",
-        "email": "str2@example.com",
         "phoneNum": "601950000002",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "str3@example.com",
+        "gender": "Female",
         "id": "S00087",
         "name": "Streamer User 3",
-        "gender": "Female",
-        "email": "str3@example.com",
         "phoneNum": "601950000003",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "str4@example.com",
+        "gender": "Male",
         "id": "S00088",
         "name": "Streamer User 4",
-        "gender": "Male",
-        "email": "str4@example.com",
         "phoneNum": "601950000004",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "str5@example.com",
+        "gender": "Female",
         "id": "S00089",
         "name": "Streamer User 5",
-        "gender": "Female",
-        "email": "str5@example.com",
         "phoneNum": "601950000005",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "normal1@example.com",
+        "gender": "Male",
         "id": "S00090",
         "name": "Normal User 1",
-        "gender": "Male",
-        "email": "normal1@example.com",
         "phoneNum": "602000000001",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal2@example.com",
+        "gender": "Female",
         "id": "S00091",
         "name": "Normal User 2",
-        "gender": "Female",
-        "email": "normal2@example.com",
         "phoneNum": "602000000002",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal3@example.com",
+        "gender": "Male",
         "id": "S00092",
         "name": "Normal User 3",
-        "gender": "Male",
-        "email": "normal3@example.com",
         "phoneNum": "602000000003",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal4@example.com",
+        "gender": "Female",
         "id": "S00093",
         "name": "Normal User 4",
-        "gender": "Female",
-        "email": "normal4@example.com",
         "phoneNum": "602000000004",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal5@example.com",
+        "gender": "Male",
         "id": "S00094",
         "name": "Normal User 5",
-        "gender": "Male",
-        "email": "normal5@example.com",
         "phoneNum": "602000000005",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal6@example.com",
+        "gender": "Female",
         "id": "S00095",
         "name": "Normal User 6",
-        "gender": "Female",
-        "email": "normal6@example.com",
         "phoneNum": "602000000006",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal7@example.com",
+        "gender": "Male",
         "id": "S00096",
         "name": "Normal User 7",
-        "gender": "Male",
-        "email": "normal7@example.com",
         "phoneNum": "602000000007",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal8@example.com",
+        "gender": "Female",
         "id": "S00097",
         "name": "Normal User 8",
-        "gender": "Female",
-        "email": "normal8@example.com",
         "phoneNum": "602000000008",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal9@example.com",
+        "gender": "Male",
         "id": "S00098",
         "name": "Normal User 9",
-        "gender": "Male",
-        "email": "normal9@example.com",
         "phoneNum": "602000000009",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal10@example.com",
+        "gender": "Female",
         "id": "S00099",
         "name": "Normal User 10",
-        "gender": "Female",
-        "email": "normal10@example.com",
         "phoneNum": "602000000010",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal11@example.com",
+        "gender": "Male",
         "id": "S00100",
         "name": "Normal User 11",
-        "gender": "Male",
-        "email": "normal11@example.com",
         "phoneNum": "602000000011",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal12@example.com",
+        "gender": "Female",
         "id": "S00101",
         "name": "Normal User 12",
-        "gender": "Female",
-        "email": "normal12@example.com",
         "phoneNum": "602000000012",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal13@example.com",
+        "gender": "Male",
         "id": "S00102",
         "name": "Normal User 13",
-        "gender": "Male",
-        "email": "normal13@example.com",
         "phoneNum": "602000000013",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal14@example.com",
+        "gender": "Female",
         "id": "S00103",
         "name": "Normal User 14",
-        "gender": "Female",
-        "email": "normal14@example.com",
         "phoneNum": "602000000014",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal15@example.com",
+        "gender": "Male",
         "id": "S00104",
         "name": "Normal User 15",
-        "gender": "Male",
-        "email": "normal15@example.com",
         "phoneNum": "602000000015",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal16@example.com",
+        "gender": "Female",
         "id": "S00105",
         "name": "Normal User 16",
-        "gender": "Female",
-        "email": "normal16@example.com",
         "phoneNum": "602000000016",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal17@example.com",
+        "gender": "Male",
         "id": "S00106",
         "name": "Normal User 17",
-        "gender": "Male",
-        "email": "normal17@example.com",
         "phoneNum": "602000000017",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal18@example.com",
+        "gender": "Female",
         "id": "S00107",
         "name": "Normal User 18",
-        "gender": "Female",
-        "email": "normal18@example.com",
         "phoneNum": "602000000018",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal19@example.com",
+        "gender": "Male",
         "id": "S00108",
         "name": "Normal User 19",
-        "gender": "Male",
-        "email": "normal19@example.com",
         "phoneNum": "602000000019",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal20@example.com",
+        "gender": "Female",
         "id": "S00109",
         "name": "Normal User 20",
-        "gender": "Female",
-        "email": "normal20@example.com",
         "phoneNum": "602000000020",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal21@example.com",
+        "gender": "Male",
         "id": "S00110",
         "name": "Normal User 21",
-        "gender": "Male",
-        "email": "normal21@example.com",
         "phoneNum": "602000000021",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal22@example.com",
+        "gender": "Female",
         "id": "S00111",
         "name": "Normal User 22",
-        "gender": "Female",
-        "email": "normal22@example.com",
         "phoneNum": "602000000022",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal23@example.com",
+        "gender": "Male",
         "id": "S00112",
         "name": "Normal User 23",
-        "gender": "Male",
-        "email": "normal23@example.com",
         "phoneNum": "602000000023",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal24@example.com",
+        "gender": "Female",
         "id": "S00113",
         "name": "Normal User 24",
-        "gender": "Female",
-        "email": "normal24@example.com",
         "phoneNum": "602000000024",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal25@example.com",
+        "gender": "Male",
         "id": "S00114",
         "name": "Normal User 25",
-        "gender": "Male",
-        "email": "normal25@example.com",
         "phoneNum": "602000000025",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal26@example.com",
+        "gender": "Female",
         "id": "S00115",
         "name": "Normal User 26",
-        "gender": "Female",
-        "email": "normal26@example.com",
         "phoneNum": "602000000026",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal27@example.com",
+        "gender": "Male",
         "id": "S00116",
         "name": "Normal User 27",
-        "gender": "Male",
-        "email": "normal27@example.com",
         "phoneNum": "602000000027",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal28@example.com",
+        "gender": "Female",
         "id": "S00117",
         "name": "Normal User 28",
-        "gender": "Female",
-        "email": "normal28@example.com",
         "phoneNum": "602000000028",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal29@example.com",
+        "gender": "Male",
         "id": "S00118",
         "name": "Normal User 29",
-        "gender": "Male",
-        "email": "normal29@example.com",
         "phoneNum": "602000000029",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal30@example.com",
+        "gender": "Female",
         "id": "S00119",
         "name": "Normal User 30",
-        "gender": "Female",
-        "email": "normal30@example.com",
         "phoneNum": "602000000030",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal31@example.com",
+        "gender": "Male",
         "id": "S00120",
         "name": "Normal User 31",
-        "gender": "Male",
-        "email": "normal31@example.com",
         "phoneNum": "602000000031",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal32@example.com",
+        "gender": "Female",
         "id": "S00121",
         "name": "Normal User 32",
-        "gender": "Female",
-        "email": "normal32@example.com",
         "phoneNum": "602000000032",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal33@example.com",
+        "gender": "Male",
         "id": "S00122",
         "name": "Normal User 33",
-        "gender": "Male",
-        "email": "normal33@example.com",
         "phoneNum": "602000000033",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal34@example.com",
+        "gender": "Female",
         "id": "S00123",
         "name": "Normal User 34",
-        "gender": "Female",
-        "email": "normal34@example.com",
         "phoneNum": "602000000034",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal35@example.com",
+        "gender": "Male",
         "id": "S00124",
         "name": "Normal User 35",
-        "gender": "Male",
-        "email": "normal35@example.com",
         "phoneNum": "602000000035",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal36@example.com",
+        "gender": "Female",
         "id": "S00125",
         "name": "Normal User 36",
-        "gender": "Female",
-        "email": "normal36@example.com",
         "phoneNum": "602000000036",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "vip16@example.com",
+        "gender": "Male",
         "id": "S00126",
         "name": "VIP User 16",
-        "gender": "Male",
-        "email": "vip16@example.com",
         "phoneNum": "602000000126",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip17@example.com",
+        "gender": "Female",
         "id": "S00127",
         "name": "VIP User 17",
-        "gender": "Female",
-        "email": "vip17@example.com",
         "phoneNum": "602000000127",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip18@example.com",
+        "gender": "Male",
         "id": "S00128",
         "name": "VIP User 18",
-        "gender": "Male",
-        "email": "vip18@example.com",
         "phoneNum": "602000000128",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip19@example.com",
+        "gender": "Female",
         "id": "S00129",
         "name": "VIP User 19",
-        "gender": "Female",
-        "email": "vip19@example.com",
         "phoneNum": "602000000129",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip20@example.com",
+        "gender": "Male",
         "id": "S00130",
         "name": "VIP User 20",
-        "gender": "Male",
-        "email": "vip20@example.com",
         "phoneNum": "602000000130",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Instagram",
+        "email": "influencer13@example.com",
+        "gender": "Female",
         "id": "S00131",
         "name": "Influencer User 13",
-        "gender": "Female",
-        "email": "influencer13@example.com",
         "phoneNum": "602000000131",
-        "type": "Influencer",
-        "affiliation": "Instagram"
+        "type": "Influencer"
     },
     {
+        "affiliation": "TikTok",
+        "email": "influencer14@example.com",
+        "gender": "Male",
         "id": "S00132",
         "name": "Influencer User 14",
-        "gender": "Male",
-        "email": "influencer14@example.com",
         "phoneNum": "602000000132",
-        "type": "Influencer",
-        "affiliation": "TikTok"
+        "type": "Influencer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "influencer15@example.com",
+        "gender": "Female",
         "id": "S00133",
         "name": "Influencer User 15",
-        "gender": "Female",
-        "email": "influencer15@example.com",
         "phoneNum": "602000000133",
-        "type": "Influencer",
-        "affiliation": "YouTube"
+        "type": "Influencer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "streamer6@example.com",
+        "gender": "Male",
         "id": "S00134",
         "name": "Streamer User 6",
-        "gender": "Male",
-        "email": "streamer6@example.com",
         "phoneNum": "602000000134",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "streamer7@example.com",
+        "gender": "Female",
         "id": "S00135",
         "name": "Streamer User 7",
-        "gender": "Female",
-        "email": "streamer7@example.com",
         "phoneNum": "602000000135",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "normal37@example.com",
+        "gender": "Male",
         "id": "S00136",
         "name": "Normal User 37",
-        "gender": "Male",
-        "email": "normal37@example.com",
         "phoneNum": "602000000136",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal38@example.com",
+        "gender": "Female",
         "id": "S00137",
         "name": "Normal User 38",
-        "gender": "Female",
-        "email": "normal38@example.com",
         "phoneNum": "602000000137",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal39@example.com",
+        "gender": "Male",
         "id": "S00138",
         "name": "Normal User 39",
-        "gender": "Male",
-        "email": "normal39@example.com",
         "phoneNum": "602000000138",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal40@example.com",
+        "gender": "Female",
         "id": "S00139",
         "name": "Normal User 40",
-        "gender": "Female",
-        "email": "normal40@example.com",
         "phoneNum": "602000000139",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal41@example.com",
+        "gender": "Male",
         "id": "S00140",
         "name": "Normal User 41",
-        "gender": "Male",
-        "email": "normal41@example.com",
         "phoneNum": "602000000140",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal42@example.com",
+        "gender": "Female",
         "id": "S00141",
         "name": "Normal User 42",
-        "gender": "Female",
-        "email": "normal42@example.com",
         "phoneNum": "602000000141",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal43@example.com",
+        "gender": "Male",
         "id": "S00142",
         "name": "Normal User 43",
-        "gender": "Male",
-        "email": "normal43@example.com",
         "phoneNum": "602000000142",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal44@example.com",
+        "gender": "Female",
         "id": "S00143",
         "name": "Normal User 44",
-        "gender": "Female",
-        "email": "normal44@example.com",
         "phoneNum": "602000000143",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal45@example.com",
+        "gender": "Male",
         "id": "S00144",
         "name": "Normal User 45",
-        "gender": "Male",
-        "email": "normal45@example.com",
         "phoneNum": "602000000144",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal46@example.com",
+        "gender": "Female",
         "id": "S00145",
         "name": "Normal User 46",
-        "gender": "Female",
-        "email": "normal46@example.com",
         "phoneNum": "602000000145",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal47@example.com",
+        "gender": "Male",
         "id": "S00146",
         "name": "Normal User 47",
-        "gender": "Male",
-        "email": "normal47@example.com",
         "phoneNum": "602000000146",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal48@example.com",
+        "gender": "Female",
         "id": "S00147",
         "name": "Normal User 48",
-        "gender": "Female",
-        "email": "normal48@example.com",
         "phoneNum": "602000000147",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal49@example.com",
+        "gender": "Male",
         "id": "S00148",
         "name": "Normal User 49",
-        "gender": "Male",
-        "email": "normal49@example.com",
         "phoneNum": "602000000148",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal50@example.com",
+        "gender": "Female",
         "id": "S00149",
         "name": "Normal User 50",
-        "gender": "Female",
-        "email": "normal50@example.com",
         "phoneNum": "602000000149",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal51@example.com",
+        "gender": "Male",
         "id": "S00150",
         "name": "Normal User 51",
-        "gender": "Male",
-        "email": "normal51@example.com",
         "phoneNum": "602000000150",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal52@example.com",
+        "gender": "Female",
         "id": "S00151",
         "name": "Normal User 52",
-        "gender": "Female",
-        "email": "normal52@example.com",
         "phoneNum": "602000000151",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal53@example.com",
+        "gender": "Male",
         "id": "S00152",
         "name": "Normal User 53",
-        "gender": "Male",
-        "email": "normal53@example.com",
         "phoneNum": "602000000152",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal54@example.com",
+        "gender": "Female",
         "id": "S00153",
         "name": "Normal User 54",
-        "gender": "Female",
-        "email": "normal54@example.com",
         "phoneNum": "602000000153",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal55@example.com",
+        "gender": "Male",
         "id": "S00154",
         "name": "Normal User 55",
-        "gender": "Male",
-        "email": "normal55@example.com",
         "phoneNum": "602000000154",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal56@example.com",
+        "gender": "Female",
         "id": "S00155",
         "name": "Normal User 56",
-        "gender": "Female",
-        "email": "normal56@example.com",
         "phoneNum": "602000000155",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal57@example.com",
+        "gender": "Male",
         "id": "S00156",
         "name": "Normal User 57",
-        "gender": "Male",
-        "email": "normal57@example.com",
         "phoneNum": "602000000156",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal58@example.com",
+        "gender": "Female",
         "id": "S00157",
         "name": "Normal User 58",
-        "gender": "Female",
-        "email": "normal58@example.com",
         "phoneNum": "602000000157",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal59@example.com",
+        "gender": "Male",
         "id": "S00158",
         "name": "Normal User 59",
-        "gender": "Male",
-        "email": "normal59@example.com",
         "phoneNum": "602000000158",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal60@example.com",
+        "gender": "Female",
         "id": "S00159",
         "name": "Normal User 60",
-        "gender": "Female",
-        "email": "normal60@example.com",
         "phoneNum": "602000000159",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal61@example.com",
+        "gender": "Male",
         "id": "S00160",
         "name": "Normal User 61",
-        "gender": "Male",
-        "email": "normal61@example.com",
         "phoneNum": "602000000160",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal62@example.com",
+        "gender": "Female",
         "id": "S00161",
         "name": "Normal User 62",
-        "gender": "Female",
-        "email": "normal62@example.com",
         "phoneNum": "602000000161",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal63@example.com",
+        "gender": "Male",
         "id": "S00162",
         "name": "Normal User 63",
-        "gender": "Male",
-        "email": "normal63@example.com",
         "phoneNum": "602000000162",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal64@example.com",
+        "gender": "Female",
         "id": "S00163",
         "name": "Normal User 64",
-        "gender": "Female",
-        "email": "normal64@example.com",
         "phoneNum": "602000000163",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal65@example.com",
+        "gender": "Male",
         "id": "S00164",
         "name": "Normal User 65",
-        "gender": "Male",
-        "email": "normal65@example.com",
         "phoneNum": "602000000164",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal66@example.com",
+        "gender": "Female",
         "id": "S00165",
         "name": "Normal User 66",
-        "gender": "Female",
-        "email": "normal66@example.com",
         "phoneNum": "602000000165",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal67@example.com",
+        "gender": "Male",
         "id": "S00166",
         "name": "Normal User 67",
-        "gender": "Male",
-        "email": "normal67@example.com",
         "phoneNum": "602000000166",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal68@example.com",
+        "gender": "Female",
         "id": "S00167",
         "name": "Normal User 68",
-        "gender": "Female",
-        "email": "normal68@example.com",
         "phoneNum": "602000000167",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal69@example.com",
+        "gender": "Male",
         "id": "S00168",
         "name": "Normal User 69",
-        "gender": "Male",
-        "email": "normal69@example.com",
         "phoneNum": "602000000168",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal70@example.com",
+        "gender": "Female",
         "id": "S00169",
         "name": "Normal User 70",
-        "gender": "Female",
-        "email": "normal70@example.com",
         "phoneNum": "602000000169",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal71@example.com",
+        "gender": "Male",
         "id": "S00170",
         "name": "Normal User 71",
-        "gender": "Male",
-        "email": "normal71@example.com",
         "phoneNum": "602000000170",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal72@example.com",
+        "gender": "Female",
         "id": "S00171",
         "name": "Normal User 72",
-        "gender": "Female",
-        "email": "normal72@example.com",
         "phoneNum": "602000000171",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal73@example.com",
+        "gender": "Male",
         "id": "S00172",
         "name": "Normal User 73",
-        "gender": "Male",
-        "email": "normal73@example.com",
         "phoneNum": "602000000172",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal74@example.com",
+        "gender": "Female",
         "id": "S00173",
         "name": "Normal User 74",
-        "gender": "Female",
-        "email": "normal74@example.com",
         "phoneNum": "602000000173",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal75@example.com",
+        "gender": "Male",
         "id": "S00174",
         "name": "Normal User 75",
-        "gender": "Male",
-        "email": "normal75@example.com",
         "phoneNum": "602000000174",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "normal76@example.com",
+        "gender": "Female",
         "id": "S00175",
         "name": "Normal User 76",
-        "gender": "Female",
-        "email": "normal76@example.com",
         "phoneNum": "602000000175",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "vip33@example.com",
+        "gender": "Male",
         "id": "S00176",
         "name": "VIP User 33",
-        "gender": "Male",
-        "email": "vip33@example.com",
         "phoneNum": "602000000176",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip34@example.com",
+        "gender": "Female",
         "id": "S00177",
         "name": "VIP User 34",
-        "gender": "Female",
-        "email": "vip34@example.com",
         "phoneNum": "602000000177",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip35@example.com",
+        "gender": "Male",
         "id": "S00178",
         "name": "VIP User 35",
-        "gender": "Male",
-        "email": "vip35@example.com",
         "phoneNum": "602000000178",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip36@example.com",
+        "gender": "Female",
         "id": "S00179",
         "name": "VIP User 36",
-        "gender": "Female",
-        "email": "vip36@example.com",
         "phoneNum": "602000000179",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip37@example.com",
+        "gender": "Male",
         "id": "S00180",
         "name": "VIP User 37",
-        "gender": "Male",
-        "email": "vip37@example.com",
         "phoneNum": "602000000180",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip38@example.com",
+        "gender": "Female",
         "id": "S00181",
         "name": "VIP User 38",
-        "gender": "Female",
-        "email": "vip38@example.com",
         "phoneNum": "602000000181",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip39@example.com",
+        "gender": "Male",
         "id": "S00182",
         "name": "VIP User 39",
-        "gender": "Male",
-        "email": "vip39@example.com",
         "phoneNum": "602000000182",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip40@example.com",
+        "gender": "Female",
         "id": "S00183",
         "name": "VIP User 40",
-        "gender": "Female",
-        "email": "vip40@example.com",
         "phoneNum": "602000000183",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip41@example.com",
+        "gender": "Male",
         "id": "S00184",
         "name": "VIP User 41",
-        "gender": "Male",
-        "email": "vip41@example.com",
         "phoneNum": "602000000184",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip42@example.com",
+        "gender": "Female",
         "id": "S00185",
         "name": "VIP User 42",
-        "gender": "Female",
-        "email": "vip42@example.com",
         "phoneNum": "602000000185",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip43@example.com",
+        "gender": "Male",
         "id": "S00186",
         "name": "VIP User 43",
-        "gender": "Male",
-        "email": "vip43@example.com",
         "phoneNum": "602000000186",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip44@example.com",
+        "gender": "Female",
         "id": "S00187",
         "name": "VIP User 44",
-        "gender": "Female",
-        "email": "vip44@example.com",
         "phoneNum": "602000000187",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip45@example.com",
+        "gender": "Male",
         "id": "S00188",
         "name": "VIP User 45",
-        "gender": "Male",
-        "email": "vip45@example.com",
         "phoneNum": "602000000188",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip46@example.com",
+        "gender": "Female",
         "id": "S00189",
         "name": "VIP User 46",
-        "gender": "Female",
-        "email": "vip46@example.com",
         "phoneNum": "602000000189",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip47@example.com",
+        "gender": "Male",
         "id": "S00190",
         "name": "VIP User 47",
-        "gender": "Male",
-        "email": "vip47@example.com",
         "phoneNum": "602000000190",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip48@example.com",
+        "gender": "Female",
         "id": "S00191",
         "name": "VIP User 48",
-        "gender": "Female",
-        "email": "vip48@example.com",
         "phoneNum": "602000000191",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip49@example.com",
+        "gender": "Male",
         "id": "S00192",
         "name": "VIP User 49",
-        "gender": "Male",
-        "email": "vip49@example.com",
         "phoneNum": "602000000192",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip50@example.com",
+        "gender": "Female",
         "id": "S00193",
         "name": "VIP User 50",
-        "gender": "Female",
-        "email": "vip50@example.com",
         "phoneNum": "602000000193",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip51@example.com",
+        "gender": "Male",
         "id": "S00194",
         "name": "VIP User 51",
-        "gender": "Male",
-        "email": "vip51@example.com",
         "phoneNum": "602000000194",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip52@example.com",
+        "gender": "Female",
         "id": "S00195",
         "name": "VIP User 52",
-        "gender": "Female",
-        "email": "vip52@example.com",
         "phoneNum": "602000000195",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip53@example.com",
+        "gender": "Male",
         "id": "S00196",
         "name": "VIP User 53",
-        "gender": "Male",
-        "email": "vip53@example.com",
         "phoneNum": "602000000196",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip54@example.com",
+        "gender": "Female",
         "id": "S00197",
         "name": "VIP User 54",
-        "gender": "Female",
-        "email": "vip54@example.com",
         "phoneNum": "602000000197",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip55@example.com",
+        "gender": "Male",
         "id": "S00198",
         "name": "VIP User 55",
-        "gender": "Male",
-        "email": "vip55@example.com",
         "phoneNum": "602000000198",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip56@example.com",
+        "gender": "Female",
         "id": "S00199",
         "name": "VIP User 56",
-        "gender": "Female",
-        "email": "vip56@example.com",
         "phoneNum": "602000000199",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip57@example.com",
+        "gender": "Male",
         "id": "S00200",
         "name": "VIP User 57",
-        "gender": "Male",
-        "email": "vip57@example.com",
         "phoneNum": "602000000200",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip58@example.com",
+        "gender": "Female",
         "id": "S00201",
         "name": "VIP User 58",
-        "gender": "Female",
-        "email": "vip58@example.com",
         "phoneNum": "602000000201",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip59@example.com",
+        "gender": "Male",
         "id": "S00202",
         "name": "VIP User 59",
-        "gender": "Male",
-        "email": "vip59@example.com",
         "phoneNum": "602000000202",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip60@example.com",
+        "gender": "Female",
         "id": "S00203",
         "name": "VIP User 60",
-        "gender": "Female",
-        "email": "vip60@example.com",
         "phoneNum": "602000000203",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip61@example.com",
+        "gender": "Male",
         "id": "S00204",
         "name": "VIP User 61",
-        "gender": "Male",
-        "email": "vip61@example.com",
         "phoneNum": "602000000204",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "",
+        "email": "vip62@example.com",
+        "gender": "Female",
         "id": "S00205",
         "name": "VIP User 62",
-        "gender": "Female",
-        "email": "vip62@example.com",
         "phoneNum": "602000000205",
-        "type": "VIP",
-        "affiliation": ""
+        "type": "VIP"
     },
     {
+        "affiliation": "Twitch",
+        "email": "extrastreamer1@twitch.tv",
+        "gender": "Male",
         "id": "S00206",
         "name": "Extra Streamer 1",
-        "gender": "Male",
-        "email": "extrastreamer1@twitch.tv",
         "phoneNum": "602000000206",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "extrastreamer2@youtube.com",
+        "gender": "Female",
         "id": "S00207",
         "name": "Extra Streamer 2",
-        "gender": "Female",
-        "email": "extrastreamer2@youtube.com",
         "phoneNum": "602000000207",
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Twitch",
+        "email": "extrastreamer3@twitch.tv",
+        "gender": "Male",
         "id": "S00208",
         "name": "Extra Streamer 3",
-        "gender": "Male",
-        "email": "extrastreamer3@twitch.tv",
         "phoneNum": "602000000208",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Facebook Gaming",
+        "email": "extrastreamer4@facebook.com",
+        "gender": "Female",
         "id": "S00209",
         "name": "Extra Streamer 4",
-        "gender": "Female",
-        "email": "extrastreamer4@facebook.com",
         "phoneNum": "602000000209",
-        "type": "Streamer",
-        "affiliation": "Facebook Gaming"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Huya",
+        "email": "extrastreamer5@huya.com",
+        "gender": "Male",
         "id": "S00210",
         "name": "Extra Streamer 5",
-        "gender": "Male",
-        "email": "extrastreamer5@huya.com",
         "phoneNum": "602000000210",
-        "type": "Streamer",
-        "affiliation": "Huya"
+        "type": "Streamer"
     },
     {
+        "affiliation": "",
+        "email": "extranormal1@example.com",
+        "gender": "Female",
         "id": "S00211",
         "name": "Extra Normal 1",
-        "gender": "Female",
-        "email": "extranormal1@example.com",
         "phoneNum": "602000000211",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "extranormal2@example.com",
+        "gender": "Male",
         "id": "S00212",
         "name": "Extra Normal 2",
-        "gender": "Male",
-        "email": "extranormal2@example.com",
         "phoneNum": "602000000212",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "extranormal3@example.com",
+        "gender": "Female",
         "id": "S00213",
         "name": "Extra Normal 3",
-        "gender": "Female",
-        "email": "extranormal3@example.com",
         "phoneNum": "602000000213",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "extranormal4@example.com",
+        "gender": "Male",
         "id": "S00214",
         "name": "Extra Normal 4",
-        "gender": "Male",
-        "email": "extranormal4@example.com",
         "phoneNum": "602000000214",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "extranormal5@example.com",
+        "gender": "Female",
         "id": "S00215",
         "name": "Extra Normal 5",
-        "gender": "Female",
-        "email": "extranormal5@example.com",
         "phoneNum": "602000000215",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow1@example.com",
+        "gender": "Male",
         "id": "S00216",
         "name": "Overflow Normal 1",
-        "gender": "Male",
-        "email": "overflow1@example.com",
         "phoneNum": "602000000216",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow2@example.com",
+        "gender": "Female",
         "id": "S00217",
         "name": "Overflow Normal 2",
-        "gender": "Female",
-        "email": "overflow2@example.com",
         "phoneNum": "602000000217",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow3@example.com",
+        "gender": "Male",
         "id": "S00218",
         "name": "Overflow Normal 3",
-        "gender": "Male",
-        "email": "overflow3@example.com",
         "phoneNum": "602000000218",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow4@example.com",
+        "gender": "Female",
         "id": "S00219",
         "name": "Overflow Normal 4",
-        "gender": "Female",
-        "email": "overflow4@example.com",
         "phoneNum": "602000000219",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow5@example.com",
+        "gender": "Male",
         "id": "S00220",
         "name": "Overflow Normal 5",
-        "gender": "Male",
-        "email": "overflow5@example.com",
         "phoneNum": "602000000220",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow6@example.com",
+        "gender": "Female",
         "id": "S00221",
         "name": "Overflow Normal 6",
-        "gender": "Female",
-        "email": "overflow6@example.com",
         "phoneNum": "602000000221",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow7@example.com",
+        "gender": "Male",
         "id": "S00222",
         "name": "Overflow Normal 7",
-        "gender": "Male",
-        "email": "overflow7@example.com",
         "phoneNum": "602000000222",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow8@example.com",
+        "gender": "Female",
         "id": "S00223",
         "name": "Overflow Normal 8",
-        "gender": "Female",
-        "email": "overflow8@example.com",
         "phoneNum": "602000000223",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow9@example.com",
+        "gender": "Male",
         "id": "S00224",
         "name": "Overflow Normal 9",
-        "gender": "Male",
-        "email": "overflow9@example.com",
         "phoneNum": "602000000224",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow10@example.com",
+        "gender": "Female",
         "id": "S00225",
         "name": "Overflow Normal 10",
-        "gender": "Female",
-        "email": "overflow10@example.com",
         "phoneNum": "602000000225",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow11@example.com",
+        "gender": "Male",
         "id": "S00226",
         "name": "Overflow Normal 11",
-        "gender": "Male",
-        "email": "overflow11@example.com",
         "phoneNum": "602000000226",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow12@example.com",
+        "gender": "Female",
         "id": "S00227",
         "name": "Overflow Normal 12",
-        "gender": "Female",
-        "email": "overflow12@example.com",
         "phoneNum": "602000000227",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow13@example.com",
+        "gender": "Male",
         "id": "S00228",
         "name": "Overflow Normal 13",
-        "gender": "Male",
-        "email": "overflow13@example.com",
         "phoneNum": "602000000228",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow14@example.com",
+        "gender": "Female",
         "id": "S00229",
         "name": "Overflow Normal 14",
-        "gender": "Female",
-        "email": "overflow14@example.com",
         "phoneNum": "602000000229",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow15@example.com",
+        "gender": "Male",
         "id": "S00230",
         "name": "Overflow Normal 15",
-        "gender": "Male",
-        "email": "overflow15@example.com",
         "phoneNum": "602000000230",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow16@example.com",
+        "gender": "Female",
         "id": "S00231",
         "name": "Overflow Normal 16",
-        "gender": "Female",
-        "email": "overflow16@example.com",
         "phoneNum": "602000000231",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow17@example.com",
+        "gender": "Male",
         "id": "S00232",
         "name": "Overflow Normal 17",
-        "gender": "Male",
-        "email": "overflow17@example.com",
         "phoneNum": "602000000232",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow18@example.com",
+        "gender": "Female",
         "id": "S00233",
         "name": "Overflow Normal 18",
-        "gender": "Female",
-        "email": "overflow18@example.com",
         "phoneNum": "602000000233",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow19@example.com",
+        "gender": "Male",
         "id": "S00234",
         "name": "Overflow Normal 19",
-        "gender": "Male",
-        "email": "overflow19@example.com",
         "phoneNum": "602000000234",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow20@example.com",
+        "gender": "Female",
         "id": "S00235",
         "name": "Overflow Normal 20",
-        "gender": "Female",
-        "email": "overflow20@example.com",
         "phoneNum": "602000000235",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow21@example.com",
+        "gender": "Male",
         "id": "S00236",
         "name": "Overflow Normal 21",
-        "gender": "Male",
-        "email": "overflow21@example.com",
         "phoneNum": "602000000236",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow22@example.com",
+        "gender": "Female",
         "id": "S00237",
         "name": "Overflow Normal 22",
-        "gender": "Female",
-        "email": "overflow22@example.com",
         "phoneNum": "602000000237",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow23@example.com",
+        "gender": "Male",
         "id": "S00238",
         "name": "Overflow Normal 23",
-        "gender": "Male",
-        "email": "overflow23@example.com",
         "phoneNum": "602000000238",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow24@example.com",
+        "gender": "Female",
         "id": "S00239",
         "name": "Overflow Normal 24",
-        "gender": "Female",
-        "email": "overflow24@example.com",
         "phoneNum": "602000000239",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow25@example.com",
+        "gender": "Male",
         "id": "S00240",
         "name": "Overflow Normal 25",
-        "gender": "Male",
-        "email": "overflow25@example.com",
         "phoneNum": "602000000240",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow26@example.com",
+        "gender": "Female",
         "id": "S00241",
         "name": "Overflow Normal 26",
-        "gender": "Female",
-        "email": "overflow26@example.com",
         "phoneNum": "602000000241",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow27@example.com",
+        "gender": "Male",
         "id": "S00242",
         "name": "Overflow Normal 27",
-        "gender": "Male",
-        "email": "overflow27@example.com",
         "phoneNum": "602000000242",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow28@example.com",
+        "gender": "Female",
         "id": "S00243",
         "name": "Overflow Normal 28",
-        "gender": "Female",
-        "email": "overflow28@example.com",
         "phoneNum": "602000000243",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow29@example.com",
+        "gender": "Male",
         "id": "S00244",
         "name": "Overflow Normal 29",
-        "gender": "Male",
-        "email": "overflow29@example.com",
         "phoneNum": "602000000244",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow30@example.com",
+        "gender": "Female",
         "id": "S00245",
         "name": "Overflow Normal 30",
-        "gender": "Female",
-        "email": "overflow30@example.com",
         "phoneNum": "602000000245",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow31@example.com",
+        "gender": "Male",
         "id": "S00246",
         "name": "Overflow Normal 31",
-        "gender": "Male",
-        "email": "overflow31@example.com",
         "phoneNum": "602000000246",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow32@example.com",
+        "gender": "Female",
         "id": "S00247",
         "name": "Overflow Normal 32",
-        "gender": "Female",
-        "email": "overflow32@example.com",
         "phoneNum": "602000000247",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow33@example.com",
+        "gender": "Male",
         "id": "S00248",
         "name": "Overflow Normal 33",
-        "gender": "Male",
-        "email": "overflow33@example.com",
         "phoneNum": "602000000248",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow34@example.com",
+        "gender": "Female",
         "id": "S00249",
         "name": "Overflow Normal 34",
-        "gender": "Female",
-        "email": "overflow34@example.com",
         "phoneNum": "602000000249",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow35@example.com",
+        "gender": "Male",
         "id": "S00250",
         "name": "Overflow Normal 35",
-        "gender": "Male",
-        "email": "overflow35@example.com",
         "phoneNum": "602000000250",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow36@example.com",
+        "gender": "Female",
         "id": "S00251",
         "name": "Overflow Normal 36",
-        "gender": "Female",
-        "email": "overflow36@example.com",
         "phoneNum": "602000000251",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow37@example.com",
+        "gender": "Male",
         "id": "S00252",
         "name": "Overflow Normal 37",
-        "gender": "Male",
-        "email": "overflow37@example.com",
         "phoneNum": "602000000252",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow38@example.com",
+        "gender": "Female",
         "id": "S00253",
         "name": "Overflow Normal 38",
-        "gender": "Female",
-        "email": "overflow38@example.com",
         "phoneNum": "602000000253",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow39@example.com",
+        "gender": "Male",
         "id": "S00254",
         "name": "Overflow Normal 39",
-        "gender": "Male",
-        "email": "overflow39@example.com",
         "phoneNum": "602000000254",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "",
+        "email": "overflow40@example.com",
+        "gender": "Female",
         "id": "S00255",
         "name": "Overflow Normal 40",
-        "gender": "Female",
-        "email": "overflow40@example.com",
         "phoneNum": "602000000255",
-        "type": "Normal",
-        "affiliation": ""
+        "type": "Normal"
     },
     {
+        "affiliation": "Twitch",
+        "email": "streamer1@example.com",
+        "gender": "Male",
         "id": "S00256",
         "name": "Overflow Streamer 1",
-        "gender": "Male",
-        "email": "streamer1@example.com", 
         "phoneNum": "602000000256",
-        "type": "Streamer",
-        "affiliation": "Twitch"
+        "type": "Streamer"
     },
     {
+        "affiliation": "YouTube",
+        "email": "streamer2@example.com",
+        "gender": "Female",
         "id": "S00257",
         "name": "Overflow Streamer 2",
-        "gender": "Female",
-        "email": "streamer2@example.com",
-        "phoneNum": "602000000257", 
-        "type": "Streamer",
-        "affiliation": "YouTube"
+        "phoneNum": "602000000257",
+        "type": "Streamer"
     },
     {
+        "affiliation": "Facebook Gaming",
+        "email": "streamer3@example.com",
+        "gender": "Male",
         "id": "S00258",
         "name": "Overflow Streamer 3",
-        "gender": "Male",
-        "email": "streamer3@example.com",
         "phoneNum": "602000000258",
-        "type": "Streamer", 
-        "affiliation": "Facebook Gaming"
+        "type": "Streamer"
     },
     {
+        "affiliation": "TikTok",
+        "email": "streamer4@example.com",
+        "gender": "Female",
         "id": "S00259",
         "name": "Overflow Streamer 4",
-        "gender": "Female",
-        "email": "streamer4@example.com",
         "phoneNum": "602000000259",
-        "type": "Streamer",
-        "affiliation": "TikTok"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Discord",
+        "email": "streamer5@example.com",
+        "gender": "Male",
         "id": "S00260",
         "name": "Overflow Streamer 5",
-        "gender": "Male", 
-        "email": "streamer5@example.com",
         "phoneNum": "602000000260",
-        "type": "Streamer",
-        "affiliation": "Discord"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Kick",
+        "email": "streamer6@example.com",
+        "gender": "Female",
         "id": "S00261",
         "name": "Overflow Streamer 6",
-        "gender": "Female",
-        "email": "streamer6@example.com",
         "phoneNum": "602000000261",
-        "type": "Streamer",
-        "affiliation": "Kick"
+        "type": "Streamer"
     },
     {
-        "id": "S00262", 
-        "name": "Overflow Streamer 7",
-        "gender": "Male",
+        "affiliation": "Rumble",
         "email": "streamer7@example.com",
+        "gender": "Male",
+        "id": "S00262",
+        "name": "Overflow Streamer 7",
         "phoneNum": "602000000262",
-        "type": "Streamer",
-        "affiliation": "Rumble"
+        "type": "Streamer"
     },
     {
-        "id": "S00263",
-        "name": "Overflow Streamer 8", 
-        "gender": "Female",
+        "affiliation": "Mixer",
         "email": "streamer8@example.com",
+        "gender": "Female",
+        "id": "S00263",
+        "name": "Overflow Streamer 8",
         "phoneNum": "602000000263",
-        "type": "Streamer",
-        "affiliation": "Mixer"
+        "type": "Streamer"
     },
     {
+        "affiliation": "Premium Member",
+        "email": "vip1@example.com",
+        "gender": "Male",
         "id": "S00264",
         "name": "Overflow VIP 1",
-        "gender": "Male",
-        "email": "vip1@example.com",
-        "phoneNum": "602000000264", 
-        "type": "VIP",
-        "affiliation": "Premium Member"
+        "phoneNum": "602000000264",
+        "type": "VIP"
     },
     {
-        "id": "S00265", 
-        "name": "Overflow VIP 2",
-        "gender": "Female",
+        "affiliation": "Premium Member",
         "email": "vip2@example.com",
+        "gender": "Female",
+        "id": "S00265",
+        "name": "Overflow VIP 2",
         "phoneNum": "602000000265",
-        "type": "VIP",
-        "affiliation": "Premium Member"
+        "type": "VIP"
     },
     {
+        "affiliation": "Premium Member",
+        "email": "vip3@example.com",
+        "gender": "Male",
         "id": "S00266",
         "name": "Overflow VIP 3",
-        "gender": "Male",
-        "email": "vip3@example.com",
         "phoneNum": "602000000266",
-        "type": "VIP",
-        "affiliation": "Premium Member"
+        "type": "VIP"
     },
     {
+        "affiliation": "Premium Member",
+        "email": "vip4@example.com",
+        "gender": "Female",
         "id": "S00267",
         "name": "Overflow VIP 4",
-        "gender": "Female", 
-        "email": "vip4@example.com",
         "phoneNum": "602000000267",
-        "type": "VIP",
-        "affiliation": "Premium Member"
+        "type": "VIP"
     },
     {
+        "affiliation": "Premium Member",
+        "email": "vip5@example.com",
+        "gender": "Male",
         "id": "S00268",
         "name": "Overflow VIP 5",
-        "gender": "Male",
-        "email": "vip5@example.com",
         "phoneNum": "602000000268",
-        "type": "VIP",
-        "affiliation": "Premium Member"
+        "type": "VIP"
+    },
+    {
+        "affiliation": "",
+        "email": "chua@gmail.com",
+        "gender": "Male",
+        "id": "S00269",
+        "name": "chua",
+        "phoneNum": "012803102",
+        "type": "Normal"
     }
 ]

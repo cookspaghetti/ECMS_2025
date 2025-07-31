@@ -84,9 +84,9 @@ void SeatingManager::addToEntryQueue(const Spectator &s, bool /*quiet*/) {
         
         entryQueue.enqueue(s, priority);
     } catch (const std::exception& e) {
-        std::cout << "[ERROR] Exception in addToEntryQueue for " << s.name << ": " << e.what() << "\n";
+        std::cout << " Exception in addToEntryQueue for " << s.name << ": " << e.what() << "\n";
     } catch (...) {
-        std::cout << "[ERROR] Unknown exception in addToEntryQueue for " << s.name << "\n";
+        std::cout << " Unknown exception in addToEntryQueue for " << s.name << "\n";
     }
 }
 
@@ -1422,13 +1422,13 @@ bool SeatingManager::addSpectatorToAvailableSeat(const Spectator& spectator) {
 bool SeatingManager::assignSpectatorToSpecificSeat(const Spectator& spectator, int room, int seat) {
     // Verify the seat is actually empty
     if (!generalSeatIds[room][seat].empty()) {
-        std::cout << "  [ERROR] Seat G" << (room+1) << "-" << (seat+1) << " is not empty!\n";
+        std::cout << "   Seat G" << (room+1) << "-" << (seat+1) << " is not empty!\n";
         return false;
     }
     
     // Verify general seating has space
     if (generalSeating.isFull()) {
-        std::cout << "  [ERROR] General seating queue is full!\n";
+        std::cout << "   General seating queue is full!\n";
         return false;
     }
     
@@ -1452,7 +1452,7 @@ bool SeatingManager::assignSpectatorToSpecificSeat(const Spectator& spectator, i
         return true;
         
     } catch (...) {
-        std::cout << "  [ERROR] Exception during specific seat assignment\n";
+        std::cout << "   Exception during specific seat assignment\n";
         return false;
     }
 }

@@ -1,3692 +1,3702 @@
 [
     {
-        "checkInDateTime": "2025-01-15 07:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00001",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:00:00",
+        "checkInTime": "07:00:00",
         "checkedIn": true,
         "name": "VIP User 1",
-        "type": "VIP",
-        "checkInTime": "07:00:00"
+        "spectatorId": "S00001",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00002",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:15:00",
+        "checkInTime": "07:15:00",
         "checkedIn": true,
         "name": "VIP User 2",
-        "type": "VIP",
-        "checkInTime": "07:15:00"
+        "spectatorId": "S00002",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00003",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:30:00",
+        "checkInTime": "07:30:00",
         "checkedIn": true,
         "name": "VIP User 3",
-        "type": "VIP",
-        "checkInTime": "07:30:00"
+        "spectatorId": "S00003",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00004",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:45:00",
+        "checkInTime": "07:45:00",
         "checkedIn": true,
         "name": "VIP User 4",
-        "type": "VIP",
-        "checkInTime": "07:45:00"
+        "spectatorId": "S00004",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 08:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00005",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:00:00",
+        "checkInTime": "08:00:00",
         "checkedIn": true,
         "name": "VIP User 5",
-        "type": "VIP",
-        "checkInTime": "08:00:00"
+        "spectatorId": "S00005",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 08:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00006",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:15:00",
+        "checkInTime": "08:15:00",
         "checkedIn": true,
         "name": "VIP User 6",
-        "type": "VIP",
-        "checkInTime": "08:15:00"
+        "spectatorId": "S00006",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 08:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00007",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:30:00",
+        "checkInTime": "08:30:00",
         "checkedIn": true,
         "name": "VIP User 7",
-        "type": "VIP",
-        "checkInTime": "08:30:00"
+        "spectatorId": "S00007",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 08:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00008",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:45:00",
+        "checkInTime": "08:45:00",
         "checkedIn": true,
         "name": "VIP User 8",
-        "type": "VIP",
-        "checkInTime": "08:45:00"
+        "spectatorId": "S00008",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 09:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00009",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:00:00",
+        "checkInTime": "09:00:00",
         "checkedIn": true,
         "name": "VIP User 9",
-        "type": "VIP",
-        "checkInTime": "09:00:00"
+        "spectatorId": "S00009",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 09:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00010",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:15:00",
+        "checkInTime": "09:15:00",
         "checkedIn": true,
         "name": "VIP User 10",
-        "type": "VIP",
-        "checkInTime": "09:15:00"
+        "spectatorId": "S00010",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 09:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00011",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:30:00",
+        "checkInTime": "09:30:00",
         "checkedIn": true,
         "name": "VIP User 11 (Overflow)",
-        "type": "VIP",
-        "checkInTime": "09:30:00"
+        "spectatorId": "S00011",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 09:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00012",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:45:00",
+        "checkInTime": "09:45:00",
         "checkedIn": true,
         "name": "VIP User 12 (Overflow)",
-        "type": "VIP",
-        "checkInTime": "09:45:00"
+        "spectatorId": "S00012",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 08:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00013",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:30:00",
+        "checkInTime": "08:30:00",
         "checkedIn": true,
         "name": "Influencer 1",
-        "type": "Influencer",
-        "checkInTime": "08:30:00"
+        "spectatorId": "S00013",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Instagram",
-        "spectatorId": "S00014",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:45:00",
+        "checkInTime": "08:45:00",
         "checkedIn": true,
         "name": "Influencer 2",
-        "type": "Influencer",
-        "checkInTime": "08:45:00"
+        "spectatorId": "S00014",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "TikTok",
-        "spectatorId": "S00015",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:00:00",
+        "checkInTime": "09:00:00",
         "checkedIn": true,
         "name": "Influencer 3",
-        "type": "Influencer",
-        "checkInTime": "09:00:00"
+        "spectatorId": "S00015",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 07:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitch",
-        "spectatorId": "S00016",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:00:00",
+        "checkInTime": "07:00:00",
         "checkedIn": true,
         "name": "Streamer 1",
-        "type": "Streamer",
-        "checkInTime": "07:00:00"
+        "spectatorId": "S00016",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 07:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube Gaming",
-        "spectatorId": "S00017",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:15:00",
+        "checkInTime": "07:15:00",
         "checkedIn": true,
         "name": "Streamer 2",
-        "type": "Streamer",
-        "checkInTime": "07:15:00"
+        "spectatorId": "S00017",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 07:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Facebook Gaming",
-        "spectatorId": "S00018",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:30:00",
+        "checkInTime": "07:30:00",
         "checkedIn": true,
         "name": "Streamer 3",
-        "type": "Streamer",
-        "checkInTime": "07:30:00"
+        "spectatorId": "S00018",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 07:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Douyu",
-        "spectatorId": "S00019",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:45:00",
+        "checkInTime": "07:45:00",
         "checkedIn": true,
         "name": "Streamer 4",
-        "type": "Streamer",
-        "checkInTime": "07:45:00"
+        "spectatorId": "S00019",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Bilibili",
-        "spectatorId": "S00020",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:00:00",
+        "checkInTime": "08:00:00",
         "checkedIn": true,
         "name": "Streamer 5",
-        "type": "Streamer",
-        "checkInTime": "08:00:00"
+        "spectatorId": "S00020",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Huya",
-        "spectatorId": "S00021",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:15:00",
+        "checkInTime": "08:15:00",
         "checkedIn": true,
         "name": "Streamer 6 (Overflow)",
-        "type": "Streamer",
-        "checkInTime": "08:15:00"
+        "spectatorId": "S00021",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 10:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00022",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:00:00",
+        "checkInTime": "10:00:00",
         "checkedIn": true,
         "name": "Normal User 1",
-        "type": "Normal",
-        "checkInTime": "10:00:00"
+        "spectatorId": "S00022",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00023",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:15:00",
+        "checkInTime": "10:15:00",
         "checkedIn": true,
         "name": "Normal User 2",
-        "type": "Normal",
-        "checkInTime": "10:15:00"
+        "spectatorId": "S00023",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00024",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:30:00",
+        "checkInTime": "10:30:00",
         "checkedIn": true,
         "name": "Normal User 3",
-        "type": "Normal",
-        "checkInTime": "10:30:00"
+        "spectatorId": "S00024",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00025",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:45:00",
+        "checkInTime": "10:45:00",
         "checkedIn": true,
         "name": "Normal User 4",
-        "type": "Normal",
-        "checkInTime": "10:45:00"
+        "spectatorId": "S00025",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00026",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:00:00",
+        "checkInTime": "11:00:00",
         "checkedIn": true,
         "name": "Normal User 5",
-        "type": "Normal",
-        "checkInTime": "11:00:00"
+        "spectatorId": "S00026",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 06:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00058",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:00:00",
+        "checkInTime": "06:00:00",
         "checkedIn": true,
         "name": "VIP User 1",
-        "type": "VIP",
-        "checkInTime": "06:00:00"
+        "spectatorId": "S00058",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00059",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:05:00",
+        "checkInTime": "06:05:00",
         "checkedIn": true,
         "name": "VIP User 2",
-        "type": "VIP",
-        "checkInTime": "06:05:00"
+        "spectatorId": "S00059",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00060",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:10:00",
+        "checkInTime": "06:10:00",
         "checkedIn": true,
         "name": "VIP User 3",
-        "type": "VIP",
-        "checkInTime": "06:10:00"
+        "spectatorId": "S00060",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00061",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:15:00",
+        "checkInTime": "06:15:00",
         "checkedIn": true,
         "name": "VIP User 4",
-        "type": "VIP",
-        "checkInTime": "06:15:00"
+        "spectatorId": "S00061",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00062",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:20:00",
+        "checkInTime": "06:20:00",
         "checkedIn": true,
         "name": "VIP User 5",
-        "type": "VIP",
-        "checkInTime": "06:20:00"
+        "spectatorId": "S00062",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00063",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:25:00",
+        "checkInTime": "06:25:00",
         "checkedIn": true,
         "name": "VIP User 6",
-        "type": "VIP",
-        "checkInTime": "06:25:00"
+        "spectatorId": "S00063",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00064",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:30:00",
+        "checkInTime": "06:30:00",
         "checkedIn": true,
         "name": "VIP User 7",
-        "type": "VIP",
-        "checkInTime": "06:30:00"
+        "spectatorId": "S00064",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00065",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:35:00",
+        "checkInTime": "06:35:00",
         "checkedIn": true,
         "name": "VIP User 8",
-        "type": "VIP",
-        "checkInTime": "06:35:00"
+        "spectatorId": "S00065",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00066",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:40:00",
+        "checkInTime": "06:40:00",
         "checkedIn": true,
         "name": "VIP User 9",
-        "type": "VIP",
-        "checkInTime": "06:40:00"
+        "spectatorId": "S00066",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00067",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:45:00",
+        "checkInTime": "06:45:00",
         "checkedIn": true,
         "name": "VIP User 10",
-        "type": "VIP",
-        "checkInTime": "06:45:00"
+        "spectatorId": "S00067",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00068",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:50:00",
+        "checkInTime": "06:50:00",
         "checkedIn": true,
         "name": "VIP User 11",
-        "type": "VIP",
-        "checkInTime": "06:50:00"
+        "spectatorId": "S00068",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 06:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00069",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 06:55:00",
+        "checkInTime": "06:55:00",
         "checkedIn": true,
         "name": "VIP User 12",
-        "type": "VIP",
-        "checkInTime": "06:55:00"
+        "spectatorId": "S00069",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00070",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:00:00",
+        "checkInTime": "07:00:00",
         "checkedIn": true,
         "name": "VIP User 13",
-        "type": "VIP",
-        "checkInTime": "07:00:00"
+        "spectatorId": "S00070",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00071",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:05:00",
+        "checkInTime": "07:05:00",
         "checkedIn": true,
         "name": "VIP User 14",
-        "type": "VIP",
-        "checkInTime": "07:05:00"
+        "spectatorId": "S00071",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00072",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:10:00",
+        "checkInTime": "07:10:00",
         "checkedIn": true,
         "name": "VIP User 15",
-        "type": "VIP",
-        "checkInTime": "07:10:00"
+        "spectatorId": "S00072",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 08:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Instagram",
-        "spectatorId": "S00073",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:00:00",
+        "checkInTime": "08:00:00",
         "checkedIn": true,
         "name": "Influencer User 1",
-        "type": "Influencer",
-        "checkInTime": "08:00:00"
+        "spectatorId": "S00073",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "TikTok",
-        "spectatorId": "S00074",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:05:00",
+        "checkInTime": "08:05:00",
         "checkedIn": true,
         "name": "Influencer User 2",
-        "type": "Influencer",
-        "checkInTime": "08:05:00"
+        "spectatorId": "S00074",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00075",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:10:00",
+        "checkInTime": "08:10:00",
         "checkedIn": true,
         "name": "Influencer User 3",
-        "type": "Influencer",
-        "checkInTime": "08:10:00"
+        "spectatorId": "S00075",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitter",
-        "spectatorId": "S00076",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:15:00",
+        "checkInTime": "08:15:00",
         "checkedIn": true,
         "name": "Influencer User 4",
-        "type": "Influencer",
-        "checkInTime": "08:15:00"
+        "spectatorId": "S00076",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Facebook",
-        "spectatorId": "S00077",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:20:00",
+        "checkInTime": "08:20:00",
         "checkedIn": true,
         "name": "Influencer User 5",
-        "type": "Influencer",
-        "checkInTime": "08:20:00"
+        "spectatorId": "S00077",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Instagram",
-        "spectatorId": "S00078",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:25:00",
+        "checkInTime": "08:25:00",
         "checkedIn": true,
         "name": "Influencer User 6",
-        "type": "Influencer",
-        "checkInTime": "08:25:00"
+        "spectatorId": "S00078",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "TikTok",
-        "spectatorId": "S00079",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:30:00",
+        "checkInTime": "08:30:00",
         "checkedIn": true,
         "name": "Influencer User 7",
-        "type": "Influencer",
-        "checkInTime": "08:30:00"
+        "spectatorId": "S00079",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00080",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:35:00",
+        "checkInTime": "08:35:00",
         "checkedIn": true,
         "name": "Influencer User 8",
-        "type": "Influencer",
-        "checkInTime": "08:35:00"
+        "spectatorId": "S00080",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitter",
-        "spectatorId": "S00081",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:40:00",
+        "checkInTime": "08:40:00",
         "checkedIn": true,
         "name": "Influencer User 9",
-        "type": "Influencer",
-        "checkInTime": "08:40:00"
+        "spectatorId": "S00081",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Facebook",
-        "spectatorId": "S00082",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:45:00",
+        "checkInTime": "08:45:00",
         "checkedIn": true,
         "name": "Influencer User 10",
-        "type": "Influencer",
-        "checkInTime": "08:45:00"
+        "spectatorId": "S00082",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Instagram",
-        "spectatorId": "S00083",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:50:00",
+        "checkInTime": "08:50:00",
         "checkedIn": true,
         "name": "Influencer User 11",
-        "type": "Influencer",
-        "checkInTime": "08:50:00"
+        "spectatorId": "S00083",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 08:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "TikTok",
-        "spectatorId": "S00084",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 08:55:00",
+        "checkInTime": "08:55:00",
         "checkedIn": true,
         "name": "Influencer User 12",
-        "type": "Influencer",
-        "checkInTime": "08:55:00"
+        "spectatorId": "S00084",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitch",
-        "spectatorId": "S00085",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:00:00",
+        "checkInTime": "09:00:00",
         "checkedIn": true,
         "name": "Streamer User 1",
-        "type": "Streamer",
-        "checkInTime": "09:00:00"
+        "spectatorId": "S00085",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00086",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:05:00",
+        "checkInTime": "09:05:00",
         "checkedIn": true,
         "name": "Streamer User 2",
-        "type": "Streamer",
-        "checkInTime": "09:05:00"
+        "spectatorId": "S00086",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitch",
-        "spectatorId": "S00087",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:10:00",
+        "checkInTime": "09:10:00",
         "checkedIn": true,
         "name": "Streamer User 3",
-        "type": "Streamer",
-        "checkInTime": "09:10:00"
+        "spectatorId": "S00087",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00088",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:15:00",
+        "checkInTime": "09:15:00",
         "checkedIn": true,
         "name": "Streamer User 4",
-        "type": "Streamer",
-        "checkInTime": "09:15:00"
+        "spectatorId": "S00088",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitch",
-        "spectatorId": "S00089",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:20:00",
+        "checkInTime": "09:20:00",
         "checkedIn": true,
         "name": "Streamer User 5",
-        "type": "Streamer",
-        "checkInTime": "09:20:00"
+        "spectatorId": "S00089",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 10:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00090",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:00:00",
+        "checkInTime": "10:00:00",
         "checkedIn": true,
         "name": "Normal User 1",
-        "type": "Normal",
-        "checkInTime": "10:00:00"
+        "spectatorId": "S00090",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00091",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:05:00",
+        "checkInTime": "10:05:00",
         "checkedIn": true,
         "name": "Normal User 2",
-        "type": "Normal",
-        "checkInTime": "10:05:00"
+        "spectatorId": "S00091",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00092",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:10:00",
+        "checkInTime": "10:10:00",
         "checkedIn": true,
         "name": "Normal User 3",
-        "type": "Normal",
-        "checkInTime": "10:10:00"
+        "spectatorId": "S00092",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00093",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:15:00",
+        "checkInTime": "10:15:00",
         "checkedIn": true,
         "name": "Normal User 4",
-        "type": "Normal",
-        "checkInTime": "10:15:00"
+        "spectatorId": "S00093",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00094",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:20:00",
+        "checkInTime": "10:20:00",
         "checkedIn": true,
         "name": "Normal User 5",
-        "type": "Normal",
-        "checkInTime": "10:20:00"
+        "spectatorId": "S00094",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00095",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:25:00",
+        "checkInTime": "10:25:00",
         "checkedIn": true,
         "name": "Normal User 6",
-        "type": "Normal",
-        "checkInTime": "10:25:00"
+        "spectatorId": "S00095",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00096",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:30:00",
+        "checkInTime": "10:30:00",
         "checkedIn": true,
         "name": "Normal User 7",
-        "type": "Normal",
-        "checkInTime": "10:30:00"
+        "spectatorId": "S00096",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00097",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:35:00",
+        "checkInTime": "10:35:00",
         "checkedIn": true,
         "name": "Normal User 8",
-        "type": "Normal",
-        "checkInTime": "10:35:00"
+        "spectatorId": "S00097",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00098",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:40:00",
+        "checkInTime": "10:40:00",
         "checkedIn": true,
         "name": "Normal User 9",
-        "type": "Normal",
-        "checkInTime": "10:40:00"
+        "spectatorId": "S00098",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00099",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:45:00",
+        "checkInTime": "10:45:00",
         "checkedIn": true,
         "name": "Normal User 10",
-        "type": "Normal",
-        "checkInTime": "10:45:00"
+        "spectatorId": "S00099",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00100",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:50:00",
+        "checkInTime": "10:50:00",
         "checkedIn": true,
         "name": "Normal User 11",
-        "type": "Normal",
-        "checkInTime": "10:50:00"
+        "spectatorId": "S00100",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 10:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00101",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 10:55:00",
+        "checkInTime": "10:55:00",
         "checkedIn": true,
         "name": "Normal User 12",
-        "type": "Normal",
-        "checkInTime": "10:55:00"
+        "spectatorId": "S00101",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00102",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:00:00",
+        "checkInTime": "11:00:00",
         "checkedIn": true,
         "name": "Normal User 13",
-        "type": "Normal",
-        "checkInTime": "11:00:00"
+        "spectatorId": "S00102",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00103",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:05:00",
+        "checkInTime": "11:05:00",
         "checkedIn": true,
         "name": "Normal User 14",
-        "type": "Normal",
-        "checkInTime": "11:05:00"
+        "spectatorId": "S00103",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00104",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:10:00",
+        "checkInTime": "11:10:00",
         "checkedIn": true,
         "name": "Normal User 15",
-        "type": "Normal",
-        "checkInTime": "11:10:00"
+        "spectatorId": "S00104",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00105",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:15:00",
+        "checkInTime": "11:15:00",
         "checkedIn": true,
         "name": "Normal User 16",
-        "type": "Normal",
-        "checkInTime": "11:15:00"
+        "spectatorId": "S00105",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00106",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:20:00",
+        "checkInTime": "11:20:00",
         "checkedIn": true,
         "name": "Normal User 17",
-        "type": "Normal",
-        "checkInTime": "11:20:00"
+        "spectatorId": "S00106",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00107",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:25:00",
+        "checkInTime": "11:25:00",
         "checkedIn": true,
         "name": "Normal User 18",
-        "type": "Normal",
-        "checkInTime": "11:25:00"
+        "spectatorId": "S00107",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00108",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:30:00",
+        "checkInTime": "11:30:00",
         "checkedIn": true,
         "name": "Normal User 19",
-        "type": "Normal",
-        "checkInTime": "11:30:00"
+        "spectatorId": "S00108",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00109",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:35:00",
+        "checkInTime": "11:35:00",
         "checkedIn": true,
         "name": "Normal User 20",
-        "type": "Normal",
-        "checkInTime": "11:35:00"
+        "spectatorId": "S00109",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00110",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:40:00",
+        "checkInTime": "11:40:00",
         "checkedIn": true,
         "name": "Normal User 21",
-        "type": "Normal",
-        "checkInTime": "11:40:00"
+        "spectatorId": "S00110",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00111",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:45:00",
+        "checkInTime": "11:45:00",
         "checkedIn": true,
         "name": "Normal User 22",
-        "type": "Normal",
-        "checkInTime": "11:45:00"
+        "spectatorId": "S00111",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00112",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:50:00",
+        "checkInTime": "11:50:00",
         "checkedIn": true,
         "name": "Normal User 23",
-        "type": "Normal",
-        "checkInTime": "11:50:00"
+        "spectatorId": "S00112",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 11:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00113",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 11:55:00",
+        "checkInTime": "11:55:00",
         "checkedIn": true,
         "name": "Normal User 24",
-        "type": "Normal",
-        "checkInTime": "11:55:00"
+        "spectatorId": "S00113",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00114",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:00:00",
+        "checkInTime": "12:00:00",
         "checkedIn": true,
         "name": "Normal User 25",
-        "type": "Normal",
-        "checkInTime": "12:00:00"
+        "spectatorId": "S00114",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00115",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:05:00",
+        "checkInTime": "12:05:00",
         "checkedIn": true,
         "name": "Normal User 26",
-        "type": "Normal",
-        "checkInTime": "12:05:00"
+        "spectatorId": "S00115",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00116",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:10:00",
+        "checkInTime": "12:10:00",
         "checkedIn": true,
         "name": "Normal User 27",
-        "type": "Normal",
-        "checkInTime": "12:10:00"
+        "spectatorId": "S00116",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00117",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:15:00",
+        "checkInTime": "12:15:00",
         "checkedIn": true,
         "name": "Normal User 28",
-        "type": "Normal",
-        "checkInTime": "12:15:00"
+        "spectatorId": "S00117",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00118",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:20:00",
+        "checkInTime": "12:20:00",
         "checkedIn": true,
         "name": "Normal User 29",
-        "type": "Normal",
-        "checkInTime": "12:20:00"
+        "spectatorId": "S00118",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00119",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:25:00",
+        "checkInTime": "12:25:00",
         "checkedIn": true,
         "name": "Normal User 30",
-        "type": "Normal",
-        "checkInTime": "12:25:00"
+        "spectatorId": "S00119",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00120",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:30:00",
+        "checkInTime": "12:30:00",
         "checkedIn": true,
         "name": "Normal User 31",
-        "type": "Normal",
-        "checkInTime": "12:30:00"
+        "spectatorId": "S00120",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00121",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:35:00",
+        "checkInTime": "12:35:00",
         "checkedIn": true,
         "name": "Normal User 32",
-        "type": "Normal",
-        "checkInTime": "12:35:00"
+        "spectatorId": "S00121",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00122",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:40:00",
+        "checkInTime": "12:40:00",
         "checkedIn": true,
         "name": "Normal User 33",
-        "type": "Normal",
-        "checkInTime": "12:40:00"
+        "spectatorId": "S00122",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00123",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:45:00",
+        "checkInTime": "12:45:00",
         "checkedIn": true,
         "name": "Normal User 34",
-        "type": "Normal",
-        "checkInTime": "12:45:00"
+        "spectatorId": "S00123",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00124",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:50:00",
+        "checkInTime": "12:50:00",
         "checkedIn": true,
         "name": "Normal User 35",
-        "type": "Normal",
-        "checkInTime": "12:50:00"
+        "spectatorId": "S00124",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 12:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00125",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 12:55:00",
+        "checkInTime": "12:55:00",
         "checkedIn": true,
         "name": "Normal User 36",
-        "type": "Normal",
-        "checkInTime": "12:55:00"
+        "spectatorId": "S00125",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 07:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00126",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:15:00",
+        "checkInTime": "07:15:00",
         "checkedIn": true,
         "name": "VIP User 16",
-        "type": "VIP",
-        "checkInTime": "07:15:00"
+        "spectatorId": "S00126",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00127",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:20:00",
+        "checkInTime": "07:20:00",
         "checkedIn": true,
         "name": "VIP User 17",
-        "type": "VIP",
-        "checkInTime": "07:20:00"
+        "spectatorId": "S00127",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00128",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:25:00",
+        "checkInTime": "07:25:00",
         "checkedIn": true,
         "name": "VIP User 18",
-        "type": "VIP",
-        "checkInTime": "07:25:00"
+        "spectatorId": "S00128",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00129",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:30:00",
+        "checkInTime": "07:30:00",
         "checkedIn": true,
         "name": "VIP User 19",
-        "type": "VIP",
-        "checkInTime": "07:30:00"
+        "spectatorId": "S00129",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 07:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00130",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 07:35:00",
+        "checkInTime": "07:35:00",
         "checkedIn": true,
         "name": "VIP User 20",
-        "type": "VIP",
-        "checkInTime": "07:35:00"
+        "spectatorId": "S00130",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2025-01-15 09:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Instagram",
-        "spectatorId": "S00131",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:00:00",
+        "checkInTime": "09:00:00",
         "checkedIn": true,
         "name": "Influencer User 13",
-        "type": "Influencer",
-        "checkInTime": "09:00:00"
+        "spectatorId": "S00131",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "TikTok",
-        "spectatorId": "S00132",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:05:00",
+        "checkInTime": "09:05:00",
         "checkedIn": true,
         "name": "Influencer User 14",
-        "type": "Influencer",
-        "checkInTime": "09:05:00"
+        "spectatorId": "S00132",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00133",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:10:00",
+        "checkInTime": "09:10:00",
         "checkedIn": true,
         "name": "Influencer User 15",
-        "type": "Influencer",
-        "checkInTime": "09:10:00"
+        "spectatorId": "S00133",
+        "type": "Influencer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "Twitch",
-        "spectatorId": "S00134",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:25:00",
+        "checkInTime": "09:25:00",
         "checkedIn": true,
         "name": "Streamer User 6",
-        "type": "Streamer",
-        "checkInTime": "09:25:00"
+        "spectatorId": "S00134",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 09:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "YouTube",
-        "spectatorId": "S00135",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 09:30:00",
+        "checkInTime": "09:30:00",
         "checkedIn": true,
         "name": "Streamer User 7",
-        "type": "Streamer",
-        "checkInTime": "09:30:00"
+        "spectatorId": "S00135",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2025-01-15 13:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00136",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:00:00",
+        "checkInTime": "13:00:00",
         "checkedIn": true,
         "name": "Normal User 37",
-        "type": "Normal",
-        "checkInTime": "13:00:00"
+        "spectatorId": "S00136",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00137",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:05:00",
+        "checkInTime": "13:05:00",
         "checkedIn": true,
         "name": "Normal User 38",
-        "type": "Normal",
-        "checkInTime": "13:05:00"
+        "spectatorId": "S00137",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00138",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:10:00",
+        "checkInTime": "13:10:00",
         "checkedIn": true,
         "name": "Normal User 39",
-        "type": "Normal",
-        "checkInTime": "13:10:00"
+        "spectatorId": "S00138",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00139",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:15:00",
+        "checkInTime": "13:15:00",
         "checkedIn": true,
         "name": "Normal User 40",
-        "type": "Normal",
-        "checkInTime": "13:15:00"
+        "spectatorId": "S00139",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00140",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:20:00",
+        "checkInTime": "13:20:00",
         "checkedIn": true,
         "name": "Normal User 41",
-        "type": "Normal",
-        "checkInTime": "13:20:00"
+        "spectatorId": "S00140",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00141",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:25:00",
+        "checkInTime": "13:25:00",
         "checkedIn": true,
         "name": "Normal User 42",
-        "type": "Normal",
-        "checkInTime": "13:25:00"
+        "spectatorId": "S00141",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00142",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:30:00",
+        "checkInTime": "13:30:00",
         "checkedIn": true,
         "name": "Normal User 43",
-        "type": "Normal",
-        "checkInTime": "13:30:00"
+        "spectatorId": "S00142",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00143",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:35:00",
+        "checkInTime": "13:35:00",
         "checkedIn": true,
         "name": "Normal User 44",
-        "type": "Normal",
-        "checkInTime": "13:35:00"
+        "spectatorId": "S00143",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00144",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:40:00",
+        "checkInTime": "13:40:00",
         "checkedIn": true,
         "name": "Normal User 45",
-        "type": "Normal",
-        "checkInTime": "13:40:00"
+        "spectatorId": "S00144",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00145",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:45:00",
+        "checkInTime": "13:45:00",
         "checkedIn": true,
         "name": "Normal User 46",
-        "type": "Normal",
-        "checkInTime": "13:45:00"
+        "spectatorId": "S00145",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00146",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:50:00",
+        "checkInTime": "13:50:00",
         "checkedIn": true,
         "name": "Normal User 47",
-        "type": "Normal",
-        "checkInTime": "13:50:00"
+        "spectatorId": "S00146",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 13:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00147",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 13:55:00",
+        "checkInTime": "13:55:00",
         "checkedIn": true,
         "name": "Normal User 48",
-        "type": "Normal",
-        "checkInTime": "13:55:00"
+        "spectatorId": "S00147",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00148",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:00:00",
+        "checkInTime": "14:00:00",
         "checkedIn": true,
         "name": "Normal User 49",
-        "type": "Normal",
-        "checkInTime": "14:00:00"
+        "spectatorId": "S00148",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00149",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:05:00",
+        "checkInTime": "14:05:00",
         "checkedIn": true,
         "name": "Normal User 50",
-        "type": "Normal",
-        "checkInTime": "14:05:00"
+        "spectatorId": "S00149",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00150",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:10:00",
+        "checkInTime": "14:10:00",
         "checkedIn": true,
         "name": "Normal User 51",
-        "type": "Normal",
-        "checkInTime": "14:10:00"
+        "spectatorId": "S00150",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00151",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:15:00",
+        "checkInTime": "14:15:00",
         "checkedIn": true,
         "name": "Normal User 52",
-        "type": "Normal",
-        "checkInTime": "14:15:00"
+        "spectatorId": "S00151",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00152",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:20:00",
+        "checkInTime": "14:20:00",
         "checkedIn": true,
         "name": "Normal User 53",
-        "type": "Normal",
-        "checkInTime": "14:20:00"
+        "spectatorId": "S00152",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00153",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:25:00",
+        "checkInTime": "14:25:00",
         "checkedIn": true,
         "name": "Normal User 54",
-        "type": "Normal",
-        "checkInTime": "14:25:00"
+        "spectatorId": "S00153",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00154",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:30:00",
+        "checkInTime": "14:30:00",
         "checkedIn": true,
         "name": "Normal User 55",
-        "type": "Normal",
-        "checkInTime": "14:30:00"
+        "spectatorId": "S00154",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00155",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:35:00",
+        "checkInTime": "14:35:00",
         "checkedIn": true,
         "name": "Normal User 56",
-        "type": "Normal",
-        "checkInTime": "14:35:00"
+        "spectatorId": "S00155",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00156",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:40:00",
+        "checkInTime": "14:40:00",
         "checkedIn": true,
         "name": "Normal User 57",
-        "type": "Normal",
-        "checkInTime": "14:40:00"
+        "spectatorId": "S00156",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00157",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:45:00",
+        "checkInTime": "14:45:00",
         "checkedIn": true,
         "name": "Normal User 58",
-        "type": "Normal",
-        "checkInTime": "14:45:00"
+        "spectatorId": "S00157",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00158",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:50:00",
+        "checkInTime": "14:50:00",
         "checkedIn": true,
         "name": "Normal User 59",
-        "type": "Normal",
-        "checkInTime": "14:50:00"
+        "spectatorId": "S00158",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 14:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00159",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 14:55:00",
+        "checkInTime": "14:55:00",
         "checkedIn": true,
         "name": "Normal User 60",
-        "type": "Normal",
-        "checkInTime": "14:55:00"
+        "spectatorId": "S00159",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00160",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:00:00",
+        "checkInTime": "15:00:00",
         "checkedIn": true,
         "name": "Normal User 61",
-        "type": "Normal",
-        "checkInTime": "15:00:00"
+        "spectatorId": "S00160",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00161",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:05:00",
+        "checkInTime": "15:05:00",
         "checkedIn": true,
         "name": "Normal User 62",
-        "type": "Normal",
-        "checkInTime": "15:05:00"
+        "spectatorId": "S00161",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00162",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:10:00",
+        "checkInTime": "15:10:00",
         "checkedIn": true,
         "name": "Normal User 63",
-        "type": "Normal",
-        "checkInTime": "15:10:00"
+        "spectatorId": "S00162",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00163",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:15:00",
+        "checkInTime": "15:15:00",
         "checkedIn": true,
         "name": "Normal User 64",
-        "type": "Normal",
-        "checkInTime": "15:15:00"
+        "spectatorId": "S00163",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00164",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:20:00",
+        "checkInTime": "15:20:00",
         "checkedIn": true,
         "name": "Normal User 65",
-        "type": "Normal",
-        "checkInTime": "15:20:00"
+        "spectatorId": "S00164",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00165",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:25:00",
+        "checkInTime": "15:25:00",
         "checkedIn": true,
         "name": "Normal User 66",
-        "type": "Normal",
-        "checkInTime": "15:25:00"
+        "spectatorId": "S00165",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00166",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:30:00",
+        "checkInTime": "15:30:00",
         "checkedIn": true,
         "name": "Normal User 67",
-        "type": "Normal",
-        "checkInTime": "15:30:00"
+        "spectatorId": "S00166",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00167",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:35:00",
+        "checkInTime": "15:35:00",
         "checkedIn": true,
         "name": "Normal User 68",
-        "type": "Normal",
-        "checkInTime": "15:35:00"
+        "spectatorId": "S00167",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00168",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:40:00",
+        "checkInTime": "15:40:00",
         "checkedIn": true,
         "name": "Normal User 69",
-        "type": "Normal",
-        "checkInTime": "15:40:00"
+        "spectatorId": "S00168",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00169",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:45:00",
+        "checkInTime": "15:45:00",
         "checkedIn": true,
         "name": "Normal User 70",
-        "type": "Normal",
-        "checkInTime": "15:45:00"
+        "spectatorId": "S00169",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00170",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:50:00",
+        "checkInTime": "15:50:00",
         "checkedIn": true,
         "name": "Normal User 71",
-        "type": "Normal",
-        "checkInTime": "15:50:00"
+        "spectatorId": "S00170",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 15:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00171",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 15:55:00",
+        "checkInTime": "15:55:00",
         "checkedIn": true,
         "name": "Normal User 72",
-        "type": "Normal",
-        "checkInTime": "15:55:00"
+        "spectatorId": "S00171",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00172",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:00:00",
+        "checkInTime": "16:00:00",
         "checkedIn": true,
         "name": "Normal User 73",
-        "type": "Normal",
-        "checkInTime": "16:00:00"
+        "spectatorId": "S00172",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00173",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:05:00",
+        "checkInTime": "16:05:00",
         "checkedIn": true,
         "name": "Normal User 74",
-        "type": "Normal",
-        "checkInTime": "16:05:00"
+        "spectatorId": "S00173",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00174",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:10:00",
+        "checkInTime": "16:10:00",
         "checkedIn": true,
         "name": "Normal User 75",
-        "type": "Normal",
-        "checkInTime": "16:10:00"
+        "spectatorId": "S00174",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00175",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:15:00",
+        "checkInTime": "16:15:00",
         "checkedIn": true,
         "name": "Normal User 76",
-        "type": "Normal",
-        "checkInTime": "16:15:00"
+        "spectatorId": "S00175",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00176",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:20:00",
+        "checkInTime": "16:20:00",
         "checkedIn": true,
         "name": "Normal User 77",
-        "type": "Normal",
-        "checkInTime": "16:20:00"
+        "spectatorId": "S00176",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00177",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:25:00",
+        "checkInTime": "16:25:00",
         "checkedIn": true,
         "name": "Normal User 78",
-        "type": "Normal",
-        "checkInTime": "16:25:00"
+        "spectatorId": "S00177",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00178",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:30:00",
+        "checkInTime": "16:30:00",
         "checkedIn": true,
         "name": "Normal User 79",
-        "type": "Normal",
-        "checkInTime": "16:30:00"
+        "spectatorId": "S00178",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00179",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:35:00",
+        "checkInTime": "16:35:00",
         "checkedIn": true,
         "name": "Normal User 80",
-        "type": "Normal",
-        "checkInTime": "16:35:00"
+        "spectatorId": "S00179",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00180",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:40:00",
+        "checkInTime": "16:40:00",
         "checkedIn": true,
         "name": "Normal User 81",
-        "type": "Normal",
-        "checkInTime": "16:40:00"
+        "spectatorId": "S00180",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00181",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:45:00",
+        "checkInTime": "16:45:00",
         "checkedIn": true,
         "name": "Normal User 82",
-        "type": "Normal",
-        "checkInTime": "16:45:00"
+        "spectatorId": "S00181",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00182",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:50:00",
+        "checkInTime": "16:50:00",
         "checkedIn": true,
         "name": "Normal User 83",
-        "type": "Normal",
-        "checkInTime": "16:50:00"
+        "spectatorId": "S00182",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 16:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00183",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 16:55:00",
+        "checkInTime": "16:55:00",
         "checkedIn": true,
         "name": "Normal User 84",
-        "type": "Normal",
-        "checkInTime": "16:55:00"
+        "spectatorId": "S00183",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00184",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:00:00",
+        "checkInTime": "17:00:00",
         "checkedIn": true,
         "name": "Normal User 85",
-        "type": "Normal",
-        "checkInTime": "17:00:00"
+        "spectatorId": "S00184",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00185",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:05:00",
+        "checkInTime": "17:05:00",
         "checkedIn": true,
         "name": "Normal User 86",
-        "type": "Normal",
-        "checkInTime": "17:05:00"
+        "spectatorId": "S00185",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00186",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:10:00",
+        "checkInTime": "17:10:00",
         "checkedIn": true,
         "name": "Normal User 87",
-        "type": "Normal",
-        "checkInTime": "17:10:00"
+        "spectatorId": "S00186",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00187",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:15:00",
+        "checkInTime": "17:15:00",
         "checkedIn": true,
         "name": "Normal User 88",
-        "type": "Normal",
-        "checkInTime": "17:15:00"
+        "spectatorId": "S00187",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00188",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:20:00",
+        "checkInTime": "17:20:00",
         "checkedIn": true,
         "name": "Normal User 89",
-        "type": "Normal",
-        "checkInTime": "17:20:00"
+        "spectatorId": "S00188",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00189",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:25:00",
+        "checkInTime": "17:25:00",
         "checkedIn": true,
         "name": "Normal User 90",
-        "type": "Normal",
-        "checkInTime": "17:25:00"
+        "spectatorId": "S00189",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00190",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:30:00",
+        "checkInTime": "17:30:00",
         "checkedIn": true,
         "name": "Normal User 91",
-        "type": "Normal",
-        "checkInTime": "17:30:00"
+        "spectatorId": "S00190",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00191",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:35:00",
+        "checkInTime": "17:35:00",
         "checkedIn": true,
         "name": "Normal User 92",
-        "type": "Normal",
-        "checkInTime": "17:35:00"
+        "spectatorId": "S00191",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00192",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:40:00",
+        "checkInTime": "17:40:00",
         "checkedIn": true,
         "name": "Normal User 93",
-        "type": "Normal",
-        "checkInTime": "17:40:00"
+        "spectatorId": "S00192",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00193",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:45:00",
+        "checkInTime": "17:45:00",
         "checkedIn": true,
         "name": "Normal User 94",
-        "type": "Normal",
-        "checkInTime": "17:45:00"
+        "spectatorId": "S00193",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00194",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:50:00",
+        "checkInTime": "17:50:00",
         "checkedIn": true,
         "name": "Normal User 95",
-        "type": "Normal",
-        "checkInTime": "17:50:00"
+        "spectatorId": "S00194",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 17:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00195",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 17:55:00",
+        "checkInTime": "17:55:00",
         "checkedIn": true,
         "name": "Normal User 96",
-        "type": "Normal",
-        "checkInTime": "17:55:00"
+        "spectatorId": "S00195",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00196",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:00:00",
+        "checkInTime": "18:00:00",
         "checkedIn": true,
         "name": "Normal User 97",
-        "type": "Normal",
-        "checkInTime": "18:00:00"
+        "spectatorId": "S00196",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00197",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:05:00",
+        "checkInTime": "18:05:00",
         "checkedIn": true,
         "name": "Normal User 98",
-        "type": "Normal",
-        "checkInTime": "18:05:00"
+        "spectatorId": "S00197",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00198",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:10:00",
+        "checkInTime": "18:10:00",
         "checkedIn": true,
         "name": "Normal User 99",
-        "type": "Normal",
-        "checkInTime": "18:10:00"
+        "spectatorId": "S00198",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00199",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:15:00",
+        "checkInTime": "18:15:00",
         "checkedIn": true,
         "name": "Normal User 100",
-        "type": "Normal",
-        "checkInTime": "18:15:00"
+        "spectatorId": "S00199",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00200",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:20:00",
+        "checkInTime": "18:20:00",
         "checkedIn": true,
         "name": "Normal User 101",
-        "type": "Normal",
-        "checkInTime": "18:20:00"
+        "spectatorId": "S00200",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00201",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:25:00",
+        "checkInTime": "18:25:00",
         "checkedIn": true,
         "name": "Normal User 102",
-        "type": "Normal",
-        "checkInTime": "18:25:00"
+        "spectatorId": "S00201",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00202",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:30:00",
+        "checkInTime": "18:30:00",
         "checkedIn": true,
         "name": "Normal User 103",
-        "type": "Normal",
-        "checkInTime": "18:30:00"
+        "spectatorId": "S00202",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00203",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:35:00",
+        "checkInTime": "18:35:00",
         "checkedIn": true,
         "name": "Normal User 104",
-        "type": "Normal",
-        "checkInTime": "18:35:00"
+        "spectatorId": "S00203",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00204",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:40:00",
+        "checkInTime": "18:40:00",
         "checkedIn": true,
         "name": "Normal User 105",
-        "type": "Normal",
-        "checkInTime": "18:40:00"
+        "spectatorId": "S00204",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00205",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:45:00",
+        "checkInTime": "18:45:00",
         "checkedIn": true,
         "name": "Normal User 106",
-        "type": "Normal",
-        "checkInTime": "18:45:00"
+        "spectatorId": "S00205",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00206",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:50:00",
+        "checkInTime": "18:50:00",
         "checkedIn": true,
         "name": "Normal User 107",
-        "type": "Normal",
-        "checkInTime": "18:50:00"
+        "spectatorId": "S00206",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 18:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00207",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 18:55:00",
+        "checkInTime": "18:55:00",
         "checkedIn": true,
         "name": "Normal User 108",
-        "type": "Normal",
-        "checkInTime": "18:55:00"
+        "spectatorId": "S00207",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00208",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:00:00",
+        "checkInTime": "19:00:00",
         "checkedIn": true,
         "name": "Normal User 109",
-        "type": "Normal",
-        "checkInTime": "19:00:00"
+        "spectatorId": "S00208",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00209",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:05:00",
+        "checkInTime": "19:05:00",
         "checkedIn": true,
         "name": "Normal User 110",
-        "type": "Normal",
-        "checkInTime": "19:05:00"
+        "spectatorId": "S00209",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00210",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:10:00",
+        "checkInTime": "19:10:00",
         "checkedIn": true,
         "name": "Normal User 111",
-        "type": "Normal",
-        "checkInTime": "19:10:00"
+        "spectatorId": "S00210",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00211",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:15:00",
+        "checkInTime": "19:15:00",
         "checkedIn": true,
         "name": "Normal User 112",
-        "type": "Normal",
-        "checkInTime": "19:15:00"
+        "spectatorId": "S00211",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00212",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:20:00",
+        "checkInTime": "19:20:00",
         "checkedIn": true,
         "name": "Normal User 113",
-        "type": "Normal",
-        "checkInTime": "19:20:00"
+        "spectatorId": "S00212",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00213",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:25:00",
+        "checkInTime": "19:25:00",
         "checkedIn": true,
         "name": "Normal User 114",
-        "type": "Normal",
-        "checkInTime": "19:25:00"
+        "spectatorId": "S00213",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00214",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:30:00",
+        "checkInTime": "19:30:00",
         "checkedIn": true,
         "name": "Normal User 115",
-        "type": "Normal",
-        "checkInTime": "19:30:00"
+        "spectatorId": "S00214",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00215",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:35:00",
+        "checkInTime": "19:35:00",
         "checkedIn": true,
         "name": "Normal User 116",
-        "type": "Normal",
-        "checkInTime": "19:35:00"
+        "spectatorId": "S00215",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00216",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:40:00",
+        "checkInTime": "19:40:00",
         "checkedIn": true,
         "name": "Normal User 117",
-        "type": "Normal",
-        "checkInTime": "19:40:00"
+        "spectatorId": "S00216",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00217",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:45:00",
+        "checkInTime": "19:45:00",
         "checkedIn": true,
         "name": "Normal User 118",
-        "type": "Normal",
-        "checkInTime": "19:45:00"
+        "spectatorId": "S00217",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00218",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:50:00",
+        "checkInTime": "19:50:00",
         "checkedIn": true,
         "name": "Normal User 119",
-        "type": "Normal",
-        "checkInTime": "19:50:00"
+        "spectatorId": "S00218",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 19:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00219",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 19:55:00",
+        "checkInTime": "19:55:00",
         "checkedIn": true,
         "name": "Normal User 120",
-        "type": "Normal",
-        "checkInTime": "19:55:00"
+        "spectatorId": "S00219",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00220",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:00:00",
+        "checkInTime": "20:00:00",
         "checkedIn": true,
         "name": "Normal User 121",
-        "type": "Normal",
-        "checkInTime": "20:00:00"
+        "spectatorId": "S00220",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00221",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:05:00",
+        "checkInTime": "20:05:00",
         "checkedIn": true,
         "name": "Normal User 122",
-        "type": "Normal",
-        "checkInTime": "20:05:00"
+        "spectatorId": "S00221",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00222",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:10:00",
+        "checkInTime": "20:10:00",
         "checkedIn": true,
         "name": "Normal User 123",
-        "type": "Normal",
-        "checkInTime": "20:10:00"
+        "spectatorId": "S00222",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00223",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:15:00",
+        "checkInTime": "20:15:00",
         "checkedIn": true,
         "name": "Normal User 124",
-        "type": "Normal",
-        "checkInTime": "20:15:00"
+        "spectatorId": "S00223",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:20:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00224",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:20:00",
+        "checkInTime": "20:20:00",
         "checkedIn": true,
         "name": "Normal User 125",
-        "type": "Normal",
-        "checkInTime": "20:20:00"
+        "spectatorId": "S00224",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:25:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00225",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:25:00",
+        "checkInTime": "20:25:00",
         "checkedIn": true,
         "name": "Normal User 126",
-        "type": "Normal",
-        "checkInTime": "20:25:00"
+        "spectatorId": "S00225",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:30:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00226",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:30:00",
+        "checkInTime": "20:30:00",
         "checkedIn": true,
         "name": "Normal User 127",
-        "type": "Normal",
-        "checkInTime": "20:30:00"
+        "spectatorId": "S00226",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:35:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00227",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:35:00",
+        "checkInTime": "20:35:00",
         "checkedIn": true,
         "name": "Normal User 128",
-        "type": "Normal",
-        "checkInTime": "20:35:00"
+        "spectatorId": "S00227",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:40:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00228",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:40:00",
+        "checkInTime": "20:40:00",
         "checkedIn": true,
         "name": "Normal User 129",
-        "type": "Normal",
-        "checkInTime": "20:40:00"
+        "spectatorId": "S00228",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:45:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00229",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:45:00",
+        "checkInTime": "20:45:00",
         "checkedIn": true,
         "name": "Normal User 130",
-        "type": "Normal",
-        "checkInTime": "20:45:00"
+        "spectatorId": "S00229",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:50:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00230",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:50:00",
+        "checkInTime": "20:50:00",
         "checkedIn": true,
         "name": "Normal User 131",
-        "type": "Normal",
-        "checkInTime": "20:50:00"
+        "spectatorId": "S00230",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 20:55:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00231",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 20:55:00",
+        "checkInTime": "20:55:00",
         "checkedIn": true,
         "name": "Normal User 132",
-        "type": "Normal",
-        "checkInTime": "20:55:00"
+        "spectatorId": "S00231",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 21:00:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00232",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 21:00:00",
+        "checkInTime": "21:00:00",
         "checkedIn": true,
         "name": "Normal User 133",
-        "type": "Normal",
-        "checkInTime": "21:00:00"
+        "spectatorId": "S00232",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 21:05:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00233",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 21:05:00",
+        "checkInTime": "21:05:00",
         "checkedIn": true,
         "name": "Normal User 134",
-        "type": "Normal",
-        "checkInTime": "21:05:00"
+        "spectatorId": "S00233",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 21:10:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00234",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 21:10:00",
+        "checkInTime": "21:10:00",
         "checkedIn": true,
         "name": "Normal User 135",
-        "type": "Normal",
-        "checkInTime": "21:10:00"
+        "spectatorId": "S00234",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2025-01-15 21:15:00",
-        "checkInDate": "2025-01-15",
         "affiliation": "",
-        "spectatorId": "S00235",
+        "checkInDate": "2025-01-15",
+        "checkInDateTime": "2025-01-15 21:15:00",
+        "checkInTime": "21:15:00",
         "checkedIn": true,
         "name": "Normal User 136",
-        "type": "Normal",
-        "checkInTime": "21:15:00"
+        "spectatorId": "S00235",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 21:16:00",
-        "spectatorId": "S00051",
+        "checkInTime": "21:16:00",
         "checkedIn": true,
         "name": "StreamerOne Alpha",
-        "type": "Streamer",
-        "checkInTime": "21:16:00"
+        "spectatorId": "S00051",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:17:00",
-        "spectatorId": "S00052",
+        "checkInTime": "21:17:00",
         "checkedIn": true,
         "name": "StreamerTwo Beta",
-        "type": "Streamer",
-        "checkInTime": "21:17:00"
+        "spectatorId": "S00052",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:18:00",
-        "spectatorId": "S00053",
+        "checkInTime": "21:18:00",
         "checkedIn": true,
         "name": "StreamerThree Gamma",
-        "type": "Streamer",
-        "checkInTime": "21:18:00"
+        "spectatorId": "S00053",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:19:00",
-        "spectatorId": "S00054",
+        "checkInTime": "21:19:00",
         "checkedIn": true,
         "name": "StreamerFour Delta",
-        "type": "Streamer",
-        "checkInTime": "21:19:00"
+        "spectatorId": "S00054",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:20:00",
-        "spectatorId": "S00055",
+        "checkInTime": "21:20:00",
         "checkedIn": true,
         "name": "StreamerFive Epsilon",
-        "type": "Streamer",
-        "checkInTime": "21:20:00"
+        "spectatorId": "S00055",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:21:00",
-        "spectatorId": "S00056",
+        "checkInTime": "21:21:00",
         "checkedIn": true,
         "name": "StreamerSix Overflow",
-        "type": "Streamer",
-        "checkInTime": "21:21:00"
+        "spectatorId": "S00056",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:22:00",
-        "spectatorId": "S00057",
+        "checkInTime": "21:22:00",
         "checkedIn": true,
         "name": "StreamerSeven Extra",
-        "type": "Streamer",
-        "checkInTime": "21:22:00"
+        "spectatorId": "S00057",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:23:00",
-        "spectatorId": "S00058",
+        "checkInTime": "21:23:00",
         "checkedIn": true,
         "name": "VIP User 1",
-        "type": "VIP",
-        "checkInTime": "21:23:00"
+        "spectatorId": "S00058",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:24:00",
-        "spectatorId": "S00059",
+        "checkInTime": "21:24:00",
         "checkedIn": true,
         "name": "VIP User 2",
-        "type": "VIP",
-        "checkInTime": "21:24:00"
+        "spectatorId": "S00059",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:25:00",
-        "spectatorId": "S00060",
+        "checkInTime": "21:25:00",
         "checkedIn": true,
         "name": "VIP User 3",
-        "type": "VIP",
-        "checkInTime": "21:25:00"
+        "spectatorId": "S00060",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:26:00",
-        "spectatorId": "S00061",
+        "checkInTime": "21:26:00",
         "checkedIn": true,
         "name": "VIP User 4",
-        "type": "VIP",
-        "checkInTime": "21:26:00"
+        "spectatorId": "S00061",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:27:00",
-        "spectatorId": "S00062",
+        "checkInTime": "21:27:00",
         "checkedIn": true,
         "name": "VIP User 5",
-        "type": "VIP",
-        "checkInTime": "21:27:00"
+        "spectatorId": "S00062",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:28:00",
-        "spectatorId": "S00063",
+        "checkInTime": "21:28:00",
         "checkedIn": true,
         "name": "VIP User 6",
-        "type": "VIP",
-        "checkInTime": "21:28:00"
+        "spectatorId": "S00063",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:29:00",
-        "spectatorId": "S00064",
+        "checkInTime": "21:29:00",
         "checkedIn": true,
         "name": "VIP User 7",
-        "type": "VIP",
-        "checkInTime": "21:29:00"
+        "spectatorId": "S00064",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:30:00",
-        "spectatorId": "S00065",
+        "checkInTime": "21:30:00",
         "checkedIn": true,
         "name": "VIP User 8",
-        "type": "VIP",
-        "checkInTime": "21:30:00"
+        "spectatorId": "S00065",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:31:00",
-        "spectatorId": "S00066",
+        "checkInTime": "21:31:00",
         "checkedIn": true,
         "name": "VIP User 9",
-        "type": "VIP",
-        "checkInTime": "21:31:00"
+        "spectatorId": "S00066",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:32:00",
-        "spectatorId": "S00067",
+        "checkInTime": "21:32:00",
         "checkedIn": true,
         "name": "VIP User 10",
-        "type": "VIP",
-        "checkInTime": "21:32:00"
+        "spectatorId": "S00067",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:33:00",
-        "spectatorId": "S00068",
+        "checkInTime": "21:33:00",
         "checkedIn": true,
         "name": "VIP User 11",
-        "type": "VIP",
-        "checkInTime": "21:33:00"
+        "spectatorId": "S00068",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:34:00",
-        "spectatorId": "S00069",
+        "checkInTime": "21:34:00",
         "checkedIn": true,
         "name": "VIP User 12",
-        "type": "VIP",
-        "checkInTime": "21:34:00"
+        "spectatorId": "S00069",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:35:00",
-        "spectatorId": "S00070",
+        "checkInTime": "21:35:00",
         "checkedIn": true,
         "name": "VIP User 13",
-        "type": "VIP",
-        "checkInTime": "21:35:00"
+        "spectatorId": "S00070",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:36:00",
-        "spectatorId": "S00071",
+        "checkInTime": "21:36:00",
         "checkedIn": true,
         "name": "VIP User 14",
-        "type": "VIP",
-        "checkInTime": "21:36:00"
+        "spectatorId": "S00071",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:37:00",
-        "spectatorId": "S00072",
+        "checkInTime": "21:37:00",
         "checkedIn": true,
         "name": "VIP User 15",
-        "type": "VIP",
-        "checkInTime": "21:37:00"
+        "spectatorId": "S00072",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:38:00",
-        "spectatorId": "S00126",
+        "checkInTime": "21:38:00",
         "checkedIn": true,
         "name": "VIP User 16",
-        "type": "VIP",
-        "checkInTime": "21:38:00"
+        "spectatorId": "S00126",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:39:00",
-        "spectatorId": "S00127",
+        "checkInTime": "21:39:00",
         "checkedIn": true,
         "name": "VIP User 17",
-        "type": "VIP",
-        "checkInTime": "21:39:00"
+        "spectatorId": "S00127",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:40:00",
-        "spectatorId": "S00128",
+        "checkInTime": "21:40:00",
         "checkedIn": true,
         "name": "VIP User 18",
-        "type": "VIP",
-        "checkInTime": "21:40:00"
+        "spectatorId": "S00128",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:41:00",
-        "spectatorId": "S00129",
+        "checkInTime": "21:41:00",
         "checkedIn": true,
         "name": "VIP User 19",
-        "type": "VIP",
-        "checkInTime": "21:41:00"
+        "spectatorId": "S00129",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:42:00",
-        "spectatorId": "S00130",
+        "checkInTime": "21:42:00",
         "checkedIn": true,
         "name": "VIP User 20",
-        "type": "VIP",
-        "checkInTime": "21:42:00"
+        "spectatorId": "S00130",
+        "type": "VIP"
     },
     {
         "checkInDateTime": "2024-01-10 21:43:00",
-        "spectatorId": "S00073",
+        "checkInTime": "21:43:00",
         "checkedIn": true,
         "name": "Influencer User 1",
-        "type": "Influencer",
-        "checkInTime": "21:43:00"
+        "spectatorId": "S00073",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:44:00",
-        "spectatorId": "S00074",
+        "checkInTime": "21:44:00",
         "checkedIn": true,
         "name": "Influencer User 2",
-        "type": "Influencer",
-        "checkInTime": "21:44:00"
+        "spectatorId": "S00074",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:45:00",
-        "spectatorId": "S00075",
+        "checkInTime": "21:45:00",
         "checkedIn": true,
         "name": "Influencer User 3",
-        "type": "Influencer",
-        "checkInTime": "21:45:00"
+        "spectatorId": "S00075",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:46:00",
-        "spectatorId": "S00076",
+        "checkInTime": "21:46:00",
         "checkedIn": true,
         "name": "Influencer User 4",
-        "type": "Influencer",
-        "checkInTime": "21:46:00"
+        "spectatorId": "S00076",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:47:00",
-        "spectatorId": "S00077",
+        "checkInTime": "21:47:00",
         "checkedIn": true,
         "name": "Influencer User 5",
-        "type": "Influencer",
-        "checkInTime": "21:47:00"
+        "spectatorId": "S00077",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:48:00",
-        "spectatorId": "S00078",
+        "checkInTime": "21:48:00",
         "checkedIn": true,
         "name": "Influencer User 6",
-        "type": "Influencer",
-        "checkInTime": "21:48:00"
+        "spectatorId": "S00078",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:49:00",
-        "spectatorId": "S00079",
+        "checkInTime": "21:49:00",
         "checkedIn": true,
         "name": "Influencer User 7",
-        "type": "Influencer",
-        "checkInTime": "21:49:00"
+        "spectatorId": "S00079",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:50:00",
-        "spectatorId": "S00080",
+        "checkInTime": "21:50:00",
         "checkedIn": true,
         "name": "Influencer User 8",
-        "type": "Influencer",
-        "checkInTime": "21:50:00"
+        "spectatorId": "S00080",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:51:00",
-        "spectatorId": "S00081",
+        "checkInTime": "21:51:00",
         "checkedIn": true,
         "name": "Influencer User 9",
-        "type": "Influencer",
-        "checkInTime": "21:51:00"
+        "spectatorId": "S00081",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:52:00",
-        "spectatorId": "S00082",
+        "checkInTime": "21:52:00",
         "checkedIn": true,
         "name": "Influencer User 10",
-        "type": "Influencer",
-        "checkInTime": "21:52:00"
+        "spectatorId": "S00082",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:53:00",
-        "spectatorId": "S00083",
+        "checkInTime": "21:53:00",
         "checkedIn": true,
         "name": "Influencer User 11",
-        "type": "Influencer",
-        "checkInTime": "21:53:00"
+        "spectatorId": "S00083",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:54:00",
-        "spectatorId": "S00084",
+        "checkInTime": "21:54:00",
         "checkedIn": true,
         "name": "Influencer User 12",
-        "type": "Influencer",
-        "checkInTime": "21:54:00"
+        "spectatorId": "S00084",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:55:00",
-        "spectatorId": "S00131",
+        "checkInTime": "21:55:00",
         "checkedIn": true,
         "name": "Influencer User 13",
-        "type": "Influencer",
-        "checkInTime": "21:55:00"
+        "spectatorId": "S00131",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:56:00",
-        "spectatorId": "S00132",
+        "checkInTime": "21:56:00",
         "checkedIn": true,
         "name": "Influencer User 14",
-        "type": "Influencer",
-        "checkInTime": "21:56:00"
+        "spectatorId": "S00132",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:57:00",
-        "spectatorId": "S00133",
+        "checkInTime": "21:57:00",
         "checkedIn": true,
         "name": "Influencer User 15",
-        "type": "Influencer",
-        "checkInTime": "21:57:00"
+        "spectatorId": "S00133",
+        "type": "Influencer"
     },
     {
         "checkInDateTime": "2024-01-10 21:58:00",
-        "spectatorId": "S00085",
+        "checkInTime": "21:58:00",
         "checkedIn": true,
         "name": "Streamer User 1",
-        "type": "Streamer",
-        "checkInTime": "21:58:00"
+        "spectatorId": "S00085",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 21:59:00",
-        "spectatorId": "S00086",
+        "checkInTime": "21:59:00",
         "checkedIn": true,
         "name": "Streamer User 2",
-        "type": "Streamer",
-        "checkInTime": "21:59:00"
+        "spectatorId": "S00086",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 22:00:00",
-        "spectatorId": "S00087",
+        "checkInTime": "22:00:00",
         "checkedIn": true,
         "name": "Streamer User 3",
-        "type": "Streamer",
-        "checkInTime": "22:00:00"
+        "spectatorId": "S00087",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 22:01:00",
-        "spectatorId": "S00088",
+        "checkInTime": "22:01:00",
         "checkedIn": true,
         "name": "Streamer User 4",
-        "type": "Streamer",
-        "checkInTime": "22:01:00"
+        "spectatorId": "S00088",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 22:02:00",
-        "spectatorId": "S00089",
+        "checkInTime": "22:02:00",
         "checkedIn": true,
         "name": "Streamer User 5",
-        "type": "Streamer",
-        "checkInTime": "22:02:00"
+        "spectatorId": "S00089",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 22:03:00",
-        "spectatorId": "S00134",
+        "checkInTime": "22:03:00",
         "checkedIn": true,
         "name": "Streamer User 6",
-        "type": "Streamer",
-        "checkInTime": "22:03:00"
+        "spectatorId": "S00134",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 22:04:00",
-        "spectatorId": "S00135",
+        "checkInTime": "22:04:00",
         "checkedIn": true,
         "name": "Streamer User 7",
-        "type": "Streamer",
-        "checkInTime": "22:04:00"
+        "spectatorId": "S00135",
+        "type": "Streamer"
     },
     {
         "checkInDateTime": "2024-01-10 22:05:00",
-        "spectatorId": "S00090",
+        "checkInTime": "22:05:00",
         "checkedIn": true,
         "name": "Normal User 1",
-        "type": "Normal",
-        "checkInTime": "22:05:00"
+        "spectatorId": "S00090",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:06:00",
-        "spectatorId": "S00091",
+        "checkInTime": "22:06:00",
         "checkedIn": true,
         "name": "Normal User 2",
-        "type": "Normal",
-        "checkInTime": "22:06:00"
+        "spectatorId": "S00091",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:07:00",
-        "spectatorId": "S00092",
+        "checkInTime": "22:07:00",
         "checkedIn": true,
         "name": "Normal User 3",
-        "type": "Normal",
-        "checkInTime": "22:07:00"
+        "spectatorId": "S00092",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:08:00",
-        "spectatorId": "S00093",
+        "checkInTime": "22:08:00",
         "checkedIn": true,
         "name": "Normal User 4",
-        "type": "Normal",
-        "checkInTime": "22:08:00"
+        "spectatorId": "S00093",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:09:00",
-        "spectatorId": "S00094",
+        "checkInTime": "22:09:00",
         "checkedIn": true,
         "name": "Normal User 5",
-        "type": "Normal",
-        "checkInTime": "22:09:00"
+        "spectatorId": "S00094",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:10:00",
-        "spectatorId": "S00095",
+        "checkInTime": "22:10:00",
         "checkedIn": true,
         "name": "Normal User 6",
-        "type": "Normal",
-        "checkInTime": "22:10:00"
+        "spectatorId": "S00095",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:11:00",
-        "spectatorId": "S00096",
+        "checkInTime": "22:11:00",
         "checkedIn": true,
         "name": "Normal User 7",
-        "type": "Normal",
-        "checkInTime": "22:11:00"
+        "spectatorId": "S00096",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:12:00",
-        "spectatorId": "S00097",
+        "checkInTime": "22:12:00",
         "checkedIn": true,
         "name": "Normal User 8",
-        "type": "Normal",
-        "checkInTime": "22:12:00"
+        "spectatorId": "S00097",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:13:00",
-        "spectatorId": "S00098",
+        "checkInTime": "22:13:00",
         "checkedIn": true,
         "name": "Normal User 9",
-        "type": "Normal",
-        "checkInTime": "22:13:00"
+        "spectatorId": "S00098",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:14:00",
-        "spectatorId": "S00099",
+        "checkInTime": "22:14:00",
         "checkedIn": true,
         "name": "Normal User 10",
-        "type": "Normal",
-        "checkInTime": "22:14:00"
+        "spectatorId": "S00099",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:15:00",
-        "spectatorId": "S00100",
+        "checkInTime": "22:15:00",
         "checkedIn": true,
         "name": "Normal User 11",
-        "type": "Normal",
-        "checkInTime": "22:15:00"
+        "spectatorId": "S00100",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:16:00",
-        "spectatorId": "S00101",
+        "checkInTime": "22:16:00",
         "checkedIn": true,
         "name": "Normal User 12",
-        "type": "Normal",
-        "checkInTime": "22:16:00"
+        "spectatorId": "S00101",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:17:00",
-        "spectatorId": "S00102",
+        "checkInTime": "22:17:00",
         "checkedIn": true,
         "name": "Normal User 13",
-        "type": "Normal",
-        "checkInTime": "22:17:00"
+        "spectatorId": "S00102",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:18:00",
-        "spectatorId": "S00103",
+        "checkInTime": "22:18:00",
         "checkedIn": true,
         "name": "Normal User 14",
-        "type": "Normal",
-        "checkInTime": "22:18:00"
+        "spectatorId": "S00103",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:19:00",
-        "spectatorId": "S00104",
+        "checkInTime": "22:19:00",
         "checkedIn": true,
         "name": "Normal User 15",
-        "type": "Normal",
-        "checkInTime": "22:19:00"
+        "spectatorId": "S00104",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:20:00",
-        "spectatorId": "S00105",
+        "checkInTime": "22:20:00",
         "checkedIn": true,
         "name": "Normal User 16",
-        "type": "Normal",
-        "checkInTime": "22:20:00"
+        "spectatorId": "S00105",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:21:00",
-        "spectatorId": "S00106",
+        "checkInTime": "22:21:00",
         "checkedIn": true,
         "name": "Normal User 17",
-        "type": "Normal",
-        "checkInTime": "22:21:00"
+        "spectatorId": "S00106",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:22:00",
-        "spectatorId": "S00107",
+        "checkInTime": "22:22:00",
         "checkedIn": true,
         "name": "Normal User 18",
-        "type": "Normal",
-        "checkInTime": "22:22:00"
+        "spectatorId": "S00107",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:23:00",
-        "spectatorId": "S00108",
+        "checkInTime": "22:23:00",
         "checkedIn": true,
         "name": "Normal User 19",
-        "type": "Normal",
-        "checkInTime": "22:23:00"
+        "spectatorId": "S00108",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:24:00",
-        "spectatorId": "S00109",
+        "checkInTime": "22:24:00",
         "checkedIn": true,
         "name": "Normal User 20",
-        "type": "Normal",
-        "checkInTime": "22:24:00"
+        "spectatorId": "S00109",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:25:00",
-        "spectatorId": "S00110",
+        "checkInTime": "22:25:00",
         "checkedIn": true,
         "name": "Normal User 21",
-        "type": "Normal",
-        "checkInTime": "22:25:00"
+        "spectatorId": "S00110",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:26:00",
-        "spectatorId": "S00111",
+        "checkInTime": "22:26:00",
         "checkedIn": true,
         "name": "Normal User 22",
-        "type": "Normal",
-        "checkInTime": "22:26:00"
+        "spectatorId": "S00111",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:27:00",
-        "spectatorId": "S00112",
+        "checkInTime": "22:27:00",
         "checkedIn": true,
         "name": "Normal User 23",
-        "type": "Normal",
-        "checkInTime": "22:27:00"
+        "spectatorId": "S00112",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:28:00",
-        "spectatorId": "S00113",
+        "checkInTime": "22:28:00",
         "checkedIn": true,
         "name": "Normal User 24",
-        "type": "Normal",
-        "checkInTime": "22:28:00"
+        "spectatorId": "S00113",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:29:00",
-        "spectatorId": "S00114",
+        "checkInTime": "22:29:00",
         "checkedIn": true,
         "name": "Normal User 25",
-        "type": "Normal",
-        "checkInTime": "22:29:00"
+        "spectatorId": "S00114",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:30:00",
-        "spectatorId": "S00115",
+        "checkInTime": "22:30:00",
         "checkedIn": true,
         "name": "Normal User 26",
-        "type": "Normal",
-        "checkInTime": "22:30:00"
+        "spectatorId": "S00115",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:31:00",
-        "spectatorId": "S00116",
+        "checkInTime": "22:31:00",
         "checkedIn": true,
         "name": "Normal User 27",
-        "type": "Normal",
-        "checkInTime": "22:31:00"
+        "spectatorId": "S00116",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:32:00",
-        "spectatorId": "S00117",
+        "checkInTime": "22:32:00",
         "checkedIn": true,
         "name": "Normal User 28",
-        "type": "Normal",
-        "checkInTime": "22:32:00"
+        "spectatorId": "S00117",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:33:00",
-        "spectatorId": "S00118",
+        "checkInTime": "22:33:00",
         "checkedIn": true,
         "name": "Normal User 29",
-        "type": "Normal",
-        "checkInTime": "22:33:00"
+        "spectatorId": "S00118",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:34:00",
-        "spectatorId": "S00119",
+        "checkInTime": "22:34:00",
         "checkedIn": true,
         "name": "Normal User 30",
-        "type": "Normal",
-        "checkInTime": "22:34:00"
+        "spectatorId": "S00119",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:35:00",
-        "spectatorId": "S00120",
+        "checkInTime": "22:35:00",
         "checkedIn": true,
         "name": "Normal User 31",
-        "type": "Normal",
-        "checkInTime": "22:35:00"
+        "spectatorId": "S00120",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:36:00",
-        "spectatorId": "S00121",
+        "checkInTime": "22:36:00",
         "checkedIn": true,
         "name": "Normal User 32",
-        "type": "Normal",
-        "checkInTime": "22:36:00"
+        "spectatorId": "S00121",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:37:00",
-        "spectatorId": "S00122",
+        "checkInTime": "22:37:00",
         "checkedIn": true,
         "name": "Normal User 33",
-        "type": "Normal",
-        "checkInTime": "22:37:00"
+        "spectatorId": "S00122",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:38:00",
-        "spectatorId": "S00123",
+        "checkInTime": "22:38:00",
         "checkedIn": true,
         "name": "Normal User 34",
-        "type": "Normal",
-        "checkInTime": "22:38:00"
+        "spectatorId": "S00123",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:39:00",
-        "spectatorId": "S00124",
+        "checkInTime": "22:39:00",
         "checkedIn": true,
         "name": "Normal User 35",
-        "type": "Normal",
-        "checkInTime": "22:39:00"
+        "spectatorId": "S00124",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:40:00",
-        "spectatorId": "S00125",
+        "checkInTime": "22:40:00",
         "checkedIn": true,
         "name": "Normal User 36",
-        "type": "Normal",
-        "checkInTime": "22:40:00"
+        "spectatorId": "S00125",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:41:00",
-        "spectatorId": "S00136",
+        "checkInTime": "22:41:00",
         "checkedIn": true,
         "name": "Normal User 37",
-        "type": "Normal",
-        "checkInTime": "22:41:00"
+        "spectatorId": "S00136",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:42:00",
-        "spectatorId": "S00137",
+        "checkInTime": "22:42:00",
         "checkedIn": true,
         "name": "Normal User 38",
-        "type": "Normal",
-        "checkInTime": "22:42:00"
+        "spectatorId": "S00137",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:43:00",
-        "spectatorId": "S00138",
+        "checkInTime": "22:43:00",
         "checkedIn": true,
         "name": "Normal User 39",
-        "type": "Normal",
-        "checkInTime": "22:43:00"
+        "spectatorId": "S00138",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:44:00",
-        "spectatorId": "S00139",
+        "checkInTime": "22:44:00",
         "checkedIn": true,
         "name": "Normal User 40",
-        "type": "Normal",
-        "checkInTime": "22:44:00"
+        "spectatorId": "S00139",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:45:00",
-        "spectatorId": "S00140",
+        "checkInTime": "22:45:00",
         "checkedIn": true,
         "name": "Normal User 41",
-        "type": "Normal",
-        "checkInTime": "22:45:00"
+        "spectatorId": "S00140",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:46:00",
-        "spectatorId": "S00141",
+        "checkInTime": "22:46:00",
         "checkedIn": true,
         "name": "Normal User 42",
-        "type": "Normal",
-        "checkInTime": "22:46:00"
+        "spectatorId": "S00141",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:47:00",
-        "spectatorId": "S00142",
+        "checkInTime": "22:47:00",
         "checkedIn": true,
         "name": "Normal User 43",
-        "type": "Normal",
-        "checkInTime": "22:47:00"
+        "spectatorId": "S00142",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:48:00",
-        "spectatorId": "S00143",
+        "checkInTime": "22:48:00",
         "checkedIn": true,
         "name": "Normal User 44",
-        "type": "Normal",
-        "checkInTime": "22:48:00"
+        "spectatorId": "S00143",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:49:00",
-        "spectatorId": "S00144",
+        "checkInTime": "22:49:00",
         "checkedIn": true,
         "name": "Normal User 45",
-        "type": "Normal",
-        "checkInTime": "22:49:00"
+        "spectatorId": "S00144",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:50:00",
-        "spectatorId": "S00145",
+        "checkInTime": "22:50:00",
         "checkedIn": true,
         "name": "Normal User 46",
-        "type": "Normal",
-        "checkInTime": "22:50:00"
+        "spectatorId": "S00145",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:51:00",
-        "spectatorId": "S00146",
+        "checkInTime": "22:51:00",
         "checkedIn": true,
         "name": "Normal User 47",
-        "type": "Normal",
-        "checkInTime": "22:51:00"
+        "spectatorId": "S00146",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:52:00",
-        "spectatorId": "S00147",
+        "checkInTime": "22:52:00",
         "checkedIn": true,
         "name": "Normal User 48",
-        "type": "Normal",
-        "checkInTime": "22:52:00"
+        "spectatorId": "S00147",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:53:00",
-        "spectatorId": "S00148",
+        "checkInTime": "22:53:00",
         "checkedIn": true,
         "name": "Normal User 49",
-        "type": "Normal",
-        "checkInTime": "22:53:00"
+        "spectatorId": "S00148",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:54:00",
-        "spectatorId": "S00149",
+        "checkInTime": "22:54:00",
         "checkedIn": true,
         "name": "Normal User 50",
-        "type": "Normal",
-        "checkInTime": "22:54:00"
+        "spectatorId": "S00149",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:55:00",
-        "spectatorId": "S00150",
+        "checkInTime": "22:55:00",
         "checkedIn": true,
         "name": "Normal User 51",
-        "type": "Normal",
-        "checkInTime": "22:55:00"
+        "spectatorId": "S00150",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:56:00",
-        "spectatorId": "S00151",
+        "checkInTime": "22:56:00",
         "checkedIn": true,
         "name": "Normal User 52",
-        "type": "Normal",
-        "checkInTime": "22:56:00"
+        "spectatorId": "S00151",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:57:00",
-        "spectatorId": "S00152",
+        "checkInTime": "22:57:00",
         "checkedIn": true,
         "name": "Normal User 53",
-        "type": "Normal",
-        "checkInTime": "22:57:00"
+        "spectatorId": "S00152",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:58:00",
-        "spectatorId": "S00153",
+        "checkInTime": "22:58:00",
         "checkedIn": true,
         "name": "Normal User 54",
-        "type": "Normal",
-        "checkInTime": "22:58:00"
+        "spectatorId": "S00153",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 22:59:00",
-        "spectatorId": "S00154",
+        "checkInTime": "22:59:00",
         "checkedIn": true,
         "name": "Normal User 55",
-        "type": "Normal",
-        "checkInTime": "22:59:00"
+        "spectatorId": "S00154",
+        "type": "Normal"
     },
     {
         "checkInDateTime": "2024-01-10 23:00:00",
-        "spectatorId": "S00155",
+        "checkInTime": "23:00:00",
         "checkedIn": true,
         "name": "Normal User 56",
-        "type": "Normal",
-        "checkInTime": "23:00:00"
+        "spectatorId": "S00155",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:01:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00176",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:01:00",
+        "checkInTime": "23:01:00",
         "checkedIn": true,
         "name": "VIP User 33",
-        "type": "VIP",
-        "checkInTime": "23:01:00"
+        "spectatorId": "S00176",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:02:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00177",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:02:00",
+        "checkInTime": "23:02:00",
         "checkedIn": true,
         "name": "VIP User 34",
-        "type": "VIP",
-        "checkInTime": "23:02:00"
+        "spectatorId": "S00177",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:03:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00178",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:03:00",
+        "checkInTime": "23:03:00",
         "checkedIn": true,
         "name": "VIP User 35",
-        "type": "VIP",
-        "checkInTime": "23:03:00"
+        "spectatorId": "S00178",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:04:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00179",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:04:00",
+        "checkInTime": "23:04:00",
         "checkedIn": true,
         "name": "VIP User 36",
-        "type": "VIP",
-        "checkInTime": "23:04:00"
+        "spectatorId": "S00179",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:05:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00180",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:05:00",
+        "checkInTime": "23:05:00",
         "checkedIn": true,
         "name": "VIP User 37",
-        "type": "VIP",
-        "checkInTime": "23:05:00"
+        "spectatorId": "S00180",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:06:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00181",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:06:00",
+        "checkInTime": "23:06:00",
         "checkedIn": true,
         "name": "VIP User 38",
-        "type": "VIP",
-        "checkInTime": "23:06:00"
+        "spectatorId": "S00181",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:07:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00182",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:07:00",
+        "checkInTime": "23:07:00",
         "checkedIn": true,
         "name": "VIP User 39",
-        "type": "VIP",
-        "checkInTime": "23:07:00"
+        "spectatorId": "S00182",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:08:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00183",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:08:00",
+        "checkInTime": "23:08:00",
         "checkedIn": true,
         "name": "VIP User 40",
-        "type": "VIP",
-        "checkInTime": "23:08:00"
+        "spectatorId": "S00183",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:09:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00184",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:09:00",
+        "checkInTime": "23:09:00",
         "checkedIn": true,
         "name": "VIP User 41",
-        "type": "VIP",
-        "checkInTime": "23:09:00"
+        "spectatorId": "S00184",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:10:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00185",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:10:00",
+        "checkInTime": "23:10:00",
         "checkedIn": true,
         "name": "VIP User 42",
-        "type": "VIP",
-        "checkInTime": "23:10:00"
+        "spectatorId": "S00185",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:11:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00186",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:11:00",
+        "checkInTime": "23:11:00",
         "checkedIn": true,
         "name": "VIP User 43",
-        "type": "VIP",
-        "checkInTime": "23:11:00"
+        "spectatorId": "S00186",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:12:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00187",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:12:00",
+        "checkInTime": "23:12:00",
         "checkedIn": true,
         "name": "VIP User 44",
-        "type": "VIP",
-        "checkInTime": "23:12:00"
+        "spectatorId": "S00187",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:13:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00188",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:13:00",
+        "checkInTime": "23:13:00",
         "checkedIn": true,
         "name": "VIP User 45",
-        "type": "VIP",
-        "checkInTime": "23:13:00"
+        "spectatorId": "S00188",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:14:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00189",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:14:00",
+        "checkInTime": "23:14:00",
         "checkedIn": true,
         "name": "VIP User 46",
-        "type": "VIP",
-        "checkInTime": "23:14:00"
+        "spectatorId": "S00189",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:15:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00190",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:15:00",
+        "checkInTime": "23:15:00",
         "checkedIn": true,
         "name": "VIP User 47",
-        "type": "VIP",
-        "checkInTime": "23:15:00"
+        "spectatorId": "S00190",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:16:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "Twitch",
-        "spectatorId": "S00191",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:16:00",
+        "checkInTime": "23:16:00",
         "checkedIn": true,
         "name": "VIP User 48",
-        "type": "VIP",
-        "checkInTime": "23:16:00"
+        "spectatorId": "S00191",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:17:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "YouTube",
-        "spectatorId": "S00192",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:17:00",
+        "checkInTime": "23:17:00",
         "checkedIn": true,
         "name": "VIP User 49",
-        "type": "VIP",
-        "checkInTime": "23:17:00"
+        "spectatorId": "S00192",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:18:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "Twitch",
-        "spectatorId": "S00193",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:18:00",
+        "checkInTime": "23:18:00",
         "checkedIn": true,
         "name": "VIP User 50",
-        "type": "VIP",
-        "checkInTime": "23:18:00"
+        "spectatorId": "S00193",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-10 23:19:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "Twitch",
-        "spectatorId": "S00206",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:19:00",
+        "checkInTime": "23:19:00",
         "checkedIn": true,
         "name": "Extra Streamer 1",
-        "type": "Streamer",
-        "checkInTime": "23:19:00"
+        "spectatorId": "S00206",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-10 23:20:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "YouTube",
-        "spectatorId": "S00207",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:20:00",
+        "checkInTime": "23:20:00",
         "checkedIn": true,
         "name": "Extra Streamer 2",
-        "type": "Streamer",
-        "checkInTime": "23:20:00"
+        "spectatorId": "S00207",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-10 23:21:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "Twitch",
-        "spectatorId": "S00208",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:21:00",
+        "checkInTime": "23:21:00",
         "checkedIn": true,
         "name": "Extra Streamer 3",
-        "type": "Streamer",
-        "checkInTime": "23:21:00"
+        "spectatorId": "S00208",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-10 23:22:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "Facebook Gaming",
-        "spectatorId": "S00209",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:22:00",
+        "checkInTime": "23:22:00",
         "checkedIn": true,
         "name": "Extra Streamer 4",
-        "type": "Streamer",
-        "checkInTime": "23:22:00"
+        "spectatorId": "S00209",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-10 23:23:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "Huya",
-        "spectatorId": "S00210",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:23:00",
+        "checkInTime": "23:23:00",
         "checkedIn": true,
         "name": "Extra Streamer 5",
-        "type": "Streamer",
-        "checkInTime": "23:23:00"
+        "spectatorId": "S00210",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-10 23:24:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00211",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:24:00",
+        "checkInTime": "23:24:00",
         "checkedIn": true,
         "name": "Extra Normal 1",
-        "type": "Normal",
-        "checkInTime": "23:24:00"
+        "spectatorId": "S00211",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:25:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00212",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:25:00",
+        "checkInTime": "23:25:00",
         "checkedIn": true,
         "name": "Extra Normal 2",
-        "type": "Normal",
-        "checkInTime": "23:25:00"
+        "spectatorId": "S00212",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:26:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00213",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:26:00",
+        "checkInTime": "23:26:00",
         "checkedIn": true,
         "name": "Extra Normal 3",
-        "type": "Normal",
-        "checkInTime": "23:26:00"
+        "spectatorId": "S00213",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:27:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00214",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:27:00",
+        "checkInTime": "23:27:00",
         "checkedIn": true,
         "name": "Extra Normal 4",
-        "type": "Normal",
-        "checkInTime": "23:27:00"
+        "spectatorId": "S00214",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:28:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00215",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:28:00",
+        "checkInTime": "23:28:00",
         "checkedIn": true,
         "name": "Extra Normal 5",
-        "type": "Normal",
-        "checkInTime": "23:28:00"
+        "spectatorId": "S00215",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:30:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00216",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:30:00",
+        "checkInTime": "23:30:00",
         "checkedIn": true,
         "name": "Overflow Normal 1",
-        "type": "Normal",
-        "checkInTime": "23:30:00"
+        "spectatorId": "S00216",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:32:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00217",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:32:00",
+        "checkInTime": "23:32:00",
         "checkedIn": true,
         "name": "Overflow Normal 2",
-        "type": "Normal",
-        "checkInTime": "23:32:00"
+        "spectatorId": "S00217",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:34:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00218",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:34:00",
+        "checkInTime": "23:34:00",
         "checkedIn": true,
         "name": "Overflow Normal 3",
-        "type": "Normal",
-        "checkInTime": "23:34:00"
+        "spectatorId": "S00218",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:36:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00219",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:36:00",
+        "checkInTime": "23:36:00",
         "checkedIn": true,
         "name": "Overflow Normal 4",
-        "type": "Normal",
-        "checkInTime": "23:36:00"
+        "spectatorId": "S00219",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:38:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00220",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:38:00",
+        "checkInTime": "23:38:00",
         "checkedIn": true,
         "name": "Overflow Normal 5",
-        "type": "Normal",
-        "checkInTime": "23:38:00"
+        "spectatorId": "S00220",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:40:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00221",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:40:00",
+        "checkInTime": "23:40:00",
         "checkedIn": true,
         "name": "Overflow Normal 6",
-        "type": "Normal",
-        "checkInTime": "23:40:00"
+        "spectatorId": "S00221",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:42:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00222",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:42:00",
+        "checkInTime": "23:42:00",
         "checkedIn": true,
         "name": "Overflow Normal 7",
-        "type": "Normal",
-        "checkInTime": "23:42:00"
+        "spectatorId": "S00222",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:44:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00223",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:44:00",
+        "checkInTime": "23:44:00",
         "checkedIn": true,
         "name": "Overflow Normal 8",
-        "type": "Normal",
-        "checkInTime": "23:44:00"
+        "spectatorId": "S00223",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:46:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00224",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:46:00",
+        "checkInTime": "23:46:00",
         "checkedIn": true,
         "name": "Overflow Normal 9",
-        "type": "Normal",
-        "checkInTime": "23:46:00"
+        "spectatorId": "S00224",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:48:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00225",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:48:00",
+        "checkInTime": "23:48:00",
         "checkedIn": true,
         "name": "Overflow Normal 10",
-        "type": "Normal",
-        "checkInTime": "23:48:00"
+        "spectatorId": "S00225",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:50:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00226",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:50:00",
+        "checkInTime": "23:50:00",
         "checkedIn": true,
         "name": "Overflow Normal 11",
-        "type": "Normal",
-        "checkInTime": "23:50:00"
+        "spectatorId": "S00226",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:52:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00227",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:52:00",
+        "checkInTime": "23:52:00",
         "checkedIn": true,
         "name": "Overflow Normal 12",
-        "type": "Normal",
-        "checkInTime": "23:52:00"
+        "spectatorId": "S00227",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:54:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00228",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:54:00",
+        "checkInTime": "23:54:00",
         "checkedIn": true,
         "name": "Overflow Normal 13",
-        "type": "Normal",
-        "checkInTime": "23:54:00"
+        "spectatorId": "S00228",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:56:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00229",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:56:00",
+        "checkInTime": "23:56:00",
         "checkedIn": true,
         "name": "Overflow Normal 14",
-        "type": "Normal",
-        "checkInTime": "23:56:00"
+        "spectatorId": "S00229",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-10 23:58:00",
-        "checkInDate": "2024-01-10",
         "affiliation": "",
-        "spectatorId": "S00230",
+        "checkInDate": "2024-01-10",
+        "checkInDateTime": "2024-01-10 23:58:00",
+        "checkInTime": "23:58:00",
         "checkedIn": true,
         "name": "Overflow Normal 15",
-        "type": "Normal",
-        "checkInTime": "23:58:00"
+        "spectatorId": "S00230",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:00:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00231",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:00:00",
+        "checkInTime": "00:00:00",
         "checkedIn": true,
         "name": "Overflow Normal 16",
-        "type": "Normal",
-        "checkInTime": "00:00:00"
+        "spectatorId": "S00231",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:02:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00232",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:02:00",
+        "checkInTime": "00:02:00",
         "checkedIn": true,
         "name": "Overflow Normal 17",
-        "type": "Normal",
-        "checkInTime": "00:02:00"
+        "spectatorId": "S00232",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:04:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00233",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:04:00",
+        "checkInTime": "00:04:00",
         "checkedIn": true,
         "name": "Overflow Normal 18",
-        "type": "Normal",
-        "checkInTime": "00:04:00"
+        "spectatorId": "S00233",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:06:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00234",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:06:00",
+        "checkInTime": "00:06:00",
         "checkedIn": true,
         "name": "Overflow Normal 19",
-        "type": "Normal",
-        "checkInTime": "00:06:00"
+        "spectatorId": "S00234",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:08:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00235",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:08:00",
+        "checkInTime": "00:08:00",
         "checkedIn": true,
         "name": "Overflow Normal 20",
-        "type": "Normal",
-        "checkInTime": "00:08:00"
+        "spectatorId": "S00235",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:10:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00236",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:10:00",
+        "checkInTime": "00:10:00",
         "checkedIn": true,
         "name": "Overflow Normal 21",
-        "type": "Normal",
-        "checkInTime": "00:10:00"
+        "spectatorId": "S00236",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:12:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00237",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:12:00",
+        "checkInTime": "00:12:00",
         "checkedIn": true,
         "name": "Overflow Normal 22",
-        "type": "Normal",
-        "checkInTime": "00:12:00"
+        "spectatorId": "S00237",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:14:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00238",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:14:00",
+        "checkInTime": "00:14:00",
         "checkedIn": true,
         "name": "Overflow Normal 23",
-        "type": "Normal",
-        "checkInTime": "00:14:00"
+        "spectatorId": "S00238",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:16:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00239",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:16:00",
+        "checkInTime": "00:16:00",
         "checkedIn": true,
         "name": "Overflow Normal 24",
-        "type": "Normal",
-        "checkInTime": "00:16:00"
+        "spectatorId": "S00239",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:18:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00240",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:18:00",
+        "checkInTime": "00:18:00",
         "checkedIn": true,
         "name": "Overflow Normal 25",
-        "type": "Normal",
-        "checkInTime": "00:18:00"
+        "spectatorId": "S00240",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:20:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00241",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:20:00",
+        "checkInTime": "00:20:00",
         "checkedIn": true,
         "name": "Overflow Normal 26",
-        "type": "Normal",
-        "checkInTime": "00:20:00"
+        "spectatorId": "S00241",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:22:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00242",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:22:00",
+        "checkInTime": "00:22:00",
         "checkedIn": true,
         "name": "Overflow Normal 27",
-        "type": "Normal",
-        "checkInTime": "00:22:00"
+        "spectatorId": "S00242",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:24:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00243",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:24:00",
+        "checkInTime": "00:24:00",
         "checkedIn": true,
         "name": "Overflow Normal 28",
-        "type": "Normal",
-        "checkInTime": "00:24:00"
+        "spectatorId": "S00243",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:26:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00244",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:26:00",
+        "checkInTime": "00:26:00",
         "checkedIn": true,
         "name": "Overflow Normal 29",
-        "type": "Normal",
-        "checkInTime": "00:26:00"
+        "spectatorId": "S00244",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:28:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00245",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:28:00",
+        "checkInTime": "00:28:00",
         "checkedIn": true,
         "name": "Overflow Normal 30",
-        "type": "Normal",
-        "checkInTime": "00:28:00"
+        "spectatorId": "S00245",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:30:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00246",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:30:00",
+        "checkInTime": "00:30:00",
         "checkedIn": true,
         "name": "Overflow Normal 31",
-        "type": "Normal",
-        "checkInTime": "00:30:00"
+        "spectatorId": "S00246",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:32:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00247",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:32:00",
+        "checkInTime": "00:32:00",
         "checkedIn": true,
         "name": "Overflow Normal 32",
-        "type": "Normal",
-        "checkInTime": "00:32:00"
+        "spectatorId": "S00247",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:34:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00248",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:34:00",
+        "checkInTime": "00:34:00",
         "checkedIn": true,
         "name": "Overflow Normal 33",
-        "type": "Normal",
-        "checkInTime": "00:34:00"
+        "spectatorId": "S00248",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:36:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00249",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:36:00",
+        "checkInTime": "00:36:00",
         "checkedIn": true,
         "name": "Overflow Normal 34",
-        "type": "Normal",
-        "checkInTime": "00:36:00"
+        "spectatorId": "S00249",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:38:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00250",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:38:00",
+        "checkInTime": "00:38:00",
         "checkedIn": true,
         "name": "Overflow Normal 35",
-        "type": "Normal",
-        "checkInTime": "00:38:00"
+        "spectatorId": "S00250",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:40:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00251",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:40:00",
+        "checkInTime": "00:40:00",
         "checkedIn": true,
         "name": "Overflow Normal 36",
-        "type": "Normal",
-        "checkInTime": "00:40:00"
+        "spectatorId": "S00251",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:42:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00252",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:42:00",
+        "checkInTime": "00:42:00",
         "checkedIn": true,
         "name": "Overflow Normal 37",
-        "type": "Normal",
-        "checkInTime": "00:42:00"
+        "spectatorId": "S00252",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:44:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00253",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:44:00",
+        "checkInTime": "00:44:00",
         "checkedIn": true,
         "name": "Overflow Normal 38",
-        "type": "Normal",
-        "checkInTime": "00:44:00"
+        "spectatorId": "S00253",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:46:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00254",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:46:00",
+        "checkInTime": "00:46:00",
         "checkedIn": true,
         "name": "Overflow Normal 39",
-        "type": "Normal",
-        "checkInTime": "00:46:00"
+        "spectatorId": "S00254",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:48:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "",
-        "spectatorId": "S00255",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:48:00",
+        "checkInTime": "00:48:00",
         "checkedIn": true,
         "name": "Overflow Normal 40",
-        "type": "Normal",
-        "checkInTime": "00:48:00"
+        "spectatorId": "S00255",
+        "type": "Normal"
     },
     {
-        "checkInDateTime": "2024-01-11 00:49:00",
-        "checkInDate": "2024-01-11", 
         "affiliation": "Twitch",
-        "spectatorId": "S00256",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:49:00",
+        "checkInTime": "00:49:00",
         "checkedIn": true,
         "name": "Overflow Streamer 1",
-        "type": "Streamer",
-        "checkInTime": "00:49:00"
+        "spectatorId": "S00256",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:50:00",
+        "affiliation": "YouTube",
         "checkInDate": "2024-01-11",
-        "affiliation": "YouTube", 
-        "spectatorId": "S00257",
+        "checkInDateTime": "2024-01-11 00:50:00",
+        "checkInTime": "00:50:00",
         "checkedIn": true,
         "name": "Overflow Streamer 2",
-        "type": "Streamer",
-        "checkInTime": "00:50:00"
+        "spectatorId": "S00257",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:51:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Facebook Gaming",
-        "spectatorId": "S00258", 
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:51:00",
+        "checkInTime": "00:51:00",
         "checkedIn": true,
         "name": "Overflow Streamer 3",
-        "type": "Streamer",
-        "checkInTime": "00:51:00"
+        "spectatorId": "S00258",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:52:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "TikTok",
-        "spectatorId": "S00259",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:52:00",
+        "checkInTime": "00:52:00",
         "checkedIn": true,
         "name": "Overflow Streamer 4",
-        "type": "Streamer",
-        "checkInTime": "00:52:00"
+        "spectatorId": "S00259",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:53:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Discord",
-        "spectatorId": "S00260",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:53:00",
+        "checkInTime": "00:53:00",
         "checkedIn": true,
         "name": "Overflow Streamer 5",
-        "type": "Streamer",
-        "checkInTime": "00:53:00"
+        "spectatorId": "S00260",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:54:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Kick",
-        "spectatorId": "S00261", 
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:54:00",
+        "checkInTime": "00:54:00",
         "checkedIn": true,
         "name": "Overflow Streamer 6",
-        "type": "Streamer",
-        "checkInTime": "00:54:00"
+        "spectatorId": "S00261",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:55:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Rumble",
-        "spectatorId": "S00262",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:55:00",
+        "checkInTime": "00:55:00",
         "checkedIn": true,
         "name": "Overflow Streamer 7",
-        "type": "Streamer",
-        "checkInTime": "00:55:00"
+        "spectatorId": "S00262",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:56:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Mixer",
-        "spectatorId": "S00263",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:56:00",
+        "checkInTime": "00:56:00",
         "checkedIn": true,
         "name": "Overflow Streamer 8",
-        "type": "Streamer",
-        "checkInTime": "00:56:00"
+        "spectatorId": "S00263",
+        "type": "Streamer"
     },
     {
-        "checkInDateTime": "2024-01-11 00:57:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Premium Member",
-        "spectatorId": "S00264",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:57:00",
+        "checkInTime": "00:57:00",
         "checkedIn": true,
         "name": "Overflow VIP 1",
-        "type": "VIP",
-        "checkInTime": "00:57:00"
+        "spectatorId": "S00264",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-11 00:58:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Premium Member",
-        "spectatorId": "S00265",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:58:00",
+        "checkInTime": "00:58:00",
         "checkedIn": true,
         "name": "Overflow VIP 2",
-        "type": "VIP",
-        "checkInTime": "00:58:00"
+        "spectatorId": "S00265",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-11 00:59:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Premium Member",
-        "spectatorId": "S00266",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 00:59:00",
+        "checkInTime": "00:59:00",
         "checkedIn": true,
         "name": "Overflow VIP 3",
-        "type": "VIP",
-        "checkInTime": "00:59:00"
+        "spectatorId": "S00266",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-11 01:00:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Premium Member",
-        "spectatorId": "S00267",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 01:00:00",
+        "checkInTime": "01:00:00",
         "checkedIn": true,
         "name": "Overflow VIP 4",
-        "type": "VIP",
-        "checkInTime": "01:00:00"
+        "spectatorId": "S00267",
+        "type": "VIP"
     },
     {
-        "checkInDateTime": "2024-01-11 01:01:00",
-        "checkInDate": "2024-01-11",
         "affiliation": "Premium Member",
-        "spectatorId": "S00268",
+        "checkInDate": "2024-01-11",
+        "checkInDateTime": "2024-01-11 01:01:00",
+        "checkInTime": "01:01:00",
         "checkedIn": true,
-        "name": "Overflow VIP 5", 
-        "type": "VIP",
-        "checkInTime": "01:01:00"
+        "name": "Overflow VIP 5",
+        "spectatorId": "S00268",
+        "type": "VIP"
+    },
+    {
+        "affiliation": "",
+        "checkInDate": "2025-07-31",
+        "checkInDateTime": "2025-07-31 20:54:36",
+        "checkInTime": "20:54:36",
+        "checkedIn": true,
+        "name": "chua",
+        "spectatorId": "S00269",
+        "type": "Normal"
     }
 ]

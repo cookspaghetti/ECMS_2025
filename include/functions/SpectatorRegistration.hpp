@@ -31,6 +31,13 @@ private:
     DoublyLinkedList<Spectator> allSpectators;
     SeatingManager*             seatingManager;
     bool                        dataLoaded;
+    int                         nextSpectatorId;
+    
+    /// Helper function to get current date and time as string
+    std::string getCurrentDateTime();
+    
+    /// Helper function to update check-in file with spectator data
+    void updateCheckInFile(const Spectator& spectator);
 };
 
 #endif // FUNCTIONS_SPECTATORREGISTRATION_HPP
