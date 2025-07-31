@@ -175,8 +175,21 @@ DoublyLinkedList<Spectator> JsonLoader::loadSpectators(const std::string& filena
         else if (typeStr == "Influencer") type = SpectatorType::Influencer;
         else if (typeStr == "Player") type = SpectatorType::Player;
         
+        // Parse ID - handle both string format ("S00001") and integer format
+        int id;
+        if (item["id"].is_string()) {
+            std::string idStr = item["id"];
+            if (idStr.front() == 'S') {
+                id = std::stoi(idStr.substr(1)); // Remove 'S' prefix and convert to int
+            } else {
+                id = std::stoi(idStr); // Convert string to int
+            }
+        } else {
+            id = item["id"]; // Direct integer assignment
+        }
+        
         Spectator spec(
-            item["id"],
+            id,
             item["name"],
             item["gender"] == "Male" ? Gender::Male : Gender::Female,
             item["email"],

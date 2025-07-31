@@ -236,7 +236,7 @@ bool JsonWriter::writeAllSpectators(const DoublyLinkedList<Spectator>& spectator
     file << jsonArray.dump(4);
     file.close();
     
-    std::cout << "Successfully wrote " << spectators.getSize() << " spectators to " << filename << std::endl;
+    // std::cout << "Successfully wrote " << spectators.getSize() << " spectators to " << filename << std::endl;
     return true;
 }
 
@@ -382,8 +382,11 @@ json JsonWriter::resultToJson(const Result& result) {
 }
 
 json JsonWriter::spectatorToJson(const Spectator& spectator) {
+    // Format ID as "S" + zero-padded 5-digit number
+    std::string formattedId = "S" + std::string(5 - std::to_string(spectator.id).length(), '0') + std::to_string(spectator.id);
+    
     return json{
-        {"id", spectator.id},
+        {"id", formattedId},
         {"name", spectator.name},
         {"gender", genderToString(spectator.gender)},
         {"email", spectator.email},
