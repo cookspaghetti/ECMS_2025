@@ -63,38 +63,15 @@ public:
     // Overflow management methods
     bool hasOverflow() const;
     void handleOverflow();
-    void addMoreSeats();
-    void rejectOverflowUsers();
     
-    // Helper methods for overflow handling
-    void handleOverflowWithMoreSeats(const DoublyLinkedList<Spectator>& vipOverflow,
-                                    const DoublyLinkedList<Spectator>& influencerOverflow,
-                                    const DoublyLinkedList<Spectator>& streamerOverflow,
-                                    const DoublyLinkedList<Spectator>& normalOverflow);
-    void handleOverflowReassignment(const DoublyLinkedList<Spectator>& vipOverflow,
-                                   const DoublyLinkedList<Spectator>& influencerOverflow,
-                                   const DoublyLinkedList<Spectator>& streamerOverflow,
-                                   const DoublyLinkedList<Spectator>& normalOverflow);
+    // Helper methods for overflow handling  
     void handleOverflowManual(const DoublyLinkedList<Spectator>& vipOverflow,
                              const DoublyLinkedList<Spectator>& influencerOverflow,
                              const DoublyLinkedList<Spectator>& streamerOverflow,
                              const DoublyLinkedList<Spectator>& normalOverflow);
-    void rejectAllOverflow(const DoublyLinkedList<Spectator>& vipOverflow,
-                          const DoublyLinkedList<Spectator>& influencerOverflow,
-                          const DoublyLinkedList<Spectator>& streamerOverflow,
-                          const DoublyLinkedList<Spectator>& normalOverflow);
-    
-    // New drop and replace methods
-    void handleDropAndReplace(const DoublyLinkedList<Spectator>& vipOverflow,
-                             const DoublyLinkedList<Spectator>& influencerOverflow,
-                             const DoublyLinkedList<Spectator>& streamerOverflow,
-                             const DoublyLinkedList<Spectator>& normalOverflow);
-    bool dropUserFromGeneralSeating(SpectatorType targetType);
-    bool dropUserFromStreamingRoom();
     
     // Manual seat management helpers
     bool removeSpectatorById(int id);
-    bool addSpectatorToAvailableSeat(const Spectator& spectator);
     bool assignSpectatorToSpecificSeat(const Spectator& spectator, int room, int seat);
 
 private:
