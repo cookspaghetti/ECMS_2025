@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "category": "International",
+        "currentParticipants": 2,
+        "endDate": "13/12/2025",
+        "id": "T00002",
+        "location": "APU",
+        "maxParticipants": 32,
+        "name": "Test2",
+        "prizePool": 50000.0,
+        "stage": "Qualifiers",
+        "startDate": "12/12/2025"
+    }
+]
