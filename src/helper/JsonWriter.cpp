@@ -369,8 +369,10 @@ json JsonWriter::resultToJson(const Result& result) {
 }
 
 json JsonWriter::spectatorToJson(const Spectator& spectator) {
+    std::string formattedId = "S" + std::string(5 - std::to_string(spectator.id).length(), '0') + std::to_string(spectator.id);
+
     return json{
-        {"id", spectator.id},
+        {"id", formattedId},
         {"name", spectator.name},
         {"gender", genderToString(spectator.gender)},
         {"email", spectator.email},
