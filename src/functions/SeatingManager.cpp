@@ -12,9 +12,8 @@ std::string centerText(const std::string& text, int width) {
     return std::string(leftPad, ' ') + text + std::string(rightPad, ' ');
 }
 
-// ——————————————————————————————————————————————————————————
+
 // Constructor
-// ——————————————————————————————————————————————————————————
 SeatingManager::SeatingManager(int vipCapacity,
                                int influencerCapacity,
                                int numStreamRooms,
@@ -57,9 +56,7 @@ SeatingManager::SeatingManager(int vipCapacity,
     }
 }
 
-// ——————————————————————————————————————————————————————————
 // Get priority for spectator types (higher number = higher priority)
-// ——————————————————————————————————————————————————————————
 int getSpectatorPriority(SpectatorType type) {
     switch (type) {
         case SpectatorType::VIP:        return 4;  // Highest priority
@@ -70,9 +67,7 @@ int getSpectatorPriority(SpectatorType type) {
     }
 }
 
-// ——————————————————————————————————————————————————————————
 // Enqueue into entry queue with priority
-// ——————————————————————————————————————————————————————————
 void SeatingManager::addToEntryQueue(const Spectator &s, bool /*quiet*/) {
     try {
         int priority = getSpectatorPriority(s.type);
@@ -89,9 +84,7 @@ void SeatingManager::addToEntryQueue(const Spectator &s, bool /*quiet*/) {
     }
 }
 
-// ——————————————————————————————————————————————————————————
 // Process everyone waiting to be seated
-// ——————————————————————————————————————————————————————————
 void SeatingManager::processEntryQueue(bool verbose) {
     std::cout << "Processing spectators for seat assignments...\n";
     
@@ -152,9 +145,7 @@ void SeatingManager::processEntryQueue(bool verbose) {
     std::cout << "Completed processing " << processedCount << " spectators.\n";
 }
 
-// ——————————————————————————————————————————————————————————
 // Print current seating & overflow stats
-// ——————————————————————————————————————————————————————————
 void SeatingManager::displaySeatingStatus() const {
     std::cout << "\n=== ROOM-BY-ROOM SEATING LAYOUT ===\n";
 
@@ -452,9 +443,7 @@ void SeatingManager::displaySeatingStatus() const {
     std::cout << "\n";
 }
 
-// ——————————————————————————————————————————————————————————
 // Helpers
-// ——————————————————————————————————————————————————————————
 bool SeatingManager::assignVIPSeat(const Spectator &s, bool /*quiet*/) {
     if (!vipSeating.isFull()) {
         // Find next available VIP seat for display tracking

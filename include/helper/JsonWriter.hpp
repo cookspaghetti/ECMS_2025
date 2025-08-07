@@ -43,7 +43,6 @@ public:
     static std::string championToString(Champion champion);
     static std::string genderToString(Gender gender);
     static std::string spectatorTypeToString(SpectatorType type);
-    static std::string matchTypeToString(MatchType type);
     static std::string tournamentStageToString(TournamentStage stage);
     static std::string tournamentCategoryToString(TournamentCategory category);
 private:

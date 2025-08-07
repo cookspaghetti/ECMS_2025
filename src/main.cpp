@@ -3,16 +3,24 @@
 #include "functions/PlayerRegistration.hpp"
 #include "functions/SpectatorRegistration.hpp"
 #include "functions/GameResultLogger.hpp"
+#include "functions/TournamentManager.hpp"
+#include "manager/Task2Manager.hpp"
+#include "manager/Task1Manager.hpp"
 
 PlayerRegistration playerReg;
 SpectatorRegistration spectatorReg; 
-GameResultLogger logger; // Global logger instance 
+GameResultLogger logger; // Global logger instance
+TournamentManager tournamentManager; // Global tournament manager instance 
+Task1Manager task1Manager(tournamentManager); // Global Task1Manager instance
+Task2Manager task2Manager(tournamentManager, playerReg); // Global Task2Manager instance
+
+PriorityQueue<Player> checkInQueue;
 
 
 void handleMatchScheduling();
-void handleRegistration();
 void handleSpectatorQueue();
 void handleResultLogging();
+void handleTask2Manager();
 
 int main() {
     int choice;
@@ -32,13 +40,16 @@ int main() {
                 handleMatchScheduling();
                 break;
             case 2:
-                handleRegistration();
+                handleTask2Manager();
                 break;
             case 3:
                 handleSpectatorQueue();
                 break;
             case 4:
                 handleResultLogging();
+                break;
+            case 5:
+                handleTask2Manager();
                 break;
             case 0:
                 std::cout << "Exiting... Goodbye!\n";
@@ -52,62 +63,18 @@ int main() {
     return 0;
 }
 
-void handleMatchScheduling() {
-    int choice;
-    do {
-        std::cout << "\n-- Match Scheduling Menu --\n";
-        std::cout << "1. Show Current Tournaments\n";
-        std::cout << "2. Check Tournament Info\n";
-        std::cout << "3. Search Player\n";
-        std::cout << "0. Back to Main Menu\n";
-        std::cout << "Select an option: ";
-        std::cin >> choice;
-
-        switch (choice) {
-            case 1:
-                std::cout << "Showing current tournaments...\n";
-                break;
-            case 2:
-                std::cout << "Checking tournament info...\n";
-                break;
-            case 3:
-                std::cout << "Searching player...\n";
-                break;
-            case 0:
-                break;
-            default:
-                std::cout << "Invalid option. Try again.\n";
-        }
-    } while (choice != 0);
+void handleTask2Manager() {
+    task2Manager.runTournamentRegistrationSystem();
 }
 
-void handleRegistration() {
-    int choice;
-    do {
-        std::cout << "\n-- Tournament Registration Menu --\n";
-        std::cout << "1. Register Player\n";
-        std::cout << "2. Check-In Player\n";
-        std::cout << "3. Show Registered Queue\n";
-        std::cout << "0. Back to Main Menu\n";
-        std::cout << "Select an option: ";
-        std::cin >> choice;
-
-        switch (choice) {
-            case 1:
-                playerReg.registerPlayer();
-                break;
-            case 2:
-                playerReg.checkInPlayer();
-                break;
-            case 3:
-                playerReg.displayQueue();
-                break;
-            case 0:
-                break;
-            default:
-                std::cout << "Invalid option. Try again.\n";
-        }
-    } while (choice != 0);
+void handleMatchScheduling() {
+    std::cout << "\n=== MATCH SCHEDULING & PLAYER PROGRESSION ===\n";
+    
+    // Check if there's a final queue from Task2 to use
+    std::cout << "Note: To start match scheduling with players, complete tournament registration in option 2 first.\n";
+    
+    // Run the Task1Manager system
+    task1Manager.runMatchSchedulingSystem();
 }
 
 void handleSpectatorQueue() {
@@ -115,8 +82,7 @@ void handleSpectatorQueue() {
     do {
         std::cout << "\n-- Spectator Management Menu --\n";
         std::cout << "1. Register Spectator\n";
-        std::cout << "2. Check-In Spectator\n";
-        std::cout << "3. Display Queue\n";
+        std::cout << "2. Display Queue\n";
         std::cout << "0. Back to Main Menu\n";
         std::cout << "Select an option: ";
         
@@ -132,9 +98,6 @@ void handleSpectatorQueue() {
                 spectatorReg.registerSpectator();
                 break;
             case 2:
-                spectatorReg.checkInSpectator();
-                break;
-            case 3:
                 std::cout << "Displaying spectator queue and seating status...\n";
                 spectatorReg.displayQueue();
                 break;
@@ -173,15 +136,8 @@ void handleResultLogging() {
             case 2: {
                 std::cout << "=== PLAYER SEARCH ===\n";
                 std::cout << "Enter Player ID to search: ";
-                std::string input;
-                std::cin >> input;
-                int playerId;
-                try {
-                    playerId = std::stoi(input);
-                } catch (...) {
-                    std::cout << "Invalid Player ID entered.\n";
-                    break;
-                }
+                std::string playerId;
+                std::cin >> playerId;
                 
                 // Search for specific player matches (data already loaded)
                 logger.searchMatchesByPlayer(playerId);
@@ -194,15 +150,8 @@ void handleResultLogging() {
             case 3: {
                 std::cout << "=== TOURNAMENT SEARCH ===\n";
                 std::cout << "Enter Tournament/Match ID to search: ";
-                std::string input;
-                std::cin >> input;
-                int tournamentId;
-                try {
-                    tournamentId = std::stoi(input);
-                } catch (...) {
-                    std::cout << "Invalid Tournament/Match ID entered.\n";
-                    break;
-                }
+                std::string tournamentId;
+                std::cin >> tournamentId;
                 
                 // Search for specific tournament/match (data already loaded)
                 logger.searchMatchesByMatchId(tournamentId);

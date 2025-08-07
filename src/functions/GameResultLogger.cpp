@@ -36,7 +36,7 @@ GameResultLogger::~GameResultLogger() {
     // Destructor - DoublyLinkedList and Stack will clean themselves up automatically
 }
 
-int GameResultLogger::findPlayerIndex(int playerId) const {
+int GameResultLogger::findPlayerIndex(const std::string& playerId) const {
     for (int i = 0; i < playerCount; ++i) {
         if (playerStatistics[i].playerId == playerId) {
             return i;
@@ -47,22 +47,13 @@ int GameResultLogger::findPlayerIndex(int playerId) const {
 
 std::string GameResultLogger::stageToString(TournamentStage stage) const {
     switch (stage) {
+        case TournamentStage::Registration: return "Registration";
         case TournamentStage::Qualifiers: return "Qualifiers";
-        case TournamentStage::GroupStage: return "Group Stage";
-        case TournamentStage::KnockoutStage: return "Knockout Stage";
         case TournamentStage::Quarterfinals: return "Quarterfinals";
         case TournamentStage::Semifinals: return "Semifinals";
         case TournamentStage::Finals: return "Finals";
+        case TournamentStage::Completed: return "Completed";
         default: return "Unknown Stage";
-    }
-}
-
-std::string GameResultLogger::matchTypeToString(MatchType type) const {
-    switch (type) {
-        case MatchType::BestOf1: return "Best of 1";
-        case MatchType::BestOf3: return "Best of 3";
-        case MatchType::BestOf5: return "Best of 5";
-        default: return "Unknown Type";
     }
 }
 
@@ -71,7 +62,7 @@ std::string GameResultLogger::matchTypeToString(MatchType type) const {
 // ===============================================
 
 void GameResultLogger::loadResultsFromJSON() {
-    loadResultsFromJSON("../data/results.json");
+    loadResultsFromJSON("data/results.json");
 }
 
 void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
@@ -80,13 +71,6 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
     
     // Use JsonLoader - it handles DoublyLinkedList internally
     auto resultsList = JsonLoader::loadResults(jsonPath);
-    
-    // If no results, try with full path
-    if (resultsList.getSize() == 0) {
-        std::cout << "Trying fallback path...\n";
-        std::string fallbackPath = "c:/Users/CHUA/Documents/GitHub/ECMS_2025/" + jsonPath;
-        resultsList = JsonLoader::loadResults(fallbackPath);
-    }
     
     if (resultsList.getSize() == 0) {
         std::cout << "JsonLoader could not load results. No results available.\n";
@@ -108,9 +92,9 @@ void GameResultLogger::calculatePlayerStatistics() {
     recordOperation("Calculating player statistics using JsonLoader");
     
     // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
-    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    auto resultsList = JsonLoader::loadResults("data/results.json");
     if (resultsList.getSize() == 0) {
-        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+        resultsList = JsonLoader::loadResults("data/results.json");
     }
     
     // Reset player statistics
@@ -130,28 +114,28 @@ void GameResultLogger::calculatePlayerStatistics() {
         if (!result) continue;
         
         // Create approximate player IDs (since JsonLoader doesn't provide MatchPlayerInfo separately)
-        int player1Id = 100 + i;  // Approximate player1Id
-        int player2Id = 200 + i;  // Approximate player2Id
-        int winnerId = result->winnerId;
+        std::string player1Id = "P" + std::string(5 - std::to_string(100 + i).length(), '0') + std::to_string(100 + i);  // Format P00XXX
+        std::string player2Id = "P" + std::string(5 - std::to_string(200 + i).length(), '0') + std::to_string(200 + i);  // Format P00XXX
+        std::string winnerId = result->winnerId;
         
         // Find or create player statistics entries
         int player1Index = findPlayerIndex(player1Id);
         if (player1Index == -1 && playerCount < MAX_PLAYERS) {
-            playerStatistics[playerCount] = PlayerStats(player1Id, "Player" + std::to_string(player1Id));
+            playerStatistics[playerCount] = PlayerStats(player1Id, "Player" + player1Id);
             player1Index = playerCount++;
         }
         
         int player2Index = findPlayerIndex(player2Id);
         if (player2Index == -1 && playerCount < MAX_PLAYERS) {
-            playerStatistics[playerCount] = PlayerStats(player2Id, "Player" + std::to_string(player2Id));
+            playerStatistics[playerCount] = PlayerStats(player2Id, "Player" + player2Id);
             player2Index = playerCount++;
         }
         
         // Update statistics for player 1
         if (player1Index != -1) {
             bool player1Won = (winnerId == player1Id);
-            Champion player1Champion = (result->championsP1[0] != Champion::NoChampion) ? 
-                                       result->championsP1[0] : Champion::NoChampion;
+            Champion player1Champion = (result->championsP1 != Champion::NoChampion) ?
+                                       result->championsP1 : Champion::NoChampion;
             playerStatistics[player1Index].updateStats(player1Won, player1Champion, "2024-01-01", 30.0f);
             
             // Push to analysis stack
@@ -161,8 +145,8 @@ void GameResultLogger::calculatePlayerStatistics() {
         // Update statistics for player 2
         if (player2Index != -1) {
             bool player2Won = (winnerId == player2Id);
-            Champion player2Champion = (result->championsP2[0] != Champion::NoChampion) ? 
-                                       result->championsP2[0] : Champion::NoChampion;
+            Champion player2Champion = (result->championsP2 != Champion::NoChampion) ?
+                                       result->championsP2 : Champion::NoChampion;
             playerStatistics[player2Index].updateStats(player2Won, player2Champion, "2024-01-01", 30.0f);
             
             // Push to analysis stack
@@ -177,9 +161,9 @@ void GameResultLogger::displayLoadedResults() const {
     std::cout << "\n=== LOADED RESULTS FROM JSON (via JsonLoader) ===\n";
     
     // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
-    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    auto resultsList = JsonLoader::loadResults("data/results.json");
     if (resultsList.getSize() == 0) {
-        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+        resultsList = JsonLoader::loadResults("data/results.json");
     }
     
     if (resultsList.getSize() == 0) {
@@ -189,21 +173,23 @@ void GameResultLogger::displayLoadedResults() const {
     
     std::cout << std::left;
     std::cout << std::setw(6) << "ID" << std::setw(10) << "Match ID" 
-              << std::setw(8) << "Winner" << std::setw(10) << "Score"
-              << std::setw(12) << "P1 Champ" << std::setw(12) << "P2 Champ\n";
-    std::cout << std::string(68, '-') << "\n";
+              << std::setw(8) << "Winner" << std::setw(12) << "P1 Champ" << std::setw(12) << "P2 Champ\n";
+    std::cout << std::string(58, '-') << "\n";
     
     // Use JsonLoader's DoublyLinkedList results
     for (int i = 0; i < resultsList.getSize(); ++i) {
         Result* result = resultsList.get(i);
         if (!result) continue;
         
+        // Get champion names for display
+        std::string champ1Str = championToString(result->championsP1);
+        std::string champ2Str = championToString(result->championsP2);
+        
         std::cout << std::setw(6) << result->id
                   << std::setw(10) << result->matchId
                   << std::setw(8) << result->winnerId
-                  << std::setw(10) << result->score
-                  << std::setw(12) << ("Champ#" + std::to_string(static_cast<int>(result->championsP1[0]))).substr(0, 11)
-                  << ("Champ#" + std::to_string(static_cast<int>(result->championsP2[0]))).substr(0, 11) << "\n";
+                  << std::setw(12) << champ1Str.substr(0, 11)
+                  << champ2Str.substr(0, 11) << "\n";
     }
     
     std::cout << "\nTotal loaded results (via JsonLoader): " << resultsList.getSize() << "\n";
@@ -309,7 +295,7 @@ void GameResultLogger::displayPlayerFavoriteChampions() const {
         if (stats.totalMatches > 0 && stats.mostUsedChampion != Champion::NoChampion) {
             // Find usage count for most used champion
             int maxUsage = 0;
-            for (int j = 0; j < 52; ++j) {
+            for (int j = 0; j < 12; ++j) { // Only check valid champion enum range (0-11)
                 if (stats.championUsageCount[j] > maxUsage) {
                     maxUsage = stats.championUsageCount[j];
                 }
@@ -317,7 +303,7 @@ void GameResultLogger::displayPlayerFavoriteChampions() const {
             
             std::cout << std::setw(12) << stats.playerId
                       << std::setw(20) << stats.playerName
-                      << std::setw(20) << ("Champion#" + std::to_string(static_cast<int>(stats.mostUsedChampion)))
+                      << std::setw(20) << championToString(stats.mostUsedChampion)
                       << maxUsage << "\n";
         }
     }
@@ -344,16 +330,17 @@ void GameResultLogger::displayComprehensivePlayerStats() const {
             std::cout << "Longest Win Streak: " << stats.longestWinStreak << "\n";
             
             if (stats.mostUsedChampion != Champion::NoChampion) {
-                std::cout << "Most Used Champion: " << "Champion#" << static_cast<int>(stats.mostUsedChampion) << "\n";
+                std::cout << "Most Used Champion: " << championToString(stats.mostUsedChampion) << "\n";
             }
             
             // Show top 3 champions if available
             std::cout << "Champion Usage: ";
             int shownChampions = 0;
-            for (int j = 0; j < 52 && shownChampions < 3; ++j) {
+            for (int j = 0; j < 12 && shownChampions < 3; ++j) { // Only check valid champion enum range (0-11)
                 if (stats.championUsageCount[j] > 0) {
                     if (shownChampions > 0) std::cout << ", ";
-                    std::cout << "Champion#" << j 
+                    Champion champ = static_cast<Champion>(j);
+                    std::cout << championToString(champ)
                              << "(" << stats.championUsageCount[j] << ")";
                     shownChampions++;
                 }
@@ -373,14 +360,14 @@ void GameResultLogger::displayComprehensivePlayerStats() const {
 void GameResultLogger::pushSearchResult(const Result& result) {
     if (!searchResultsStack.isFull()) {
         searchResultsStack.push(result);
-        recordOperation("Pushed search result to stack - Match ID: " + std::to_string(result.matchId));
+        recordOperation("Pushed search result to stack - Match ID: " + result.matchId);
     }
 }
 
 Result GameResultLogger::popSearchResult() {
     if (!searchResultsStack.isEmpty()) {
         Result result = searchResultsStack.pop();
-        recordOperation("Popped search result from stack - Match ID: " + std::to_string(result.matchId));
+        recordOperation("Popped search result from stack - Match ID: " + result.matchId);
         return result;
     }
     return Result(); // Return empty result if stack is empty
@@ -406,9 +393,8 @@ void GameResultLogger::displaySearchResultsStack() const {
     Stack<Result> tempStack(MAX_RECENT_MATCHES);
     
     std::cout << std::left;
-    std::cout << std::setw(10) << "Match ID" << std::setw(8) << "Games" 
-              << std::setw(12) << "Score" << std::setw(10) << "Winner\n";
-    std::cout << std::string(40, '-') << "\n";
+    std::cout << std::setw(10) << "Match ID" << std::setw(10) << "Winner\n";
+    std::cout << std::string(20, '-') << "\n";
     
     // Display stack contents (Note: this is a simplified display)
     std::cout << "Stack contains " << searchResultsStack.size() << " search result(s)\n";
@@ -419,14 +405,14 @@ void GameResultLogger::displaySearchResultsStack() const {
 void GameResultLogger::pushPlayerAnalysis(const PlayerStats& stats) {
     if (!playerAnalysisStack.isFull()) {
         playerAnalysisStack.push(stats);
-        recordOperation("Pushed player analysis to stack - Player ID: " + std::to_string(stats.playerId));
+        recordOperation("Pushed player analysis to stack - Player ID: " + stats.playerId);
     }
 }
 
 PlayerStats GameResultLogger::popPlayerAnalysis() {
     if (!playerAnalysisStack.isEmpty()) {
         PlayerStats stats = playerAnalysisStack.pop();
-        recordOperation("Popped player analysis from stack - Player ID: " + std::to_string(stats.playerId));
+        recordOperation("Popped player analysis from stack - Player ID: " + stats.playerId);
         return stats;
     }
     return PlayerStats(); // Return empty stats if stack is empty
@@ -510,9 +496,9 @@ void GameResultLogger::traverseResultsForward() const {
     std::cout << "\n=== FORWARD TRAVERSAL OF RESULTS (via JsonLoader) ===\n";
     
     // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
-    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    auto resultsList = JsonLoader::loadResults("data/results.json");
     if (resultsList.getSize() == 0) {
-        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+        resultsList = JsonLoader::loadResults("data/results.json");
     }
     
     if (resultsList.getSize() == 0) {
@@ -535,9 +521,9 @@ void GameResultLogger::traverseResultsBackward() const {
     std::cout << "\n=== BACKWARD TRAVERSAL OF RESULTS (via JsonLoader) ===\n";
     
     // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
-    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    auto resultsList = JsonLoader::loadResults("data/results.json");
     if (resultsList.getSize() == 0) {
-        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+        resultsList = JsonLoader::loadResults("data/results.json");
     }
     
     if (resultsList.getSize() == 0) {
@@ -556,13 +542,13 @@ void GameResultLogger::traverseResultsBackward() const {
     }
 }
 
-void GameResultLogger::findResultInList(int matchId) const {
+void GameResultLogger::findResultInList(const std::string& matchId) const {
     std::cout << "\n=== SEARCHING FOR MATCH ID " << matchId << " IN JSONLOADER RESULTS ===\n";
     
     // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
-    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    auto resultsList = JsonLoader::loadResults("data/results.json");
     if (resultsList.getSize() == 0) {
-        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+        resultsList = JsonLoader::loadResults("data/results.json");
     }
     
     bool found = false;
@@ -572,7 +558,6 @@ void GameResultLogger::findResultInList(int matchId) const {
             std::cout << "Found at position " << (i+1) << ":\n";
             std::cout << "  Match ID: " << result->matchId << "\n";
             std::cout << "  Winner ID: " << result->winnerId << "\n";
-            std::cout << "  Score: " << result->score << "\n";
             
             // Push to search results stack
             const_cast<GameResultLogger*>(this)->pushSearchResult(*result);
@@ -587,13 +572,13 @@ void GameResultLogger::findResultInList(int matchId) const {
     }
 }
 
-void GameResultLogger::filterResultsByPlayer(int playerId) const {
+void GameResultLogger::filterResultsByPlayer(const std::string& playerId) const {
     std::cout << "\n=== FILTERING RESULTS BY PLAYER " << playerId << " (via JsonLoader) ===\n";
     
     // Get fresh data from JsonLoader (DoublyLinkedList handled internally)
-    auto resultsList = JsonLoader::loadResults("../data/results.json");
+    auto resultsList = JsonLoader::loadResults("data/results.json");
     if (resultsList.getSize() == 0) {
-        resultsList = JsonLoader::loadResults("c:/Users/CHUA/Documents/GitHub/ECMS_2025/data/results.json");
+        resultsList = JsonLoader::loadResults("data/results.json");
     }
     
     int foundCount = 0;
@@ -625,7 +610,7 @@ int GameResultLogger::getLoadedResultsCount() const {
     return loadedResultsCount;
 }
 
-void GameResultLogger::searchMatchesByPlayer(int playerId) const {
+void GameResultLogger::searchMatchesByPlayer(const std::string& playerId) const {
     std::cout << "\n=== SEARCHING FOR PLAYER " << playerId << " ===\n";
     
     bool found = false;
@@ -648,11 +633,9 @@ void GameResultLogger::searchMatchesByPlayer(int playerId) const {
                     
                     std::cout << "Match " << matchCount << ":\n";
                     std::cout << "  Match ID: " << result.matchId << "\n";
-                    std::cout << "  Score: " << result.score << "\n";
                     std::cout << "  Winner ID: " << result.winnerId << "\n";
-                    std::cout << "  Games Played: " << result.gamesPlayed << "\n";
-                    std::cout << "  Player 1 Champion: Champion #" << static_cast<int>(result.championsP1[0]) << "\n";
-                    std::cout << "  Player 2 Champion: Champion #" << static_cast<int>(result.championsP2[0]) << "\n\n";
+                    std::cout << "  Player 1 Champion: " << championToString(result.championsP1) << "\n";
+                    std::cout << "  Player 2 Champion: " << championToString(result.championsP2) << "\n\n";
                 }
                 break;
             }
@@ -666,7 +649,7 @@ void GameResultLogger::searchMatchesByPlayer(int playerId) const {
     }
 }
 
-void GameResultLogger::displayPlayerPerformance(int playerId) const {
+void GameResultLogger::displayPlayerPerformance(const std::string& playerId) const {
     std::cout << "\n=== PLAYER " << playerId << " PERFORMANCE ===\n";
     
     int playerIndex = findPlayerIndex(playerId);
@@ -687,11 +670,11 @@ void GameResultLogger::displayPlayerPerformance(int playerId) const {
     std::cout << "Average Game Duration: " << std::fixed << std::setprecision(1) << stats.averageGameDuration << " minutes\n";
     
     if (stats.mostUsedChampion != Champion::NoChampion) {
-        std::cout << "Most Used Champion: Champion #" << static_cast<int>(stats.mostUsedChampion) << "\n";
+        std::cout << "Most Used Champion: " << championToString(stats.mostUsedChampion) << "\n";
     }
 }
 
-void GameResultLogger::searchMatchesByMatchId(int matchId) const {
+void GameResultLogger::searchMatchesByMatchId(const std::string& matchId) const {
     std::cout << "\n=== SEARCHING FOR MATCH " << matchId << " ===\n";
     
     bool found = false;
@@ -707,11 +690,9 @@ void GameResultLogger::searchMatchesByMatchId(int matchId) const {
             
             std::cout << "Match Found:\n";
             std::cout << "  Match ID: " << result.matchId << "\n";
-            std::cout << "  Score: " << result.score << "\n";
             std::cout << "  Winner ID: " << result.winnerId << "\n";
-            std::cout << "  Games Played: " << result.gamesPlayed << "\n";
-            std::cout << "  Player 1 Champions: Champion #" << static_cast<int>(result.championsP1[0]) << "\n";
-            std::cout << "  Player 2 Champions: Champion #" << static_cast<int>(result.championsP2[0]) << "\n";
+            std::cout << "  Player 1 Champion: " << championToString(result.championsP1) << "\n";
+            std::cout << "  Player 2 Champion: " << championToString(result.championsP2) << "\n";
             break;
         }
     }
@@ -721,6 +702,6 @@ void GameResultLogger::searchMatchesByMatchId(int matchId) const {
     }
 }
 
-bool GameResultLogger::hasPlayerData(int playerId) const {
+bool GameResultLogger::hasPlayerData(const std::string& playerId) const {
     return findPlayerIndex(playerId) != -1;
 }

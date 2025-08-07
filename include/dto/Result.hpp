@@ -6,30 +6,19 @@
 
 class Result {
 public:
-    static const int TEAM_SIZE = 5;
+    std::string id;
+    std::string matchId;                            // ID of the associated match
+    Champion championsP1;
+    Champion championsP2;
+    std::string winnerId;                           // ID of the winning player
 
-    int id;
-    int matchId;                            // ID of the associated match
-    int gamesPlayed;                        // Number of games played in the match
-    std::string score;                      // Format: "winner:loser"
-    Champion championsP1[TEAM_SIZE];        // Champions used by player 1
-    Champion championsP2[TEAM_SIZE];        // Champions used by player 2
-    int winnerId;                           // ID of the winning player
-
-    Result() : id(0), matchId(0), gamesPlayed(0), score(""), winnerId(0) {
-        for (int i = 0; i < TEAM_SIZE; ++i) {
-            championsP1[i] = Champion::NoChampion;
-            championsP2[i] = Champion::NoChampion;
-        }
+    Result() : id(""), matchId(""), winnerId("") {
+        championsP1 = Champion::NoChampion;
+        championsP2 = Champion::NoChampion;
     }
-    
-    Result(int id, int matchId, int gamesPlayed, const std::string& score,
-           Champion championsP1[TEAM_SIZE], Champion championsP2[TEAM_SIZE], int winnerId)
-        : id(id), matchId(matchId), gamesPlayed(gamesPlayed), score(score), winnerId(winnerId) {
-        for (int i = 0; i < TEAM_SIZE; ++i) {
-            this->championsP1[i] = championsP1[i];
-            this->championsP2[i] = championsP2[i];
-        }
+
+    Result(const std::string& id, const std::string& matchId, Champion championsP1, Champion championsP2, const std::string& winnerId)
+        : id(id), matchId(matchId), championsP1(championsP1), championsP2(championsP2), winnerId(winnerId) {
     }
 };
 
@@ -46,6 +35,24 @@ inline Champion championFromString(const std::string& str) {
     if (str == "Yasuo") return Champion::Yasuo;
     if (str == "Zed") return Champion::Zed;
     return Champion::NoChampion;
+}
+
+inline std::string championToString(Champion champion) {
+    switch (champion) {
+        case Champion::Akali: return "Akali";
+        case Champion::Ezreal: return "Ezreal";
+        case Champion::Fiora: return "Fiora";
+        case Champion::Fizz: return "Fizz";
+        case Champion::Garen: return "Garen";
+        case Champion::Jax: return "Jax";
+        case Champion::Katarina: return "Katarina";
+        case Champion::LeeSin: return "LeeSin";
+        case Champion::Riven: return "Riven";
+        case Champion::Yasuo: return "Yasuo";
+        case Champion::Zed: return "Zed";
+        case Champion::NoChampion: return "NoChamp";
+        default: return "Unknown";
+    }
 }
 
 #endif

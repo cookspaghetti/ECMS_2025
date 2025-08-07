@@ -27,9 +27,10 @@ DoublyLinkedList<Player> JsonLoader::loadPlayers(const std::string& filename) {
             item["isEarlyBird"],
             item["isWildcard"],
             item["isLate"],
-            item["dateJoined"],
-            item["performanceId"]
+            item["dateJoined"]
         );
+
+        std::cout << "Loaded player: " << player.name << " (ID: " << player.id << ")" << std::endl;
         list.append(player);
     }
     return list;
@@ -54,8 +55,7 @@ PriorityQueue<Player> JsonLoader::loadCheckedInPlayers(const std::string& filena
             item["isEarlyBird"],
             item["isWildcard"],
             item["isLate"],
-            item["dateJoined"],
-            item["performanceId"]
+            item["dateJoined"]
         );
         queue.enqueue(player, item["priority"]);
     }
@@ -74,28 +74,21 @@ DoublyLinkedList<Match> JsonLoader::loadMatches(const std::string& filename) {
         // Parse TournamentStage from string
         TournamentStage stage = TournamentStage::Qualifiers;
         std::string stageStr = item["stage"];
-        if (stageStr == "GroupStage") stage = TournamentStage::GroupStage;
-        else if (stageStr == "KnockoutStage") stage = TournamentStage::KnockoutStage;
+        if (stageStr == "Registration") stage = TournamentStage::Registration;
+        else if (stageStr == "Qualifiers") stage = TournamentStage::Qualifiers;
+        else if (stageStr == "Tiebreakers") stage = TournamentStage::Tiebreakers;
         else if (stageStr == "Quarterfinals") stage = TournamentStage::Quarterfinals;
         else if (stageStr == "Semifinals") stage = TournamentStage::Semifinals;
         else if (stageStr == "Finals") stage = TournamentStage::Finals;
-
-        // Parse MatchType from string
-        MatchType matchType = MatchType::BestOf1;
-        std::string matchTypeStr = item["matchType"];
-        if (matchTypeStr == "BestOf3") matchType = MatchType::BestOf3;
-        else if (matchTypeStr == "BestOf5") matchType = MatchType::BestOf5;
 
         Match match(
             item["id"],
             item["tournamentId"],
             stage,
-            matchType,
             item["date"],
             item["time"],
             item["player1"],
-            item["player2"],
-            item["resultId"]
+            item["player2"]
         );
         list.append(match);
     }
@@ -132,25 +125,15 @@ DoublyLinkedList<Result> JsonLoader::loadResults(const std::string& filename) {
     file >> data;
 
     for (const auto& item : data) {
-        Champion championsP1[Result::TEAM_SIZE];
-        Champion championsP2[Result::TEAM_SIZE];
-
-        const auto& jsonP1 = item["championsP1"];
-        const auto& jsonP2 = item["championsP2"];
-
-        for (int i = 0; i < Result::TEAM_SIZE; ++i) {
-            championsP1[i] = championFromString(jsonP1.at(i));
-            championsP2[i] = championFromString(jsonP2.at(i));
-        }
+        Champion champP1 = championFromString(item["championsP1"]);
+        Champion champP2 = championFromString(item["championsP2"]);
 
         Result result(
-            item["id"],
-            item["matchId"],
-            item["gamesPlayed"],
-            item["score"],
-            championsP1,
-            championsP2,
-            item["winnerId"]
+            item["id"].get<std::string>(),
+            item["matchId"].get<std::string>(),
+            champP1,
+            champP2,
+            item["winnerId"].get<std::string>()
         );
         list.append(result);
     }
@@ -174,22 +157,10 @@ DoublyLinkedList<Spectator> JsonLoader::loadSpectators(const std::string& filena
         else if (typeStr == "Streamer") type = SpectatorType::Streamer;
         else if (typeStr == "Influencer") type = SpectatorType::Influencer;
         else if (typeStr == "Player") type = SpectatorType::Player;
-        
-        // Parse ID - handle both string format ("S00001") and integer format
-        int id;
-        if (item["id"].is_string()) {
-            std::string idStr = item["id"];
-            if (idStr.front() == 'S') {
-                id = std::stoi(idStr.substr(1)); // Remove 'S' prefix and convert to int
-            } else {
-                id = std::stoi(idStr); // Convert string to int
-            }
-        } else {
-            id = item["id"]; // Direct integer assignment
-        }
+
         
         Spectator spec(
-            id,
+            item["id"],
             item["name"],
             item["gender"] == "Male" ? Gender::Male : Gender::Female,
             item["email"],
@@ -220,11 +191,13 @@ DoublyLinkedList<Tournament> JsonLoader::loadTournaments(const std::string& file
         // Parse TournamentStage from string
         TournamentStage stage = TournamentStage::Qualifiers;
         std::string stageStr = item["stage"];
-        if (stageStr == "GroupStage") stage = TournamentStage::GroupStage;
-        else if (stageStr == "KnockoutStage") stage = TournamentStage::KnockoutStage;
+        if (stageStr == "Registration") stage = TournamentStage::Registration;
+        else if (stageStr == "Qualifiers") stage = TournamentStage::Qualifiers;
+        else if (stageStr == "Tiebreakers") stage = TournamentStage::Tiebreakers;
         else if (stageStr == "Quarterfinals") stage = TournamentStage::Quarterfinals;
         else if (stageStr == "Semifinals") stage = TournamentStage::Semifinals;
         else if (stageStr == "Finals") stage = TournamentStage::Finals;
+        else if (stageStr == "Completed") stage = TournamentStage::Completed;
 
         Tournament t(
             item["id"],

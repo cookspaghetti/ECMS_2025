@@ -332,8 +332,7 @@ json JsonWriter::playerToJson(const Player& player) {
         {"isEarlyBird", player.isEarlyBird},
         {"isWildcard", player.isWildcard},
         {"isLate", player.isLate},
-        {"dateJoined", player.dateJoined},
-        {"performanceId", player.performanceId}
+        {"dateJoined", player.dateJoined}
     };
 }
 
@@ -342,12 +341,10 @@ json JsonWriter::matchToJson(const Match& match) {
         {"id", match.id},
         {"tournamentId", match.tournamentId},
         {"stage", tournamentStageToString(match.stage)},
-        {"matchType", matchTypeToString(match.matchType)},
         {"date", match.date},
         {"time", match.time},
         {"player1", match.player1},
-        {"player2", match.player2},
-        {"resultId", match.resultId}
+        {"player2", match.player2}
     };
 }
 
@@ -362,31 +359,18 @@ json JsonWriter::performanceToJson(const Performance& performance) {
 }
 
 json JsonWriter::resultToJson(const Result& result) {
-    json championsP1Array = json::array();
-    json championsP2Array = json::array();
-    
-    for (int i = 0; i < Result::TEAM_SIZE; i++) {
-        championsP1Array.push_back(championToString(result.championsP1[i]));
-        championsP2Array.push_back(championToString(result.championsP2[i]));
-    }
-    
     return json{
         {"id", result.id},
         {"matchId", result.matchId},
-        {"gamesPlayed", result.gamesPlayed},
-        {"score", result.score},
-        {"championsP1", championsP1Array},
-        {"championsP2", championsP2Array},
+        {"championsP1", championToString(result.championsP1)},
+        {"championsP2", championToString(result.championsP2)},
         {"winnerId", result.winnerId}
     };
 }
 
 json JsonWriter::spectatorToJson(const Spectator& spectator) {
-    // Format ID as "S" + zero-padded 5-digit number
-    std::string formattedId = "S" + std::string(5 - std::to_string(spectator.id).length(), '0') + std::to_string(spectator.id);
-    
     return json{
-        {"id", formattedId},
+        {"id", spectator.id},
         {"name", spectator.name},
         {"gender", genderToString(spectator.gender)},
         {"email", spectator.email},
@@ -449,21 +433,11 @@ std::string JsonWriter::spectatorTypeToString(SpectatorType type) {
     }
 }
 
-std::string JsonWriter::matchTypeToString(MatchType type) {
-    switch (type) {
-        case MatchType::BestOf1: return "BestOf1";
-        case MatchType::BestOf3: return "BestOf3";
-        case MatchType::BestOf5: return "BestOf5";
-        default: return "BestOf1";
-    }
-}
-
 std::string JsonWriter::tournamentStageToString(TournamentStage stage) {
     switch (stage) {
         case TournamentStage::Registration: return "Registration";
         case TournamentStage::Qualifiers: return "Qualifiers";
-        case TournamentStage::GroupStage: return "GroupStage";
-        case TournamentStage::KnockoutStage: return "KnockoutStage";
+        case TournamentStage::Tiebreakers: return "Tiebreakers";
         case TournamentStage::Quarterfinals: return "Quarterfinals";
         case TournamentStage::Semifinals: return "Semifinals";
         case TournamentStage::Finals: return "Finals";

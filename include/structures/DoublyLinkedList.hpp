@@ -22,6 +22,28 @@ private:
 public:
     DoublyLinkedList() : head(nullptr), tail(nullptr), size(0) {}
     
+    // Copy constructor
+    DoublyLinkedList(const DoublyLinkedList& other) : head(nullptr), tail(nullptr), size(0) {
+        Node* current = other.head;
+        while (current) {
+            append(current->data);
+            current = current->next;
+        }
+    }
+    
+    // Assignment operator
+    DoublyLinkedList& operator=(const DoublyLinkedList& other) {
+        if (this != &other) {
+            clear();
+            Node* current = other.head;
+            while (current) {
+                append(current->data);
+                current = current->next;
+            }
+        }
+        return *this;
+    }
+    
     ~DoublyLinkedList() {
         clear();
     }

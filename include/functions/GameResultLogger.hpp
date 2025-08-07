@@ -67,33 +67,33 @@ public:
 
 // Player statistics structure for performance tracking
 struct PlayerStats {
-    int playerId;
+    std::string playerId;
     std::string playerName;
     int totalMatches;
     int wins;
     int losses;
     float winRate;
     Champion mostUsedChampion;
-    int championUsageCount[52]; // Track usage for each champion
+    int championUsageCount[12]; // Track usage for each champion (0-11)
     std::string lastMatchDate;
     int currentWinStreak;
     int longestWinStreak;
     float averageGameDuration; // in minutes
     
-    PlayerStats() : playerId(0), playerName(""), totalMatches(0), wins(0), losses(0), 
+    PlayerStats() : playerId(""), playerName(""), totalMatches(0), wins(0), losses(0), 
                    winRate(0.0f), mostUsedChampion(Champion::NoChampion), 
                    lastMatchDate(""), currentWinStreak(0), longestWinStreak(0),
                    averageGameDuration(0.0f) {
-        for (int i = 0; i < 52; ++i) {
+        for (int i = 0; i < 12; ++i) {
             championUsageCount[i] = 0;
         }
     }
     
-    PlayerStats(int id, const std::string& name) : playerId(id), playerName(name),
+    PlayerStats(const std::string& id, const std::string& name) : playerId(id), playerName(name),
                 totalMatches(0), wins(0), losses(0), winRate(0.0f),
                 mostUsedChampion(Champion::NoChampion), lastMatchDate(""),
                 currentWinStreak(0), longestWinStreak(0), averageGameDuration(0.0f) {
-        for (int i = 0; i < 52; ++i) {
+        for (int i = 0; i < 12; ++i) {
             championUsageCount[i] = 0;
         }
     }
@@ -150,29 +150,27 @@ struct MatchSummary {
     std::string score;
     std::string winnerName;
     TournamentStage stage;
-    MatchType matchType;
     float duration; // in minutes
     
     MatchSummary() : matchId(0), date(""), player1Name(""), player2Name(""), 
                     score(""), winnerName(""), stage(TournamentStage::Qualifiers),
-                    matchType(MatchType::BestOf1), duration(0.0f) {}
+                    duration(0.0f) {}
     
     MatchSummary(int id, const std::string& d, const std::string& p1, const std::string& p2,
-                const std::string& sc, const std::string& winner, TournamentStage st,
-                MatchType mt, float dur) 
+                const std::string& sc, const std::string& winner, TournamentStage st, float dur) 
                 : matchId(id), date(d), player1Name(p1), player2Name(p2), score(sc),
-                  winnerName(winner), stage(st), matchType(mt), duration(dur) {}
+                  winnerName(winner), stage(st), duration(dur) {}
 };
 
 // Helper structure to store match player information from JSON
 struct MatchPlayerInfo {
-    int matchId;
-    int player1Id;
-    int player2Id;
-    int winnerId;
+    std::string matchId;
+    std::string player1Id;
+    std::string player2Id;
+    std::string winnerId;
     
-    MatchPlayerInfo() : matchId(0), player1Id(0), player2Id(0), winnerId(0) {}
-    MatchPlayerInfo(int mid, int p1, int p2, int winner) 
+    MatchPlayerInfo() : matchId(""), player1Id(""), player2Id(""), winnerId("") {}
+    MatchPlayerInfo(const std::string& mid, const std::string& p1, const std::string& p2, const std::string& winner) 
         : matchId(mid), player1Id(p1), player2Id(p2), winnerId(winner) {}
 };
 
@@ -198,9 +196,8 @@ private:
     int playerCount;
     
     // Helper functions
-    int findPlayerIndex(int playerId) const;
+    int findPlayerIndex(const std::string& playerId) const;
     std::string stageToString(TournamentStage stage) const;
-    std::string matchTypeToString(MatchType type) const;
     
 public:
     GameResultLogger();
@@ -218,8 +215,8 @@ public:
     void displayLoadedResults() const;                // Display results from JsonLoader
     void traverseResultsForward() const;              // Forward traversal via JsonLoader
     void traverseResultsBackward() const;             // Backward traversal via JsonLoader
-    void findResultInList(int matchId) const;         // Find result using JsonLoader
-    void filterResultsByPlayer(int playerId) const;   // Filter results from JsonLoader
+    void findResultInList(const std::string& matchId) const;         // Find result using JsonLoader
+    void filterResultsByPlayer(const std::string& playerId) const;   // Filter results from JsonLoader
     
     // Stack-based operations for search and analysis
     void pushSearchResult(const Result& result);      // Push result to search stack
@@ -239,9 +236,9 @@ public:
     
     // Statistical Analysis from JsonLoader data (DoublyLinkedList handled internally)
     void calculatePlayerStatistics();
-    void displayPlayerPerformance(int playerId) const;
-    void searchMatchesByPlayer(int playerId) const;
-    void searchMatchesByMatchId(int matchId) const;
+    void displayPlayerPerformance(const std::string& playerId) const;
+    void searchMatchesByPlayer(const std::string& playerId) const;
+    void searchMatchesByMatchId(const std::string& matchId) const;
     void displayPlayerFavoriteChampions() const;
     void displayPlayerMatchCount() const;
     void displayPlayerWinRates() const;
@@ -249,7 +246,7 @@ public:
     
     // Utility functions
     int getLoadedResultsCount() const;
-    bool hasPlayerData(int playerId) const;
+    bool hasPlayerData(const std::string& playerId) const;
 };
 
 #endif // GAMERESULTLOGGER_HPP

@@ -1,19 +1,11 @@
 #ifndef ENUM_HPP
 #define ENUM_HPP
 
-enum class MatchType
-{
-    BestOf1,
-    BestOf3,
-    BestOf5
-};
-
 enum class TournamentStage
 {
     Registration,    // Added for tournament creation
     Qualifiers,
-    GroupStage,
-    KnockoutStage,   // Changed from Knockout to match existing
+    Tiebreakers,
     Quarterfinals,
     Semifinals,
     Finals,
