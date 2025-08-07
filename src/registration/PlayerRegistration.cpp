@@ -31,15 +31,13 @@ PlayerRegistration::PlayerRegistration() : nextPlayerId(1), registrationCount(0)
         
         // Set next player ID to be one higher than the maximum existing ID
         nextPlayerId = maxId + 1;
-        std::cout << "Player database loaded. Next player ID will be: " << nextPlayerId << std::endl;
     } else {
-        std::cout << "Warning: Could not load player database. Starting with ID 1." << std::endl;
+        // No debug message
     }
 
     // Load existing registered players
     try{
         registeredPlayers = JsonLoader::loadPlayers("data/temp_registered_players.json");
-        std::cout << "Loaded " << registeredPlayers.getSize() << " previously registered players." << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Error loading registered players: " << e.what() << std::endl;
         registeredPlayers.clear();
@@ -48,7 +46,6 @@ PlayerRegistration::PlayerRegistration() : nextPlayerId(1), registrationCount(0)
     // Load existing check-in queue
     try {
         checkInQueue = JsonLoader::loadCheckedInPlayers("data/temp_checkin_queue.json");
-        std::cout << "Loaded " << checkInQueue.getSize() << " players from temporary check-in queue." << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Error loading check-in queue: " << e.what() << std::endl;
         checkInQueue.clear();
@@ -62,7 +59,6 @@ PlayerRegistration::PlayerRegistration() : nextPlayerId(1), registrationCount(0)
             std::cout << "Max participants for current tournament: " << maxParticipants << std::endl;
         }
     } else {
-        std::cout << "No active tournament found. Max participants set to 0." << std::endl;
         clearAll();
     }
     
@@ -618,9 +614,6 @@ void PlayerRegistration::clearRegisteredPlayers() {
     // Clear the temporary registered players file
     DoublyLinkedList<Player> emptyList;
     JsonWriter::writeAllPlayers(emptyList, "data/temp_registered_players.json");
-    
-    std::cout << "Cleared " << playerCount << " registered players.\n";
-    std::cout << "Tournament participant count has been reset.\n";
 }
 
 void PlayerRegistration::clearCheckInQueue() {
@@ -630,24 +623,15 @@ void PlayerRegistration::clearCheckInQueue() {
     // Clear the temporary check-in queue file
     PriorityQueue<Player> emptyQueue;
     JsonWriter::writeAllCheckedInPlayer(emptyQueue, "data/temp_checkin_queue.json");
-    
-    std::cout << "Cleared " << queueSize << " players from check-in queue.\n";
 }
 
 void PlayerRegistration::clearAll() {
-    std::cout << "\n=== CLEARING ALL REGISTRATION DATA ===\n";
-    
     int totalRegistered = registeredPlayers.getSize();
     int totalCheckedIn = checkInQueue.getSize();
     
     // Clear both lists
     clearRegisteredPlayers();
     clearCheckInQueue();
-    
-    std::cout << "\n=== CLEAR OPERATION COMPLETE ===\n";
-    std::cout << "Total registered players cleared: " << totalRegistered << std::endl;
-    std::cout << "Total check-in queue entries cleared: " << totalCheckedIn << std::endl;
-    std::cout << "All registration data has been reset.\n";
 }
 
 std::string PlayerRegistration::getCurrentDate() {

@@ -9,7 +9,6 @@ bool PlayerManager::PlayerManager::loadPlayersFromFile() {
     try {
         allPlayers = JsonLoader::loadPlayers(filename);
         dataLoaded = true;
-        std::cout << "Loaded " << allPlayers.getSize() << " players from " << filename << std::endl;
         return true;
     } catch (const std::exception& e) {
         std::cerr << "Error loading players from file: " << e.what() << std::endl;

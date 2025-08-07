@@ -211,7 +211,6 @@ void PriorityQueue<T>::clear() {
         heap[i] = nullptr;
     }
     size = 0;
-    std::cout << "Priority Queue cleared.\n";
 }
 
 // Get all items with their priorities

@@ -41,12 +41,10 @@ bool JsonWriter::writeAllCheckedInPlayer(PriorityQueue<Player>& checkInQueue, co
         // Create empty file if queue is empty
         std::ofstream file(filename);
         if (!file.is_open()) {
-            std::cerr << "Failed to open file for writing: " << filename << std::endl;
             return false;
         }
         file << "[]";
         file.close();
-        std::cout << "Created empty check-in queue file: " << filename << std::endl;
         return true;
     }
     
@@ -70,14 +68,11 @@ bool JsonWriter::writeAllCheckedInPlayer(PriorityQueue<Player>& checkInQueue, co
     // Write to file (replace entire content)
     std::ofstream file(filename);
     if (!file.is_open()) {
-        std::cerr << "Failed to open file for writing: " << filename << std::endl;
         return false;
     }
     
     file << jsonArray.dump(4); // Pretty print with 4 spaces
     file.close();
-    
-    std::cout << "Successfully wrote " << jsonArray.size() << " checked-in players to " << filename << std::endl;
     return true;
 }
 
@@ -93,14 +88,11 @@ bool JsonWriter::writeAllPlayers(const DoublyLinkedList<Player>& players, const 
     
     std::ofstream file(filename);
     if (!file.is_open()) {
-        std::cerr << "Failed to open file for writing: " << filename << std::endl;
         return false;
     }
     
     file << jsonArray.dump(4); // Pretty print with 4 spaces
     file.close();
-    
-    std::cout << "Successfully wrote " << players.getSize() << " players to " << filename << std::endl;
     return true;
 }
 

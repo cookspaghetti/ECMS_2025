@@ -73,7 +73,6 @@ void GameResultLogger::loadResultsFromJSON(const std::string& jsonPath) {
     auto resultsList = JsonLoader::loadResults(jsonPath);
     
     if (resultsList.getSize() == 0) {
-        std::cout << "JsonLoader could not load results. No results available.\n";
         recordOperation("JSON loading failed - no results found");
         loadedResultsCount = 0;
         return;

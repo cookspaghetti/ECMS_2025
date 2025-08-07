@@ -40,7 +40,6 @@ void TournamentManager::loadTournamentsFromFile() {
                 tournaments.append(*tournament);
             }
         }
-        std::cout << "Loaded " << tournaments.getSize() << " tournaments from file.\n";
     } catch (const std::exception& e) {
         std::cerr << "Error loading tournaments: " << e.what() << std::endl;
         std::cout << "No tournaments loaded.\n";
